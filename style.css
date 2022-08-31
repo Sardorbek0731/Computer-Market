@@ -1,0 +1,264 @@
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+img {
+  user-select: none;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65rem;
+}
+.hidden {
+  display: none;
+}
+.m-r0 {
+  margin-right: 0;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.color--black {
+  color: black;
+}
+.flex {
+  display: flex;
+}
+.justify_center {
+  justify-content: center;
+}
+.align_center {
+  align-items: center;
+}
+
+/* End General */
+
+/* Header */
+.nav {
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 17%;
+  height: 100vh;
+  z-index: 2;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  background-color: rgb(4, 0, 45);
+}
+
+.ul {
+  flex-direction: column;
+  width: 100%;
+}
+.nav_item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  height: 4rem;
+  margin: 0 20px 10px 20px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+.nav_item:last-child {
+  margin-bottom: 0;
+}
+.nav_item:hover {
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+}
+.nav_item:hover {
+  background-color: rgb(255, 255, 255);
+}
+.nav_item:hover .nav_link h1,
+.nav_item:hover .nav_link svg,
+.nav_item:hover .nav_link i {
+  color: rgb(3, 0, 28);
+}
+.nav_link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.nav_link h1 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: all 0.4s ease;
+}
+.nav_link svg,
+.nav_link i {
+  font-size: 1.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: white;
+  margin-right: 10px;
+  transition: all 0.4s ease;
+  text-align: center;
+  width: 50px;
+}
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg img {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 8rem;
+  left: 0;
+}
+.by {
+  position: absolute;
+  bottom: 1.7rem;
+  color: white;
+  text-decoration: none;
+}
+.brand {
+  margin-left: 20px;
+  text-decoration: none;
+}
+.brand i,
+.brand h1 {
+  font-size: 2rem;
+  color: white;
+}
+.brand h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* End Header */
+
+.body-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 83vw;
+  float: right;
+}
+
+/* Main */
+.home {
+  width: 83vw;
+  height: 100vh;
+  background: linear-gradient(-45deg, rgb(255, 208, 68), rgb(254, 221, 114));
+}
+.home_text {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 60px;
+}
+.home_title h1 {
+  font-size: 3.2rem;
+  margin-bottom: 40px;
+}
+.home_p p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+.registr_btn button {
+  border: 2px solid black;
+  outline: none;
+  padding: 17px 40px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
+}
+.registr_btn button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+}
+.home_bg img {
+  width: 32rem;
+  height: auto;
+}
+
+/* Advantage  */
+.advantage {
+  padding: 150px 0;
+  width: 83vw;
+  flex-direction: column;
+}
+.advantage_title {
+  margin-bottom: 100px;
+}
+.advantage_title h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-shadow: 10px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.advantage_items {
+  width: 100%;
+}
+.advantage_item {
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 30px 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: all 0.4s;
+}
+.advantage_item:hover {
+  transform: scale(1.08);
+  background-color: rgb(255, 179, 0);
+}
+.advantageItem_head i {
+  color: rgb(77, 138, 194);
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+.advantage_item:hover .advantageItem_head i,
+.advantage_item:hover .advantageItem_head svg,
+.advantage_item:hover .advantageItem_body_title h1,
+.advantage_item:hover .advantageItem_body_p p {
+  color: white;
+}
+.advantageItem_head svg {
+  fill: currentColor;
+  width: 4rem;
+  width: 4rem;
+  margin-bottom: 30px;
+}
+._2UMx206R8RMWSMNdZZT2bK {
+  color: rgb(77, 138, 194);
+  font-size: 4rem !important;
+}
+.advantageItem_body {
+  flex-direction: column;
+}
+.advantageItem_body_title h1 {
+  color: rgb(77, 138, 194);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.advantageItem_body_p p {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+}

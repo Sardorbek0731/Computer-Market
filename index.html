@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computers Market</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="loader"></div>
+    <main id="main">
+      <!----------- Header ----------->
+      <header id="header">
+        <nav class="nav flex" id="nav">
+          <a href="index.html" class="brand flex align_center">
+            <i
+              class="fa-solid fa-laptop color--black mr-10"
+              id="brand-icon"
+            ></i>
+            <h1 class="color--black" id="nav-brand-text">Market</h1>
+          </a>
+          <ul class="ul flex justify_center">
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <i class="fa-solid fa-house-chimney"></i>
+                <h1 class="nav-link_p" id="nav-link--p">Bosh sahifa</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h1 class="nav-link_p" id="nav-link--p">Maxsulotlar</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-collection-fill category_icon"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z"
+                  />
+                </svg>
+                <h1 class="nav-link_p" id="nav-link--p">Toifalar</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <i class="fa-solid fa-handshake sponser_icon"></i>
+                <h1 class="nav-link_p" id="nav-link--p">Homiylar</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-file-earmark-person-fill about_icon"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z"
+                  />
+                </svg>
+                <h1 class="nav-link_p" id="nav-link--p">Biz haqimizda</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-person-circle profil_icon"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                  />
+                </svg>
+                <h1 class="nav-link_p" id="nav-link--p">Profil</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chat-left-dots-fill contact_icon"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                  />
+                </svg>
+                <h1 class="nav-link_p" id="nav-link--p">Aloqa</h1>
+              </a>
+            </li>
+          </ul>
+          <div class="bg">
+            <img src="./image/nav bar bg/bg.png" alt="Background image" />
+            <a href="#" class="by">
+              Created<br />
+              by Sardoreb Olimov
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      <div class="body-item">
+        <!----------- Home ----------->
+        <section id="home">
+          <div class="home flex justify_center align_center">
+            <div class="container">
+              <div class="home_text flex justify_center">
+                <div class="home_title">
+                  <h1 class="color--black">
+                    Kompyuter Market <br />
+                    online do'kon
+                  </h1>
+                </div>
+                <div class="home_p">
+                  <p>
+                    Kompyuterlarni tez va oson buyurtirish<br />
+                    imkoniga ega bo'ling!
+                  </p>
+                </div>
+                <div class="registr_btn">
+                  <button type="button">Ro'yxatdan o'tish</button>
+                </div>
+              </div>
+              <div class="home_bg">
+                <img src="./image/home-bg3.png" alt="Laptop image" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!----------- Advantage ----------->
+        <section>
+          <div class="advantage flex justify_center align_center">
+            <div class="advantage_title">
+              <div class="container">
+                <h1>Bizning afzalliklar</h1>
+              </div>
+            </div>
+            <div class="advantage_items flex justify_center align_center">
+              <div class="container">
+                <div class="advantage_item flex justify_center align_center">
+                  <div class="advantageItem_head">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                  </div>
+                  <div
+                    class="advantageItem_body flex justify_center align_center"
+                  >
+                    <div class="advantageItem_body_title">
+                      <h1>Yuqori sifat</h1>
+                    </div>
+                    <div class="advantageItem_body_p">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur<br />
+                        adipisicing elit Quae explicabo quidem<br />
+                        asperiores provident.<br />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantage_item flex justify_center align_center">
+                  <div class="advantageItem_head">
+                    <svg
+                      class="MuiSvgIcon-root _2UMx206R8RMWSMNdZZT2bK"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div
+                    class="advantageItem_body flex justify_center align_center"
+                  >
+                    <div class="advantageItem_body_title">
+                      <h1>Tezkor yetkazib berish</h1>
+                    </div>
+                    <div class="advantageItem_body_p">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur<br />
+                        adipisicing elit Quae explicabo quidem<br />
+                        asperiores provident.<br />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantage_item flex justify_center align_center">
+                  <div class="advantageItem_head">
+                    <i class="fa-solid fa-user-lock"></i>
+                  </div>
+                  <div
+                    class="advantageItem_body flex justify_center align_center"
+                  >
+                    <div class="advantageItem_body_title">
+                      <h1>Ma'lumotingiz maxfiyligi</h1>
+                    </div>
+                    <div class="advantageItem_body_p">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur<br />
+                        adipisicing elit Quae explicabo quidem<br />
+                        asperiores provident.<br />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
