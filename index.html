@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Computers Market</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -106,22 +106,21 @@
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-chat-left-dots-fill contact_icon"
+                  class="bi bi-chat-dots-fill"
                   viewBox="0 0 16 16"
                 >
                   <path
-                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                    d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
                   />
                 </svg>
                 <h1 class="nav-link_p" id="nav-link--p">Aloqa</h1>
               </a>
             </li>
           </ul>
-          <div class="bg">
-            <img src="./image/nav bar bg/bg.png" alt="Background image" />
-            <a href="#" class="by">
-              Created<br />
-              by Sardoreb Olimov
+          <div class="nav-bg">
+            <img src="./image/Footer/footer-background.png" alt="Bg image" />
+            <a href="http://github.com/sardorbek0731">
+              Sardorbek Olimov
             </a>
           </div>
         </nav>
@@ -165,70 +164,95 @@
               </div>
             </div>
             <div class="advantage_items flex justify_center align_center">
-              <div class="container">
-                <div class="advantage_item flex justify_center align_center">
-                  <div class="advantageItem_head">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                  </div>
-                  <div
-                    class="advantageItem_body flex justify_center align_center"
-                  >
-                    <div class="advantageItem_body_title">
-                      <h1>Yuqori sifat</h1>
+              <div class="advantageFirst_row">
+                <div class="container">
+                  <div class="advantage_item flex justify_center align_center">
+                    <div class="advantageItem_head">
+                      <i class="fa-solid fa-thumbs-up"></i>
                     </div>
-                    <div class="advantageItem_body_p">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur<br />
-                        adipisicing elit Quae explicabo quidem<br />
-                        asperiores provident.<br />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="advantage_item flex justify_center align_center">
-                  <div class="advantageItem_head">
-                    <svg
-                      class="MuiSvgIcon-root _2UMx206R8RMWSMNdZZT2bK"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
+                    <div
+                      class="advantageItem_body flex justify_center align_center"
                     >
-                      <path
-                        d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div
-                    class="advantageItem_body flex justify_center align_center"
-                  >
-                    <div class="advantageItem_body_title">
-                      <h1>Tezkor yetkazib berish</h1>
+                      <div class="advantageItem_body_title">
+                        <h1>Yuqori sifat</h1>
+                      </div>
+                      <div class="advantageItem_body_p">
+                        <p>
+                          Sizning maxsulotingizga hech qanday<br />
+                          shikast yetmasligi uchun biz bir qancha<br />
+                          sharoitlar yaratganmiz!<br />
+                        </p>
+                      </div>
                     </div>
-                    <div class="advantageItem_body_p">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur<br />
-                        adipisicing elit Quae explicabo quidem<br />
-                        asperiores provident.<br />
-                      </p>
+                  </div>
+                  <div class="advantage_item flex justify_center align_center">
+                    <div class="advantageItem_head">
+                      <svg
+                        class="MuiSvgIcon-root _2UMx206R8RMWSMNdZZT2bK"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div
+                      class="advantageItem_body flex justify_center align_center"
+                    >
+                      <div class="advantageItem_body_title">
+                        <h1>Tezkor yetkazib berish</h1>
+                      </div>
+                      <div class="advantageItem_body_p">
+                        <p>
+                          Biz sizga buyurtmangizni 2 kun ichida<br />
+                          yetkazib bera olamiz va bu xozirgi<br />
+                          kunda juda tez hisoblanadi!<br />
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="advantage_item flex justify_center align_center">
-                  <div class="advantageItem_head">
-                    <i class="fa-solid fa-user-lock"></i>
-                  </div>
-                  <div
-                    class="advantageItem_body flex justify_center align_center"
-                  >
-                    <div class="advantageItem_body_title">
-                      <h1>Ma'lumotingiz maxfiyligi</h1>
+              </div>
+              <div class="advantageSecond_row">
+                <div class="container">
+                  <div class="advantage_item flex justify_center align_center">
+                    <div class="advantageItem_head">
+                      <i class="fa-solid fa-user-lock"></i>
                     </div>
-                    <div class="advantageItem_body_p">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur<br />
-                        adipisicing elit Quae explicabo quidem<br />
-                        asperiores provident.<br />
-                      </p>
+                    <div
+                      class="advantageItem_body flex justify_center align_center"
+                    >
+                      <div class="advantageItem_body_title">
+                        <h1>Ma'lumotingiz maxfiyligi</h1>
+                      </div>
+                      <div class="advantageItem_body_p">
+                        <p>
+                          Biz sizning Profilingizdagi ma'lumotlarni<br />
+                          tarqatilmasligini oldini olish bor imkoni-<br />
+                          yatimizdan foydalanamiz!<br />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="advantage_item flex justify_center align_center">
+                    <div class="advantageItem_head">
+                      <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <div
+                      class="advantageItem_body flex justify_center align_center"
+                    >
+                      <div class="advantageItem_body_title">
+                        <h1>Bepul yetkazish</h1>
+                      </div>
+                      <div class="advantageItem_body_p">
+                        <p>
+                          Biz sizning maxsulotingiz bepul va<br />
+                          tez yetkazib berish imkoniga <br />
+                          egamiz!<br />
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -238,6 +262,6 @@
         </section>
       </div>
     </main>
-    <script src="app.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
