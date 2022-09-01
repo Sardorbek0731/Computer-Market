@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computers Market</title>
+    <link rel="stylesheet" href="../css/profil.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="loader"></div>
+    <main id="main">
+      <!----------- Header ----------->
+      <header id="header">
+        <nav class="nav flex" id="nav">
+          <a href="index.html" class="brand flex align_center">
+            <i
+              class="fa-solid fa-laptop color--black mr-10"
+              id="brand-icon"
+            ></i>
+            <h1 class="color--black" id="nav-brand-text">Market</h1>
+          </a>
+          <ul class="ul flex justify_center">
+            <li class="nav_item">
+              <a href="../index.html" class="nav_link">
+                <i class="fa-solid fa-house-chimney"></i>
+                <h1 class="nav-link_p" id="nav-link--p">Bosh sahifa</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h1 class="nav-link_p" id="nav-link--p">Maxsulotlar</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-collection-fill category_icon"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z"
+                  />
+                </svg>
+                <h1 class="nav-link_p" id="nav-link--p">Toifalar</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <i class="fa-solid fa-handshake sponser_icon"></i>
+                <h1 class="nav-link_p" id="nav-link--p">Homiylar</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-file-earmark-person-fill about_icon"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z"
+                  />
+                </svg>
+                <h1 class="nav-link_p" id="nav-link--p">Biz haqimizda</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="./assets/profil.html" class="nav_link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-person-circle profil_icon"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                  />
+                </svg>
+                <h1 class="nav-link_p" id="nav-link--p">Profil</h1>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chat-dots-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                  />
+                </svg>
+                <h1 class="nav-link_p" id="nav-link--p">Aloqa</h1>
+              </a>
+            </li>
+          </ul>
+          <div class="nav-bg">
+            <img src="../image/Footer/footer-background.png" alt="Bg image" />
+            <a href="http://github.com/sardorbek0731" class="color_white">
+              Sardorbek Olimov
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      <!----------- Profil ----------->
+      <section>
+        <div class="profil flex justify_center align_center">
+          <div class="container">
+            <div class="profil_item flex">
+              <div class="itemFirst_column">
+                <div class="item_img">
+                  <img src="../image/Profil/images.jpg" alt="Profil image" />
+                </div>
+              </div>
+              <div class="itemSecond_column flex">
+                <div class="user_name">
+                  <h1 id="user-name" class="color_white">Sardorbek Olimov</h1>
+                </div>
+                <div class="user_email">
+                  <a href="#" id="user-email" class="color_white"
+                    >sardor.20070731@gmail.com</a
+                  >
+                </div>
+                <div class="userBirthday_date flex align_center justify_evenly">
+                  <div class="birthday_year birthday_item">
+                    <h2 class="color_white">Tug'ilgan yili:</h2>
+                    <h3 id="birthday-year" class="color_white">2007 yil</h3>
+                  </div>
+                  <div class="birthday_month birthday_item">
+                    <h2 class="color_white">Yoshingiz:</h2>
+                    <h3 id="birthday-month" class="color_white">15</h3>
+                  </div>
+                  <div class="birthday_day birthday_item">
+                    <h2 class="color_white">Tug'ilgan kuni:</h2>
+                    <h3 id="birthday-day" class="color_white">Iyul, 31</h3>
+                  </div>
+                </div>
+                <div class="user_links">
+                  <div class="firstRow_links flex justify_between">
+                    <div class="user_telegram_link">
+                      <a href="#" id="user-link--t.me" class="color_white">
+                        <i class="fa-brands fa-telegram mr-10"></i>
+                        Sardorbek_0731
+                      </a>
+                    </div>
+
+                    <div class="user-addres_link">
+                      <a href="#" id="user-link--youtube" class="color_white">
+                        <i class="fa-brands fa-youtube mr-10"></i>
+                        SardorbekOlimov2007
+                      </a>
+                    </div>
+                  </div>
+                  <div class="secondRow_links flex justify_between">
+                    <div class="user_telegram_link">
+                      <a href="#" id="user-link--twitter" class="color_white">
+                        <i class="fa-brands fa-square-twitter mr-10"></i>
+                        sardorbek20070731
+                      </a>
+                    </div>
+                    <div class="user-addres_link">
+                      <a href="#" id="user-link--address" class="color_white">
+                        <i class="fa-solid fa-location-dot mr-10"></i>
+                        Uzbekistan
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="user_about">
+                  <h4 class="color_white">Ma'lumotingiz :</h4>
+                  <p id="user-about" class="color_white">
+                    Salom, mening ismim Sardorbek Olimov. Men 7-sonli<br />
+                    umumiy o'rta ta'lim maktabida ta'lim olaman. Menga<br />
+                    matema tika, fizika va ingliz tili fanlari juda ham
+                    yoqadi.<br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../js/profil.js"></script>
+  </body>
+</html>
