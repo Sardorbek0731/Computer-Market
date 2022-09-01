@@ -169,18 +169,23 @@ body {
   outline: none;
   padding: 17px 40px;
   background-color: black;
-  color: white;
   border-radius: 10px;
-  font-size: 1.2rem;
-  font-weight: 300;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
   transition: all 0.4s;
 }
 .registr_btn button:hover {
   background-color: white;
-  color: black;
   transform: scale(1.05);
+}
+.registr_btn a {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+}
+.registr_btn button:hover a {
+  color: black;
 }
 .home_bg img {
   width: 32rem;
