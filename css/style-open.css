@@ -3,24 +3,98 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-img {
-  user-select: none;
+html {
+  scroll-behavior: smooth;
 }
 body {
   width: 100%;
   height: 100%;
   background-color: white;
 }
+#main {
+  display: none;
+}
+.container-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: rgb(80, 142, 251);
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 12rem;
+  width: 12rem;
+  margin-bottom: 50px;
+}
+.loader_item1,
+.loader_item2,
+.loader_item3 {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  display: block;
+  animation: rotate1 2s linear infinite;
+  position: absolute;
+}
+.loader_item2 {
+  width: 8rem;
+  height: 8rem;
+  animation: rotate2 2s linear infinite;
+}
+.loader_item3 {
+  width: 4rem;
+  height: 4rem;
+  animation: rotate3 2s linear infinite;
+}
+@keyframes rotate1 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotate3 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.please h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: white;
+}
 ::-webkit-scrollbar {
   width: 0;
+}
+img {
+  user-select: none;
 }
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 65rem;
+}
+.hidden {
+  display: none;
 }
 .mr-10 {
   margin-right: 10px;
@@ -34,17 +108,8 @@ body {
 .justify_center {
   justify-content: center;
 }
-.justify_between {
-  justify-content: space-between;
-}
-.justify_evenly {
-  justify-content: space-evenly;
-}
 .align_center {
   align-items: center;
-}
-.color_white {
-  color: white;
 }
 
 /* End General */
@@ -141,90 +206,52 @@ body {
 
 /* End Header */
 
-.profil {
+/* Main */
+.home {
   float: right;
-  width: 83%;
+  width: 83vw;
   height: 100vh;
-  background-color: white;
+  box-shadow: 0 0 90px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(-60deg, rgb(0, 115, 138), rgb(179, 255, 255));
 }
-#profile-animate {
-  will-change: transform;
-  transition: all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
-}
-.profil_item {
-  width: 100%;
-  height: 70vh;
-  background-color: rgb(0, 23, 56);
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.947);
-  padding: 3rem 3rem;
-}
-.itemFirst_column {
-  margin-right: 7rem;
-}
-.item_img {
-  width: 15rem;
-  height: 15rem;
-}
-.item_img img {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-}
-.itemSecond_column {
+.home_text {
   flex-direction: column;
+  align-items: flex-start;
+  margin-right: 60px;
 }
-.user_name,
-.user_email,
-.userBirthday_date,
-.user_links {
+.home_title h1 {
+  font-size: 3.2rem;
   margin-bottom: 40px;
 }
-.user_name h1,
-.user_email a {
-  font-weight: 500;
+.home_p p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  margin-bottom: 40px;
 }
-.user_name h1 {
-  font-size: 2.5rem;
-}
-.user_email a {
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-.userBirthday_date,
-.user_about {
-  padding: 20px 30px;
+.registr_btn button {
+  border: 2px solid black;
+  outline: none;
+  padding: 17px 40px;
+  background-color: black;
   border-radius: 10px;
-  background-color: rgb(1, 1, 81);
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
 }
-.birthday_item h2 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+.registr_btn button:hover {
+  background-color: white;
+  transform: scale(1.05);
 }
-.birthday_item h2,
-.birthday_item h3 {
-  font-weight: 400;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.birthday_year,
-.birthday_month {
-  margin-right: 6rem;
-}
-.user_links {
-  flex-direction: column;
-}
-.firstRow_links {
-  margin-bottom: 20px;
-}
-.user_links a {
+.registr_btn a {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: white;
   text-decoration: none;
 }
-.user_links a i {
-  font-size: 1.3rem;
+.registr_btn button:hover a {
+  color: black;
 }
-.user_about h4 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  font-weight: 400;
+.home_bg img {
+  width: 32rem;
+  height: auto;
 }
