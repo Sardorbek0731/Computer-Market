@@ -30,8 +30,8 @@
     <main id="main">
       <!----------- Home ----------->
       <section id="home">
-        <div class="home flex justify_center align_center">
-          <div class="home_nav">
+        <div class="home wf-100 flex justify_center align_center">
+          <div class="home_nav wf-100">
             <div class="container">
               <a href="index.html" class="brand flex align_center">
                 <i
@@ -76,8 +76,8 @@
           <div class="message_icon" id="message-open">
             <i class="fa-solid fa-comment-dots color--white"></i>
           </div>
-          <div class="message_item" id="message-item-text">
-            <div class="message_head flex align_center">
+          <div class="message_fixed_card" id="message-item-text">
+            <div class="message_head flex align_center wf-100">
               <div class="message_head_brand message_brand">
                 <i class="fa-solid fa-laptop" id="brand-icon"></i>
               </div>
@@ -85,40 +85,38 @@
                 <h1>Market</h1>
               </div>
               <div id="message-close" class="message_close_item">
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark color--white"></i>
               </div>
             </div>
-            <div class="message_body">
-              <div class="first_post post_item flex align_center">
+            <div class="message_body wf-100" id="message-body">
+              <div class="first_post flex align_center wf-100">
                 <div class="first_post_date post_date">
-                  <h4>14:13, 2022.09.02</h4>
+                  <h4>14:10, 2022.09.02</h4>
                 </div>
-                <div class="post_items flex">
+                <div class="post_items flex wf-100">
                   <div class="message_body_brand message_brand">
                     <i class="fa-solid fa-laptop" id="brand-icon"></i>
                   </div>
                   <div class="message_text">
                     <p>
-                      Assalomu, alaykum.<br />
-                      Hhurmatli mijoz! Siz tushinmagan<br />
-                      qismlaringiz bo'lsa savolingizni be-<br />
-                      rishingiz mumkin.<br />
+                      Assalomu alaykum.<br>
+                      Hurmatli mijoz, savolingiz bo'lsa<br>
+                      berishingiz mumkin!<br>
                     </p>
                   </div>
                 </div>
               </div>
-              <div id="create-post"></div>
-              <div id="response-post"></div>
             </div>
-            <div class="message_footer">
-              <form class="form_text_create flex align_center" id="form-create">
+            <div class="message_footer wf-100">
+              <form class="form_text_create flex align_center wf-100" id="form-create">
                 <input
                   type="text"
                   id="question-input"
-                  placeholder="Savolingiz..."
+                  class="wf-100"
+                  placeholder="Savolingizni kiriting..."
                 />
-                <button type="submit">
-                  <i class="fa-solid fa-share"></i>
+                <button type="submit" class="submit_message">
+                  <i class="fa-solid fa-share color--white"></i>
                 </button>
               </form>
             </div>
