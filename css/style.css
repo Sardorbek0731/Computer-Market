@@ -74,6 +74,7 @@ body {
   }
 }
 
+
 .please h1 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -83,6 +84,16 @@ body {
 }
 ::-webkit-scrollbar {
   width: 0;
+}
+.scroll_bar {
+  position: fixed;
+  cursor: pointer;
+  top: 0px;
+  right: 10px;
+  width:  0.2rem;
+  border-radius: 50px;
+  height: 30rem;
+  background-color: rgb(105, 105, 105);
 }
 img {
   user-select: none;
@@ -227,8 +238,8 @@ img {
   background-color: white;
   border-radius: 10px;
   justify-content: space-between;
-  padding: 1rem 1rem;
-  width: 23rem;
+  padding: 1rem 1.35rem;
+  width: 22.3rem;
 }
 .message_brand,
 .request_icon,
@@ -282,6 +293,11 @@ img {
 }
 .post_date {
   margin-bottom: 10px;
+}
+.post_date h4 {
+  color: rgb(65, 65, 65);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
 }
 .message_text {
   width: 15.5rem;
