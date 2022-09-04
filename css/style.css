@@ -85,16 +85,6 @@ body {
 ::-webkit-scrollbar {
   width: 0;
 }
-.scroll_bar {
-  position: fixed;
-  cursor: pointer;
-  top: 0px;
-  right: 10px;
-  width:  0.2rem;
-  border-radius: 50px;
-  height: 30rem;
-  background-color: rgb(105, 105, 105);
-}
 img {
   user-select: none;
 }
@@ -417,4 +407,45 @@ img {
 }
 .advantageFirst_row {
   margin-bottom: 6rem;
+}
+
+
+/* Brands */
+
+.brands {
+  padding: 150px 0;
+  width: 100%;
+  flex-direction: column;
+}
+.brands_title {
+  margin-bottom: 100px;
+}
+.brands_title h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.brands_item {
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+  margin-right: 20px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.brands_item:last-child {
+  margin-right: 0;
+}
+.brands_item:hover {
+  transform: scale(1.07);
+}
+.brands_item img {
+  width: 10rem;
+  height: auto;
+  margin-bottom: 20px;
+}
+.brand_item_title {
+  font-size: 1.1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
 }

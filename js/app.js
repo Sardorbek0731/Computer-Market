@@ -8,14 +8,6 @@ setTimeout(() => {
   profilLoader.style.display = "none";
 }, 3000);
 
-// Scroll bar
-
-const scrollBar = document.getElementById("scroll-bar");
-
-window.addEventListener("scroll", (e) => {
-  scrollBar.style.top = `${window.scrollY}px`;
-});
-
 // Message
 
 const messageOpen = document.getElementById("message-open");
