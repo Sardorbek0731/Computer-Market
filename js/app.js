@@ -8,6 +8,7 @@ setTimeout(() => {
   profilLoader.style.display = "none";
 }, 3000);
 
+
 // Message
 
 const messageOpen = document.getElementById("message-open");
@@ -74,7 +75,6 @@ formCreate.addEventListener("submit", (e) => {
 
               </div>
           </div>`;
-
 
     setTimeout(() => {
       messageBody.innerHTML += `

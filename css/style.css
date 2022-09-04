@@ -426,23 +426,23 @@ img {
 }
 .brands_item {
   flex-direction: column;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   border-radius: 20px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
   margin-right: 20px;
-  transition: all 0.4s;
   cursor: pointer;
 }
 .brands_item:last-child {
   margin-right: 0;
 }
-.brands_item:hover {
-  transform: scale(1.07);
-}
 .brands_item img {
-  width: 10rem;
+  width: 8rem;
   height: auto;
   margin-bottom: 20px;
+  transition: all 0.4s;
+}
+.brands_item:hover img {
+  transform: translateY(-0.5rem);
 }
 .brand_item_title {
   font-size: 1.1rem;

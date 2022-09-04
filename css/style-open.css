@@ -146,8 +146,9 @@ img {
   margin-bottom: 0;
 }
 .nav_item:hover {
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   background-color: rgb(45, 115, 254);
+  transform: translateX(10px);
 }
 .nav_item:hover .nav_link h1,
 .nav_item:hover .nav_link svg,
