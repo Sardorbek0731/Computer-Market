@@ -201,6 +201,7 @@ img {
   background-color: black;
   cursor: pointer;
   transition: all 0.2s ease;
+  z-index: 100;
 }
 .message_icon:hover {
   transform: scale(1.08);
@@ -222,6 +223,7 @@ img {
   border-radius: 10px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
   background-color: rgb(218, 215, 255);
+  z-index: 100;
 }
 .message_head {
   background-color: white;
@@ -468,13 +470,33 @@ img {
   border-radius: 10px;
   margin-right: 20px;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .link_item:last-child {
   margin-right: 0;
 }
 .link_item i {
+  transition: all 0.5s;
   color: rgb(102, 102, 102);
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+}
+.telegram_link:hover {
+  background-color: blue;
+}
+.youtube_link:hover {
+  background-color: red;
+}
+.github_link:hover {
+  background-color: black;
+}
+.facebook_link:hover {
+  background-color: blue;
+}
+.telegram_link:hover i,
+.youtube_link:hover i,
+.github_link:hover i,
+.facebook_link:hover i {
+  color: white;
 }
 .website_about_link ul li {
   list-style: none;
@@ -484,14 +506,20 @@ img {
   margin-bottom: 0;
 }
 .website_about_link ul li a {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   text-decoration: none;
   color: rgb(125, 125, 125);
   font-size: 1rem;
+  transition: all 0.4s;
+  margin-left: 0;
+}
+.website_about_link ul li a:hover {
+  color: black;
+  margin-left: 10px;
 }
 .website_about_link_title h3 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   font-size: 1.7rem;
   margin-bottom: 30px;
@@ -506,10 +534,11 @@ img {
 .userSend_email form label {
   position: absolute;
   left: 0;
-  top: -1.3rem;
+  top: -0.2rem;
   font-size: 1.3rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
+  transition: all 0.4s;
 }
 .userSend_email form input {
   background-color: transparent;
@@ -517,6 +546,27 @@ img {
   border-bottom: 1px solid black;
   margin-bottom: 4rem;
   outline: none;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.userSend_email form input:focus {
+  border-bottom: 1px solid rgb(125, 125, 125);
+}
+.userSend_email form input:focus ~ label {
+  top: -2rem;
+  font-size: 1rem;
+  color: rgb(125, 125, 125);
+}
+.userSend_email form input:valid {
+  border-bottom: 2px solid rgb(47, 162, 129);
+}
+.userSend_email form input:valid ~ label {
+  top: -2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(47, 162, 129);
 }
 .userSend_email form button {
   border: none;
@@ -528,7 +578,7 @@ img {
   background-color: rgb(255, 0, 93);
   user-select: none;
   font-size: 1.1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
   transition: all 0.4s;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
@@ -540,6 +590,6 @@ img {
   color: rgb(125, 125, 125);
   margin-bottom: 4rem;
   font-size: 1.1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
 }
