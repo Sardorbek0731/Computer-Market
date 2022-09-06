@@ -204,54 +204,62 @@ img {
   color: white;
 }
 
-/* End Header */
+/* Top Header */
+#top-header {
+    display: flex;
+    float: right;
+    width: 83vw;
+    height: 70px;
+}
+.topNav {
+    display: flex;
+    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 83vw;
+    height: 70px;
+    z-index: 20;
+    background: linear-gradient(to right, rgb(0, 0, 255), rgb(0, 0, 126));
+}
+.topUl {
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 30px;
+}
+.top_nav_item {
+    list-style: none;
+}
+.top_nav_link svg {
+    color: white;
+    width: 2rem;
+    height: 3rem; 
+    margin-right: 4rem;
+}
 
-/* Main */
-.home {
+
+/* Product */
+
+.product {
   float: right;
-  width: 83vw;
-  height: 100vh;
-  box-shadow: 0 0 90px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(-60deg, rgb(0, 115, 138), rgb(179, 255, 255));
-}
-.home_text {
   flex-direction: column;
-  align-items: flex-start;
-  margin-right: 60px;
+  width: 83vw;
+  position: relative;
+  padding-top: 50px;
 }
-.home_title h1 {
-  font-size: 3.2rem;
-  margin-bottom: 40px;
+.product_title {
+    position: absolute;
+    top: 2.4%;
 }
-.home_p p {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 1.5rem;
-  margin-bottom: 40px;
+.product_title h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 360;
+    color: black;
+    font-size: 2.5rem;
 }
-.registr_btn button {
-  border: 2px solid black;
-  outline: none;
-  padding: 17px 40px;
-  background-color: black;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s;
-}
-.registr_btn button:hover {
-  background-color: white;
-  transform: scale(1.05);
-}
-.registr_btn a {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: white;
-  text-decoration: none;
-}
-.registr_btn button:hover a {
-  color: black;
-}
-.home_bg img {
-  width: 32rem;
-  height: auto;
+.product_items {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(241, 241, 255);
+    border-radius: 30px 30px 0 0;
 }

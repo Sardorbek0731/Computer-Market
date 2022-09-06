@@ -93,12 +93,8 @@ formCreate.addEventListener("submit", (e) => {
                   <div class="message_text">
                       <p>
                         Valaykum, assalom.<br />
-                        Hurmatli mijoz! Savollarga javobni<br>
-                        adminimizdan olishingiz mumkin,<br>
-                        shuningdek ko'p so'raladigan sa-<br>
-                        vollar bo'limidan savolingizga ja-<br>
-                        vob topishingiz mumkin.<br><br>
-                        Admin tel: +998 94 117 3949
+                        Hurmatli mijoz, savolingiz bo'lsa<br />
+                        berishingiz mumkin!<br /> 
                       </p>
                   </div>
 
