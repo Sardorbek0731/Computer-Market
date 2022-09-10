@@ -152,41 +152,86 @@
         </ul>
         <div class="nav-bg">
           <img src="../image/Footer/footer-background.png" alt="Bg image" />
-          <a href="http://github.com/sardorbek0731"> Created by <br>
-            Sardorbek Olimov </a>
+          <a href="http://github.com/sardorbek0731">
+            Created by <br />
+            Sardorbek Olimov
+          </a>
         </div>
       </nav>
     </header>
 
+    <!----------- Register Profil ----------->
+    <section id="register-profil">
+      <div class="registerProfil flex justify_evenly align_center">
+        <div class="registerProfil_bg">
+          <img
+            src="../image/Profil/Register Profil/sales-force.svg"
+            alt="Image"
+          />
+        </div>
+        <div class="registerProfil_form">
+          <form>
+            <div class="firstName form_item">
+              <input type="text" id="firstName" required />
+              <label for="firstName">Ismingiz</label>
+            </div>
+            <div class="lastName form_item">
+              <input type="text" id="lastName" required />
+              <label for="lastName">Familiyangiz</label>
+            </div>
+            <div class="email form_item">
+              <input type="text" id="email" required />
+              <label for="email">Emailingiz</label>
+            </div>
+            <div class="age form_item">
+              <input type="number" id="age" required />
+              <label for="age">Yoshingiz</label>
+            </div>
+            <div class="message form_item">
+              <textarea id="message" cols="25" rows="3" placeholder="Ma'lumotingiz..." required></textarea>
+            </div>
+            <button id="open-profil" class="openProfil_btn" type="button">
+              Yuborish
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!----------- Profil ----------->
-    <section>
-      <div id="id"></div>
+    <section id="profil">
       <div class="profil flex justify_center align_center">
         <div class="container">
           <div id="profile-animate">
             <div class="profil_item flex" id="profil-item">
+              <div class="userFile_img">
+                <form>
+                  <input type="file" id="file-user-img" class="user_img">
+                </form>
+              </div>
               <div class="itemFirst_column">
                 <div class="item_img">
-                  <img src="../image/Profil/images.jpg" alt="Profil image" />
+                  <img
+                    src="../image/Profil/user image.png"
+                    alt="Profil image"
+                  />
                 </div>
               </div>
               <div class="itemSecond_column flex">
                 <div class="user_name">
-                  <h1 id="user-name" class="color_white">Sardorbek Olimov</h1>
+                  <h1 id="user-name" class="color_white"></h1>
                 </div>
                 <div class="user_email">
-                  <a href="#" id="user-email" class="color_white"
-                    >sardor.20070731@gmail.com</a
-                  >
+                  <a href="#" id="user-email" class="color_white"></a>
                 </div>
                 <div class="userBirthday_date flex align_center justify_evenly">
                   <div class="birthday_year birthday_item">
                     <h2 class="color_white">Tug'ilgan yili:</h2>
-                    <h3 id="birthday-year" class="color_white">2007 yil</h3>
+                    <h3 id="user-year" class="color_white"></h3>
                   </div>
-                  <div class="birthday_month birthday_item">
+                  <div class="birthday_age birthday_item">
                     <h2 class="color_white">Yoshingiz:</h2>
-                    <h3 id="birthday-month" class="color_white">15</h3>
+                    <h3 id="user-age" class="color_white"></h3>
                   </div>
                   <div class="birthday_day birthday_item">
                     <h2 class="color_white">Tug'ilgan kuni:</h2>
@@ -227,10 +272,7 @@
                 <div class="user_about">
                   <h4 class="color_white">Ma'lumotingiz :</h4>
                   <p id="user-about" class="color_white">
-                    Salom, mening ismim Sardorbek Olimov. Men 7-sonli<br />
-                    umumiy o'rta ta'lim maktabida ta'lim olaman. Menga<br />
-                    matema tika, fizika va ingliz tili fanlari juda ham
-                    yoqadi.<br />
+                    
                   </p>
                 </div>
               </div>

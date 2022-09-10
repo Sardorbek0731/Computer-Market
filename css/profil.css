@@ -22,6 +22,9 @@ body {
   align-items: center;
   width: 65rem;
 }
+#profil {
+  display: none;
+}
 .mr-10 {
   margin-right: 10px;
 }
@@ -139,7 +142,92 @@ body {
   color: white;
 }
 
-/* End Header */
+/* Register Profil */
+.registerProfil {
+  width: 83%;
+  height: 100vh;
+  float: right;
+}
+.registerProfil_bg img {
+  width: 33rem;
+  height: auto;
+}
+.registerProfil_form form {
+  padding: 6rem 6rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10rem rgba(0, 0, 0, 0.15);
+  border: 1.5px solid rgb(3, 1, 146);
+}
+.form_item {
+  position: relative;
+  margin: 2.7rem 0;
+}
+.firstName {
+  margin-top: 0;
+}
+.form_item input {
+  outline: none;
+  border: none;
+  border-bottom: 1.5px solid black;
+  padding-bottom: 0.8rem;
+  font-size: 1.05rem;
+  user-select: none;
+  width: 100%;
+}
+.form_item textarea {
+  outline: none;
+  border: 1.5px solid black;
+  font-size: 1.05rem;
+  user-select: none;
+  padding: 0.7rem;
+}
+.form_item label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.3s;
+  font-size: 1.05rem;
+  user-select: none;
+}
+.form_item input:focus {
+  border-bottom: 1.5px solid red;
+}
+.form_item input:valid {
+  border-bottom: 1.5px solid rgb(0, 0, 0);
+}
+.form_item textarea:focus {
+  border: 1.5px solid red;
+}
+.form_item textarea:valid {
+  border: 1.5px solid rgb(0, 0, 0);
+}
+.form_item input:focus ~ label,
+.form_item textarea:focus ~ label {
+  top: -1.6rem;
+  font-size: 0.8rem;
+}
+.form_item input:valid ~ label,
+.form_item textarea:valid ~ label {
+  top: -1.6rem;
+  font-size: 0.8rem;
+}
+.openProfil_btn {
+  width: 100%;
+  height: 4.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: rgb(67, 116, 212);
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 12px 12px 20px rgba(67, 115, 212, 0.7);
+  transition: all 0.4s;
+}
+.openProfil_btn:hover {
+  transform: scale(0.95);
+}
+
+/* Profil */
 
 .profil {
   float: right;
@@ -208,7 +296,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .birthday_year,
-.birthday_month {
+.birthday_age {
   margin-right: 6rem;
 }
 .user_links {
@@ -223,8 +311,21 @@ body {
 .user_links a i {
   font-size: 1.3rem;
 }
+.user_about {
+  width: 30rem;
+  overflow: auto;
+}
 .user_about h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
   font-weight: 400;
 }
+.user_img {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: rgb(62, 99, 185);
+}
+
