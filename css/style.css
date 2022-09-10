@@ -84,6 +84,15 @@ body {
 ::-webkit-scrollbar {
   width: 0;
 }
+.scroll_bar {
+  position: fixed;
+  transition: all 0.1s;
+  top: 0;
+  width: 20%;
+  height: 10px;
+  background-color: black;
+  left: 0;
+}
 img {
   user-select: none;
 }

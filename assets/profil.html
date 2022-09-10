@@ -187,9 +187,6 @@
               <input type="number" id="age" required />
               <label for="age">Yoshingiz</label>
             </div>
-            <div class="message form_item">
-              <textarea id="message" cols="25" rows="3" placeholder="Ma'lumotingiz..." required></textarea>
-            </div>
             <button id="open-profil" class="openProfil_btn" type="button">
               Yuborish
             </button>
@@ -202,79 +199,67 @@
     <section id="profil">
       <div class="profil flex justify_center align_center">
         <div class="container">
-          <div id="profile-animate">
-            <div class="profil_item flex" id="profil-item">
-              <div class="userFile_img">
-                <form>
-                  <input type="file" id="file-user-img" class="user_img">
-                </form>
+          <div class="profil_item flex justify_between" id="profil-item">
+            <div class="itemFirst_column flex justify_evenly align_center">
+              <div class="user_img_item">
+                <img
+                  id="user-img"
+                  src="../image/Profil/user image.png"
+                  alt="Profil image"
+                />
               </div>
-              <div class="itemFirst_column">
-                <div class="item_img">
-                  <img
-                    src="../image/Profil/user image.png"
-                    alt="Profil image"
-                  />
+              <div class="user_name">
+                <h1 id="user-name" class="color_white"></h1>
+              </div>
+              <div class="user_email">
+                <a href="#" id="user-email" class="color_white"></a>
+              </div>
+            </div>
+            <div class="itemSecond_column flex justify_evenly align_center">
+              <div class="userBirthday_date flex align_center justify_evenly">
+                <div class="birthday_year birthday_item">
+                  <h2 class="color_white">Tug'ilgan yili:</h2>
+                  <h3 id="user-year" class="color_white"></h3>
+                </div>
+                <div class="birthday_age birthday_item">
+                  <h2 class="color_white">Yoshingiz:</h2>
+                  <h3 id="user-age" class="color_white"></h3>
                 </div>
               </div>
-              <div class="itemSecond_column flex">
-                <div class="user_name">
-                  <h1 id="user-name" class="color_white"></h1>
-                </div>
-                <div class="user_email">
-                  <a href="#" id="user-email" class="color_white"></a>
-                </div>
-                <div class="userBirthday_date flex align_center justify_evenly">
-                  <div class="birthday_year birthday_item">
-                    <h2 class="color_white">Tug'ilgan yili:</h2>
-                    <h3 id="user-year" class="color_white"></h3>
+              <div class="user_links">
+                <div class="firstRow_links flex justify_between">
+                  <div class="user_telegram_link">
+                    <a href="#" id="user-link--t.me" class="color_white">
+                      <i class="fa-brands fa-telegram mr-10"></i>
+                      Sardorbek_0731
+                    </a>
                   </div>
-                  <div class="birthday_age birthday_item">
-                    <h2 class="color_white">Yoshingiz:</h2>
-                    <h3 id="user-age" class="color_white"></h3>
-                  </div>
-                  <div class="birthday_day birthday_item">
-                    <h2 class="color_white">Tug'ilgan kuni:</h2>
-                    <h3 id="birthday-day" class="color_white">Iyul, 31</h3>
-                  </div>
-                </div>
-                <div class="user_links">
-                  <div class="firstRow_links flex justify_between">
-                    <div class="user_telegram_link">
-                      <a href="#" id="user-link--t.me" class="color_white">
-                        <i class="fa-brands fa-telegram mr-10"></i>
-                        Sardorbek_0731
-                      </a>
-                    </div>
 
-                    <div class="user-addres_link">
-                      <a href="#" id="user-link--youtube" class="color_white">
-                        <i class="fa-brands fa-youtube mr-10"></i>
-                        SardorbekOlimov2007
-                      </a>
-                    </div>
-                  </div>
-                  <div class="secondRow_links flex justify_between">
-                    <div class="user_telegram_link">
-                      <a href="#" id="user-link--twitter" class="color_white">
-                        <i class="fa-brands fa-square-twitter mr-10"></i>
-                        sardorbek20070731
-                      </a>
-                    </div>
-                    <div class="user-addres_link">
-                      <a href="#" id="user-link--address" class="color_white">
-                        <i class="fa-solid fa-location-dot mr-10"></i>
-                        Uzbekistan
-                      </a>
-                    </div>
+                  <div class="user-addres_link">
+                    <a href="#" id="user-link--youtube" class="color_white">
+                      <i class="fa-brands fa-youtube mr-10"></i>
+                      SardorbekOlimov2007
+                    </a>
                   </div>
                 </div>
-                <div class="user_about">
-                  <h4 class="color_white">Ma'lumotingiz :</h4>
-                  <p id="user-about" class="color_white">
-                    
-                  </p>
+                <div class="secondRow_links flex justify_between">
+                  <div class="user_telegram_link">
+                    <a href="#" id="user-link--twitter" class="color_white">
+                      <i class="fa-brands fa-square-twitter mr-10"></i>
+                      sardorbek20070731
+                    </a>
+                  </div>
+                  <div class="user-addres_link">
+                    <a href="#" id="user-link--address" class="color_white">
+                      <i class="fa-solid fa-location-dot mr-10"></i>
+                      Uzbekistan
+                    </a>
+                  </div>
                 </div>
+              </div>
+              <div class="user_about">
+                <h4 class="color_white">Ma'lumotingiz :</h4>
+                <p id="user-about" class="color_white"></p>
               </div>
             </div>
           </div>

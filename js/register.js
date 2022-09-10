@@ -1,7 +1,6 @@
 const plusBtn = document.querySelector(".plus");
 const containerSecond = document.querySelector(".container_second");
 const xMark = document.querySelector(".xMark");
-const btnFirst = document.querySelector(".btn-first");
 const plusIcon = document.querySelector("#plusIcon");
 
 plusBtn.addEventListener("click", () => {

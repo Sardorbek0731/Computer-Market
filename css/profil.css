@@ -174,13 +174,6 @@ body {
   user-select: none;
   width: 100%;
 }
-.form_item textarea {
-  outline: none;
-  border: 1.5px solid black;
-  font-size: 1.05rem;
-  user-select: none;
-  padding: 0.7rem;
-}
 .form_item label {
   position: absolute;
   left: 0;
@@ -195,19 +188,11 @@ body {
 .form_item input:valid {
   border-bottom: 1.5px solid rgb(0, 0, 0);
 }
-.form_item textarea:focus {
-  border: 1.5px solid red;
-}
-.form_item textarea:valid {
-  border: 1.5px solid rgb(0, 0, 0);
-}
-.form_item input:focus ~ label,
-.form_item textarea:focus ~ label {
+.form_item input:focus ~ label {
   top: -1.6rem;
   font-size: 0.8rem;
 }
-.form_item input:valid ~ label,
-.form_item textarea:valid ~ label {
+.form_item input:valid ~ label {
   top: -1.6rem;
   font-size: 0.8rem;
 }
@@ -242,26 +227,29 @@ body {
 }
 .profil_item {
   width: 100%;
-  height: 70vh;
+}
+.itemFirst_column,
+.itemSecond_column {
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.6);
   background-color: rgb(0, 23, 56);
-  border-radius: 20px;
-  box-shadow: 0 0 70px rgba(0, 0, 0, 0.5);
-  padding: 3rem 3rem;
+  height: 70vh;
 }
 .itemFirst_column {
-  margin-right: 7rem;
+  width: 35%;
 }
-.item_img {
-  width: 15rem;
-  height: 15rem;
+.itemSecond_column {
+  width: 60%;
 }
-.item_img img {
+.user_img_item {
+  width: 13rem;
+  height: 13rem;
+}
+.user_img_item img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
-}
-.itemSecond_column {
-  flex-direction: column;
 }
 .user_name,
 .user_email,
@@ -271,10 +259,10 @@ body {
 }
 .user_name h1,
 .user_email a {
-  font-weight: 500;
+  font-weight: 400;
 }
 .user_name h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .user_email a {
   text-decoration: none;
@@ -295,8 +283,7 @@ body {
   font-weight: 400;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.birthday_year,
-.birthday_age {
+.birthday_year {
   margin-right: 6rem;
 }
 .user_links {
@@ -320,12 +307,3 @@ body {
   margin-bottom: 10px;
   font-weight: 400;
 }
-.user_img {
-  width: 10rem;
-  height: 3rem;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-  background-color: rgb(62, 99, 185);
-}
-

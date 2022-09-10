@@ -11,6 +11,7 @@ const openProfil = document.getElementById("open-profil");
 
 // Profil Item
 const profil = document.getElementById("profil");
+const userImg = document.getElementById("user-img");
 const userName = document.getElementById("user-name");
 const userEmail = document.getElementById("user-email");
 const userAbout = document.getElementById("user-about");
@@ -19,7 +20,7 @@ const userYear = document.getElementById("user-year");
 
 let now = new Date();
 
-let year = now.getFullYear()
+let year = now.getFullYear();
 
 openProfil.addEventListener("click", (e) => {
   e.preventDefault();
