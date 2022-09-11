@@ -31,6 +31,9 @@ body {
 .color--black {
   color: black;
 }
+.hidden {
+  display: none;
+}
 .flex {
   display: flex;
 }
@@ -274,7 +277,9 @@ body {
   padding: 1rem 1rem;
 }
 .userName_title h1,
-.userGoogle_title h1 {
+.userName_title input,
+.userGoogle_title h1,
+.userGoogle_title input {
   font-size: 1.7rem;
   font-weight: 400;
   margin-bottom: 15px;
@@ -282,7 +287,11 @@ body {
 #user-firstName,
 #user-lastName,
 #user-email,
-#user-number {
+#user-number,
+#user-create-firstName,
+#user-create-lastName,
+#user-create-email,
+#user-create-number {
   display: flex;
   justify-content: flex-start;
   padding: 0 1rem;
@@ -299,7 +308,8 @@ body {
   font-size: 1rem;
   user-select: none;
 }
-.create_settings form button {
+.create_settings form button,
+.createUser_btn form button {
   padding: 1.5rem 1.5rem;
   cursor: pointer;
   border-radius: 10px;
@@ -311,6 +321,39 @@ body {
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
 }
-.create_settings form button:hover {
+.create_settings form button:hover,
+.createUser_btn form button:hover {
   transform: scale(0.95);
+}
+.settings_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+.createUser_about {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  width: 40rem;
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.openedCreate_settings {
+  background-color: white;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  height: 50vh;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
 }
