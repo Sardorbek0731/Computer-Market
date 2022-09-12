@@ -172,20 +172,32 @@
         <div class="registerProfil_form">
           <form>
             <div class="firstName form_item">
-              <input type="text" id="firstName" required />
+              <input type="text" id="firstName" autocomplete="off" required />
               <label for="firstName">Ismingiz</label>
+              <div class="show_message hidden" id="name-error">
+                <p>Iltimos, ismingizni kiriting...</p>
+              </div>
             </div>
             <div class="lastName form_item">
-              <input type="text" id="lastName" required />
+              <input type="text" id="lastName" autocomplete="off" required />
               <label for="lastName">Familiyangiz</label>
+              <div class="show_message hidden" id="lastName-error">
+                <p>Iltimos, familiyangizni kiriting...</p>
+              </div>
             </div>
             <div class="email form_item">
-              <input type="text" id="email" required />
+              <input type="text" id="email" autocomplete="off" required />
               <label for="email">Emailingiz</label>
+              <div class="show_message hidden" id="email-error">
+                <p>Iltimos, emailingizni kiriting...</p>
+              </div>
             </div>
             <div class="number form_item">
-              <input type="text" id="number" required />
+              <input type="text" id="number" autocomplete="off" required />
               <label for="number">Raqamingiz</label>
+              <div class="show_message hidden" id="number-error">
+                <p>Iltimos, raqamingizni kiriting...</p>
+              </div>
             </div>
             <button id="open-profil" class="openProfil_btn" type="button">
               Yuborish
@@ -255,7 +267,7 @@
                 <div class="create_settings">
                   <form>
                     <button type="button" id="create-settings">
-                     O'zgartirish
+                      O'zgartirish
                     </button>
                   </form>
                 </div>
@@ -267,51 +279,75 @@
                   </form>
                 </div>
               </div>
-              <div class="settings_overlay hidden" id="settings-overlay"></div>
-              <div class="createUser_about hidden" id="create-user-about">
-                <div
-                  class="openedCreate_settings flex justify_center align_center"
-                  id="opened-user-settings"
-                >
-                  <div class="user_names flex justify_between align_center">
-                    <div class="user_firstname">
-                      <div class="userFirstName_title userName_title">
-                        <h1>Ism</h1>
-                      </div>
-                      <form>
-                        <input type="text" id="user-create-firstName" />
-                      </form>
-                    </div>
-                    <div class="user_lastName">
-                      <div class="userLastName_title userName_title">
-                        <h1>Familiya</h1>
-                      </div>
-                      <input type="text" id="user-create-lastName" />
-                    </div>
+              <div class="profil_settings hidden" id="profil-settings">
+                <div class="settings_overlay"></div>
+                <div class="createUser_about flex">
+                  <div class="profilSettings_close">
+                    <form>
+                      <button type="button" class="flex align_center justify_center" id="close-profil-setting">
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                    </form>
                   </div>
                   <div
-                    class="userGoogle_adress flex justify_between align_center"
+                    class="openedCreate_settings flex justify_center align_center"
                   >
-                    <div class="user_email">
-                      <div class="userEmail_title userGoogle_title">
-                        <h1>Email</h1>
+                    <div class="user_names flex justify_between align_center">
+                      <div class="user_firstname">
+                        <div class="userFirstName_title userName_title">
+                          <h1>Ism</h1>
+                        </div>
+                        <form>
+                          <input
+                            type="text"
+                            id="user-create-firstName"
+                            autocomplete="off"
+                          />
+                        </form>
                       </div>
-                      <input type="text" id="user-create-email" />
+                      <div class="user_lastName">
+                        <div class="userLastName_title userName_title">
+                          <h1>Familiya</h1>
+                        </div>
+                        <input
+                          type="text"
+                          id="user-create-lastName"
+                          autocomplete="off"
+                        />
+                      </div>
                     </div>
-                    <div class="user_number">
-                      <div class="userNumber_title userGoogle_title">
-                        <h1>Raqamingiz</h1>
+                    <div
+                      class="userGoogle_adress flex justify_between align_center"
+                    >
+                      <div class="user_email">
+                        <div class="userEmail_title userGoogle_title">
+                          <h1>Email</h1>
+                        </div>
+                        <input
+                          type="text"
+                          id="user-create-email"
+                          autocomplete="off"
+                        />
                       </div>
-                      <input type="text" id="user-create-number" />
+                      <div class="user_number">
+                        <div class="userNumber_title userGoogle_title">
+                          <h1>Raqamingiz</h1>
+                        </div>
+                        <input
+                          type="text"
+                          id="user-create-number"
+                          autocomplete="off"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="createUser_btn">
-                  <form>
-                    <button type="button" id="user-about-save">
-                      Ma'lumotlarni saqlash
-                    </button>
-                  </form>
+                  <div class="createUser_btn">
+                    <form>
+                      <button type="button" id="user-about-save">
+                        Ma'lumotlarni saqlash
+                      </button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>

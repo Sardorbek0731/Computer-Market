@@ -9,6 +9,37 @@ const number = document.getElementById("number");
 const message = document.getElementById("message");
 const openProfil = document.getElementById("open-profil");
 
+// Show message
+
+const nameError = document.getElementById("name-error");
+const lastNameError = document.getElementById("lastName-error");
+const emailError = document.getElementById("email-error");
+const numberError = document.getElementById("number-error");
+
+openProfil.addEventListener("click", (e) => {
+  e.preventDefault();
+  setTimeout(() => {
+    if (firstName.value.length === 0) {
+      nameError.classList.remove("hidden");
+    }
+  }, 700);
+  setTimeout(() => {
+    if (lastName.value.length === 0) {
+      lastNameError.classList.remove("hidden");
+    }
+  }, 1400);
+  setTimeout(() => {
+    if (email.value.length === 0) {
+      emailError.classList.remove("hidden");
+    }
+  }, 2100);
+  setTimeout(() => {
+    if (number.value.length === 0) {
+      numberError.classList.remove("hidden");
+    }
+  }, 2800);
+});
+
 // Profil Item
 const profil = document.getElementById("profil");
 const userName = document.getElementById("user-name");
@@ -109,15 +140,16 @@ registerProfil.style.display = noneTodos;
 
 // Create User Settings
 const createSettingsBtn = document.getElementById("create-settings");
-const settingsOverlay = document.getElementById("settings-overlay");
-const createUserAbout = document.getElementById("create-user-about");
+const profilSettings = document.getElementById("profil-settings");
 const userAboutSaveBtn = document.getElementById("user-about-save");
 const deleteSettings = document.getElementById("delete-settings");
+const closeProfilSetting = document.getElementById("close-profil-setting");
 
 createSettingsBtn.addEventListener("click", () => {
-  settingsOverlay.classList.remove("hidden");
-  createUserAbout.classList.remove("hidden");
-  createUserAbout.style.display = "flex";
+  profilSettings.classList.remove("hidden");
+});
+closeProfilSetting.addEventListener("click", () => {
+  profilSettings.classList.add("hidden");
 });
 
 userAboutSaveBtn.addEventListener("click", (e) => {
@@ -154,9 +186,7 @@ userAboutSaveBtn.addEventListener("click", (e) => {
   userEmail.innerHTML = seetingEmailTodos;
   userNumber.innerHTML = seetingNumberTodos;
   userName.innerHTML = `${seetingNameTodos} ${seetingLastTodos}`;
-  settingsOverlay.classList.add("hidden");
-  createUserAbout.classList.add("hidden");
-  createUserAbout.style.display = "none";
+  profilSettings.classList.add("hidden");
 });
 
 let seetingNameTodos = JSON.parse(localStorage.getItem("settingFirstName"))
@@ -180,9 +210,7 @@ userLastName.innerHTML = seetingLastTodos;
 userEmail.innerHTML = seetingEmailTodos;
 userNumber.innerHTML = seetingNumberTodos;
 userName.innerHTML = `${seetingNameTodos} ${seetingLastTodos}`;
-settingsOverlay.classList.add("hidden");
-createUserAbout.classList.add("hidden");
-createUserAbout.style.display = "none";
+profilSettings.classList.add("hidden");
 
 userCreateFirstName.value = seetingNameTodos;
 userCreateLastName.value = seetingLastTodos;

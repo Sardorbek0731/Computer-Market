@@ -163,7 +163,7 @@ body {
 }
 .form_item {
   position: relative;
-  margin: 2.7rem 0;
+  margin: 3.5rem 0;
 }
 .firstName {
   margin-top: 0;
@@ -213,6 +213,12 @@ body {
 }
 .openProfil_btn:hover {
   transform: scale(0.95);
+}
+.show_message p {
+  position: absolute;
+  bottom: -1.8rem;
+  color: red;
+  font-size: 1rem;
 }
 
 /* Profil */
@@ -311,14 +317,14 @@ body {
 .create_settings form button,
 .createUser_btn form button,
 .deleteProfil_user form button {
-  padding: 1rem 1rem;
+  padding: 1.4rem 1.2rem;
   cursor: pointer;
   border-radius: 10px;
   background-color: #4c7faf;
   outline: none;
   border: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
 }
@@ -363,5 +369,18 @@ body {
   border-radius: 15px;
   height: 50vh;
   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
-  margin-bottom: 2rem;
+  margin: 3rem 0;
+}
+.profilSettings_close form button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: red;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.profilSettings_close form button i {
+  color: white;
+  font-size: 1.7rem;
 }
