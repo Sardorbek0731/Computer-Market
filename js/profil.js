@@ -118,3 +118,72 @@ createSettingsBtn.addEventListener("click", () => {
   createUserAbout.classList.remove("hidden");
   createUserAbout.style.display = "flex";
 });
+
+userAboutSaveBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.setItem(
+    "settingFirstName",
+    JSON.stringify(userCreateFirstName.value)
+  );
+  localStorage.setItem(
+    "settingLastName",
+    JSON.stringify(userCreateLastName.value)
+  );
+  localStorage.setItem("settingEmail", JSON.stringify(userCreateEmail.value));
+  localStorage.setItem("settingNumber", JSON.stringify(userCreateNumber.value));
+
+  let seetingNameTodos = JSON.parse(localStorage.getItem("settingFirstName"))
+    ? JSON.parse(localStorage.getItem("settingFirstName"))
+    : nameTodos;
+
+  let seetingLastTodos = JSON.parse(localStorage.getItem("settingLastName"))
+    ? JSON.parse(localStorage.getItem("settingLastName"))
+    : lastTodos;
+
+  let seetingEmailTodos = JSON.parse(localStorage.getItem("settingEmail"))
+    ? JSON.parse(localStorage.getItem("settingEmail"))
+    : emailTodos;
+
+  let seetingNumberTodos = JSON.parse(localStorage.getItem("settingNumber"))
+    ? JSON.parse(localStorage.getItem("settingNumber"))
+    : numberTodos;
+
+  userFirstName.innerHTML = seetingNameTodos;
+  userLastName.innerHTML = seetingLastTodos;
+  userEmail.innerHTML = seetingEmailTodos;
+  userNumber.innerHTML = seetingNumberTodos;
+  userName.innerHTML = `${seetingNameTodos} ${seetingLastTodos}`;
+  settingsOverlay.classList.add("hidden");
+  createUserAbout.classList.add("hidden");
+  createUserAbout.style.display = "none";
+});
+
+let seetingNameTodos = JSON.parse(localStorage.getItem("settingFirstName"))
+  ? JSON.parse(localStorage.getItem("settingFirstName"))
+  : nameTodos;
+
+let seetingLastTodos = JSON.parse(localStorage.getItem("settingLastName"))
+  ? JSON.parse(localStorage.getItem("settingLastName"))
+  : lastTodos;
+
+let seetingEmailTodos = JSON.parse(localStorage.getItem("settingEmail"))
+  ? JSON.parse(localStorage.getItem("settingEmail"))
+  : emailTodos;
+
+let seetingNumberTodos = JSON.parse(localStorage.getItem("settingNumber"))
+  ? JSON.parse(localStorage.getItem("settingNumber"))
+  : numberTodos;
+
+userFirstName.innerHTML = seetingNameTodos;
+userLastName.innerHTML = seetingLastTodos;
+userEmail.innerHTML = seetingEmailTodos;
+userNumber.innerHTML = seetingNumberTodos;
+userName.innerHTML = `${seetingNameTodos} ${seetingLastTodos}`;
+settingsOverlay.classList.add("hidden");
+createUserAbout.classList.add("hidden");
+createUserAbout.style.display = "none";
+
+userCreateFirstName.value = seetingNameTodos;
+userCreateLastName.value = seetingLastTodos;
+userCreateEmail.value = seetingEmailTodos;
+userCreateNumber.value = seetingNumberTodos;
