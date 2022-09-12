@@ -112,6 +112,7 @@ const createSettingsBtn = document.getElementById("create-settings");
 const settingsOverlay = document.getElementById("settings-overlay");
 const createUserAbout = document.getElementById("create-user-about");
 const userAboutSaveBtn = document.getElementById("user-about-save");
+const deleteSettings = document.getElementById("delete-settings");
 
 createSettingsBtn.addEventListener("click", () => {
   settingsOverlay.classList.remove("hidden");
@@ -187,3 +188,9 @@ userCreateFirstName.value = seetingNameTodos;
 userCreateLastName.value = seetingLastTodos;
 userCreateEmail.value = seetingEmailTodos;
 userCreateNumber.value = seetingNumberTodos;
+
+deleteSettings.addEventListener("click", () => {
+  profil.style.display = "none";
+  registerProfil.style.display = "block";
+  localStorage.clear();
+});
