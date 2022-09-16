@@ -466,8 +466,8 @@ img {
   background-color: rgb(214, 220, 255);
   flex-direction: column;
 }
-.footer_brand {
-  margin-bottom: 50px;
+.footer_brand, .footer_links {
+  margin-bottom: 3.5rem;
 }
 .link_item {
   display: flex;
@@ -489,7 +489,8 @@ img {
   color: rgb(102, 102, 102);
   font-size: 1.7rem;
 }
-.telegram_link:hover {
+.telegram_link:hover,
+.facebook_link:hover {
   background-color: blue;
 }
 .youtube_link:hover {
@@ -498,14 +499,18 @@ img {
 .github_link:hover {
   background-color: black;
 }
-.facebook_link:hover {
-  background-color: blue;
-}
 .telegram_link:hover i,
 .youtube_link:hover i,
 .github_link:hover i,
 .facebook_link:hover i {
   color: white;
+}
+.by h1, .by h1 a {
+  text-decoration: none;
+  color: rgb(125, 125, 125);
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 350;
 }
 .website_about_link ul li {
   list-style: none;
@@ -530,8 +535,8 @@ img {
 .website_about_link_title h3 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
-  font-size: 1.7rem;
-  margin-bottom: 30px;
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
 }
 .userSend_email {
   flex-direction: column;
@@ -553,7 +558,7 @@ img {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid black;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   outline: none;
   padding-bottom: 1rem;
   font-size: 1.1rem;
@@ -569,35 +574,36 @@ img {
   color: rgb(125, 125, 125);
 }
 .userSend_email form input:valid {
-  border-bottom: 2px solid rgb(47, 162, 129);
+  border-bottom: 1px solid rgb(47, 162, 129);
 }
 .userSend_email form input:valid ~ label {
   top: -2rem;
-  font-weight: 500;
   font-size: 1rem;
   color: rgb(47, 162, 129);
 }
 .userSend_email form button {
   border: none;
-  width: 10rem;
-  height: 4.5rem;
-  border-radius: 15px;
+  width: 8.5rem;
+  height: 3.9rem;
+  border-radius: 7px;
   color: white;
   outline: none;
-  background-color: rgb(255, 0, 93);
+  background-color: rgb(255, 0, 60);
   user-select: none;
   font-size: 1.1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
-  transition: all 0.4s;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+  transition: all 0.4s; 
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgb(255, 0, 60);
 }
 .userSend_email form button:hover {
-  transform: scale(1.06);
+  background-color: white;
+  color: rgb(255, 0, 60);
 }
 .sendEmail_title h2 {
   color: rgb(125, 125, 125);
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
   font-size: 1.1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;

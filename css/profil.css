@@ -28,6 +28,9 @@ body {
 .mr-10 {
   margin-right: 10px;
 }
+.mb-07 {
+  margin-bottom: 0.7rem;
+}
 .color--black {
   color: black;
 }
@@ -227,7 +230,8 @@ body {
   float: right;
   width: 83%;
   height: 100vh;
-  background-color: white;
+  background: url(../image/Profil/profil_bg.jpg) no-repeat center;
+  background-size: cover;
 }
 #profile-animate {
   will-change: transform;
@@ -237,31 +241,17 @@ body {
 .profil_item {
   width: 100%;
 }
-.userAbouts_second {
-  flex-direction: column;
-  align-items: flex-start;
-  height: 75vh;
-  width: 60%;
-}
-.userAbouts_second_title h1 {
-  font-weight: 400;
-  font-size: 1.8rem;
-}
 .itemFirst_column,
 .itemSecond_column {
   flex-direction: column;
-  border-radius: 15px;
-  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
-  background-color: rgb(255, 255, 255);
+  border-radius: 40px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
   height: 75vh;
-  border: 1px solid rgb(0, 0, 0);
 }
 .itemFirst_column {
   width: 35%;
-}
-.itemSecond_column {
-  width: 100%;
-  height: 45vh;
 }
 .user_img_item {
   width: 13rem;
@@ -273,103 +263,99 @@ body {
   height: 100%;
 }
 .user_name h1 {
-  font-size: 2rem;
   font-weight: 350;
+  font-size: 2rem;
 }
 
-.user_names,
+.userAbouts_second {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+.itemSecond_column {
+  width: 100%;
+  height: 62vh;
+}
+.userAbouts_second_title h1 {
+  font-weight: 350;
+  padding-left: 2rem;
+  font-size: 1.8rem;
+}
+.user_about_items {
+  flex-direction: column;
+  width: 100%;
+}
+.user_card_names,
 .userGoogle_adress {
-  width: 85%;
-  padding: 1rem 1rem;
+  width: 90%;
 }
-.userName_title h1,
-.userName_title input,
-.userGoogle_title h1,
-.userGoogle_title input {
-  font-size: 1.7rem;
-  font-weight: 400;
-  margin-bottom: 15px;
+.user_card_names {
+  margin-bottom: 3rem;
 }
-#user-firstName,
-#user-lastName,
-#user-email,
-#user-number,
-#user-create-firstName,
-#user-create-lastName,
-#user-create-email,
-#user-create-number {
-  display: flex;
-  justify-content: flex-start;
-  padding: 0 1rem;
-  align-items: center;
-  border: 1px solid rgb(0, 0, 0);
-  width: 13.5rem;
-  height: 3.5rem;
-  border-radius: 7px;
+.user_about_card {
+  background-color: rgb(50, 100, 224);
+  width: 14rem;
+  padding: 1rem;
+  border-radius: 15px;
 }
-.user_names h1,
-.user_email h1,
-.user_number h1 {
-  font-weight: 400;
-  font-size: 1rem;
-  user-select: none;
+.user_about_card h1 {
+  font-weight: 350;
+  font-size: 1.1rem;
 }
-.create_settings form button,
-.createUser_btn form button,
-.deleteProfil_user form button {
-  padding: 1.4rem 1.2rem;
+.userProfil_btns button,
+.createUser_btn button {
   cursor: pointer;
-  border-radius: 10px;
-  background-color: #4c7faf;
-  outline: none;
   border: none;
+  border-radius: 50px;
   color: white;
   font-size: 1.1rem;
-  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s;
+  padding: 1.4rem 1.7rem;
+  transition: all 0.5s;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+.create_settings form button {
+  margin-right: 1.5rem;
+}
+.create_settings form button,
+.createUser_btn form button {
+  background-color: rgb(0, 121, 103);
 }
 .deleteProfil_user form button {
   background-color: red;
 }
-.create_settings form button:hover,
-.createUser_btn form button:hover,
-.deleteProfil_user form button:hover {
+.userProfil_btns button:hover,
+.createUser_btn button:hover {
   transform: scale(0.95);
 }
-.create_settings {
-  margin-right: 2rem;
+
+.createUser_about {
+  align-items: flex-end;
+  flex-direction: column;
+  position: fixed;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.newProfil_card {
+  flex-direction: column;
+  background-color: white;
+  border-radius: 30px;
+  padding: 6rem 6rem;
 }
 .settings_overlay {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(20px);
   width: 100%;
   height: 100vh;
   z-index: 10;
 }
-.createUser_about {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 15;
-  width: 40rem;
-  height: 100vh;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-}
-.openedCreate_settings {
-  background-color: white;
-  flex-direction: column;
-  width: 100%;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 15px;
-  height: 50vh;
-  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
-  margin: 3rem 0;
+.profilSettings_close,
+.newProfil_card {
+  margin-bottom: 2rem;
 }
 .profilSettings_close form button {
   width: 4rem;
@@ -383,4 +369,31 @@ body {
 .profilSettings_close form button i {
   color: white;
   font-size: 1.7rem;
+}
+
+.newUser_name {
+  margin-bottom: 5rem;
+}
+.newUser_firstname,
+.newUser_email {
+  margin-right: 5rem;
+}
+.newUserName h1,
+.newUsers_link h1 {
+  color: black;
+  font-weight: 370;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+.newUser_name input,
+.newUsers_links input {
+  padding-bottom: 0.6rem;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid blue;
+}
+.newUser_name input:focus,
+.newUsers_links input:focus {
+  border-bottom: 2px solid rgb(225, 53, 0);
 }

@@ -66,8 +66,6 @@ openProfil.addEventListener("click", (e) => {
     localStorage.setItem("lastName", JSON.stringify(lastName.value));
     localStorage.setItem("email", JSON.stringify(email.value));
     localStorage.setItem("number", JSON.stringify(number.value));
-    localStorage.setItem("none", JSON.stringify("none"));
-    localStorage.setItem("block", JSON.stringify("block"));
 
     let nameTodos = JSON.parse(localStorage.getItem("firstName"))
       ? JSON.parse(localStorage.getItem("firstName"))
@@ -85,13 +83,17 @@ openProfil.addEventListener("click", (e) => {
       ? JSON.parse(localStorage.getItem("number"))
       : [];
 
+    localStorage.setItem("none", JSON.stringify("none"));
+    localStorage.setItem("block", JSON.stringify("block"));
+
+    profil.style.display = "block";
+    registerProfil.style.display = "none";
+
     userFirstName.innerHTML = nameTodos;
     userLastName.innerHTML = lastTodos;
     userEmail.innerHTML = emailTodos;
     userNumber.innerHTML = numberTodos;
     userName.innerHTML = `${nameTodos} ${lastTodos}`;
-    profil.style.display = "block";
-    registerProfil.style.display = "none";
 
     userCreateFirstName.value = nameTodos;
     userCreateLastName.value = lastTodos;

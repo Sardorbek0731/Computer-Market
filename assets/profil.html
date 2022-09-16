@@ -216,50 +216,54 @@
               <div class="user_img_item">
                 <img
                   id="user-img"
-                  src="../image/Profil/user image.png"
+                  src="../image/Profil/user.png"
                   alt="Profil image"
                 />
               </div>
               <div class="user_name">
-                <h1 id="user-name"></h1>
+                <h1 id="user-name" class="color_white"></h1>
               </div>
             </div>
             <div class="userAbouts_second flex justify_between">
-              <div class="userAbouts_second_title">
-                <h1>
-                  Foydalanuvchi shaxsiy <br />
-                  ma'lumotlari
-                </h1>
-              </div>
-              <div class="itemSecond_column flex justify_evenly align_center">
-                <div class="user_names flex justify_between align_center">
-                  <div class="user_firstname">
-                    <div class="userFirstName_title userName_title">
-                      <h1>Ism</h1>
-                    </div>
-                    <h1 id="user-firstName"></h1>
-                  </div>
-                  <div class="user_lastName">
-                    <div class="userLastName_title userName_title">
-                      <h1>Familiya</h1>
-                    </div>
-                    <h1 id="user-lastName"></h1>
-                  </div>
+              <div class="itemSecond_column flex justify_evenly">
+                <div class="userAbouts_second_title">
+                  <h1 class="color_white">
+                    Foydalanuvchi shaxsiy <br />
+                    ma'lumotlari
+                  </h1>
                 </div>
-                <div
-                  class="userGoogle_adress flex justify_between align_center"
-                >
-                  <div class="user_email">
-                    <div class="userEmail_title userGoogle_title">
-                      <h1>Email</h1>
+                <div class="user_about_items flex align_center justify_center">
+                  <div
+                    class="user_card_names flex justify_between align_center"
+                  >
+                    <div class="user_firstname user_about_card">
+                      <div class="userFirstName_title userName_title">
+                        <h1 class="color_white mb-07">Ism:</h1>
+                      </div>
+                      <h1 id="user-firstName" class="color_white"></h1>
                     </div>
-                    <h1 id="user-email"></h1>
+                    <div class="user_lastName user_about_card">
+                      <div class="userLastName_title userName_title">
+                        <h1 class="color_white mb-07">Familiya:</h1>
+                      </div>
+                      <h1 id="user-lastName" class="color_white"></h1>
+                    </div>
                   </div>
-                  <div class="user_number">
-                    <div class="userNumber_title userGoogle_title">
-                      <h1>Raqamingiz</h1>
+                  <div
+                    class="userGoogle_adress flex justify_between align_center"
+                  >
+                    <div class="user_email user_about_card">
+                      <div class="userEmail_title userGoogle_title">
+                        <h1 class="color_white mb-07">Email:</h1>
+                      </div>
+                      <h1 id="user-email" class="color_white"></h1>
                     </div>
-                    <h1 id="user-number"></h1>
+                    <div class="user_number user_about_card">
+                      <div class="userNumber_title userGoogle_title">
+                        <h1 class="color_white mb-07">Raqamingiz:</h1>
+                      </div>
+                      <h1 id="user-number" class="color_white"></h1>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -284,29 +288,29 @@
                 <div class="createUser_about flex">
                   <div class="profilSettings_close">
                     <form>
-                      <button type="button" class="flex align_center justify_center" id="close-profil-setting">
+                      <button
+                        type="button"
+                        class="flex align_center justify_center"
+                        id="close-profil-setting"
+                      >
                         <i class="fa-solid fa-xmark"></i>
                       </button>
                     </form>
                   </div>
-                  <div
-                    class="openedCreate_settings flex justify_center align_center"
-                  >
-                    <div class="user_names flex justify_between align_center">
-                      <div class="user_firstname">
-                        <div class="userFirstName_title userName_title">
+                  <div class="newProfil_card flex justify_center align_center">
+                    <div class="newUser_name flex justify_between align_center">
+                      <div class="newUser_firstname">
+                        <div class="userFirstName_title newUserName">
                           <h1>Ism</h1>
                         </div>
-                        <form>
-                          <input
-                            type="text"
-                            id="user-create-firstName"
-                            autocomplete="off"
-                          />
-                        </form>
+                        <input
+                          type="text"
+                          id="user-create-firstName"
+                          autocomplete="off"
+                        />
                       </div>
-                      <div class="user_lastName">
-                        <div class="userLastName_title userName_title">
+                      <div class="newUser_lastName">
+                        <div class="userLastName_title newUserName">
                           <h1>Familiya</h1>
                         </div>
                         <input
@@ -317,10 +321,10 @@
                       </div>
                     </div>
                     <div
-                      class="userGoogle_adress flex justify_between align_center"
+                      class="newUsers_links flex justify_between align_center"
                     >
-                      <div class="user_email">
-                        <div class="userEmail_title userGoogle_title">
+                      <div class="newUser_email">
+                        <div class="userEmail_title newUsers_link">
                           <h1>Email</h1>
                         </div>
                         <input
@@ -329,8 +333,8 @@
                           autocomplete="off"
                         />
                       </div>
-                      <div class="user_number">
-                        <div class="userNumber_title userGoogle_title">
+                      <div class="newUser_number">
+                        <div class="userNumber_title newUsers_link">
                           <h1>Raqamingiz</h1>
                         </div>
                         <input
