@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 65rem;
+  width: 70rem;
 }
 #profil {
   display: none;
@@ -244,23 +244,27 @@ body {
 .itemFirst_column,
 .itemSecond_column {
   flex-direction: column;
-  border-radius: 40px;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(25px);
-  height: 75vh;
+  border-radius: 10px;
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  height: 80vh;
 }
 .itemFirst_column {
   width: 35%;
 }
 .user_img_item {
-  width: 13rem;
-  height: 13rem;
+  width: 17rem;
+  height: auto;
 }
 .user_img_item img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+.user_name {
+  text-align: center;
 }
 .user_name h1 {
   font-weight: 350;
@@ -270,11 +274,11 @@ body {
 .userAbouts_second {
   flex-direction: column;
   align-items: flex-start;
-  width: 60%;
+  width: 63%;
 }
 .itemSecond_column {
   width: 100%;
-  height: 62vh;
+  height: 65vh;
 }
 .userAbouts_second_title h1 {
   font-weight: 350;
@@ -294,9 +298,10 @@ body {
 }
 .user_about_card {
   background-color: rgb(50, 100, 224);
-  width: 14rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  width: 16.5rem;
   padding: 1rem;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .user_about_card h1 {
   font-weight: 350;
@@ -306,7 +311,7 @@ body {
 .createUser_btn button {
   cursor: pointer;
   border: none;
-  border-radius: 50px;
+  border-radius: 10px;
   color: white;
   font-size: 1.1rem;
   padding: 1.4rem 1.7rem;
