@@ -264,7 +264,9 @@
                   </div>
                   <div class="productItem_shop">
                     <form>
-                      <button type="button">Buyurtma berish</button>
+                      <button type="button" id="placing-an-order-btn">
+                        Buyurtma berish
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -369,11 +371,11 @@
 
     <main id="bag-main">
       <!----------- Top Header ----------->
-      <header id="top-header">
+      <header id="top-header-bag">
         <nav class="topNav">
           <ul class="topUl flex align_center justify_between">
             <div class="product_title">
-              <h1>Maxsulotlar</h1>
+              <h1>Savatcha</h1>
             </div>
             <div class="top_nav_items flex align_center justify_center">
               <li class="top_nav_item">
@@ -441,73 +443,11 @@
 
       <!----------- There Product ----------->
       <section id="there-product">
-        <div class="there_product">
-          <div id="there-product-items"></div>
-        </div>
-      </section>
-    </main>
-
-    <main id="there-product-main">
-      <!----------- Top Header ----------->
-      <header id="top-header">
-        <nav class="topNav">
-          <ul class="topUl flex align_center justify_between">
-            <div class="product_title">
-              <h1>Maxsulotlar</h1>
-            </div>
-            <div class="top_nav_items flex align_center justify_center">
-              <li class="top_nav_item">
-                <a
-                  href="./profil.html"
-                  class="top_nav_link flex justify_center align_center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-heart-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
-                    />
-                  </svg>
-                  <h1>Yoqtirganlar</h1>
-                </a>
-              </li>
-              <li class="top_nav_item" id="product-bag">
-                <a
-                  href="#"
-                  class="top_nav_link flex justify_center align_center"
-                  style="margin-right: 0"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-bag-plus-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"
-                    />
-                  </svg>
-                  <h1>Savatcha</h1>
-                </a>
-              </li>
-            </div>
-          </ul>
-        </nav>
-      </header>
-
-      <!----------- There Product ----------->
-      <section id="there-product">
-        <div class="there_product">
-          <div id="there-product-items"></div>
+        <div class="there_product flex justify_center align_center">
+          <div
+            id="there-product-items"
+            class="flex justify_center align_center"
+          ></div>
         </div>
       </section>
     </main>

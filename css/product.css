@@ -14,7 +14,9 @@ body {
   height: 100%;
   background-color: white;
 }
-#bag-main {
+#empty-product,
+#there-product,
+#top-header-bag {
   display: none;
 }
 .container-loader {
@@ -372,8 +374,7 @@ img {
   float: right;
   flex-direction: column;
   width: 83vw;
-  height: 91vh;
-  position: relative;
+  height: 93.5vh;
 }
 .empty_product_bg {
   width: 20rem;
@@ -388,4 +389,87 @@ img {
   font-weight: 370;
   font-size: 2rem;
   color: rgb(64, 0, 255);
+}
+
+/* There Product */
+
+.there_product {
+  float: right;
+  flex-direction: column;
+  width: 83vw;
+  height: 91vh;
+}
+#there-product-items {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.there_product_item {
+  height: 12rem;
+  width: 75%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.there_product_item_img {
+  width: 11rem;
+  height: 10rem;
+}
+.there_product_item_img img {
+  width: 100%;
+  height: 100%;
+}
+.there_product_item_name {
+  flex-direction: column;
+  height: 100%;
+}
+.there_product_item_name h1 {
+  font-weight: 350;
+  font-size: 1.8rem;
+}
+.there_product_item_price h2 {
+  color: rgb(0, 0, 107);
+  font-size: 1.4rem;
+  font-weight: 350;
+}
+.there_product_item_date {
+  flex-direction: column;
+  height: 100%;
+}
+.there_product_item_date_title h1,
+.there_product_item_date_title h3 {
+  color: rgb(80, 80, 80);
+  font-weight: 350;
+}
+.there_product_item_date_title h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.there_product_item_date_title h3 {
+  font-size: 0.9rem;
+}
+
+.there_product_item_btns {
+  flex-direction: column;
+  height: 100%;
+}
+.there_product_item_btn button {
+  background-color: hwb(240 95% 0%);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.there_product_item_btn button i {
+  color: rgb(168, 168, 168);
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+.there_product_item_delete button:hover i {
+  color: red;
+}
+.there_product_item_edit button:hover i {
+  color: blue;
 }
