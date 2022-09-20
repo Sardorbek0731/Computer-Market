@@ -398,22 +398,23 @@ img {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   border: 1px solid black;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 .there_product_item:last-child {
   margin-bottom: 0;
 }
 .there_product_item_img {
-  width: 11rem;
+  width: 25%;
   height: 10rem;
 }
 .there_product_item_img img {
-  width: 100%;
+  width: 11rem;
   height: 100%;
 }
 .there_product_item_name {
   flex-direction: column;
   height: 100%;
+  width: 25%;
 }
 .there_product_item_name h1 {
   font-weight: 350;
@@ -427,6 +428,7 @@ img {
 .there_product_item_date {
   flex-direction: column;
   height: 100%;
+  width: 25%;
 }
 .there_product_item_date_title h1,
 .there_product_item_date_title h3 {

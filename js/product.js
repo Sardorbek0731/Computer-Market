@@ -1,3 +1,24 @@
+// Placing date
+function placingDate() {
+  let now = new Date();
+
+  let date = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+  let month = now.getMonth() < 10 ? "0" + now.getMonth() : now.getMonth();
+  let year = now.getFullYear();
+
+  return `${date}.${month}.${year}`;
+}
+// Deliver date
+function deliverDate() {
+  let now = new Date();
+
+  let date = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+  let month = now.getMonth() < 10 ? "0" + now.getMonth() : now.getMonth();
+  let year = now.getFullYear();
+
+  return `${date + 3}.${month}.${year}`;
+}
+
 // Product item
 const productMain = document.getElementById("product-main");
 const thereProductItems = document.getElementById("there-product-items");
@@ -12,6 +33,14 @@ let productItemImages = [
   "Image-4",
   "Image-5",
   "Image-6",
+];
+let productItemNames = [
+  "Dell XPS 17",
+  "HP ENVY x360",
+  "Samsung Galaxy Book Pro",
+  "Products HP Victus 16",
+  "MacBook Pro M1 Pro",
+  "MICROSOFT Surface Pro 8",
 ];
 
 // There Product Item
@@ -34,8 +63,7 @@ placingAnOrderBtn.forEach((placingBtn, i) => {
   
             <div class="there_product_item_name flex justify_evenly">
                   <h1>
-                    Dell XPS 17 (i9-12900HKRTX<br />
-                    3060)<br />
+                    ${productItemNames[i]}
                   </h1>
                 <div class="there_product_item_price">
                     <h2>UZS 15,000,000</h2>
@@ -47,13 +75,13 @@ placingAnOrderBtn.forEach((placingBtn, i) => {
                     class="there_product_item_order_date there_product_item_date_title"
                   >
                     <h1>Buyurtma vaqti:</h1>
-                    <h3>14.09.2022</h3>
+                    <h3>${placingDate()}</h3>
                   </div>
                   <div
                     class="there_product_item_deliver_date there_product_item_date_title"
                   >
                     <h1>Yetkazish vaqti:</h1>
-                    <h3>18.09.2022</h3>
+                    <h3>${deliverDate()}</h3>
                   </div>
             </div>
   
