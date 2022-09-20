@@ -13,16 +13,13 @@ let productItemImages = [
   "Image-5",
   "Image-6",
 ];
-let productImagesCounter = 0;
-console.log(productItemImages[productImagesCounter]);
 
 // There Product Item
 const thereProduct = document.getElementById("there-product");
 const emptyProduct = document.getElementById("empty-product");
 const placingAnOrderBtn = document.querySelectorAll("#placing-an-order-btn");
-console.log(placingAnOrderBtn);
 
-placingAnOrderBtn.forEach((placingBtn) => {
+placingAnOrderBtn.forEach((placingBtn, i) => {
   placingBtn.addEventListener("click", () => {
     thereProductItems.innerHTML += `
       <div class="there_product_item align_center justify_evenly"
@@ -30,7 +27,7 @@ placingAnOrderBtn.forEach((placingBtn) => {
   
             <div class="there_product_item_img">
                   <img
-                    src="../image/Products/"
+                    src="../image/Products/${productItemImages[i]}.png"
                     alt="Dell image"
                   />
             </div>
