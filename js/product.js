@@ -23,6 +23,8 @@ function deliverDate() {
 const productMain = document.getElementById("product-main");
 const thereProductItems = document.getElementById("there-product-items");
 const thereProductItem = document.getElementsByClassName("there_product_item");
+const productItemCounter = document.getElementById("product-item-counter");
+productItemCounter.innerHTML = 0;
 
 let counter = 0;
 let deleteCounter = 0;
@@ -104,6 +106,7 @@ placingAnOrderBtn.forEach((placingBtn, i) => {
     `;
 
     counter++;
+    productItemCounter.innerHTML++;
   });
 });
 

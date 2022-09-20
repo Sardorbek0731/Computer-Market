@@ -256,10 +256,25 @@ img {
   font-weight: 350;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.nav_link_svg {
+  position: relative;
+}
 .top_nav_link svg {
   width: 1.7rem;
   height: 1.7rem;
   margin-right: 10px;
+}
+.product_item_counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -10%;
+  bottom: -25%;
+  background-color: black;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
 }
 
 /* Product */
