@@ -1,3 +1,13 @@
+const productMain = document.getElementById("product-main");
+const thereProductItems = document.getElementById("there-product-items");
+const thereProductItem = document.getElementsByClassName("there_product_item");
+const productItemCounter = document.getElementById("product-item-counter");
+const topHeaderBag = document.getElementById("top-header-bag");
+const topHeader = document.getElementById("top-header");
+const thereProduct = document.getElementById("there-product");
+const emptyProduct = document.getElementById("empty-product");
+const placingAnOrderBtn = document.querySelectorAll("#placing-an-order-btn");
+
 // Placing date
 function placingDate() {
   let now = new Date();
@@ -19,13 +29,7 @@ function deliverDate() {
   return `${date + 3}.${month}.${year}`;
 }
 
-// Product item
-const productMain = document.getElementById("product-main");
-const thereProductItems = document.getElementById("there-product-items");
-const thereProductItem = document.getElementsByClassName("there_product_item");
-const productItemCounter = document.getElementById("product-item-counter");
-productItemCounter.innerHTML = 0;
-
+// There Main
 let counter = 0;
 let deleteCounter = 0;
 let productItemImages = [
@@ -45,13 +49,9 @@ let productItemNames = [
   "MICROSOFT Surface Pro 8",
 ];
 
-// There Product Item
-const thereProduct = document.getElementById("there-product");
-const emptyProduct = document.getElementById("empty-product");
-const placingAnOrderBtn = document.querySelectorAll("#placing-an-order-btn");
-
 placingAnOrderBtn.forEach((placingBtn, i) => {
-  placingBtn.addEventListener("click", () => {
+  placingBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     thereProductItems.innerHTML += `
       <div class="there_product_item align_center justify_evenly"
           id=there-product-item>
@@ -105,32 +105,99 @@ placingAnOrderBtn.forEach((placingBtn, i) => {
         </div>
     `;
 
-    counter++;
     productItemCounter.innerHTML++;
+    counter++;
+    localStorage.setItem("item", JSON.stringify(thereProductItems.innerHTML));
+    localStorage.setItem(
+      "itemCounter",
+      JSON.stringify(productItemCounter.innerHTML)
+    );
   });
 });
 
-const productBagLink = document.getElementById("product-bag-link");
-const topHeaderBag = document.getElementById("top-header-bag");
-const topHeader = document.getElementById("top-header");
+let itemStorage = JSON.parse(localStorage.getItem("item"))
+  ? JSON.parse(localStorage.getItem("item"))
+  : [];
 
-productBagLink.addEventListener("click", () => {
+thereProductItems.innerHTML += itemStorage;
+
+let itemStorageCounter = JSON.parse(localStorage.getItem("itemCounter"))
+  ? JSON.parse(localStorage.getItem("itemCounter"))
+  : [];
+
+productItemCounter.innerHTML = itemStorageCounter.length
+  ? itemStorageCounter
+  : 0;
+
+// There Main and Emty Main open link
+function productBagLink() {
   productMain.style.display = "none";
   topHeader.style.display = "none";
   topHeaderBag.style.display = "block";
 
+  localStorage.setItem("blockStorage", JSON.stringify("block"));
+  localStorage.setItem("noneStorage", JSON.stringify("none"));
+
   if (thereProductItem.length > 0) {
+    localStorage.setItem("thereBlockStorage", JSON.stringify("block"));
     thereProduct.style.display = "block";
   } else {
-    emptyProduct.style.display = "block";
-  }
-});
-
-function deleteProduct(counter) {
-  thereProductItem[counter].style.display = "none";
-  deleteCounter++;
-  if (thereProductItem.length === deleteCounter) {
-    thereProduct.style.display = "none";
+    localStorage.setItem("emptyBlockStorage", JSON.stringify("block"));
     emptyProduct.style.display = "block";
   }
 }
+let thereBlockStorage = JSON.parse(localStorage.getItem("thereBlockStorage"))
+  ? JSON.parse(localStorage.getItem("thereBlockStorage"))
+  : [];
+let emptyBlockStorage = JSON.parse(localStorage.getItem("emptyBlockStorage"))
+  ? JSON.parse(localStorage.getItem("emptyBlockStorage"))
+  : [];
+
+let noneStorage = JSON.parse(localStorage.getItem("noneStorage"))
+  ? JSON.parse(localStorage.getItem("noneStorage"))
+  : [];
+let blockStorage = JSON.parse(localStorage.getItem("blockStorage"))
+  ? JSON.parse(localStorage.getItem("blockStorage"))
+  : [];
+productMain.style.display = noneStorage;
+topHeader.style.display = noneStorage;
+topHeaderBag.style.display = blockStorage;
+
+thereProduct.style.display = thereBlockStorage;
+emptyProduct.style.display = emptyBlockStorage;
+
+// There Main and Emty Main close link
+
+function productItemBack() {
+  localStorage.setItem("blockBack", JSON.stringify("block"));
+  localStorage.setItem("noneBack", JSON.stringify("none"));
+
+  thereProduct.style.display = "none";
+  emptyProduct.style.display = "none";
+  topHeaderBag.style.display = "none";
+  topHeader.style.display = "block";
+  productMain.style.display = "block";
+}
+
+// There Main item delete
+function deleteProduct(counter) {
+  thereProductItem[counter].style.display = "none";
+  deleteCounter++;
+
+  if (thereProductItem.length === deleteCounter) {
+    localStorage.setItem("itemDelete", JSON.stringify("none"));
+    localStorage.setItem("emtyItemDelete", JSON.stringify("block"));
+    localStorage.setItem("nullItemCounter", JSON.stringify(0));
+    emptyProduct.style.display = "block";
+    thereProduct.style.display = "none";
+  }
+}
+let emtyItemDelete = JSON.parse(localStorage.getItem("emtyItemDelete"))
+  ? JSON.parse(localStorage.getItem("emtyItemDelete"))
+  : [];
+let itemDelete = JSON.parse(localStorage.getItem("itemDelete"))
+  ? JSON.parse(localStorage.getItem("itemDelete"))
+  : [];
+
+thereProduct.style.display = itemDelete;
+emptyProduct.style.display = emtyItemDelete;
