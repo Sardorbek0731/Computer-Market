@@ -123,10 +123,6 @@ thereProductItems.innerHTML += itemStorage;
 
 let itemStorageCounter = JSON.parse(localStorage.getItem("itemCounter"))
   ? JSON.parse(localStorage.getItem("itemCounter"))
-  : [];
-
-productItemCounter.innerHTML = itemStorageCounter.length
-  ? itemStorageCounter
   : 0;
 
 // There Main and Emty Main open link
@@ -134,70 +130,110 @@ function productBagLink() {
   productMain.style.display = "none";
   topHeader.style.display = "none";
   topHeaderBag.style.display = "block";
-
-  localStorage.setItem("blockStorage", JSON.stringify("block"));
-  localStorage.setItem("noneStorage", JSON.stringify("none"));
+  localStorage.setItem("thereProductNone", JSON.stringify("none"));
+  localStorage.setItem("thereProductHeaderBlock", JSON.stringify("block"));
 
   if (thereProductItem.length > 0) {
-    localStorage.setItem("thereBlockStorage", JSON.stringify("block"));
+    localStorage.setItem("thereProductBlock", JSON.stringify("block"));
     thereProduct.style.display = "block";
   } else {
-    localStorage.setItem("emptyBlockStorage", JSON.stringify("block"));
+    localStorage.clear();
     emptyProduct.style.display = "block";
   }
 }
-let thereBlockStorage = JSON.parse(localStorage.getItem("thereBlockStorage"))
-  ? JSON.parse(localStorage.getItem("thereBlockStorage"))
-  : [];
-let emptyBlockStorage = JSON.parse(localStorage.getItem("emptyBlockStorage"))
-  ? JSON.parse(localStorage.getItem("emptyBlockStorage"))
-  : [];
+let thereProductBlock = JSON.parse(localStorage.getItem("thereProductBlock"))
+  ? JSON.parse(localStorage.getItem("thereProductBlock"))
+  : "none";
 
-let noneStorage = JSON.parse(localStorage.getItem("noneStorage"))
-  ? JSON.parse(localStorage.getItem("noneStorage"))
-  : [];
-let blockStorage = JSON.parse(localStorage.getItem("blockStorage"))
-  ? JSON.parse(localStorage.getItem("blockStorage"))
-  : [];
-productMain.style.display = noneStorage;
-topHeader.style.display = noneStorage;
-topHeaderBag.style.display = blockStorage;
+let thereProductNone = JSON.parse(localStorage.getItem("thereProductNone"))
+  ? JSON.parse(localStorage.getItem("thereProductNone"))
+  : "block";
 
-thereProduct.style.display = thereBlockStorage;
-emptyProduct.style.display = emptyBlockStorage;
+let thereProductHeaderBlock = JSON.parse(
+  localStorage.getItem("thereProductHeaderBlock")
+)
+  ? JSON.parse(localStorage.getItem("thereProductHeaderBlock"))
+  : "none";
+
+thereProduct.style.display = thereProductBlock;
+productMain.style.display = thereProductNone;
+topHeader.style.display = thereProductNone;
 
 // There Main and Emty Main close link
 
 function productItemBack() {
-  localStorage.setItem("blockBack", JSON.stringify("block"));
-  localStorage.setItem("noneBack", JSON.stringify("none"));
-
+  localStorage.setItem(
+    "thereProductBlockNone",
+    JSON.stringify(("none"))
+  );
+  localStorage.setItem(
+    "thereProductNoneBlock",
+    JSON.stringify(("block"))
+  );
+  localStorage.setItem("thereProductHeaderNone", JSON.stringify("none"));
   thereProduct.style.display = "none";
   emptyProduct.style.display = "none";
   topHeaderBag.style.display = "none";
   topHeader.style.display = "block";
   productMain.style.display = "block";
 }
+let thereProductBlockNone = JSON.parse(
+  localStorage.getItem("thereProductBlockNone")
+)
+  ? JSON.parse(localStorage.getItem("thereProductBlockNone"))
+  : thereProductBlock;
+
+let thereProductNoneBlock = JSON.parse(
+  localStorage.getItem("thereProductNoneBlock")
+)
+  ? JSON.parse(localStorage.getItem("thereProductNoneBlock"))
+  : thereProductNone;
+let thereProductHeaderNone = JSON.parse(
+  localStorage.getItem("thereProductHeaderNone")
+)
+  ? JSON.parse(localStorage.getItem("thereProductHeaderNone"))
+  : thereProductHeaderBlock;
+
+thereProduct.style.display = thereProductBlockNone;
+productMain.style.display = thereProductNoneBlock;
+topHeaderBag.style.display = thereProductHeaderNone;
+topHeader.style.display = thereProductNoneBlock;
 
 // There Main item delete
 function deleteProduct(counter) {
   thereProductItem[counter].style.display = "none";
   deleteCounter++;
+  productItemCounter.innerHTML--;
 
-  if (thereProductItem.length === deleteCounter) {
-    localStorage.setItem("itemDelete", JSON.stringify("none"));
-    localStorage.setItem("emtyItemDelete", JSON.stringify("block"));
-    localStorage.setItem("nullItemCounter", JSON.stringify(0));
-    emptyProduct.style.display = "block";
+  localStorage.setItem("newDeleteCounter", JSON.stringify(++counter));
+  localStorage.setItem(
+    "newProductItems",
+    JSON.stringify(thereProductItems.innerHTML)
+  );
+  localStorage.setItem(
+    "newItemCounter",
+    JSON.stringify(productItemCounter.innerHTML)
+  );
+
+  let newDeleteCounter = JSON.parse(localStorage.getItem("newDeleteCounter"))
+    ? JSON.parse(localStorage.getItem("newDeleteCounter"))
+    : [];
+
+  if (thereProductItem.length === newDeleteCounter) {
+    localStorage.clear();
     thereProduct.style.display = "none";
+    topHeaderBag.style.display = "block";
+    emptyProduct.style.display = "block";
   }
 }
-let emtyItemDelete = JSON.parse(localStorage.getItem("emtyItemDelete"))
-  ? JSON.parse(localStorage.getItem("emtyItemDelete"))
-  : [];
-let itemDelete = JSON.parse(localStorage.getItem("itemDelete"))
-  ? JSON.parse(localStorage.getItem("itemDelete"))
-  : [];
 
-thereProduct.style.display = itemDelete;
-emptyProduct.style.display = emtyItemDelete;
+let newProductItems = JSON.parse(localStorage.getItem("newProductItems"))
+  ? JSON.parse(localStorage.getItem("newProductItems"))
+  : itemStorage;
+
+let newItemCounter = JSON.parse(localStorage.getItem("newItemCounter"))
+  ? JSON.parse(localStorage.getItem("newItemCounter"))
+  : itemStorageCounter;
+
+thereProductItems.innerHTML = newProductItems;
+productItemCounter.innerHTML = newItemCounter;
