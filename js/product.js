@@ -39,6 +39,9 @@ let productItemImages = [
   "Image-4",
   "Image-5",
   "Image-6",
+  "Image-7",
+  "Image-8",
+  "Image-9",
 ];
 let productItemNames = [
   "Dell XPS 17",
@@ -47,6 +50,9 @@ let productItemNames = [
   "Products HP Victus 16",
   "MacBook Pro M1 Pro",
   "MICROSOFT Surface Pro 8",
+  "Asus Zenbook 14 Ux434",
+  "Dell Inspiron 5510 Core",
+  "Lenova IdeaPad Flex 5",
 ];
 let productItemMoney = [
   "24 400 000",
@@ -55,6 +61,9 @@ let productItemMoney = [
   "9 500 000",
   "24 600 000",
   "17 000 000",
+  "12 560 000",
+  "9 155 000",
+  "14 300 000",
 ];
 
 placingAnOrderBtn.forEach((placingBtn, i) => {
