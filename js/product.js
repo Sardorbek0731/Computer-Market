@@ -48,6 +48,14 @@ let productItemNames = [
   "MacBook Pro M1 Pro",
   "MICROSOFT Surface Pro 8",
 ];
+let productItemMoney = [
+  "24 400 000",
+  "10 200 000",
+  "16 650 000",
+  "9 500 000",
+  "24 600 000",
+  "17 000 000",
+];
 
 placingAnOrderBtn.forEach((placingBtn, i) => {
   placingBtn.addEventListener("click", (e) => {
@@ -68,7 +76,7 @@ placingAnOrderBtn.forEach((placingBtn, i) => {
                     ${productItemNames[i]}
                   </h1>
                 <div class="there_product_item_price">
-                    <h2>UZS 15,000,000</h2>
+                    <h2>UZS ${productItemMoney[i]}</h2>
                 </div>
             </div>
   
@@ -162,14 +170,8 @@ topHeader.style.display = thereProductNone;
 // There Main and Emty Main close link
 
 function productItemBack() {
-  localStorage.setItem(
-    "thereProductBlockNone",
-    JSON.stringify(("none"))
-  );
-  localStorage.setItem(
-    "thereProductNoneBlock",
-    JSON.stringify(("block"))
-  );
+  localStorage.setItem("thereProductBlockNone", JSON.stringify("none"));
+  localStorage.setItem("thereProductNoneBlock", JSON.stringify("block"));
   localStorage.setItem("thereProductHeaderNone", JSON.stringify("none"));
   thereProduct.style.display = "none";
   emptyProduct.style.display = "none";

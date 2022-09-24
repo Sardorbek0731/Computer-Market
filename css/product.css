@@ -306,15 +306,15 @@ img {
   flex-direction: column;
   width: 22rem;
   height: 28rem;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: white;
   padding: 2rem 0;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
 }
 .product_item:hover {
   transform: translateY(-14px);
-  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 35px 35px rgba(0, 0, 0, 0.35);
 }
 
 .productItem_head {
