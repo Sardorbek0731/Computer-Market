@@ -3,8 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -40,6 +39,9 @@ img {
 }
 .justify_evenly {
   justify-content: space-evenly;
+}
+.justify_between {
+  justify-content: space-between;
 }
 .align_center {
   align-items: center;
@@ -138,3 +140,106 @@ img {
 }
 
 /* End Header */
+
+/* Admin-about */
+.admin_about {
+  width: 83vw;
+  height: 100vh;
+  float: right;
+  flex-direction: column;
+  background: linear-gradient(130deg, white 52%, rgb(2, 2, 30) 30%);
+}
+.adminAbout_first_row,
+.adminAbout_second_row {
+  width: 90%;
+}
+.admin_img {
+  width: auto;
+  height: 17rem;
+}
+.admin_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4);
+}
+.admin_item {
+  justify-content: space-around;
+  flex-direction: column;
+  width: 18rem;
+  height: 15rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 70px rgba(30, 30, 30, 0.3);
+  background: white;
+}
+.admin_grafik,
+.admin_text {
+  height: 20rem;
+}
+.admin_grafik {
+  width: 25rem;
+}
+.admin_text {
+  width: 34rem;
+}
+.admin_item i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  font-size: 1.3rem;
+}
+.admin_names i {
+  background-color: rgb(58, 153, 200);
+}
+.admin_date i {
+  background-color: rgb(26, 213, 138);
+}
+.admin_text i {
+  background-color: red;
+}
+.admin_item h1,
+.admin_item a {
+  font-weight: 375;
+  text-decoration: none;
+  color: rgb(2, 2, 30);
+}
+.admin_item a {
+  font-size: 1.1rem;
+}
+.admin_item h1 {
+  font-size: 1.5rem;
+}
+.admin_names h1 {
+  font-size: 2rem;
+}
+.admin_text p {
+  font-size: 1.1rem;
+  font-weight: 350;
+}
+.admin_links {
+  width: 100%;
+}
+.admin_links svg {
+  background-color: rgb(8, 78, 108);
+  padding: 0.8rem;
+  border-radius: 5px;
+  color: white;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.admin_links a {
+  margin-right: 1.4rem;
+}
+.admin_links a:last-child {
+  margin-right: 0;
+}
+.admin_grafik img {
+  width: 27rem;
+  height: auto;
+}
