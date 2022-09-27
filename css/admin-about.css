@@ -146,42 +146,42 @@ img {
   width: 83vw;
   height: 100vh;
   float: right;
-  flex-direction: column;
-  background: linear-gradient(130deg, white 52%, rgb(2, 2, 30) 30%);
+  background: linear-gradient(120deg, white 52%, rgb(0, 0, 0) 30%);
 }
-.adminAbout_first_row,
-.adminAbout_second_row {
-  width: 90%;
+.adminAbout_first_column {
+  flex-direction: column;
+  width: 45%;
+  height: 85%;
+}
+.adminAbout_first_row {
+  width: 100%;
 }
 .admin_img {
-  width: auto;
-  height: 17rem;
+  width: 37%;
+  height: 100%;
 }
 .admin_img img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 12px 12px 33px rgba(4, 0, 33, 0.24);
+}
+.admin_date {
+  width: 40%;
+  height: 100%;
+  padding: 0 2rem;
 }
 .admin_item {
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
-  width: 18rem;
-  height: 15rem;
-  padding: 1rem 2rem;
   border-radius: 20px;
-  box-shadow: 0 0 70px rgba(30, 30, 30, 0.3);
+  box-shadow: 12px 12px 33px rgba(4, 0, 33, 0.24);
   background: white;
 }
-.admin_grafik,
 .admin_text {
-  height: 20rem;
-}
-.admin_grafik {
-  width: 25rem;
-}
-.admin_text {
-  width: 34rem;
+  width: 86%;
+  padding: 0 7%;
+  height: 22rem;
 }
 .admin_item i {
   display: flex;
@@ -194,20 +194,19 @@ img {
   color: white;
   font-size: 1.3rem;
 }
-.admin_names i {
-  background-color: rgb(58, 153, 200);
-}
 .admin_date i {
   background-color: rgb(26, 213, 138);
 }
 .admin_text i {
   background-color: red;
 }
+.website_about i {
+  background-color: rgb(72, 131, 203);
+}
 .admin_item h1,
 .admin_item a {
   font-weight: 375;
   text-decoration: none;
-  color: rgb(2, 2, 30);
 }
 .admin_item a {
   font-size: 1.1rem;
@@ -215,31 +214,28 @@ img {
 .admin_item h1 {
   font-size: 1.5rem;
 }
-.admin_names h1 {
-  font-size: 2rem;
+.admin_text h1 {
+  font-size: 2.1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 378;
 }
-.admin_text p {
-  font-size: 1.1rem;
-  font-weight: 350;
+.admin_item p {
+  font-size: 0.955rem;
+  color: rgb(100, 100, 100);
+  font-weight: 380;
 }
-.admin_links {
-  width: 100%;
+
+.website_about {
+  width: 28rem;
+  height: 85%;
+  padding: 0 2rem;
 }
-.admin_links svg {
-  background-color: rgb(8, 78, 108);
-  padding: 0.8rem;
-  border-radius: 5px;
-  color: white;
-  width: 1.3rem;
-  height: 1.3rem;
+.cashback h2 {
+  font-size: 1.3rem;
+  font-weight: 370;
 }
-.admin_links a {
-  margin-right: 1.4rem;
-}
-.admin_links a:last-child {
-  margin-right: 0;
-}
-.admin_grafik img {
-  width: 27rem;
+.website_about img {
+  width: 13rem;
   height: auto;
 }
