@@ -3,10 +3,10 @@
 const main = document.getElementById("main");
 const profilLoader = document.getElementById("profil-loader");
 
-setTimeout(() => {
-  main.style.display = "block";
-  profilLoader.style.display = "none";
-}, 3000);
+document.addEventListener('load', () => {
+  profilLoader.style.display = "block";
+  main.style.display = "none";
+});
 
 // Message
 

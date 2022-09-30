@@ -14,11 +14,6 @@ body {
   height: 100%;
   background-color: white;
 }
-#empty-product,
-#there-product,
-#top-header-bag {
-  display: none;
-}
 .container-loader {
   display: flex;
   justify-content: center;
@@ -369,6 +364,9 @@ img {
 }
 
 /* User Bag */
+#bag-main {
+  display: none;
+}
 
 .empty_product {
   float: right;
@@ -448,15 +446,16 @@ img {
 }
 .there_product_item_date_title h1,
 .there_product_item_date_title h3 {
-  color: rgb(80, 80, 80);
   font-weight: 350;
 }
 .there_product_item_date_title h1 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: black;
 }
 .there_product_item_date_title h3 {
   font-size: 0.9rem;
+  color: rgb(80, 80, 80);
 }
 
 .there_product_item_btns {
@@ -473,7 +472,7 @@ img {
   cursor: pointer;
 }
 .there_product_item_btn button i {
-  color: rgb(168, 168, 168);
+  color: rgb(100, 100, 100);
   font-size: 1.2rem;
   transition: all 0.3s;
 }
