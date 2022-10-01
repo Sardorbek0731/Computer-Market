@@ -139,11 +139,11 @@ button {
   height: 3.5rem;
   background-color: transparent;
   border: 2px solid rgba(0, 0, 0, 0.5);
-  color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: all 0.5s;
 }
 button a {
+  color: rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
   text-decoration: none;
   font-size: 1rem;

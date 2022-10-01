@@ -3,7 +3,7 @@
 const main = document.getElementById("main");
 const profilLoader = document.getElementById("profil-loader");
 
-document.addEventListener('load', () => {
+document.addEventListener("load", () => {
   profilLoader.style.display = "block";
   main.style.display = "none";
 });
@@ -39,6 +39,7 @@ messageClose.addEventListener("click", () => {
 });
 
 formCreate.addEventListener("submit", (e) => {
+  s;
   e.preventDefault();
   let inputValue = nameInput.value;
   let uppercase = inputValue.charAt().toUpperCase();
@@ -49,7 +50,8 @@ formCreate.addEventListener("submit", (e) => {
     result.trim().length > 0 &&
     nameInput.placeholder == `Ismingizni kiriting...` &&
     result != "Salom" &&
-    result != "Assalomu alaykum"
+    result != "Assalomu alaykum" &&
+    result != "Nagap"
   ) {
     messageBody.innerHTML += `
           <div class="flex align_center post_item wf-100">
@@ -100,7 +102,11 @@ formCreate.addEventListener("submit", (e) => {
 
       nameInput.placeholder = `Savolingizni berishingiz mumkin...`;
     }, 2000);
-  } else if (result === "Salom" || result == "Assalomu alaykum") {
+  } else if (
+    result === "Salom" ||
+    result == "Assalomu alaykum" ||
+    result == "Nagap"
+  ) {
     messageBody.innerHTML += `
           <div class="flex align_center post_item wf-100">
 
@@ -138,7 +144,6 @@ formCreate.addEventListener("submit", (e) => {
 
                   <div class="message_text">
                       <p>
-                        Valaykum, alaykum!<br />
                         Hurmatli mijoz! Savollaringiz bo'lsa<br>
                         berishingiz mumkin.<br>
                       </p>
@@ -152,7 +157,8 @@ formCreate.addEventListener("submit", (e) => {
     result.trim().length > 0 &&
     nameInput.placeholder == `Savolingizni berishingiz mumkin...` &&
     result != "Salom" &&
-    result != "Assalomu alaykum"
+    result != "Assalomu alaykum" &&
+    result != "Nagap"
   ) {
     let questionInputValue = nameInput.value;
     let qusetionUppercase = questionInputValue.charAt().toUpperCase();
