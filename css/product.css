@@ -291,9 +291,8 @@ img {
   height: 100%;
   background-color: rgb(247, 247, 255);
   padding-top: 5rem;
-  padding-bottom: 5rem;
 }
-.mb-5 {
+.product_items > div {
   margin-bottom: 5rem;
 }
 
@@ -346,16 +345,15 @@ img {
   background-color: #24567d;
   border: 1.7px solid #24567d;
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   height: 3.2rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 10rem;
-  border-radius: 7px;
+  border-radius: 50px;
   cursor: pointer;
   outline: none;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s;
 }
 .productItem_shop form button:hover {
   background-color: white;

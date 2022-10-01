@@ -9,6 +9,28 @@ const thereProductItem = document.getElementsByClassName("there_product_item");
 const itemDeleteBtn = document.getElementsByClassName("item-delete-btn");
 productItemCounter.innerHTML = 0;
 
+// Time
+function orderTime() {
+  let now = new Date();
+
+  let date = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+  let month =
+    now.getMonth() < 10 ? "0" + (now.getMonth() + 1) : now.getMonth() + 1;
+  let year = now.getFullYear();
+
+  return `${date}.${month}.${year}`;
+}
+function deliveryTime() {
+  let now = new Date();
+
+  let date = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+  let month =
+    now.getMonth() < 10 ? "0" + (now.getMonth() + 1) : now.getMonth() + 1;
+  let year = now.getFullYear();
+
+  return `${date + 2}.${month}.${year}`;
+}
+
 // Product item image
 
 const imageNames = [
@@ -21,6 +43,9 @@ const imageNames = [
   "Image-7",
   "Image-8",
   "Image-9",
+  "Image-10",
+  "Image-11",
+  "Image-12",
 ];
 
 // Product item name
@@ -35,6 +60,9 @@ const itemNames = [
   "Asus Zenbook 14 Ux434",
   "Dell Inspiron 5510 Core",
   "Lenova IdeaPad Flex 5",
+  "Honor MagicBook Pro 16.1",
+  "Ultrabuk HP ENVY 13",
+  "MSI Modern 14",
 ];
 const itemPrice = [
   "UZS 24 400 000",
@@ -46,6 +74,9 @@ const itemPrice = [
   "UZS 12 560 000",
   "UZS 9 155 000",
   "UZS 14 300 000",
+  "UZS 8 500 000",
+  "UZS 10 105 000",
+  "UZS 13 100 000",
 ];
 
 let storageItem = JSON.parse(localStorage.getItem("item"))
@@ -88,12 +119,12 @@ function showItem() {
               <div class="there_product_item_date flex justify_evenly">
                 <div class="there_product_item_date_title">
                   <h1>Buyurtma vaqti:</h1>
-                  <h3>15.09.2022</h3>
+                  <h3>${item.orderTime}</h3>
                 </div>
 
                 <div class="there_product_item_date_title">
                   <h1>Yetkazish vaqti:</h1>
-                  <h3>15.09.2022</h3>
+                  <h3>${item.deliveryTime}</h3>
                 </div>
 
               </div>
@@ -133,7 +164,8 @@ function setItem() {
 
 function placingAnOrder(index) {
   storageItem.push({
-    time: "14:10, 30.09.2022",
+    orderTime: orderTime(),
+    deliveryTime: deliveryTime(),
     itemImage: imageNames[index],
     itemNames: itemNames[index],
     itemPrice: itemPrice[index],
@@ -175,5 +207,5 @@ function deleteItem(id) {
 
 function productItemBack() {
   productMain.style.display = "block";
-  bagMain.style.display = "none"
+  bagMain.style.display = "none";
 }
