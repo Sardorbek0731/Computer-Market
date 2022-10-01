@@ -22,13 +22,34 @@ body {
 .align_center {
   align-items: center;
 }
-.user_card_item {
-  width: 26rem;
+.user_card_items {
+  flex-direction: column;
+  width: 23rem;
   height: 17rem;
   border-radius: 20px;
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(177, 177, 218);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 0 2rem;
 }
+.userCard_chip {
+  width: 4rem;
+  height: 4rem;
+}
+.userCard_chip img {
+  width: 100%;
+  height: 100%;
+}
+.userCard_name_and_term {
+  width: 100%;
+  justify-content: space-between;
+}
+.userCard_item h1 {
+  color: white;
+}
+.userCard_term h3 {
+  color: blue;
+}
+
 .user_card,
 .userCard_form {
   height: 100vh;
@@ -42,25 +63,25 @@ body {
   justify-content: space-evenly;
   position: relative;
   border-radius: 15px;
-  width: 18rem;
+  width: 16rem;
   padding: 0 4rem;
-  height: 30rem;
+  height: 32rem;
   background-color: white;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 30px rgba(7, 1, 58, 0.24);
 }
 .title h1 {
   color: blue;
   font-size: 2rem;
   font-weight: 380;
 }
-.username,
+.cardNumber,
 .password,
-.password_repeat {
+.expiration {
   position: relative;
 }
-.username input,
+.cardNumber input,
 .password input,
-.password_repeat input {
+.expiration input {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -71,9 +92,9 @@ body {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.5);
 }
-.username label,
+.cardNumber label,
 .password label,
-.password_repeat label {
+.expiration label {
   position: absolute;
   left: 0;
   top: 0;
@@ -98,6 +119,7 @@ button {
   width: 100%;
   height: 4rem;
   background-color: rgb(49, 67, 168);
+  box-shadow: 10px 10px 25px rgba(2, 0, 41, 0.5);
   cursor: pointer;
   border: none;
   border-radius: 10px;
@@ -108,6 +130,6 @@ button a {
   text-decoration: none;
   font-size: 1.2rem;
 }
-button:hover {
+button:hover a {
   color: rgb(185, 185, 185);
 }
