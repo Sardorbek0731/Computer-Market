@@ -289,6 +289,9 @@ body {
   width: 100%;
   justify-content: space-between;
 }
+.cardNumber_title {
+  font-size: 1.3rem;
+}
 .userCard_item h1 {
   color: white;
 }
@@ -322,13 +325,13 @@ body {
   font-weight: 380;
 }
 .cardNumber,
-.userCardPassword,
-.expiration {
+.cardName,
+.cardExpiration {
   position: relative;
 }
 .cardNumber input,
-.expiration input,
-.userCardPassword input {
+.cardName input,
+.cardExpiration input {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -339,12 +342,12 @@ body {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.5);
 }
-.userCardPassword input {
+.cardExpiration input {
   margin-bottom: 0;
 }
 .cardNumber label,
-.expiration label,
-.userCardPassword label {
+.cardName label,
+.cardExpiration label {
   position: absolute;
   left: 0;
   top: 0;
