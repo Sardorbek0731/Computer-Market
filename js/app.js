@@ -3,9 +3,9 @@
 const main = document.getElementById("main");
 const profilLoader = document.getElementById("profil-loader");
 
-document.addEventListener("load", () => {
-  profilLoader.style.display = "block";
-  main.style.display = "none";
+window.addEventListener("load", () => {
+  main.style.display = "block";
+  profilLoader.style.display = "none";
 });
 
 // Message
