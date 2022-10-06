@@ -21,3 +21,46 @@ xMark.addEventListener("click", () => {
   plusBtn.style.display = "flex";
   plusBtn.style.animation = "close-animate 5s linear forwards";
 });
+
+// User card value
+const userAboutForm = document.getElementById("user-about-form");
+const userCardRegister = document.getElementById("user-card-register");
+const userCardName = document.getElementById("user-card-name");
+const firstNextBtn = document.getElementById("first-next-btn");
+const secondNextBtn = document.getElementById("second-next-btn");
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+const password = document.getElementById("password");
+const firstNameSecond = document.getElementById("firstNameSecond");
+const lastNameSecond = document.getElementById("lastNameSecond");
+const passwordSecond = document.getElementById("passwordSecond");
+
+function clickedNextBtn() {
+  userAboutForm.style.display = "none";
+  userCardRegister.style.display = "flex";
+}
+
+firstNextBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (
+    firstName.value.length &&
+    lastName.value.length &&
+    password.value.length
+  ) {
+    clickedNextBtn();
+    userCardName.innerHTML = `${firstName.value} ${lastName.value}`;
+  }
+});
+secondNextBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (
+    firstNameSecond.value.length &&
+    lastNameSecond.value.length &&
+    passwordSecond.value.length
+  ) {
+    clickedNextBtn();
+    userCardName.innerHTML = `${firstNameSecond.value} ${lastNameSecond.value}`;
+  }
+});

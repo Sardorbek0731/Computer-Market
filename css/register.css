@@ -12,6 +12,10 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100vh;
+}
+.userAbout_form {
+  width: 100%;
+  height: 100%;
   background: url(../image/Register/form.bg.jpg) no-repeat;
   background-size: cover;
 }
@@ -68,14 +72,15 @@ body {
 .title_register::before {
   background-color: white;
 }
-.form_create,
+.user_about_form,
 .formCreate_second {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.username,
+.firstName,
+.lastName,
 .password,
 .password_repeat {
   display: flex;
@@ -83,16 +88,16 @@ body {
   width: 12rem;
   position: relative;
 }
-.username input,
-.password input,
-.password_repeat input {
+.firstName input,
+.lastName input,
+.password input {
   width: 100%;
   background-color: transparent;
   border: none;
   height: 2rem;
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.5);
   outline: none;
-  margin-bottom: 40px;
+  margin-bottom: 2.2rem;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -100,9 +105,9 @@ body {
   color: white;
   border-bottom: 2px solid white;
 }
-.username label,
-.password label,
-.password_repeat label {
+.firstName label,
+.lastName label,
+.password label {
   position: absolute;
   left: 0;
   top: 0;
@@ -113,12 +118,12 @@ body {
 .formCreate_second label {
   color: white;
 }
-.form_create input:focus ~ label {
+.user_about_form input:focus ~ label {
   top: -1rem;
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.5);
 }
-.form_create input:valid ~ label {
+.user_about_form input:valid ~ label {
   top: -1rem;
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.5);
@@ -131,10 +136,10 @@ body {
   top: -1rem;
   font-size: 0.8rem;
 }
-.form_create input:focus {
+.user_about_form input:focus {
   border-bottom: 1.5px solid red;
 }
-button {
+.user_about_btn {
   width: 12rem;
   height: 3.5rem;
   background-color: transparent;
@@ -142,16 +147,16 @@ button {
   cursor: pointer;
   transition: all 0.5s;
 }
-button a {
+.user_about_btn a {
   color: rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
   text-decoration: none;
   font-size: 1rem;
 }
-button:hover {
+.user_about_btn:hover {
   border: 2px solid red;
 }
-button:hover a {
+.user_about_btn:hover a {
   color: red;
 }
 .btn-second {
@@ -242,4 +247,139 @@ button:hover a {
 }
 .btn-first i {
   display: none;
+}
+
+/* User Card Regsiter */
+
+.flex {
+  display: flex;
+}
+.justify_center {
+  justify-content: center;
+}
+.justify_evenly {
+  justify-content: space-evenly;
+}
+.align_center {
+  align-items: center;
+}
+.user_card_register {
+  display: none;
+  width: 100%;
+  height: 100vh;
+}
+.user_card_items {
+  flex-direction: column;
+  width: 23rem;
+  height: 17rem;
+  border-radius: 20px;
+  background-color: rgb(177, 177, 218);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 0 2rem;
+}
+.userCard_chip {
+  width: 4rem;
+  height: 4rem;
+}
+.userCard_chip img {
+  width: 100%;
+  height: 100%;
+}
+.userCard_name_and_term {
+  width: 100%;
+  justify-content: space-between;
+}
+.userCard_item h1 {
+  color: white;
+}
+.userCard_term h3 {
+  color: blue;
+}
+
+.user_card,
+.userCard_form {
+  height: 100vh;
+  width: 50%;
+}
+.user_card {
+  background-color: rgb(49, 67, 168);
+}
+.form_create {
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  border-radius: 20px;
+  width: 16rem;
+  padding: 1.5rem 4.5rem;
+  height: 30rem;
+  background-color: white;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.23);
+  border: 1px solid rgb(49, 67, 168);
+}
+.user_card_title h1 {
+  color: rgb(49, 67, 168);
+  font-size: 2rem;
+  font-weight: 380;
+}
+.cardNumber,
+.userCardPassword,
+.expiration {
+  position: relative;
+}
+.cardNumber input,
+.expiration input,
+.userCardPassword input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  height: 2.2rem;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.5);
+  outline: none;
+  margin-bottom: 2.6rem;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.userCardPassword input {
+  margin-bottom: 0;
+}
+.cardNumber label,
+.expiration label,
+.userCardPassword label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s;
+  user-select: none;
+}
+.form_create input:focus ~ label {
+  top: -1rem;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.form_create input:valid ~ label {
+  top: -1rem;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.form_create input:focus {
+  border-bottom: 1.5px solid red;
+}
+.user_card_btn {
+  width: 100%;
+  height: 4rem;
+  background-color: rgb(49, 67, 168);
+  box-shadow: 10px 10px 25px rgba(2, 0, 41, 0.5);
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+.user_card_btn a {
+  color: white;
+  transition: all 0.5s;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.user_card_btn:hover a {
+  color: rgb(185, 185, 185);
 }
