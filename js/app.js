@@ -10,12 +10,11 @@ window.addEventListener("load", () => {
 
 // Message
 
-const messageOpen = document.getElementById("message-open");
-const messageClose = document.getElementById("message-close");
 const messageItemText = document.getElementById("message-item-text");
 const formCreate = document.getElementById("form-create");
 const messageBody = document.getElementById("message-body");
 const nameInput = document.getElementById("name-input");
+
 
 function time() {
   let now = new Date();
@@ -31,15 +30,14 @@ function time() {
   return `${hour}:${minute}, ${year}.${month}.${date}`;
 }
 
-messageOpen.addEventListener("click", () => {
+function openMessage() {
   messageItemText.style.display = "flex";
-});
-messageClose.addEventListener("click", () => {
+}
+function closedMessage() {
   messageItemText.style.display = "none";
-});
+}
 
 formCreate.addEventListener("submit", (e) => {
-  s;
   e.preventDefault();
   let inputValue = nameInput.value;
   let uppercase = inputValue.charAt().toUpperCase();
