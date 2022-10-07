@@ -15,7 +15,6 @@ const formCreate = document.getElementById("form-create");
 const messageBody = document.getElementById("message-body");
 const nameInput = document.getElementById("name-input");
 
-
 function time() {
   let now = new Date();
 
