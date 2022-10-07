@@ -1,13 +1,25 @@
 // Product Page
-const productItemCounter = document.getElementById("product-item-counter");
 const productMain = document.getElementById("product-main");
+const bagMain = document.getElementById("bag-main");
+const likeMain = document.getElementById("like-main");
 const emptyProduct = document.getElementById("empty-product");
 const thereProduct = document.getElementById("there-product");
-const bagMain = document.getElementById("bag-main");
+const emtyProductLike = document.getElementById("emty-product-like");
+const thereProductLike = document.getElementById("there-product-like");
 const thereProductItems = document.getElementById("there-product-items");
+const likeProductItems = document.getElementById("like-product-items");
 const thereProductItem = document.getElementsByClassName("there_product_item");
 const itemDeleteBtn = document.getElementsByClassName("item-delete-btn");
-productItemCounter.innerHTML = 0;
+const productItemCounter = document.querySelectorAll("#product-item-counter");
+const productItemLikeCounter = document.querySelectorAll(
+  "#product-item-like-counter"
+);
+productItemCounter.forEach((itemCounter) => {
+  itemCounter.innerHTML = 0;
+});
+productItemLikeCounter.forEach((itemCounter) => {
+  itemCounter.innerHTML = 0;
+});
 
 // Time
 function orderTime() {
@@ -15,7 +27,7 @@ function orderTime() {
 
   let date = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
   let month =
-    now.getMonth() < 10 ? "0" + (now.getMonth() + 1) : now.getMonth() + 1;
+    now.getMonth() + 1 < 10 ? "0" + (now.getMonth() + 1) : now.getMonth() + 1;
   let year = now.getFullYear();
 
   return `${date}.${month}.${year}`;
@@ -23,12 +35,13 @@ function orderTime() {
 function deliveryTime() {
   let now = new Date();
 
-  let date = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+  let date =
+    now.getDate() + 2 < 10 ? "0" + (now.getDate() + 2) : now.getDate() + 2;
   let month =
-    now.getMonth() < 10 ? "0" + (now.getMonth() + 1) : now.getMonth() + 1;
+    now.getMonth() + 1 < 10 ? "0" + (now.getMonth() + 1) : now.getMonth() + 1;
   let year = now.getFullYear();
 
-  return `${date + 2}.${month}.${year}`;
+  return `${date}.${month}.${year}`;
 }
 
 // Product item image
@@ -95,7 +108,9 @@ if (storageItem.length) {
 function showCounter() {
   let counter = JSON.parse(localStorage.getItem("item"));
 
-  productItemCounter.innerHTML = counter.length;
+  productItemCounter.forEach((itemCounter) => {
+    itemCounter.innerHTML = counter.length;
+  });
 }
 
 // showItem
@@ -186,6 +201,7 @@ function placingAnOrder(index) {
 function productBagLink() {
   productMain.style.display = "none";
   bagMain.style.display = "block";
+  likeMain.style.display = "none";
 }
 
 // Delete Item
@@ -208,4 +224,97 @@ function deleteItem(id) {
 function productItemBack() {
   productMain.style.display = "block";
   bagMain.style.display = "none";
+  likeMain.style.display = "none";
+}
+
+// Like Product
+let likeCounterStorage = JSON.parse(localStorage.getItem("likeItem"))
+  ? JSON.parse(localStorage.getItem("likeItem"))
+  : [];
+
+if (likeCounterStorage.length) {
+  showLikeItem();
+  showLikeCounter();
+  thereItemLike();
+} else {
+  emtyItemLike();
+}
+
+// thereProductLike
+function thereItemLike() {
+  emtyProductLike.style.display = "none";
+  thereProductLike.style.display = "block";
+}
+function emtyItemLike() {
+  emtyProductLike.style.display = "block";
+  thereProductLike.style.display = "none";
+}
+
+// setItemLike
+function likeSetItem() {
+  localStorage.setItem("likeItem", JSON.stringify(likeCounterStorage));
+}
+
+function productItemLike(index) {
+  likeCounterStorage.push({
+    itemImage: imageNames[index],
+    itemNames: itemNames[index],
+    itemPrice: itemPrice[index],
+    itemIndex: index,
+  });
+  likeSetItem();
+  showLikeItem();
+  showLikeCounter();
+
+  if (likeCounterStorage.length) {
+    thereItemLike();
+  } else {
+    emtyItemLike();
+  }
+}
+function showLikeItem() {
+  likeProductItems.innerHTML = "";
+  likeCounterStorage.forEach((item, i) => {
+    likeProductItems.innerHTML += `
+      <div class="product_item flex justify_center align_center">
+                <div class="productItem_head flex justify_center align_center">
+                  <div class="productItem_name">
+                    <h1>${item.itemNames}</h1>
+                  </div>
+                  <img src="../image/Products/${item.itemImage}.png" alt="Desktop image" />
+                </div>
+                <div class="productItem_body flex justify_center align_center">
+                  <div class="productItem_cost">
+                    <h1>${item.itemPrice}</h1>
+                  </div>
+                  <div class="productItem_shop">
+                    <form>
+                      <button
+                        type="button"
+                        onclick="placingAnOrder(${item.itemIndex})"
+                        id="placing-an-order-btn"
+                      >
+                        Buyurtma berish
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+    `;
+  });
+}
+
+function openLikeProduct() {
+  bagMain.style.display = "none";
+  productMain.style.display = "none";
+  likeMain.style.display = "block";
+}
+
+// showLikeCounter
+function showLikeCounter() {
+  let likeCounter = JSON.parse(localStorage.getItem("likeItem"));
+
+  productItemLikeCounter.forEach((itemCounter) => {
+    itemCounter.innerHTML = likeCounter.length;
+  });
 }

@@ -297,6 +297,7 @@ img {
 }
 
 .product_item {
+  position: relative;
   flex-direction: column;
   width: 20rem;
   height: 25rem;
@@ -310,6 +311,23 @@ img {
 .product_item:hover {
   transform: translateY(-10px);
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+}
+.productItemLike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #c3ccff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+}
+.productItemLike svg {
+  color: white;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 .productItem_head {
@@ -479,4 +497,9 @@ img {
 }
 .there_product_item_edit button:hover i {
   color: blue;
+}
+
+/* Like Product */
+#like-main {
+  display: none;
 }

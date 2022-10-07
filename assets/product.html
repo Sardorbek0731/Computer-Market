@@ -160,6 +160,7 @@
       </nav>
     </header>
 
+    <!----------- Product Main ----------->
     <main id="product-main">
       <!----------- Top Header ----------->
       <header id="top-header">
@@ -169,10 +170,14 @@
               <h1>Maxsulotlar</h1>
             </div>
             <div class="top_nav_items flex align_center justify_center">
-              <li class="top_nav_item">
+              <li
+                class="top_nav_item flex justify_center align_center"
+                onclick="openLikeProduct()"
+              >
                 <a
-                  href="./profil.html"
-                  class="top_nav_link flex justify_center align_center"
+                  href="#"
+                  class="top_nav_link flex justify_center align_center nav_link_svg"
+                  style="margin-right: 0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -187,6 +192,15 @@
                       d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
                     />
                   </svg>
+                  <h1
+                    class="product_item_counter"
+                    id="product-item-like-counter"
+                  ></h1>
+                </a>
+                <a
+                  href="#"
+                  class="top_nav_link flex justify_center align_center"
+                >
                   <h1>Yoqtirganlar</h1>
                 </a>
               </li>
@@ -236,6 +250,21 @@
           <div class="product_items">
             <div class="product_first_row flex justify_evenly align_center">
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(0)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>Dell XPS 17</h1>
@@ -263,6 +292,21 @@
                 </div>
               </div>
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(1)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>HP ENVY x360</h1>
@@ -290,6 +334,21 @@
                 </div>
               </div>
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(2)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>Samsung Galaxy Book Pro</h1>
@@ -319,6 +378,21 @@
             </div>
             <div class="product_second_row flex justify_evenly align_center">
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(3)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>Products HP Victus 16</h1>
@@ -346,6 +420,21 @@
                 </div>
               </div>
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(4)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>MacBook Pro M1 Pro</h1>
@@ -373,6 +462,21 @@
                 </div>
               </div>
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(5)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>MICROSOFT Surface Pro 8</h1>
@@ -402,6 +506,21 @@
             </div>
             <div class="product_threeth_row flex justify_evenly align_center">
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(6)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>Asus Zenbook 14 Ux434</h1>
@@ -429,6 +548,21 @@
                 </div>
               </div>
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(7)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>Dell Inspiron 5510 Core</h1>
@@ -456,6 +590,21 @@
                 </div>
               </div>
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(8)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>Lenova IdeaPad Flex 5</h1>
@@ -485,6 +634,21 @@
             </div>
             <div class="product_fourth_row flex justify_evenly align_center">
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(9)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>Honor MagicBook Pro 16.1</h1>
@@ -512,6 +676,21 @@
                 </div>
               </div>
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(10)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>Ultrabuk HP ENVY 13</h1>
@@ -539,6 +718,21 @@
                 </div>
               </div>
               <div class="product_item flex justify_center align_center">
+                <div class="productItemLike" onclick="productItemLike(11)">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>MSI Modern 14</h1>
@@ -571,6 +765,7 @@
       </section>
     </main>
 
+    <!----------- Bag Main ----------->
     <main id="bag-main">
       <!----------- Top Header ----------->
       <header id="top-header-bag">
@@ -580,10 +775,14 @@
               <h1>Savatcha</h1>
             </div>
             <div class="top_nav_items flex align_center justify_center">
-              <li class="top_nav_item">
+              <li
+                class="top_nav_item flex justify_center align_center"
+                onclick="openLikeProduct()"
+              >
                 <a
-                  href="./profil.html"
-                  class="top_nav_link flex justify_center align_center"
+                  href="#"
+                  class="top_nav_link flex justify_center align_center nav_link_svg"
+                  style="margin-right: 0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -598,6 +797,15 @@
                       d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
                     />
                   </svg>
+                  <h1
+                    class="product_item_counter"
+                    id="product-item-like-counter"
+                  ></h1>
+                </a>
+                <a
+                  href="#"
+                  class="top_nav_link flex justify_center align_center"
+                >
                   <h1>Yoqtirganlar</h1>
                 </a>
               </li>
@@ -654,6 +862,102 @@
       </section>
     </main>
 
+    <!----------- Like Main ----------->
+    <main id="like-main">
+      <!----------- Top Header ----------->
+      <header id="top-header-like">
+        <nav class="topNav">
+          <ul class="topUl flex align_center justify_between">
+            <div class="product_title">
+              <h1>Yoqtirgan Maxsulotlaringiz</h1>
+            </div>
+            <div class="top_nav_items flex align_center justify_center">
+              <li class="top_nav_item" onclick="productItemBack()">
+                <a
+                  href="#"
+                  class="top_nav_link flex justify_center align_center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-bar-left"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z"
+                    />
+                  </svg>
+                  <h1>Ortga</h1>
+                </a>
+              </li>
+              <li
+                class="top_nav_item flex justify_center align_center"
+                onclick="productBagLink()"
+              >
+                <a
+                  href="#"
+                  class="top_nav_link flex justify_center align_center nav_link_svg"
+                  style="margin-right: 0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-bag-plus-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"
+                    />
+                  </svg>
+                  <h1
+                    class="product_item_counter"
+                    id="product-item-counter"
+                  ></h1>
+                </a>
+                <a
+                  href="#"
+                  class="top_nav_link flex justify_center align_center"
+                  style="margin-right: 0"
+                >
+                  <h1>Savatcha</h1>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </header>
+
+      <!----------- Empty Product ----------->
+      <section id="emty-product-like">
+        <div class="empty_product flex justify_center align_center">
+          <div class="empty_product_bg">
+            <img
+              src="../image/Products/Bag image/empty_bg.webp"
+              alt="Empty image"
+            />
+          </div>
+          <div class="empty_product_title">
+            <h1>Hozircha yoqtirgan maxsulotingiz yo'q!</h1>
+          </div>
+        </div>
+      </section>
+
+      <!----------- There Product ----------->
+      <section id="there-product-like">
+        <div class="there_product flex justify_center align_center">
+          <div
+            class="flex justify_center align_center"
+            id="like-product-items"
+          ></div>
+        </div>
+      </section>
+    </main>
     <script src="../js/product.js"></script>
   </body>
 </html>
