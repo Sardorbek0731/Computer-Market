@@ -73,7 +73,7 @@ const itemNames = [
   "Asus Zenbook 14 Ux434",
   "Dell Inspiron 5510 Core",
   "Lenova IdeaPad Flex 5",
-  "Honor MagicBook Pro 16.1",
+  "Honor MagicBook Pro",
   "Ultrabuk HP ENVY 13",
   "MSI Modern 14",
 ];
