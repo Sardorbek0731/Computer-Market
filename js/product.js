@@ -7,6 +7,7 @@ const thereProduct = document.getElementById("there-product");
 const emtyProductLike = document.getElementById("emty-product-like");
 const thereProductLike = document.getElementById("there-product-like");
 const thereProductItems = document.getElementById("there-product-items");
+const placingAnOrderBtn = document.querySelectorAll("#placing-an-order-btn");
 const likeProductItems = document.getElementById("like-product-items");
 const thereProductItem = document.getElementsByClassName("there_product_item");
 const itemDeleteBtn = document.getElementsByClassName("item-delete-btn");
@@ -100,6 +101,7 @@ if (storageItem.length) {
   showCounter();
   showItem();
   thereProductDiv();
+  buyurtmaBerildi();
 } else {
   emtyProductDiv();
 }
@@ -177,6 +179,14 @@ function setItem() {
   localStorage.setItem("item", JSON.stringify(storageItem));
 }
 
+function buyurtmaBerildi() {
+  storageItem.forEach((item) => {
+    placingAnOrderBtn[item.itemIndex].classList.add("order_was_placed");
+    placingAnOrderBtn[item.itemIndex].innerHTML = "Buyurtma berildi";
+    placingAnOrderBtn[item.itemIndex].disabled = true;
+  });
+}
+
 function placingAnOrder(index) {
   storageItem.push({
     orderTime: orderTime(),
@@ -184,10 +194,12 @@ function placingAnOrder(index) {
     itemImage: imageNames[index],
     itemNames: itemNames[index],
     itemPrice: itemPrice[index],
+    itemIndex: index,
   });
   setItem();
   showCounter();
   showItem();
+  buyurtmaBerildi();
 
   if (storageItem.length) {
     thereProductDiv();
@@ -299,7 +311,7 @@ function showLikeItem() {
                     </form>
                   </div>
                 </div>
-              </div>
+      </div>
     `;
   });
 }

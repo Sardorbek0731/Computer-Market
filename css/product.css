@@ -295,7 +295,7 @@ img {
   flex-direction: column;
   width: 20rem;
   height: 24rem;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 13px 13px 13px 13px;
   background-color: white;
   padding: 2rem 0;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -314,9 +314,9 @@ img {
   top: 0.8rem;
   left: 0.8rem;
   background-color: #648bff35;
-  width: 3.3rem;
-  height: 3.3rem;
-  border-radius: 15px 15px 15px 15px;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 13px 13px 13px 13px;
   transition: all 0.2s;
 }
 .productItemLike:hover {
@@ -357,7 +357,7 @@ img {
   text-decoration: none;
   color: #24567d;
   font-weight: 380;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 .learning h1::after {
@@ -366,7 +366,7 @@ img {
   width: 60%;
   bottom: -4px;
   left: 1px;
-  height: 1.5px;
+  height: 1.2px;
   background-color: #24567d;
 }
 .productItem_shop form button {
@@ -392,6 +392,11 @@ img {
   background-color: white;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   color: #25528e;
+}
+.productItem_shop form button.order_was_placed {
+  background-color: #15a273;
+  border: 2px solid #15a273;
+  color: white;
 }
 
 /* User Bag */
