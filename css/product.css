@@ -523,3 +523,27 @@ img {
 #like-main {
   display: none;
 }
+.like_items {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto;
+}
+.there_product_like {
+  float: right;
+  flex-direction: column;
+  width: 83vw;
+  position: relative;
+  margin-top: 70px;
+}
+.product_item_like {
+  position: relative;
+  flex-direction: column;
+  width: 20rem;
+  height: 24rem;
+  border-radius: 13px 13px 13px 13px;
+  background-color: white;
+  padding: 2rem 0;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  margin: 3rem;
+}

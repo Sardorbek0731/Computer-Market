@@ -97,15 +97,6 @@ let storageItem = JSON.parse(localStorage.getItem("item"))
   ? JSON.parse(localStorage.getItem("item"))
   : [];
 
-if (storageItem.length) {
-  showCounter();
-  showItem();
-  thereProductDiv();
-  buyurtmaBerildi();
-} else {
-  emtyProductDiv();
-}
-
 // show counter
 function showCounter() {
   let counter = JSON.parse(localStorage.getItem("item"));
@@ -181,8 +172,8 @@ function setItem() {
 
 function buyurtmaBerildi() {
   storageItem.forEach((item) => {
+    placingAnOrderBtn[item.itemIndex].innerHTML = `Buyurtma berildi`;
     placingAnOrderBtn[item.itemIndex].classList.add("order_was_placed");
-    placingAnOrderBtn[item.itemIndex].innerHTML = "Buyurtma berildi";
     placingAnOrderBtn[item.itemIndex].disabled = true;
   });
 }
@@ -194,6 +185,7 @@ function placingAnOrder(index) {
     itemImage: imageNames[index],
     itemNames: itemNames[index],
     itemPrice: itemPrice[index],
+    itemDisab: true,
     itemIndex: index,
   });
   setItem();
@@ -206,6 +198,17 @@ function placingAnOrder(index) {
   } else {
     emtyProductDiv();
   }
+}
+
+if (storageItem.length) {
+  showCounter();
+  showItem();
+  thereProductDiv();
+  storageItem.forEach((item) => {
+    buyurtmaBerildi(item.itemIndex);
+  });
+} else {
+  emtyProductDiv();
 }
 
 // There item page
@@ -288,7 +291,7 @@ function showLikeItem() {
   likeProductItems.innerHTML = "";
   likeCounterStorage.forEach((item, i) => {
     likeProductItems.innerHTML += `
-      <div class="product_item flex justify_center align_center">
+      <div class="product_item_like flex justify_center align_center">
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>${item.itemNames}</h1>
