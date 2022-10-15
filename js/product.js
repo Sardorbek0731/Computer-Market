@@ -8,6 +8,8 @@ const emtyProductLike = document.getElementById("emty-product-like");
 const thereProductLike = document.getElementById("there-product-like");
 const thereProductItems = document.getElementById("there-product-items");
 const placingAnOrderBtn = document.querySelectorAll("#placing-an-order-btn");
+const productItemLikeBtn =
+  document.getElementsByClassName("productItemLikeBtn");
 const likeProductItems = document.getElementById("like-product-items");
 const thereProductItem = document.getElementsByClassName("there_product_item");
 const itemDeleteBtn = document.getElementsByClassName("item-delete-btn");
@@ -170,12 +172,10 @@ function setItem() {
   localStorage.setItem("item", JSON.stringify(storageItem));
 }
 
-function buyurtmaBerildi() {
-  storageItem.forEach((item) => {
-    placingAnOrderBtn[item.itemIndex].innerHTML = `Buyurtma berildi`;
-    placingAnOrderBtn[item.itemIndex].classList.add("order_was_placed");
-    placingAnOrderBtn[item.itemIndex].disabled = true;
-  });
+function buyurtmaBerildi(index) {
+  placingAnOrderBtn[index].innerHTML = `Buyurtma berildi`;
+  placingAnOrderBtn[index].classList.add("order_was_placed");
+  placingAnOrderBtn[index].disabled = true;
 }
 
 function placingAnOrder(index) {
@@ -185,13 +185,12 @@ function placingAnOrder(index) {
     itemImage: imageNames[index],
     itemNames: itemNames[index],
     itemPrice: itemPrice[index],
-    itemDisab: true,
     itemIndex: index,
   });
   setItem();
   showCounter();
   showItem();
-  buyurtmaBerildi();
+  buyurtmaBerildi(index);
 
   if (storageItem.length) {
     thereProductDiv();
@@ -205,7 +204,9 @@ if (storageItem.length) {
   showItem();
   thereProductDiv();
   storageItem.forEach((item) => {
-    buyurtmaBerildi(item.itemIndex);
+    if (item.itemIndex >= 0) {
+      buyurtmaBerildi(item.itemIndex);
+    }
   });
 } else {
   emtyProductDiv();
@@ -251,6 +252,11 @@ if (likeCounterStorage.length) {
   showLikeItem();
   showLikeCounter();
   thereItemLike();
+  likeCounterStorage.forEach((item) => {
+    if (item.itemIndex >= 0) {
+      likeBosildi(item.itemIndex);
+    }
+  });
 } else {
   emtyItemLike();
 }
@@ -270,6 +276,11 @@ function likeSetItem() {
   localStorage.setItem("likeItem", JSON.stringify(likeCounterStorage));
 }
 
+function likeBosildi(index) {
+  productItemLikeBtn[index].classList.add("like_bosildi");
+  productItemLikeBtn[index].disabled = true;
+}
+
 function productItemLike(index) {
   likeCounterStorage.push({
     itemImage: imageNames[index],
@@ -280,6 +291,7 @@ function productItemLike(index) {
   likeSetItem();
   showLikeItem();
   showLikeCounter();
+  likeBosildi(index);
 
   if (likeCounterStorage.length) {
     thereItemLike();
@@ -292,11 +304,17 @@ function showLikeItem() {
   likeCounterStorage.forEach((item, i) => {
     likeProductItems.innerHTML += `
       <div class="product_item_like flex justify_center align_center">
+                <div class="productItemLikeDelete" onclick="productItemLikeDelete(${i})">
+                  <i class="fa-solid fa-trash-can"></i>
+                </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
                     <h1>${item.itemNames}</h1>
                   </div>
-                  <img src="../image/Products/${item.itemImage}.png" alt="Desktop image" />
+                  <img
+                    src="../image/Products/${item.itemImage}.png"
+                    alt="Desktop image"
+                  />
                 </div>
                 <div class="productItem_body flex justify_center align_center">
                   <div class="productItem_cost">
@@ -306,12 +324,15 @@ function showLikeItem() {
                     <form>
                       <button
                         type="button"
-                        onclick="placingAnOrder(${item.itemIndex})"
+                        onclick="placingAnOrder(${i})"
                         id="placing-an-order-btn"
                       >
                         Buyurtma berish
                       </button>
                     </form>
+                  </div>
+                  <div class="learning">
+                    <h1>Batafsil...</h1>
                   </div>
                 </div>
       </div>
@@ -332,4 +353,20 @@ function showLikeCounter() {
   productItemLikeCounter.forEach((itemCounter) => {
     itemCounter.innerHTML = likeCounter.length;
   });
+}
+
+// show like item delete
+function productItemLikeDelete(id) {
+  newLikeStorage = likeCounterStorage.filter((item, i) => {
+    return i !== id;
+  });
+  likeCounterStorage = newLikeStorage;
+
+  likeSetItem();
+  showLikeCounter();
+  showLikeItem();
+
+  if (!newLikeStorage.length) {
+    emtyItemLike();
+  }
 }
