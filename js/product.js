@@ -244,6 +244,13 @@ function productItemBack() {
 }
 
 // Like Product
+function openLikeProduct() {
+  bagMain.style.display = "none";
+  productMain.style.display = "none";
+  likeMain.style.display = "block";
+  buyurtmaBerildiLike();
+}
+
 let likeCounterStorage = JSON.parse(localStorage.getItem("likeItem"))
   ? JSON.parse(localStorage.getItem("likeItem"))
   : [];
@@ -257,6 +264,10 @@ if (likeCounterStorage.length) {
       likeBosildi(item.itemIndex);
     }
   });
+
+  if (storageItem.length) {
+    buyurtmaBerildiLike();
+  }
 } else {
   emtyItemLike();
 }
@@ -325,7 +336,7 @@ function showLikeItem() {
                       <button
                         type="button"
                         onclick="placingAnOrder(${i})"
-                        id="placing-an-order-btn"
+                        id="placing-an-order-btn-like"
                       >
                         Buyurtma berish
                       </button>
@@ -340,10 +351,18 @@ function showLikeItem() {
   });
 }
 
-function openLikeProduct() {
-  bagMain.style.display = "none";
-  productMain.style.display = "none";
-  likeMain.style.display = "block";
+function buyurtmaBerildiLike() {
+  let placingAnOrderBtnLike = document.querySelectorAll(
+    "#placing-an-order-btn-like"
+  );
+
+  storageItem.forEach((item) => {
+    if (item.itemIndex >= 0) {
+      placingAnOrderBtnLike[item.itemIndex].classList.add("order_was_placed");
+      placingAnOrderBtnLike[item.itemIndex].innerHTML = `Buyurtma berildi`;
+      placingAnOrderBtnLike[item.itemIndex].disabled = true;
+    }
+  });
 }
 
 // showLikeCounter
