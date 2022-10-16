@@ -54,6 +54,50 @@ const userCreateNumber = document.getElementById("user-create-number");
 
 // LocalStorage
 
+let userStorage = JSON.parse(localStorage.getItem("user"))
+  ? JSON.parse(localStorage.getItem("user"))
+  : [];
+
+if (userStorage.length) {
+  openedProfil();
+  showUserAbout();
+} else {
+  closedProfil();
+}
+
+// user setItem
+function setUserItem() {
+  localStorage.setItem("user", JSON.stringify(userStorage));
+}
+
+// openedProfil
+function openedProfil() {
+  profil.style.display = "block";
+  registerProfil.style.display = "none";
+}
+
+// closedProfil
+function closedProfil() {
+  profil.style.display = "none";
+  registerProfil.style.display = "block";
+}
+
+// showUserAbout
+function showUserAbout() {
+  userStorage.forEach((item) => {
+    userFirstName.innerHTML = item.firstName;
+    userLastName.innerHTML = item.lastName;
+    userEmail.innerHTML = item.email;
+    userNumber.innerHTML = item.number;
+    userName.innerHTML = `${item.firstName} ${item.lastName}`;
+
+    userCreateFirstName.value = item.firstName;
+    userCreateLastName.value = item.lastName;
+    userCreateEmail.value = item.email;
+    userCreateNumber.value = item.number;
+  });
+}
+
 openProfil.addEventListener("click", (e) => {
   e.preventDefault();
   if (
@@ -62,83 +106,18 @@ openProfil.addEventListener("click", (e) => {
     email.value.length > 0 &&
     number.value.length > 0
   ) {
-    localStorage.setItem("firstName", JSON.stringify(firstName.value));
-    localStorage.setItem("lastName", JSON.stringify(lastName.value));
-    localStorage.setItem("email", JSON.stringify(email.value));
-    localStorage.setItem("number", JSON.stringify(number.value));
+    userStorage.push({
+      firstName: firstName.value,
+      lastName: lastName.value,
+      email: email.value,
+      number: number.value,
+    });
 
-    let nameTodos = JSON.parse(localStorage.getItem("firstName"))
-      ? JSON.parse(localStorage.getItem("firstName"))
-      : [];
-
-    let lastTodos = JSON.parse(localStorage.getItem("lastName"))
-      ? JSON.parse(localStorage.getItem("lastName"))
-      : [];
-
-    let emailTodos = JSON.parse(localStorage.getItem("email"))
-      ? JSON.parse(localStorage.getItem("email"))
-      : [];
-
-    let numberTodos = JSON.parse(localStorage.getItem("number"))
-      ? JSON.parse(localStorage.getItem("number"))
-      : [];
-
-    localStorage.setItem("none", JSON.stringify("none"));
-    localStorage.setItem("block", JSON.stringify("block"));
-
-    profil.style.display = "block";
-    registerProfil.style.display = "none";
-
-    userFirstName.innerHTML = nameTodos;
-    userLastName.innerHTML = lastTodos;
-    userEmail.innerHTML = emailTodos;
-    userNumber.innerHTML = numberTodos;
-    userName.innerHTML = `${nameTodos} ${lastTodos}`;
-
-    userCreateFirstName.value = nameTodos;
-    userCreateLastName.value = lastTodos;
-    userCreateEmail.value = emailTodos;
-    userCreateNumber.value = numberTodos;
+    setUserItem();
+    openedProfil();
+    showUserAbout();
   }
 });
-
-let nameTodos = JSON.parse(localStorage.getItem("firstName"))
-  ? JSON.parse(localStorage.getItem("firstName"))
-  : [];
-
-let lastTodos = JSON.parse(localStorage.getItem("lastName"))
-  ? JSON.parse(localStorage.getItem("lastName"))
-  : [];
-
-let emailTodos = JSON.parse(localStorage.getItem("email"))
-  ? JSON.parse(localStorage.getItem("email"))
-  : [];
-
-let numberTodos = JSON.parse(localStorage.getItem("number"))
-  ? JSON.parse(localStorage.getItem("number"))
-  : [];
-
-let noneTodos = JSON.parse(localStorage.getItem("none"))
-  ? JSON.parse(localStorage.getItem("none"))
-  : [];
-
-let blockTodos = JSON.parse(localStorage.getItem("block"))
-  ? JSON.parse(localStorage.getItem("block"))
-  : [];
-
-userFirstName.innerHTML = nameTodos;
-userLastName.innerHTML = lastTodos;
-userEmail.innerHTML = emailTodos;
-userNumber.innerHTML = numberTodos;
-userName.innerHTML = `${nameTodos} ${lastTodos}`;
-
-userCreateFirstName.value = nameTodos;
-userCreateLastName.value = lastTodos;
-userCreateEmail.value = emailTodos;
-userCreateNumber.value = numberTodos;
-
-profil.style.display = blockTodos;
-registerProfil.style.display = noneTodos;
 
 // Create User Settings
 const createSettingsBtn = document.getElementById("create-settings");
@@ -156,71 +135,20 @@ closeProfilSetting.addEventListener("click", () => {
 
 userAboutSaveBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  localStorage.setItem(
-    "settingFirstName",
-    JSON.stringify(userCreateFirstName.value)
-  );
-  localStorage.setItem(
-    "settingLastName",
-    JSON.stringify(userCreateLastName.value)
-  );
-  localStorage.setItem("settingEmail", JSON.stringify(userCreateEmail.value));
-  localStorage.setItem("settingNumber", JSON.stringify(userCreateNumber.value));
 
-  let seetingNameTodos = JSON.parse(localStorage.getItem("settingFirstName"))
-    ? JSON.parse(localStorage.getItem("settingFirstName"))
-    : nameTodos;
+  userStorage.forEach((item) => {
+    item.firstName = userCreateFirstName.value;
+    item.lastName = userCreateLastName.value;
+    item.email = userCreateEmail.value;
+    item.number = userCreateNumber.value;
+  });
 
-  let seetingLastTodos = JSON.parse(localStorage.getItem("settingLastName"))
-    ? JSON.parse(localStorage.getItem("settingLastName"))
-    : lastTodos;
-
-  let seetingEmailTodos = JSON.parse(localStorage.getItem("settingEmail"))
-    ? JSON.parse(localStorage.getItem("settingEmail"))
-    : emailTodos;
-
-  let seetingNumberTodos = JSON.parse(localStorage.getItem("settingNumber"))
-    ? JSON.parse(localStorage.getItem("settingNumber"))
-    : numberTodos;
-
-  userFirstName.innerHTML = seetingNameTodos;
-  userLastName.innerHTML = seetingLastTodos;
-  userEmail.innerHTML = seetingEmailTodos;
-  userNumber.innerHTML = seetingNumberTodos;
-  userName.innerHTML = `${seetingNameTodos} ${seetingLastTodos}`;
+  setUserItem();
+  showUserAbout();
   profilSettings.classList.add("hidden");
 });
 
-let seetingNameTodos = JSON.parse(localStorage.getItem("settingFirstName"))
-  ? JSON.parse(localStorage.getItem("settingFirstName"))
-  : nameTodos;
-
-let seetingLastTodos = JSON.parse(localStorage.getItem("settingLastName"))
-  ? JSON.parse(localStorage.getItem("settingLastName"))
-  : lastTodos;
-
-let seetingEmailTodos = JSON.parse(localStorage.getItem("settingEmail"))
-  ? JSON.parse(localStorage.getItem("settingEmail"))
-  : emailTodos;
-
-let seetingNumberTodos = JSON.parse(localStorage.getItem("settingNumber"))
-  ? JSON.parse(localStorage.getItem("settingNumber"))
-  : numberTodos;
-
-userFirstName.innerHTML = seetingNameTodos;
-userLastName.innerHTML = seetingLastTodos;
-userEmail.innerHTML = seetingEmailTodos;
-userNumber.innerHTML = seetingNumberTodos;
-userName.innerHTML = `${seetingNameTodos} ${seetingLastTodos}`;
-profilSettings.classList.add("hidden");
-
-userCreateFirstName.value = seetingNameTodos;
-userCreateLastName.value = seetingLastTodos;
-userCreateEmail.value = seetingEmailTodos;
-userCreateNumber.value = seetingNumberTodos;
-
 deleteSettings.addEventListener("click", () => {
-  profil.style.display = "none";
-  registerProfil.style.display = "block";
-  localStorage.clear();
+  closedProfil();
+  localStorage.setItem("user", JSON.stringify(""));
 });
