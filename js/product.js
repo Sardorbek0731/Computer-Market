@@ -7,9 +7,8 @@ const thereProduct = document.getElementById("there-product");
 const emtyProductLike = document.getElementById("emty-product-like");
 const thereProductLike = document.getElementById("there-product-like");
 const thereProductItems = document.getElementById("there-product-items");
-const placingAnOrderBtn = document.querySelectorAll("#placing-an-order-btn");
-const productItemLikeBtn =
-  document.getElementsByClassName("productItemLikeBtn");
+const anOrderBtns = document.querySelectorAll("#placing-an-order-btn");
+const itemLikeBtns = document.getElementsByClassName("productItemLikeBtn");
 const likeProductItems = document.getElementById("like-product-items");
 const thereProductItem = document.getElementsByClassName("there_product_item");
 const itemDeleteBtn = document.getElementsByClassName("item-delete-btn");
@@ -172,10 +171,14 @@ function setItem() {
   localStorage.setItem("item", JSON.stringify(storageItem));
 }
 
-function buyurtmaBerildi(index) {
-  placingAnOrderBtn[index].innerHTML = `Buyurtma berildi`;
-  placingAnOrderBtn[index].classList.add("order_was_placed");
-  placingAnOrderBtn[index].disabled = true;
+function clickAnOrder(index) {
+  for (let i = 0; i < anOrderBtns.length - 1; i++) {
+    if (index === i) {
+      anOrderBtns[i].classList.add("clicked_an_order");
+      anOrderBtns[i].disabled = true;
+      anOrderBtns[i].innerHTML = "Buyurtma berildi";
+    }
+  }
 }
 
 function placingAnOrder(index) {
@@ -190,7 +193,7 @@ function placingAnOrder(index) {
   setItem();
   showCounter();
   showItem();
-  buyurtmaBerildi(index);
+  clickAnOrder(index);
 
   if (storageItem.length) {
     thereProductDiv();
@@ -203,10 +206,9 @@ if (storageItem.length) {
   showCounter();
   showItem();
   thereProductDiv();
+
   storageItem.forEach((item) => {
-    if (item.itemIndex >= 0) {
-      buyurtmaBerildi(item.itemIndex);
-    }
+    clickAnOrder(item.itemIndex);
   });
 } else {
   emtyProductDiv();
@@ -248,29 +250,11 @@ function openLikeProduct() {
   bagMain.style.display = "none";
   productMain.style.display = "none";
   likeMain.style.display = "block";
-  buyurtmaBerildiLike();
 }
 
-let likeCounterStorage = JSON.parse(localStorage.getItem("likeItem"))
+let likeStorage = JSON.parse(localStorage.getItem("likeItem"))
   ? JSON.parse(localStorage.getItem("likeItem"))
   : [];
-
-if (likeCounterStorage.length) {
-  showLikeItem();
-  showLikeCounter();
-  thereItemLike();
-  likeCounterStorage.forEach((item) => {
-    if (item.itemIndex >= 0) {
-      likeBosildi(item.itemIndex);
-    }
-  });
-
-  if (storageItem.length) {
-    buyurtmaBerildiLike();
-  }
-} else {
-  emtyItemLike();
-}
 
 // thereProductLike
 function thereItemLike() {
@@ -284,16 +268,41 @@ function emtyItemLike() {
 
 // setItemLike
 function likeSetItem() {
-  localStorage.setItem("likeItem", JSON.stringify(likeCounterStorage));
+  localStorage.setItem("likeItem", JSON.stringify(likeStorage));
 }
 
-function likeBosildi(index) {
-  productItemLikeBtn[index].classList.add("like_bosildi");
-  productItemLikeBtn[index].disabled = true;
+function clickedLike(index) {
+  for (let i = 0; i < itemLikeBtns.length - 1; i++) {
+    if (index === i) {
+      itemLikeBtns[i].classList.add("clicked_like");
+      itemLikeBtns[i].disabled = true;
+    }
+  }
+  for (let i = 0; i < anOrderBtns.length - 1; i++) {
+    storageItem.forEach((item) => {
+      const anOrderLike = document.querySelectorAll("#an-order-like");
+
+      if (item.itemIndex === i) {
+        anOrderLike[i].classList.add("clicked_an_order");
+        anOrderLike[i].disabled = true;
+        anOrderLike[i].innerHTML = "Buyurtma berildi";
+      } else {
+        clickAnOrder(item.itemIndex);
+
+        anOrderLike.forEach((item, i) => {
+          item.addEventListener("click", () => {
+            anOrderLike[i].classList.add("clicked_an_order");
+            anOrderLike[i].disabled = true;
+            anOrderLike[i].innerHTML = "Buyurtma berildi";
+          });
+        });
+      }
+    });
+  }
 }
 
 function productItemLike(index) {
-  likeCounterStorage.push({
+  likeStorage.push({
     itemImage: imageNames[index],
     itemNames: itemNames[index],
     itemPrice: itemPrice[index],
@@ -302,9 +311,9 @@ function productItemLike(index) {
   likeSetItem();
   showLikeItem();
   showLikeCounter();
-  likeBosildi(index);
+  clickedLike(index);
 
-  if (likeCounterStorage.length) {
+  if (likeStorage.length) {
     thereItemLike();
   } else {
     emtyItemLike();
@@ -312,7 +321,7 @@ function productItemLike(index) {
 }
 function showLikeItem() {
   likeProductItems.innerHTML = "";
-  likeCounterStorage.forEach((item, i) => {
+  likeStorage.forEach((item, i) => {
     likeProductItems.innerHTML += `
       <div class="product_item_like flex justify_center align_center">
                 <div class="productItemLikeDelete" onclick="productItemLikeDelete(${i})">
@@ -336,7 +345,7 @@ function showLikeItem() {
                       <button
                         type="button"
                         onclick="placingAnOrder(${i})"
-                        id="placing-an-order-btn-like"
+                        id="an-order-like"
                       >
                         Buyurtma berish
                       </button>
@@ -351,20 +360,6 @@ function showLikeItem() {
   });
 }
 
-function buyurtmaBerildiLike() {
-  let placingAnOrderBtnLike = document.querySelectorAll(
-    "#placing-an-order-btn-like"
-  );
-
-  storageItem.forEach((item) => {
-    if (item.itemIndex >= 0) {
-      placingAnOrderBtnLike[item.itemIndex].classList.add("order_was_placed");
-      placingAnOrderBtnLike[item.itemIndex].innerHTML = `Buyurtma berildi`;
-      placingAnOrderBtnLike[item.itemIndex].disabled = true;
-    }
-  });
-}
-
 // showLikeCounter
 function showLikeCounter() {
   let likeCounter = JSON.parse(localStorage.getItem("likeItem"));
@@ -376,10 +371,10 @@ function showLikeCounter() {
 
 // show like item delete
 function productItemLikeDelete(id) {
-  newLikeStorage = likeCounterStorage.filter((item, i) => {
+  const newLikeStorage = likeStorage.filter((item, i) => {
     return i !== id;
   });
-  likeCounterStorage = newLikeStorage;
+  likeStorage = newLikeStorage;
 
   likeSetItem();
   showLikeCounter();
@@ -388,4 +383,16 @@ function productItemLikeDelete(id) {
   if (!newLikeStorage.length) {
     emtyItemLike();
   }
+}
+
+if (likeStorage.length) {
+  showLikeItem();
+  showLikeCounter();
+  thereItemLike();
+
+  likeStorage.forEach((item) => {
+    clickedLike(item.itemIndex);
+  });
+} else {
+  emtyItemLike();
 }

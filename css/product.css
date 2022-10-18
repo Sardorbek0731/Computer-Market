@@ -323,7 +323,7 @@ img {
 .productItemLikeBtn {
   background-color: #648bff35;
 }
-.productItemLikeBtn.like_bosildi {
+.productItemLikeBtn.clicked_like {
   background-color: rgb(153, 153, 255);
 }
 .productItemLikeDelete {
@@ -407,7 +407,7 @@ img {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   color: #25528e;
 }
-.productItem_shop form button.order_was_placed {
+.productItem_shop form button.clicked_an_order {
   background-color: #15a273;
   border: 2px solid #15a273;
   color: white;
