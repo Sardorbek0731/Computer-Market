@@ -48,19 +48,19 @@ function deliveryTime() {
 
 // Product item image
 
-const imageNames = [
-  "Image-1",
-  "Image-2",
-  "Image-3",
-  "Image-4",
-  "Image-5",
-  "Image-6",
-  "Image-7",
-  "Image-8",
-  "Image-9",
-  "Image-10",
-  "Image-11",
-  "Image-12",
+const itemImage = [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
 ];
 
 // Product item name
@@ -115,7 +115,7 @@ function showItem() {
     thereProductItems.innerHTML += `
       <div class="there_product_item flex justify_evenly align_center">
               <div class="there_product_item_img">
-                <img src="../image/Products/${item.itemImage}.png" alt="Item image" />
+                <img src="../image/Products/Image-${item.itemImage}.png" alt="Item image" />
               </div>
 
               <div class="there_product_item_name flex justify_evenly">
@@ -172,7 +172,7 @@ function setItem() {
 }
 
 function clickAnOrder(index) {
-  for (let i = 0; i < anOrderBtns.length - 1; i++) {
+  for (let i = 0; i < anOrderBtns.length; i++) {
     if (index === i) {
       anOrderBtns[i].classList.add("clicked_an_order");
       anOrderBtns[i].disabled = true;
@@ -185,7 +185,7 @@ function placingAnOrder(index) {
   storageItem.push({
     orderTime: orderTime(),
     deliveryTime: deliveryTime(),
-    itemImage: imageNames[index],
+    itemImage: itemImage[index],
     itemNames: itemNames[index],
     itemPrice: itemPrice[index],
     itemIndex: index,
@@ -272,38 +272,32 @@ function likeSetItem() {
 }
 
 function clickedLike(index) {
-  for (let i = 0; i < itemLikeBtns.length - 1; i++) {
+  for (let i = 0; i < itemLikeBtns.length; i++) {
     if (index === i) {
       itemLikeBtns[i].classList.add("clicked_like");
       itemLikeBtns[i].disabled = true;
     }
   }
-  for (let i = 0; i < anOrderBtns.length - 1; i++) {
-    storageItem.forEach((item) => {
-      const anOrderLike = document.querySelectorAll("#an-order-like");
 
-      if (item.itemIndex === i) {
-        anOrderLike[i].classList.add("clicked_an_order");
-        anOrderLike[i].disabled = true;
-        anOrderLike[i].innerHTML = "Buyurtma berildi";
-      } else {
-        clickAnOrder(item.itemIndex);
+  for (let i = 0; i < storageItem.length; i++) {
+    const anOrderLike = document.querySelectorAll("#an-order-like"); 
+    anOrderLike[storageItem[i].itemIndex].classList.add("clicked_an_order");
+    anOrderLike[storageItem[i].itemIndex].disabled = true;
+    anOrderLike[storageItem[i].itemIndex].innerHTML = "Buyurtma berildi";
 
-        anOrderLike.forEach((item, i) => {
-          item.addEventListener("click", () => {
-            anOrderLike[i].classList.add("clicked_an_order");
-            anOrderLike[i].disabled = true;
-            anOrderLike[i].innerHTML = "Buyurtma berildi";
-          });
-        });
-      }
-    });
+    // anOrderLike.forEach((item, i) => {
+    //   item.addEventListener("click", () => {
+    //     anOrderLike[i].classList.add("clicked_an_order");
+    //     anOrderLike[i].disabled = true;
+    //     anOrderLike[i].innerHTML = "Buyurtma berildi";
+    //   });
+    // });
   }
 }
 
 function productItemLike(index) {
   likeStorage.push({
-    itemImage: imageNames[index],
+    itemImage: itemImage[index],
     itemNames: itemNames[index],
     itemPrice: itemPrice[index],
     itemIndex: index,
@@ -332,7 +326,7 @@ function showLikeItem() {
                     <h1>${item.itemNames}</h1>
                   </div>
                   <img
-                    src="../image/Products/${item.itemImage}.png"
+                    src="../image/Products/Image-${item.itemImage}.png"
                     alt="Desktop image"
                   />
                 </div>
