@@ -132,13 +132,13 @@
 
       <!----------- Advantage ----------->
       <section>
-        <div class="advantage flex justify_center align_center">
-          <div class="advantage_title">
+        <div class="advantage flex justify_center align_center column">
+          <div class="titles">
             <div class="container">
               <h1>Bizning afzalliklar</h1>
             </div>
           </div>
-          <div class="advantage_items flex justify_center align_center">
+          <div class="column flex justify_center align_center">
             <div class="advantageFirst_row">
               <div class="container">
                 <div class="advantage_item flex justify_center align_center">
@@ -274,10 +274,97 @@
         </div>
       </section>
 
+      <!----------- Questions ----------->
+      <section>
+        <div class="questions flex justify_center align_center column">
+          <div class="titles">
+            <div class="container">
+              <h1>
+                Ko'p so'raladigan savollarga<br />
+                javoblar
+              </h1>
+            </div>
+          </div>
+          <div class="column">
+            <div class="questions-container mb-5 flex justify_between">
+              <div class="item_question flex align_center">
+                <div class="question_header flex align_center">
+                  <div class="question_title">
+                    <h1>Ma'lumotlar xavfsizligi darajasi qanday ?</h1>
+                  </div>
+                  <div class="answer_down">
+                    <i class="fas fa-angle-down" onclick="angleDown(0)"></i>
+                  </div>
+                </div>
+                <div class="question_body">
+                  <p>
+                    Biz chet el hostinglaridan foylanamiz. Ma’lumotingiz
+                    xavfsizligi<br />
+                    haqida qayg’urmasangiz ham bo’ladi.<br />
+                  </p>
+                </div>
+              </div>
+              <div class="item_question flex align_center">
+                <div class="question_header flex align_center">
+                  <div class="question_title">
+                    <h1>Maxsulot narxini bo'lib to'lash imkoni bormi ?</h1>
+                  </div>
+                  <div class="answer_down">
+                    <i class="fas fa-angle-down" onclick="angleDown(1)"></i>
+                  </div>
+                </div>
+                <div class="question_body">
+                  <p>
+                    Ha, albatta siz maxsulot narxini 1 yilgacha bo'lib
+                    to'lashingiz<br />
+                    mumkin. Bu esa maxsulot narxiga ta'sir ko'rsatmaydi.<br />
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="questions-container flex justify_between">
+              <div class="item_question flex align_center">
+                <div class="question_header flex align_center">
+                  <div class="question_title">
+                    <h1>Buyurtma qilish uchun profil ochish shartmi ?</h1>
+                  </div>
+                  <div class="answer_down">
+                    <i class="fas fa-angle-down" onclick="angleDown(2)"></i>
+                  </div>
+                </div>
+                <div class="question_body">
+                  <p>
+                    Yo'q, profil ochish shart emas lekin kredit kartangizni
+                    ma'lumo-<br />
+                    tini kiritishingiz lozim yo'qsa buyurtma bera olmaysiz.<br />
+                  </p>
+                </div>
+              </div>
+              <div class="item_question flex align_center">
+                <div class="question_header flex align_center">
+                  <div class="question_title">
+                    <h1>Maxsulotga necha foiz chegirma bor ?</h1>
+                  </div>
+                  <div class="answer_down">
+                    <i class="fas fa-angle-down" onclick="angleDown(3)"></i>
+                  </div>
+                </div>
+                <div class="question_body">
+                  <p>
+                    Maxsulotlarimizga homiylarimiz tomonidan -30% chegirma<br>
+                    e'lon qilingan.<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!----------- Brands ----------->
       <section id="brands">
         <div class="brands flex align_center justify_center">
-          <div class="brands_title">
+          <div class="titles">
             <div class="container">
               <h1>Brendlar</h1>
             </div>
@@ -397,5 +484,6 @@
     </main>
 
     <script src="./js/app.js"></script>
+    <script src="./js/questions.js"></script>
   </body>
 </html>
