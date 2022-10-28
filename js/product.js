@@ -98,6 +98,10 @@ let storageItem = JSON.parse(localStorage.getItem("item"))
   ? JSON.parse(localStorage.getItem("item"))
   : [];
 
+let likeMainBlock = JSON.parse(localStorage.getItem("likeMain-block"))
+  ? JSON.parse(localStorage.getItem("likeMain-block"))
+  : [];
+
 // show counter
 function showCounter() {
   let counter = JSON.parse(localStorage.getItem("item"));
@@ -172,13 +176,9 @@ function setItem() {
 }
 
 function clickAnOrder(index) {
-  for (let i = 0; i < anOrderBtns.length; i++) {
-    if (index === i) {
-      anOrderBtns[i].classList.add("clicked_an_order");
-      anOrderBtns[i].disabled = true;
-      anOrderBtns[i].innerHTML = "Buyurtma berildi";
-    }
-  }
+  anOrderBtns[index].classList.add("clicked_an_order");
+  anOrderBtns[index].disabled = true;
+  anOrderBtns[index].innerHTML = "Buyurtma berildi";
 }
 
 function placingAnOrder(index) {
@@ -250,6 +250,25 @@ function openLikeProduct() {
   bagMain.style.display = "none";
   productMain.style.display = "none";
   likeMain.style.display = "block";
+
+  const anOrderLike = document.querySelectorAll("#an-order-like");
+  likeStorage.forEach((likeItem, i) => {
+    storageItem.forEach((storageItem) => {
+      if (likeItem.itemNames == storageItem.itemNames) {
+        anOrderLike[i].classList.add("clicked_an_order");
+        anOrderLike[i].disabled = true;
+        anOrderLike[i].innerHTML = "Buyurtma berildi";
+      }
+    });
+  });
+
+  anOrderLike.forEach((item, i) => {
+    item.addEventListener("click", () => {
+      anOrderLike[i].classList.add("clicked_an_order");
+      anOrderLike[i].disabled = true;
+      anOrderLike[i].innerHTML = "Buyurtma berildi";
+    });
+  });
 }
 
 let likeStorage = JSON.parse(localStorage.getItem("likeItem"))
@@ -272,27 +291,8 @@ function likeSetItem() {
 }
 
 function clickedLike(index) {
-  for (let i = 0; i < itemLikeBtns.length; i++) {
-    if (index === i) {
-      itemLikeBtns[i].classList.add("clicked_like");
-      itemLikeBtns[i].disabled = true;
-    }
-  }
-
-  for (let i = 0; i < storageItem.length; i++) {
-    const anOrderLike = document.querySelectorAll("#an-order-like");
-    anOrderLike[storageItem[i].itemIndex].classList.add("clicked_an_order");
-    anOrderLike[storageItem[i].itemIndex].disabled = true;
-    anOrderLike[storageItem[i].itemIndex].innerHTML = "Buyurtma berildi";
-
-    anOrderLike.forEach((item, i) => {
-      item.addEventListener("click", () => {
-        anOrderLike[i].classList.add("clicked_an_order");
-        anOrderLike[i].disabled = true;
-        anOrderLike[i].innerHTML = "Buyurtma berildi";
-      });
-    });
-  }
+  itemLikeBtns[index].classList.add("clicked_like");
+  itemLikeBtns[index].disabled = true;
 }
 
 function productItemLike(index) {
