@@ -280,18 +280,18 @@ function clickedLike(index) {
   }
 
   for (let i = 0; i < storageItem.length; i++) {
-    const anOrderLike = document.querySelectorAll("#an-order-like"); 
+    const anOrderLike = document.querySelectorAll("#an-order-like");
     anOrderLike[storageItem[i].itemIndex].classList.add("clicked_an_order");
     anOrderLike[storageItem[i].itemIndex].disabled = true;
     anOrderLike[storageItem[i].itemIndex].innerHTML = "Buyurtma berildi";
 
-    // anOrderLike.forEach((item, i) => {
-    //   item.addEventListener("click", () => {
-    //     anOrderLike[i].classList.add("clicked_an_order");
-    //     anOrderLike[i].disabled = true;
-    //     anOrderLike[i].innerHTML = "Buyurtma berildi";
-    //   });
-    // });
+    anOrderLike.forEach((item, i) => {
+      item.addEventListener("click", () => {
+        anOrderLike[i].classList.add("clicked_an_order");
+        anOrderLike[i].disabled = true;
+        anOrderLike[i].innerHTML = "Buyurtma berildi";
+      });
+    });
   }
 }
 

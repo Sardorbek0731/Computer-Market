@@ -1,0 +1,293 @@
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.container-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: rgb(80, 142, 251);
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 12rem;
+  width: 12rem;
+  margin-bottom: 50px;
+}
+.loader_item1,
+.loader_item2,
+.loader_item3 {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  display: block;
+  animation: rotate1 2s linear infinite;
+  position: absolute;
+}
+.loader_item2 {
+  width: 8rem;
+  height: 8rem;
+  animation: rotate2 2s linear infinite;
+}
+.loader_item3 {
+  width: 4rem;
+  height: 4rem;
+  animation: rotate3 2s linear infinite;
+}
+@keyframes rotate1 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotate3 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.please h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+img {
+  user-select: none;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65rem;
+}
+.hidden {
+  display: none;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.color--black {
+  color: black;
+}
+.flex {
+  display: flex;
+}
+.justify_center {
+  justify-content: center;
+}
+.justify_evenly {
+  justify-content: space-evenly;
+}
+.justify_between {
+  justify-content: space-between;
+}
+.align_center {
+  align-items: center;
+}
+.wf-100 {
+  width: 100%;
+}
+
+/* End General */
+
+/* Header */
+.nav {
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 17%;
+  height: 100vh;
+  z-index: 2;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
+}
+
+.ul {
+  flex-direction: column;
+  width: 100%;
+}
+.nav_item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  height: 4rem;
+  margin: 0 20px 10px 20px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+.nav_item:last-child {
+  margin-bottom: 0;
+}
+.nav_item:hover {
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+  background-color: rgb(45, 115, 254);
+}
+.nav_item:hover .nav_link h1,
+.nav_item:hover .nav_link svg,
+.nav_item:hover .nav_link i {
+  color: white;
+}
+.nav_link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.nav_link h1 {
+  color: rgb(3, 0, 51);
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: all 0.4s ease;
+}
+.nav_link svg,
+.nav_link i {
+  font-size: 1.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: rgb(3, 0, 51);
+  margin-right: 10px;
+  transition: all 0.4s ease;
+  text-align: center;
+  width: 50px;
+}
+.brand {
+  margin-left: 35px;
+  text-decoration: none;
+}
+.brand i,
+.brand h1 {
+  font-size: 2rem;
+  color: rgb(3, 0, 51);
+}
+.brand h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.nav-bg img {
+  position: absolute;
+  height: 6.5rem;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.nav-bg a {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+/* Top Header */
+#top-header {
+  display: flex;
+  float: right;
+  width: 83vw;
+  height: 70px;
+}
+.topNav {
+  display: flex;
+  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 83vw;
+  height: 70px;
+  z-index: 20;
+  background: rgb(0, 0, 255) 68%;
+}
+.topUl {
+  width: 100%;
+  padding: 0 60px;
+}
+.setting_title h1 {
+  font-weight: 360;
+  color: white;
+  font-size: 2.3rem;
+}
+
+/* Setting */
+.setting {
+  float: right;
+  width: 83vw;
+  position: relative;
+  margin-top: 70px;
+  padding: 5rem 0;
+}
+
+.setting_item {
+  flex-direction: column;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(101, 101, 101);
+  border-radius: 20px;
+  width: 32%;
+  padding: 2rem;
+}
+.settingItem_title h1 {
+  font-weight: 380;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.settingItem_input form input {
+  border: 1px solid rgb(101, 101, 101);
+  outline: none;
+  padding: 0.6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: rgb(101, 101, 101);
+  font-weight: 350;
+  width: 10rem;
+  margin-bottom: 1.5rem;
+}
+.settingItem_save {
+  width: 100%;
+}
+.settingItem_save form button {
+  width: 100%;
+  height: 3rem;
+  border-radius: 10px;
+  border: 1.5px solid rgb(49, 99, 193);
+  outline: none;
+  user-select: none;
+  background: rgb(49, 99, 193);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.settingItem_save form button:hover {
+  background-color: white;
+  color: rgb(49, 99, 193);
+}
