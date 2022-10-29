@@ -217,9 +217,9 @@ if (storageItem.length) {
 // There item page
 
 function productBagLink() {
-  productMain.style.display = "none";
-  bagMain.style.display = "block";
-  likeMain.style.display = "none";
+  bagMain.classList.remove("hidden");
+  likeMain.classList.add("hidden");
+  productMain.classList.add("hidden");
 }
 
 // Delete Item
@@ -240,16 +240,16 @@ function deleteItem(id) {
 // Product item "Back" link
 
 function productItemBack() {
-  productMain.style.display = "block";
-  bagMain.style.display = "none";
-  likeMain.style.display = "none";
+  bagMain.classList.add("hidden");
+  likeMain.classList.add("hidden");
+  productMain.classList.remove("hidden");
 }
 
 // Like Product
 function openLikeProduct() {
-  bagMain.style.display = "none";
-  productMain.style.display = "none";
-  likeMain.style.display = "block";
+  bagMain.classList.add("hidden");
+  likeMain.classList.remove("hidden");
+  productMain.classList.add("hidden");
 
   const anOrderLike = document.querySelectorAll("#an-order-like");
   likeStorage.forEach((likeItem, i) => {

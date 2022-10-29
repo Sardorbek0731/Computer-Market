@@ -412,9 +412,6 @@ img {
 }
 
 /* User Bag */
-#bag-main {
-  display: none;
-}
 
 .empty_product {
   float: right;
@@ -532,9 +529,6 @@ img {
 }
 
 /* Like Product */
-#like-main {
-  display: none;
-}
 .like_items {
   display: grid;
   width: 100%;
@@ -558,4 +552,40 @@ img {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
   margin: 3rem;
+}
+
+/* Product Item Learning */
+.productItem_learnings {
+  float: right;
+  flex-direction: column;
+  width: 83vw;
+  position: relative;
+  margin-top: 70px;
+}
+.item_learning {
+  display: flex;
+  margin: 3rem;
+  border: 1px solid black;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
+}
+.learning_img img {
+  width: 18rem;
+  height: auto;
+  border-radius: 20px;
+  margin-right: 2rem;
+}
+.learning_column {
+  flex-direction: column;
+}
+.learning_title h1 {
+  font-size: 2.1rem;
+  font-weight: 360;
+  margin-bottom: 1rem;
+}
+.learning_price h1 {
+  font-size: 1.3rem;
+  font-weight: 380;
+  color: rgb(4, 4, 149);
 }

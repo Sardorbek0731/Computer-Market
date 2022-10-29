@@ -161,7 +161,7 @@
     </header>
 
     <!----------- Product Main ----------->
-    <main id="product-main">
+    <main id="product-main" class="hidden">
       <!----------- Top Header ----------->
       <header id="top-header">
         <nav class="topNav">
@@ -686,7 +686,7 @@
     </main>
 
     <!----------- Bag Main ----------->
-    <main id="bag-main">
+    <main id="bag-main" class="hidden">
       <!----------- Top Header ----------->
       <header id="top-header-bag">
         <nav class="topNav">
@@ -759,7 +759,7 @@
     </main>
 
     <!----------- Like Main ----------->
-    <main id="like-main">
+    <main id="like-main" class="hidden">
       <!----------- Top Header ----------->
       <header id="top-header-like">
         <nav class="topNav">
@@ -824,6 +824,78 @@
       <section id="there-product-like">
         <div class="there_product_like flex justify_center align_center">
           <div class="like_items" id="like-product-items"></div>
+        </div>
+      </section>
+    </main>
+
+    <!----------- Learning Main ----------->
+    <main id="learning-main" class="">
+      <!----------- Top Header ----------->
+      <header id="top-header-like">
+        <nav class="topNav">
+          <ul class="topUl flex align_center justify_between">
+            <div class="product_title">
+              <h1>Batafsil</h1>
+            </div>
+            <div class="top_nav_items flex align_center justify_center">
+              <li class="top_nav_item" onclick="productItemBack()">
+                <a
+                  href="#"
+                  class="top_nav_link flex justify_center align_center"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                  <h1>Ortga</h1>
+                </a>
+              </li>
+              <li
+                class="top_nav_item flex justify_center align_center"
+                onclick="productBagLink()"
+              >
+                <a
+                  href="#"
+                  class="top_nav_link flex justify_center align_center nav_link_svg"
+                  style="margin-right: 0"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <h1
+                    class="product_item_counter"
+                    id="product-item-counter"
+                  ></h1>
+                </a>
+                <a
+                  href="#"
+                  class="top_nav_link flex justify_center align_center"
+                  style="margin-right: 0"
+                >
+                  <h1>Savatcha</h1>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </header>
+
+      <!----------- Product item learning ----------->
+      <section>
+        <div class="productItem_learnings">
+          <div class="item_learning">
+            <div class="learning_row">
+              <div class="learning_img">
+                <img src="../image/Learning/Image.jpg" alt="Computer image" />
+              </div>
+              <div class="learning_imgs">
+                
+              </div>
+            </div>
+            <div class="learning_column flex">
+              <div class="learning_title">
+                <h1>Dell XPS 17</h1>
+              </div>
+              <div class="learning_price">
+                <h1>UZS 24 400 000</h1>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
