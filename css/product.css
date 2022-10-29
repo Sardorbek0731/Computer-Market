@@ -564,28 +564,34 @@ img {
 }
 .item_learning {
   display: flex;
-  margin: 3rem;
+  width: 75%;
+  margin-top: 5rem;
   border: 1px solid black;
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
 }
 .learning_img img {
-  width: 18rem;
+  width: 20rem;
   height: auto;
   border-radius: 20px;
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 .learning_column {
   flex-direction: column;
 }
 .learning_title h1 {
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   font-weight: 360;
-  margin-bottom: 1rem;
 }
 .learning_price h1 {
   font-size: 1.3rem;
   font-weight: 380;
   color: rgb(4, 4, 149);
+}
+.learning_about h1 {
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+  font-weight: 370;
+  color: rgb(83, 83, 83);
 }

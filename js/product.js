@@ -2,6 +2,7 @@
 const productMain = document.getElementById("product-main");
 const bagMain = document.getElementById("bag-main");
 const likeMain = document.getElementById("like-main");
+const learningMain = document.getElementById("learning-main");
 const emptyProduct = document.getElementById("empty-product");
 const thereProduct = document.getElementById("there-product");
 const emtyProductLike = document.getElementById("emty-product-like");
@@ -220,6 +221,7 @@ function productBagLink() {
   bagMain.classList.remove("hidden");
   likeMain.classList.add("hidden");
   productMain.classList.add("hidden");
+  learningMain.classList.add("hidden");
 }
 
 // Delete Item
@@ -242,14 +244,16 @@ function deleteItem(id) {
 function productItemBack() {
   bagMain.classList.add("hidden");
   likeMain.classList.add("hidden");
+  learningMain.classList.add("hidden");
   productMain.classList.remove("hidden");
 }
 
 // Like Product
 function openLikeProduct() {
   bagMain.classList.add("hidden");
-  likeMain.classList.remove("hidden");
   productMain.classList.add("hidden");
+  learningMain.classList.add("hidden");
+  likeMain.classList.remove("hidden");
 
   const anOrderLike = document.querySelectorAll("#an-order-like");
   likeStorage.forEach((likeItem, i) => {
@@ -345,7 +349,7 @@ function showLikeItem() {
                       </button>
                     </form>
                   </div>
-                  <div class="learning">
+                  <div class="learning" onclick="openLearning()">
                     <h1>Batafsil...</h1>
                   </div>
                 </div>
@@ -389,4 +393,12 @@ if (likeStorage.length) {
   });
 } else {
   emtyItemLike();
+}
+
+// Product Item Learning
+function openLearning() {
+  bagMain.classList.add("hidden");
+  likeMain.classList.add("hidden");
+  productMain.classList.add("hidden");
+  learningMain.classList.remove("hidden");
 }
