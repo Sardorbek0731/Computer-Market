@@ -1,28 +1,5 @@
-// Product Page
-const productMain = document.getElementById("product-main");
-const bagMain = document.getElementById("bag-main");
-const likeMain = document.getElementById("like-main");
-const learningMain = document.getElementById("learning-main");
-const emptyProduct = document.getElementById("empty-product");
-const thereProduct = document.getElementById("there-product");
-const emtyProductLike = document.getElementById("emty-product-like");
-const thereProductLike = document.getElementById("there-product-like");
-const thereProductItems = document.getElementById("there-product-items");
-const anOrderBtns = document.querySelectorAll("#placing-an-order-btn");
-const itemLikeBtns = document.getElementsByClassName("productItemLikeBtn");
-const likeProductItems = document.getElementById("like-product-items");
-const thereProductItem = document.getElementsByClassName("there_product_item");
-const itemDeleteBtn = document.getElementsByClassName("item-delete-btn");
-const productItemCounter = document.querySelectorAll("#product-item-counter");
-const productItemLikeCounter = document.querySelectorAll(
-  "#product-item-like-counter"
-);
-productItemCounter.forEach((itemCounter) => {
-  itemCounter.innerHTML = 0;
-});
-productItemLikeCounter.forEach((itemCounter) => {
-  itemCounter.innerHTML = 0;
-});
+// Global Item
+const productItems = document.getElementById("product-items");
 
 // Time
 function orderTime() {
@@ -80,6 +57,8 @@ const itemNames = [
   "Ultrabuk HP ENVY 13",
   "MSI Modern 14",
 ];
+
+// Product item price
 const itemPrice = [
   "UZS 24 400 000",
   "UZS 10 200 000",
@@ -94,6 +73,83 @@ const itemPrice = [
   "UZS 10 105 000",
   "UZS 13 100 000",
 ];
+
+// Product Items
+for (let i = 0; i < itemNames.length; i++) {
+  productItems.innerHTML += `
+    <div class="product_item flex justify_center align_center">
+
+        <div class="product_item_like_btn">
+            <form>
+                <button
+                  type="button"
+                  class="productItemLikeBtn"
+                  onclick="productItemLike(${i})"
+                >
+
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="productItem_head flex justify_center align_center">
+            <div class="productItem_name">
+                <h1>${itemNames[i]}</h1>
+            </div>
+
+            <img src="../image/Products/Image-${i}.png" alt="Desktop image" />
+        </div>
+
+        <div class="productItem_body flex justify_center align_center">
+            <div class="productItem_cost">
+                <h1>${itemPrice[i]}</h1>
+            </div>
+
+            <div class="productItem_shop">
+              <form>
+                  <button
+                      type="button"
+                      onclick="placingAnOrder(${i})"
+                      id="placing-an-order-btn"
+                    >
+                        Buyurtma berish
+                  </button>
+              </form>
+            </div>
+
+            <div class="learning" onclick="openLearning()">
+                <h1>Batafsil...</h1>
+            </div>
+        </div>
+    </div>
+  `;
+}
+
+// Product Page
+const productMain = document.getElementById("product-main");
+const bagMain = document.getElementById("bag-main");
+const likeMain = document.getElementById("like-main");
+const learningMain = document.getElementById("learning-main");
+const emptyProduct = document.getElementById("empty-product");
+const thereProduct = document.getElementById("there-product");
+const emtyProductLike = document.getElementById("emty-product-like");
+const thereProductLike = document.getElementById("there-product-like");
+const thereProductItems = document.getElementById("there-product-items");
+const anOrderBtns = document.querySelectorAll("#placing-an-order-btn");
+const itemLikeBtns = document.getElementsByClassName("productItemLikeBtn");
+const likeProductItems = document.getElementById("like-product-items");
+const thereProductItem = document.getElementsByClassName("there_product_item");
+const itemDeleteBtn = document.getElementsByClassName("item-delete-btn");
+const productItemCounter = document.querySelectorAll("#product-item-counter");
+const productItemLikeCounter = document.querySelectorAll(
+  "#product-item-like-counter"
+);
+productItemCounter.forEach((itemCounter) => {
+  itemCounter.innerHTML = 0;
+});
+productItemLikeCounter.forEach((itemCounter) => {
+  itemCounter.innerHTML = 0;
+});
 
 let storageItem = JSON.parse(localStorage.getItem("item"))
   ? JSON.parse(localStorage.getItem("item"))
@@ -119,43 +175,43 @@ function showItem() {
   storageItem.forEach((item, i) => {
     thereProductItems.innerHTML += `
       <div class="there_product_item flex justify_evenly align_center">
-              <div class="there_product_item_img">
-                <img src="../image/Products/Image-${item.itemImage}.png" alt="Item image" />
-              </div>
+          <div class="there_product_item_img">
+              <img src="../image/Products/Image-${item.itemImage}.png" alt="Item image" />
+          </div>
 
-              <div class="there_product_item_name flex justify_evenly">
-                <h1>${item.itemNames}</h1>
-                <div class="there_product_item_price">
+          <div class="there_product_item_name flex justify_evenly">
+              <h1>${item.itemNames}</h1>
+
+              <div class="there_product_item_price">
                   <h2>${item.itemPrice}</h2>
-                </div>
               </div>
+          </div>
 
-              <div class="there_product_item_date flex justify_evenly">
-                <div class="there_product_item_date_title">
+          <div class="there_product_item_date flex justify_evenly">
+              <div class="there_product_item_date_title">
                   <h1>Buyurtma vaqti:</h1>
                   <h3>${item.orderTime}</h3>
-                </div>
-
-                <div class="there_product_item_date_title">
-                  <h1>Yetkazish vaqti:</h1>
-                  <h3>${item.deliveryTime}</h3>
-                </div>
-
               </div>
 
-              <div class="there_product_item_btns flex justify_evenly">
-                <div class="there_product_item_btn there_product_item_delete">
+              <div class="there_product_item_date_title">
+                  <h1>Yetkazish vaqti:</h1>
+                  <h3>${item.deliveryTime}</h3>
+              </div>
+          </div>
+
+          <div class="there_product_item_btns flex justify_evenly">
+              <div class="there_product_item_btn there_product_item_delete">
                   <button type="button" onclick="deleteItem(${i})">
                     <i class="fa-solid fa-trash-can"></i>
                   </button>
-                </div>
+              </div>
                 
-                <div class="there_product_item_btn there_product_item_edit">
+              <div class="there_product_item_btn there_product_item_edit">
                   <button type="button">
                     <i class="fa-regular fa-pen-to-square"></i>
                   </button>
-                </div>
               </div>
+          </div>
       </div>
     `;
   });
