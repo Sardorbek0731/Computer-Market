@@ -244,7 +244,7 @@ body {
 .itemFirst_column,
 .itemSecond_column {
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 70px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(20px);
@@ -301,7 +301,7 @@ body {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
   width: 16.5rem;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .user_about_card h1 {
   font-weight: 350;
@@ -311,26 +311,44 @@ body {
 .createUser_btn button {
   cursor: pointer;
   border: none;
-  border-radius: 10px;
+  font-size: 1rem;
   color: white;
-  font-size: 1.1rem;
-  padding: 1.4rem 1.7rem;
-  transition: all 0.5s;
+  padding: 1.3rem 2rem;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 .create_settings form button {
   margin-right: 1.5rem;
 }
 .create_settings form button,
 .createUser_btn form button {
-  background-color: rgb(0, 121, 103);
+  background-color: rgb(63, 204, 183);
 }
 .deleteProfil_user form button {
-  background-color: red;
+  background-color: #ff7070;
 }
-.userProfil_btns button:hover,
-.createUser_btn button:hover {
-  transform: scale(0.95);
+
+.userProfil_btns button::before,
+.createUser_btn button::before {
+  content: "";
+  position: absolute;
+  left: -95%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.2s;
+  background-color: rgb(0, 121, 103);
+}
+.deleteProfil_user button::before {
+  background-color: rgb(255, 0, 0);
+}
+.create_settings button:hover::before,
+.deleteProfil_user button:hover::before,
+.createUser_btn button:hover::before {
+  left: 0;
 }
 
 .createUser_about {
