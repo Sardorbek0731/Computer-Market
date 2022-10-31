@@ -148,17 +148,6 @@ productItemLikeCounter.forEach((itemCounter) => {
   itemCounter.innerHTML = 0;
 });
 
-productItemSearch.addEventListener("input", () => {
-  let inputValue = productItemSearch.value.toLowerCase().trim();
-  productItemName.forEach((item) => {
-    if (item.textContent.toLowerCase().includes(inputValue)) {
-      item.parentElement.parentElement.parentElement.style.display = "flex";
-    } else {
-      item.parentElement.parentElement.parentElement.style.display = "none";
-    }
-  });
-});
-
 let storageItem = JSON.parse(localStorage.getItem("item"))
   ? JSON.parse(localStorage.getItem("item"))
   : [];
@@ -397,7 +386,7 @@ function showLikeItem() {
                 </div>
                 <div class="productItem_head flex justify_center align_center">
                   <div class="productItem_name">
-                    <h1>${item.itemNames}</h1>
+                    <h1 id="product-item-name">${item.itemNames}</h1>
                   </div>
                   <img
                     src="../image/Products/Image-${item.itemImage}.png"
@@ -473,3 +462,16 @@ function openLearning() {
   productMain.classList.add("hidden");
   learningMain.classList.remove("hidden");
 }
+
+// Item search
+productItemSearch.addEventListener("input", () => {
+  let inputValue = productItemSearch.value.toLowerCase().trim();
+  productItemName.forEach((item) => {
+    console.log(item);
+    if (item.textContent.toLowerCase().includes(inputValue)) {
+      item.parentElement.parentElement.parentElement.style.display = "flex";
+    } else {
+      item.parentElement.parentElement.parentElement.style.display = "none";
+    }
+  });
+});
