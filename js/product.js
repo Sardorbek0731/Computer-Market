@@ -24,23 +24,6 @@ function deliveryTime() {
   return `${date}.${month}.${year}`;
 }
 
-// Product item image
-
-const itemImage = [
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-];
-
 // Product item name
 
 const itemNames = [
@@ -56,7 +39,51 @@ const itemNames = [
   "Honor MagicBook Pro",
   "Ultrabuk HP ENVY 13",
   "MSI Modern 14",
+  "Lenova Thinkbook 15",
+  "HP Pavilion x360",
+  "Asus Vivobook 15",
+
+  "HP ENVY x360",
+  "HP ENVY x360",
+  "HP ENVY x360",
+  "Samsung Galaxy Book Pro",
+  "Samsung Galaxy Book Pro",
+  "Samsung Galaxy Book Pro",
+  "Products HP Victus 16",
+  "Products HP Victus 16",
+  "Products HP Victus 16",
+  "MacBook Pro M1 Pro",
+  "MacBook Pro M1 Pro",
+  "MacBook Pro M1 Pro",
+  "MICROSOFT Surface Pro 8",
+  "MICROSOFT Surface Pro 8",
+  "MICROSOFT Surface Pro 8",
+  "Asus Zenbook 14 Ux434",
+  "Asus Zenbook 14 Ux434",
+  "Asus Zenbook 14 Ux434",
+  "Dell Inspiron 5510 Core",
+  "Dell Inspiron 5510 Core",
+  "Dell Inspiron 5510 Core",
+  "Lenova IdeaPad Flex 5",
+  "Lenova IdeaPad Flex 5",
+  "Lenova IdeaPad Flex 5",
+  "Honor MagicBook Pro",
+  "Honor MagicBook Pro",
+  "Honor MagicBook Pro",
+  "Ultrabuk HP ENVY 13",
+  "Ultrabuk HP ENVY 13",
+  "Ultrabuk HP ENVY 13",
+  "MSI Modern 14",
+  "MSI Modern 14",
+  "MSI Modern 14",
 ];
+
+// Product item image
+let itemImages = [];
+
+for (let i = 0; i <= itemNames.length; i++) {
+  itemImages.push(i);
+}
 
 // Product item price
 const itemPrice = [
@@ -71,6 +98,43 @@ const itemPrice = [
   "UZS 14 300 000",
   "UZS 8 500 000",
   "UZS 10 105 000",
+  "UZS 13 100 000",
+  "UZS 11 000 000",
+  "UZS 10 150 000",
+  "UZS 12 200 155",
+
+  "UZS 10 200 000",
+  "UZS 10 200 000",
+  "UZS 10 200 000",
+  "UZS 16 650 000",
+  "UZS 16 650 000",
+  "UZS 16 650 000",
+  "UZS 9 500 000",
+  "UZS 9 500 000",
+  "UZS 9 500 000",
+  "UZS 24 600 000",
+  "UZS 24 600 000",
+  "UZS 24 600 000",
+  "UZS 17 000 000",
+  "UZS 17 000 000",
+  "UZS 17 000 000",
+  "UZS 12 560 000",
+  "UZS 12 560 000",
+  "UZS 12 560 000",
+  "UZS 9 155 000",
+  "UZS 9 155 000",
+  "UZS 9 155 000",
+  "UZS 14 300 000",
+  "UZS 14 300 000",
+  "UZS 14 300 000",
+  "UZS 8 500 000",
+  "UZS 8 500 000",
+  "UZS 8 500 000",
+  "UZS 10 105 000",
+  "UZS 10 105 000",
+  "UZS 10 105 000",
+  "UZS 13 100 000",
+  "UZS 13 100 000",
   "UZS 13 100 000",
 ];
 
@@ -241,10 +305,10 @@ function placingAnOrder(index) {
   storageItem.push({
     orderTime: orderTime(),
     deliveryTime: deliveryTime(),
-    itemImage: itemImage[index],
+    itemIndex: index,
     itemNames: itemNames[index],
     itemPrice: itemPrice[index],
-    itemIndex: index,
+    itemImage: itemImages[index],
   });
   setItem();
   showCounter();
@@ -361,10 +425,10 @@ function clickedLike(index) {
 
 function productItemLike(index) {
   likeStorage.push({
-    itemImage: itemImage[index],
+    itemIndex: index,
+    itemImage: itemImages[index],
     itemNames: itemNames[index],
     itemPrice: itemPrice[index],
-    itemIndex: index,
   });
   likeSetItem();
   showLikeItem();
