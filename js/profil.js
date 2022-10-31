@@ -51,6 +51,7 @@ const userCreateFirstName = document.getElementById("user-create-firstName");
 const userCreateLastName = document.getElementById("user-create-lastName");
 const userCreateEmail = document.getElementById("user-create-email");
 const userCreateNumber = document.getElementById("user-create-number");
+const userImg = document.getElementById("user-img");
 
 // LocalStorage
 
@@ -85,6 +86,7 @@ function closedProfil() {
 // showUserAbout
 function showUserAbout() {
   userStorage.forEach((item) => {
+    userImg.innerHTML = item.firstName.slice(0, 1);
     userFirstName.innerHTML = item.firstName;
     userLastName.innerHTML = item.lastName;
     userEmail.innerHTML = item.email;

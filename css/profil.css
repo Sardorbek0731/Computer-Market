@@ -254,14 +254,20 @@ body {
   width: 34%;
 }
 .user_img_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 17rem;
-  height: auto;
-}
-.user_img_item img {
+  height: 17rem;
+  background-color: rgb(8, 184, 175);
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+}
+.user_img_item h1 {
+  color: white;
+  font-size: 12rem;
+  font-weight: 350;
+  user-select: none;
 }
 .user_name {
   text-align: center;
