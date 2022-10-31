@@ -86,7 +86,6 @@ for (let i = 0; i < itemNames.length; i++) {
                   class="productItemLikeBtn"
                   onclick="productItemLike(${i})"
                 >
-
                     <i class="fa-solid fa-heart"></i>
                 </button>
             </form>
@@ -374,6 +373,7 @@ function productItemLike(index) {
   }
 }
 function showLikeItem() {
+  let likeStorage = JSON.parse(localStorage.getItem("likeItem"));
   likeProductItems.innerHTML = "";
   likeStorage.forEach((item, i) => {
     likeProductItems.innerHTML += `
@@ -398,7 +398,7 @@ function showLikeItem() {
                     <form>
                       <button
                         type="button"
-                        onclick="placingAnOrder(${i})"
+                        onclick="placingAnOrder(${item.itemIndex})"
                         id="an-order-like"
                       >
                         Buyurtma berish
@@ -433,6 +433,25 @@ function productItemLikeDelete(id) {
   likeSetItem();
   showLikeCounter();
   showLikeItem();
+
+  const anOrderLike = document.querySelectorAll("#an-order-like");
+  likeStorage.forEach((likeItem, i) => {
+    storageItem.forEach((storageItem) => {
+      if (likeItem.itemNames == storageItem.itemNames) {
+        anOrderLike[i].classList.add("clicked_an_order");
+        anOrderLike[i].disabled = true;
+        anOrderLike[i].innerHTML = "Buyurtma berildi";
+      }
+    });
+  });
+
+  anOrderLike.forEach((item, i) => {
+    item.addEventListener("click", () => {
+      anOrderLike[i].classList.add("clicked_an_order");
+      anOrderLike[i].disabled = true;
+      anOrderLike[i].innerHTML = "Buyurtma berildi";
+    });
+  });
 
   if (!newLikeStorage.length) {
     emtyItemLike();
