@@ -257,15 +257,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 17rem;
-  height: 17rem;
+  width: 12rem;
+  height: 12rem;
   background-color: rgb(8, 184, 175);
   border-radius: 50%;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
 }
 .user_img_item h1 {
   color: white;
-  font-size: 12rem;
+  font-size: 6rem;
   font-weight: 350;
   user-select: none;
 }

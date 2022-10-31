@@ -86,7 +86,7 @@ function closedProfil() {
 // showUserAbout
 function showUserAbout() {
   userStorage.forEach((item) => {
-    userImg.innerHTML = item.firstName.slice(0, 1);
+    userImg.innerHTML = item.firstName.slice(0, 1).toUpperCase();
     userFirstName.innerHTML = item.firstName;
     userLastName.innerHTML = item.lastName;
     userEmail.innerHTML = item.email;
