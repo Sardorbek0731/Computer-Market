@@ -73,7 +73,7 @@ const itemPrice = [
 // Product Items
 for (let i = 0; i < itemNames.length; i++) {
   productItems.innerHTML += `
-    <div class="product_item flex justify_center align_center">
+    <div class="product_item justify_center align_center" id="product-item">
 
         <div class="product_item_like_btn">
             <form>
@@ -89,7 +89,7 @@ for (let i = 0; i < itemNames.length; i++) {
 
         <div class="productItem_head flex justify_center align_center">
             <div class="productItem_name">
-                <h1>${itemNames[i]}</h1>
+                <h1 id="product-item-name">${itemNames[i]}</h1>
             </div>
 
             <img src="../image/Products/Image-${i}.png" alt="Desktop image" />
@@ -130,7 +130,9 @@ const thereProduct = document.getElementById("there-product");
 const emtyProductLike = document.getElementById("emty-product-like");
 const thereProductLike = document.getElementById("there-product-like");
 const thereProductItems = document.getElementById("there-product-items");
+const productItemName = document.querySelectorAll("#product-item-name");
 const anOrderBtns = document.querySelectorAll("#placing-an-order-btn");
+const productItemSearch = document.getElementById("product-item-search");
 const itemLikeBtns = document.getElementsByClassName("productItemLikeBtn");
 const likeProductItems = document.getElementById("like-product-items");
 const thereProductItem = document.getElementsByClassName("there_product_item");
@@ -144,6 +146,17 @@ productItemCounter.forEach((itemCounter) => {
 });
 productItemLikeCounter.forEach((itemCounter) => {
   itemCounter.innerHTML = 0;
+});
+
+productItemSearch.addEventListener("input", () => {
+  let inputValue = productItemSearch.value.toLowerCase().trim();
+  productItemName.forEach((item) => {
+    if (item.textContent.toLowerCase().includes(inputValue)) {
+      item.parentElement.parentElement.parentElement.style.display = "flex";
+    } else {
+      item.parentElement.parentElement.parentElement.style.display = "none";
+    }
+  });
 });
 
 let storageItem = JSON.parse(localStorage.getItem("item"))
@@ -378,7 +391,7 @@ function showLikeItem() {
   likeProductItems.innerHTML = "";
   likeStorage.forEach((item, i) => {
     likeProductItems.innerHTML += `
-      <div class="product_item_like flex justify_center align_center">
+      <div class="product_item_like justify_center align_center">
                 <div class="productItemLikeDelete" onclick="productItemLikeDelete(${i})">
                   <i class="fa-solid fa-trash-can"></i>
                 </div>

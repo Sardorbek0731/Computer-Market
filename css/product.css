@@ -302,6 +302,7 @@ img {
 
 .product_item,
 .product_item_like {
+  display: flex;
   position: relative;
   flex-direction: column;
   width: 20rem;
@@ -548,7 +549,6 @@ img {
   display: grid;
   width: 100%;
   grid-template-columns: auto auto auto;
-  background-color: rgb(247, 247, 255);
 }
 .there_product_like {
   float: right;
