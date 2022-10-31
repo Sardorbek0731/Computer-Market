@@ -87,55 +87,55 @@ for (let i = 0; i <= itemNames.length; i++) {
 
 // Product item price
 const itemPrice = [
-  "UZS 24 400 000",
-  "UZS 10 200 000",
-  "UZS 16 650 000",
-  "UZS 9 500 000",
-  "UZS 24 600 000",
-  "UZS 17 000 000",
-  "UZS 12 560 000",
-  "UZS 9 155 000",
-  "UZS 14 300 000",
-  "UZS 8 500 000",
-  "UZS 10 105 000",
-  "UZS 13 100 000",
-  "UZS 11 000 000",
-  "UZS 10 150 000",
-  "UZS 12 200 155",
+  "24 400 000",
+  "10 200 000",
+  "16 650 000",
+  "9 500 000",
+  "24 600 000",
+  "17 000 000",
+  "12 560 000",
+  "9 155 000",
+  "14 300 000",
+  "8 500 000",
+  "10 105 000",
+  "13 100 000",
+  "11 000 000",
+  "10 150 000",
+  "12 200 155",
 
-  "UZS 10 200 000",
-  "UZS 10 200 000",
-  "UZS 10 200 000",
-  "UZS 16 650 000",
-  "UZS 16 650 000",
-  "UZS 16 650 000",
-  "UZS 9 500 000",
-  "UZS 9 500 000",
-  "UZS 9 500 000",
-  "UZS 24 600 000",
-  "UZS 24 600 000",
-  "UZS 24 600 000",
-  "UZS 17 000 000",
-  "UZS 17 000 000",
-  "UZS 17 000 000",
-  "UZS 12 560 000",
-  "UZS 12 560 000",
-  "UZS 12 560 000",
-  "UZS 9 155 000",
-  "UZS 9 155 000",
-  "UZS 9 155 000",
-  "UZS 14 300 000",
-  "UZS 14 300 000",
-  "UZS 14 300 000",
-  "UZS 8 500 000",
-  "UZS 8 500 000",
-  "UZS 8 500 000",
-  "UZS 10 105 000",
-  "UZS 10 105 000",
-  "UZS 10 105 000",
-  "UZS 13 100 000",
-  "UZS 13 100 000",
-  "UZS 13 100 000",
+  "10 200 000",
+  "10 200 000",
+  "10 200 000",
+  "16 650 000",
+  "16 650 000",
+  "16 650 000",
+  "9 500 000",
+  "9 500 000",
+  "9 500 000",
+  "24 600 000",
+  "24 600 000",
+  "24 600 000",
+  "17 000 000",
+  "17 000 000",
+  "17 000 000",
+  "12 560 000",
+  "12 560 000",
+  "12 560 000",
+  "9 155 000",
+  "9 155 000",
+  "9 155 000",
+  "14 300 000",
+  "14 300 000",
+  "14 300 000",
+  "8 500 000",
+  "8 500 000",
+  "8 500 000",
+  "10 105 000",
+  "10 105 000",
+  "10 105 000",
+  "13 100 000",
+  "13 100 000",
+  "13 100 000",
 ];
 
 // Product Items
@@ -165,7 +165,7 @@ for (let i = 0; i < itemNames.length; i++) {
 
         <div class="productItem_body flex justify_center align_center">
             <div class="productItem_cost">
-                <h1>${itemPrice[i]}</h1>
+                <h1>UZS ${itemPrice[i]}</h1>
             </div>
 
             <div class="productItem_shop">
@@ -246,7 +246,7 @@ function showItem() {
               <h1>${item.itemNames}</h1>
 
               <div class="there_product_item_price">
-                  <h2>${item.itemPrice}</h2>
+                  <h2>UZS ${item.itemPrice}</h2>
               </div>
           </div>
 
@@ -461,7 +461,7 @@ function showLikeItem() {
                 </div>
                 <div class="productItem_body flex justify_center align_center">
                   <div class="productItem_cost">
-                    <h1>${item.itemPrice}</h1>
+                    <h1>UZS ${item.itemPrice}</h1>
                   </div>
                   <div class="productItem_shop">
                     <form>
