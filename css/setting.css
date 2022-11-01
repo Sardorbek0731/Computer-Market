@@ -259,16 +259,24 @@ img {
   font-size: 1.4rem;
   margin-bottom: 1.5rem;
 }
+.settingItem_input form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.settingItem_input form label {
+  position: absolute;
+  right: 0.5rem;
+  user-select: none;
+}
 .settingItem_input form input {
   border: 1px solid rgb(101, 101, 101);
   outline: none;
-  padding: 0.6rem;
+  padding: 0.6rem 2rem 0.6rem 0.6rem;
   border-radius: 10px;
   font-size: 1rem;
-  color: rgb(101, 101, 101);
   font-weight: 350;
-  width: 10rem;
-  margin-bottom: 1.5rem;
+  width: 9rem;
 }
 .settingItem_save {
   width: 100%;
@@ -286,6 +294,7 @@ img {
   color: white;
   cursor: pointer;
   transition: all 0.3s;
+  margin-top: 1.5rem;
 }
 .settingItem_save form button:hover {
   background-color: white;
