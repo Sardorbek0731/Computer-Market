@@ -122,7 +122,7 @@ img {
 /* Header */
 .nav {
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   position: fixed;
   left: 0;
   top: 0;
