@@ -1,3 +1,20 @@
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+
+// Register default values
+let inputValues = JSON.parse(localStorage.getItem("user"))
+  ? JSON.parse(localStorage.getItem("user"))
+  : [];
+
+function defaultValue() {
+  inputValues.forEach((item) => {
+    firstName.value = item.firstName;
+    lastName.value = item.lastName;
+  });
+}
+
+if (inputValues.length) defaultValue();
+
 const plusBtn = document.querySelector(".plus");
 const containerSecond = document.querySelector(".container_second");
 const xMark = document.querySelector(".xMark");
@@ -28,8 +45,6 @@ const userCardRegister = document.getElementById("user-card-register");
 const userCardName = document.getElementById("user-card-name");
 const firstNextBtn = document.getElementById("first-next-btn");
 const secondNextBtn = document.getElementById("second-next-btn");
-const firstName = document.getElementById("firstName");
-const lastName = document.getElementById("lastName");
 const password = document.getElementById("password");
 const firstNameSecond = document.getElementById("firstNameSecond");
 const lastNameSecond = document.getElementById("lastNameSecond");
