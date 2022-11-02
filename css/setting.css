@@ -3,9 +3,9 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
 body {
@@ -248,16 +248,16 @@ img {
 
 .setting_item {
   flex-direction: column;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.2);
   border: 1px solid rgb(101, 101, 101);
   border-radius: 20px;
   width: 32%;
-  padding: 2rem;
+  padding: 2.2rem;
 }
 .settingItem_title h1 {
   font-weight: 380;
   font-size: 1.4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.2rem;
 }
 .settingItem_input form {
   display: flex;
@@ -269,34 +269,38 @@ img {
   right: 0.5rem;
   user-select: none;
 }
-.settingItem_input form input {
-  border: 1px solid rgb(101, 101, 101);
+.settingItem_input form input,
+.settingItem_input form select {
+  border: 1px solid rgb(0, 137, 147);
   outline: none;
-  padding: 0.6rem 2rem 0.6rem 0.6rem;
-  border-radius: 10px;
-  font-size: 1rem;
+  padding: 0.7rem 2rem 0.7rem 0.7rem;
+  border-radius: 5px;
+  font-size: 1.05rem;
   font-weight: 350;
   width: 9rem;
+}
+.settingItem_input form select {
+  width: 11.7rem;
 }
 .settingItem_save {
   width: 100%;
 }
 .settingItem_save form button {
-  width: 100%;
-  height: 3rem;
-  border-radius: 10px;
-  border: 1.5px solid rgb(49, 99, 193);
+  width: 11.7rem;
+  height: 3.2rem;
+  border: 1.5px solid rgb(0, 137, 147);
   outline: none;
+  border-radius: 5px;
   user-select: none;
-  background: rgb(49, 99, 193);
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  background: rgb(0, 137, 147);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   font-size: 1.1rem;
   color: white;
   cursor: pointer;
   transition: all 0.3s;
-  margin-top: 1.5rem;
+  margin-top: 2.2rem;
 }
 .settingItem_save form button:hover {
   background-color: white;
-  color: rgb(49, 99, 193);
+  color: rgb(0, 137, 147);
 }

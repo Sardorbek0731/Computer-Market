@@ -475,3 +475,4 @@ productItemSearch.addEventListener("input", () => {
     }
   });
 });
+
