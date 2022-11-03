@@ -25,28 +25,26 @@ function setItem() {
 // getItem
 function getItem() {
   let settingItems = JSON.parse(localStorage.getItem("settings"));
-  html.style.fontSize = `${settingItems[settingItems.length - 1].fontSize}px`;
-  html.style.fontFamily = `${settingItems[settingItems.length - 1].fontFamily}`;
+  settingItems.forEach((item) => {
+    html.style.fontSize = `${item.fontSize}px`;
+    html.style.fontFamily = `${item.fontFamily}`;
+  });
 }
 
 function settingFunc() {
-  if (fontSize.value.length) {
-    settingStorage.push({
-      fontSize: fontSize.value,
-      fontFamily: fontFamily.value,
-    });
+  if (fontSize.value.length && fontFamily.value.length) {
+    settingStorage = [
+      {
+        fontSize: fontSize.value,
+        fontFamily: fontFamily.value,
+      },
+    ];
 
     setItem();
     getItem();
   }
 }
-
-if (settingStorage.length) {
-  let settingItems = JSON.parse(localStorage.getItem("settings"));
-  getItem();
-  fontSize.placeholder = `${settingItems[settingItems.length - 1].fontSize}px`;
-  fontFamily.value = `${settingItems[settingItems.length - 1].fontFamily}`;
-} else if (window.screen.width >= 1600) {
+if (window.screen.width >= 1600) {
   fonSizeRegEx(20);
   fontSize.placeholder = `20`;
 } else if (window.screen.width >= 1440 && window.screen.width <= 1600) {
@@ -55,4 +53,12 @@ if (settingStorage.length) {
 } else if (window.screen.width >= 1024 && window.screen.width <= 1440) {
   fonSizeRegEx(12);
   fontSize.placeholder = `12`;
+}
+if (settingStorage.length) {
+  let settingItems = JSON.parse(localStorage.getItem("settings"));
+  getItem();
+  settingItems.forEach((item) => {
+    fontSize.placeholder = `${item.fontSize}`;
+    fontFamily.value = `${item.fontFamily}`;
+  });
 }

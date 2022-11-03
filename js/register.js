@@ -1,10 +1,21 @@
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
+const error = document.getElementById("error");
 
 // Register default values
-let inputValues = JSON.parse(localStorage.getItem("user"))
-  ? JSON.parse(localStorage.getItem("user"))
+let inputValues = JSON.parse(localStorage.getItem("register"))
+  ? JSON.parse(localStorage.getItem("register"))
   : [];
+
+// setItem
+function setItemValue() {
+  localStorage.setItem("register", JSON.stringify(inputValues));
+}
+
+// getItem
+function getItemValue() {
+  let response = JSON.parse(localStorage.getItem("register"));
+}
 
 function defaultValue() {
   inputValues.forEach((item) => {
@@ -13,69 +24,57 @@ function defaultValue() {
   });
 }
 
-if (inputValues.length) defaultValue();
-
-const plusBtn = document.querySelector(".plus");
-const containerSecond = document.querySelector(".container_second");
-const xMark = document.querySelector(".xMark");
-const plusIcon = document.querySelector("#plusIcon");
-
-plusBtn.addEventListener("click", () => {
-  plusIcon.style.transform = "rotate(315deg)";
-  plusBtn.style.animation = "plus-animate 5s linear forwards";
-  setTimeout(() => {
-    containerSecond.style.display = "flex";
-  }, 2500);
-  setTimeout(() => {
-    plusBtn.style.display = "none";
-  }, 5100);
-});
-
-xMark.addEventListener("click", () => {
-  setTimeout(() => {
-    containerSecond.style.display = "none";
-  }, 2500);
-  plusBtn.style.display = "flex";
-  plusBtn.style.animation = "close-animate 5s linear forwards";
-});
-
 // User card value
 const userAboutForm = document.getElementById("user-about-form");
 const userCardRegister = document.getElementById("user-card-register");
 const userCardName = document.getElementById("user-card-name");
-const firstNextBtn = document.getElementById("first-next-btn");
-const secondNextBtn = document.getElementById("second-next-btn");
+const nextBtn = document.getElementById("next-btn");
 const password = document.getElementById("password");
-const firstNameSecond = document.getElementById("firstNameSecond");
-const lastNameSecond = document.getElementById("lastNameSecond");
-const passwordSecond = document.getElementById("passwordSecond");
 
 function clickedNextBtn() {
   userAboutForm.style.display = "none";
   userCardRegister.style.display = "flex";
 }
 
-firstNextBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+if (inputValues.length) {
+  defaultValue();
 
-  if (
-    firstName.value.length &&
-    lastName.value.length &&
-    password.value.length
-  ) {
-    clickedNextBtn();
-    userCardName.innerHTML = `${firstName.value} ${lastName.value}`;
-  }
-});
-secondNextBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+  nextBtn.addEventListener("click", (e) => {
+    inputValues.forEach((item) => {
+      if (item.password == password.value) {
+        clickedNextBtn();
+        error.classList.add("hidden");
+      } else {
+        error.classList.remove("hidden");
+      }
+    });
+  });
+} else {
+  nextBtn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-  if (
-    firstNameSecond.value.length &&
-    lastNameSecond.value.length &&
-    passwordSecond.value.length
-  ) {
-    clickedNextBtn();
-    userCardName.innerHTML = `${firstNameSecond.value} ${lastNameSecond.value}`;
-  }
-});
+    inputValues.push({
+      firstName: firstName.value,
+      lastName: lastName.value,
+      password: password.value,
+    });
+
+    if (
+      firstName.value.length &&
+      lastName.value.length &&
+      password.value.length
+    ) {
+      setItemValue();
+      getItemValue();
+    }
+
+    if (
+      firstName.value.length &&
+      lastName.value.length &&
+      password.value.length
+    ) {
+      clickedNextBtn();
+      userCardName.innerHTML = `${firstName.value} ${lastName.value}`;
+    }
+  });
+}

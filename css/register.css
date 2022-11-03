@@ -4,6 +4,9 @@
   user-select: none;
   font-weight: 370;
 }
+.hidden {
+  display: none;
+}
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -21,11 +24,7 @@ body {
   background: url(../image/Register/form.bg.jpg) no-repeat;
   background-size: cover;
 }
-.form-animate {
-  position: relative;
-}
-.container,
-.container_second {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,32 +36,18 @@ body {
   background-color: white;
   box-shadow: 15px -15px 1px rgba(255, 255, 255, 0.724);
 }
-.container_second {
-  display: none;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: rgb(255, 0, 81);
-  box-shadow: 0 0;
-}
-.title,
-.title_register {
+.title {
   display: flex;
   position: relative;
   width: 100%;
   justify-content: space-between;
 }
-.title h1,
-.title_register h1 {
+.title h1 {
   padding-left: 6rem;
   color: rgb(255, 0, 81);
   font-size: 2.4rem;
 }
-.title_register h1 {
-  color: white;
-}
-.title::before,
-.title_register::before {
+.title::before {
   content: "";
   left: 0;
   top: 0;
@@ -71,11 +56,7 @@ body {
   height: 100%;
   background-color: rgb(255, 0, 81);
 }
-.title_register::before {
-  background-color: white;
-}
-.user_about_form,
-.formCreate_second {
+.user_about_form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,8 +64,7 @@ body {
 }
 .firstName,
 .lastName,
-.password,
-.password_repeat {
+.password {
   display: flex;
   justify-content: center;
   width: 12rem;
@@ -103,10 +83,6 @@ body {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.5);
 }
-.formCreate_second input {
-  color: white;
-  border-bottom: 2px solid white;
-}
 .firstName label,
 .lastName label,
 .password label {
@@ -117,9 +93,6 @@ body {
   transition: all 0.3s;
   user-select: none;
 }
-.formCreate_second label {
-  color: white;
-}
 .user_about_form input:focus ~ label {
   top: -1rem;
   font-size: 0.8rem;
@@ -129,14 +102,6 @@ body {
   top: -1rem;
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.5);
-}
-.formCreate_second input:focus ~ label {
-  top: -1rem;
-  font-size: 0.8rem;
-}
-.formCreate_second input:valid ~ label {
-  top: -1rem;
-  font-size: 0.8rem;
 }
 .user_about_form input:focus {
   border-bottom: 1.5px solid red;
@@ -161,94 +126,15 @@ body {
 .user_about_btn:hover a {
   color: red;
 }
-.btn-second {
-  background-color: white;
-  border: none;
-}
-.btn-second:hover {
-  border: none;
-  color: red;
-}
-.plus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 90%;
-  z-index: 10;
-  top: 45px;
-  width: 6rem;
-  height: 6rem;
-  background-color: rgb(255, 0, 81);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.7s;
-}
-@keyframes plus-animate {
-  30% {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  50% {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-  100% {
-    left: 68.3%;
-    top: 46.7px;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-  }
-}
-@keyframes close-animate {
-  0% {
-    left: 68.3%;
-    top: 46.7px;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-  }
-  50% {
-    top: 42%;
-    left: 38%;
-    transform: translate(-42%, -38%);
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-  100% {
-    left: 90%;
-    top: 45px;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    transform: rotate(315deg);
-  }
-}
-.plus i {
-  transition: all 3s;
-  color: white;
-  font-size: 1.4rem;
-}
 
-.xMark {
+.error {
   position: absolute;
-  right: 60px;
-  top: 60px;
-  cursor: pointer;
+  bottom: 10px;
+  width: 100%;
 }
-.xMark i {
-  color: white;
-  font-size: 1.4rem;
-}
-.btn-first i {
-  display: none;
+.error h1 {
+  font-size: 0.8rem;
+  color: red;
 }
 
 /* User Card Regsiter */
