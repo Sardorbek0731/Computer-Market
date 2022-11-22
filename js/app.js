@@ -1,3 +1,19 @@
+// Scroll
+
+const scrollProgress = document.getElementById("scrollbarProgress");
+
+window.addEventListener("scroll", () => {
+  const heightDoc =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const scrollTop =
+    document.body.scrollTop || document.documentElement.scrollTop;
+
+  scrollProgress.style.top = `${(scrollTop / heightDoc) * 100 - 10.2}%`;
+  scrollProgress.style.backgroundColor = `black`;
+});
+
 // Loader
 
 const main = document.getElementById("main");
