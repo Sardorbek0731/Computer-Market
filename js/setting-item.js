@@ -1,4 +1,5 @@
 // Setting
+const html = document.querySelector(`html`);
 
 let settingStorage = JSON.parse(localStorage.getItem("settings"))
   ? JSON.parse(localStorage.getItem("settings"))

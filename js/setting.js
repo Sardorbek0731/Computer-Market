@@ -3,6 +3,32 @@ const fontSize = document.getElementById("font-size");
 const fontFamily = document.getElementById("font-family");
 const html = document.querySelector(`html`);
 
+// Font Family
+let fontFamilys = [
+  "Segoe UI",
+  "Impact",
+  "Times New Roman",
+  "Georgia",
+  "Garamond",
+  "Arial",
+  "Verdana",
+  "Helvetica",
+  "Courier New",
+  "Lucida Console",
+  "Monaco",
+  "Brush Script MT",
+  "Lucida Handwriting",
+  "Copperplate",
+  "Papyrus",
+  "fantasy",
+];
+
+fontFamilys.forEach((item) => {
+  fontFamily.innerHTML += `
+      <option value="${item}">${item}</option>
+  `;
+});
+
 function fonSizeRegEx(screen) {
   fontSize.addEventListener("input", () => {
     if (fontSize.value > screen) {

@@ -269,23 +269,15 @@ img {
   right: 0.5rem;
   user-select: none;
 }
-.settingItem_input form input {
+.settingItem_input form input,
+.settingItem_input form select {
   border: 1px solid rgb(0, 137, 147);
   outline: none;
-  padding: 0 2rem 0 0.7rem;
+  padding: 0.7rem 2rem 0.7rem 0.7rem;
   border-radius: 5px;
   font-size: 1.05rem;
   font-weight: 350;
   width: 9rem;
-  height: 2.7rem;
-}
-.font_family {
-  border: 1px solid rgb(0, 137, 147);
-  border-radius: 5px;
-  width: 10.3rem;
-  padding: 0 0.7rem 0 0.7rem;
-  height: 2.7rem;
-  position: relative;
 }
 .font_family h4,
 .font_family i {
@@ -295,20 +287,8 @@ img {
 .font_family h4 {
   font-weight: 450;
 }
-.fontFamily_items {
-  position: absolute;
+.settingItem_input form select {
   width: 11.7rem;
-  padding: 0.5rem 0;
-  border: 1px solid rgb(0, 137, 147);
-  border-radius: 5px;
-  top: 140%;
-  left: 0;
-  background-color: white;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
-}
-.fontFamily_items > div {
-  margin: 1rem 1.5rem;
-  cursor: pointer;
 }
 .settingItem_save {
   width: 100%;
@@ -316,7 +296,7 @@ img {
 .settingItem_save form button {
   width: 11.7rem;
   height: 3.2rem;
-  border: 1.5px solid rgb(0, 137, 147);
+  border: 1.6px solid rgb(0, 137, 147);
   outline: none;
   border-radius: 5px;
   user-select: none;
