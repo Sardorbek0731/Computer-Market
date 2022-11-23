@@ -1,3 +1,12 @@
+.container {
+  width: 75vw;
+}
+.mb-07 {
+  margin-bottom: 0.7rem;
+}
+.color_white {
+  color: white;
+}
 /* Header */
 .nav {
   flex-direction: column;
@@ -185,10 +194,10 @@
 .itemFirst_column,
 .itemSecond_column {
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 0 70px rgba(0, 0, 0, 0.3);
-  background-color: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   height: 80vh;
 }
 .itemFirst_column {
@@ -198,15 +207,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12rem;
-  height: 12rem;
+  width: 13rem;
+  height: 13rem;
   background-color: rgb(8, 184, 175);
-  border-radius: 50%;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 .user_img_item h1 {
-  color: white;
-  font-size: 6rem;
+  font-size: 8rem;
   font-weight: 350;
   user-select: none;
 }
@@ -248,7 +256,7 @@
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
   width: 16.5rem;
   padding: 1rem;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .user_about_card h1 {
   font-weight: 350;
@@ -259,7 +267,6 @@
   cursor: pointer;
   border: none;
   font-size: 1rem;
-  color: white;
   padding: 1.3rem 2rem;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
   position: relative;
