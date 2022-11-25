@@ -73,7 +73,7 @@ const itemPrice = [
 // Product Items
 for (let i = 0; i < itemNames.length; i++) {
   productItems.innerHTML += `
-    <div class="product_item justify_center align_center" id="product-item">
+    <div class="product_item flex justify_center align_center" id="product-item">
 
         <div class="product_item_like_btn">
             <form>
@@ -380,7 +380,7 @@ function showLikeItem() {
   likeProductItems.innerHTML = "";
   likeStorage.forEach((item, i) => {
     likeProductItems.innerHTML += `
-      <div class="product_item_like justify_center align_center">
+      <div class="product_item_like flex justify_center align_center">
                 <div class="productItemLikeDelete" onclick="productItemLikeDelete(${i})">
                   <i class="fa-solid fa-trash-can"></i>
                 </div>
@@ -467,7 +467,6 @@ function openLearning() {
 productItemSearch.addEventListener("input", () => {
   let inputValue = productItemSearch.value.toLowerCase().trim();
   productItemName.forEach((item) => {
-    console.log(item);
     if (item.textContent.toLowerCase().includes(inputValue)) {
       item.parentElement.parentElement.parentElement.style.display = "flex";
     } else {
@@ -476,3 +475,26 @@ productItemSearch.addEventListener("input", () => {
   });
 });
 
+// Product Item Type
+const producItemType = document.querySelectorAll("#produc-item-type");
+const productTypeText = document.querySelectorAll("#product-type-text");
+
+producItemType.forEach((item, i) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("active");
+    productTypeText[i].classList.toggle("active");
+
+    productItemName.forEach((name) => {
+      if (
+        name.innerHTML
+          .toLowerCase()
+          .includes(productTypeText[i].innerHTML.toLowerCase())
+      ) {
+      } else {
+        name.parentElement.parentElement.parentElement.classList.toggle(
+          "hidden"
+        );
+      }
+    });
+  });
+});

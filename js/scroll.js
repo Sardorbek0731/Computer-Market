@@ -10,11 +10,10 @@ window.addEventListener("scroll", () => {
   const scrollTop =
     document.body.scrollTop || document.documentElement.scrollTop;
 
-  console.log((scrollTop / heightDoc) * 90);
-
   if ((scrollTop / heightDoc) * 90 <= 2) {
-    scrollProgress.style.top = `15px`;
+    scrollProgress.style.top = `2%`;
   } else {
     scrollProgress.style.top = `${(scrollTop / heightDoc) * 87.5}%`;
   }
+  scrollProgress.style.display = `block`;
 });
