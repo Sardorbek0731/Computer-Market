@@ -1,84 +1,3 @@
-#scrollbarProgress {
-  position: fixed;
-  top: -100%;
-  right: 15px;
-  width: 0.2rem;
-  height: 5rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
-}
-
-#main {
-  display: none;
-}
-.container-loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  background: rgb(80, 142, 251);
-}
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  height: 12rem;
-  width: 12rem;
-  margin-bottom: 50px;
-}
-.loader_item1,
-.loader_item2,
-.loader_item3 {
-  width: 12rem;
-  height: 12rem;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
-  display: block;
-  animation: rotate1 2s linear infinite;
-  position: absolute;
-}
-.loader_item2 {
-  width: 8rem;
-  height: 8rem;
-  animation: rotate2 2s linear infinite;
-}
-.loader_item3 {
-  width: 4rem;
-  height: 4rem;
-  animation: rotate3 2s linear infinite;
-}
-@keyframes rotate1 {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotate2 {
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-@keyframes rotate3 {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.please h1 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: white;
-}
-::-webkit-scrollbar {
-  width: 0;
-}
-
 .titles {
   margin-bottom: 100px;
 }
@@ -90,7 +9,7 @@
 /* Header */
 .nav {
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: fixed;
   left: 0;
   top: 0;
@@ -142,16 +61,15 @@
 .nav_link svg,
 .nav_link i {
   font-size: 1.4rem;
-  width: 1.4rem;
+  width: 50px;
   height: 1.4rem;
   color: rgb(3, 0, 51);
   margin-right: 10px;
   transition: all 0.4s ease;
   text-align: center;
-  width: 50px;
 }
 .brand {
-  margin-left: 35px;
+  margin-left: 2.25rem;
   text-decoration: none;
 }
 .brand i,
@@ -161,6 +79,22 @@
 }
 .brand h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.logout {
+  background-color: rgb(255, 231, 231);
+}
+.mode {
+  background-color: rgb(227, 227, 227);
+}
+.mode:hover {
+  background-color: black;
+}
+.logout:hover {
+  background-color: rgb(255, 0, 0);
+}
+.mode:hover,
+.logout:hover {
+  box-shadow: 0 0 0 0;
 }
 .nav-bg img {
   position: absolute;

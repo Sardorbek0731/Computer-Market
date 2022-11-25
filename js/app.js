@@ -1,29 +1,3 @@
-// Scroll
-
-const scrollProgress = document.getElementById("scrollbarProgress");
-
-window.addEventListener("scroll", () => {
-  const heightDoc =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-
-  const scrollTop =
-    document.body.scrollTop || document.documentElement.scrollTop;
-
-  scrollProgress.style.top = `${(scrollTop / heightDoc) * 100 - 10.2}%`;
-  scrollProgress.style.backgroundColor = `black`;
-});
-
-// Loader
-
-const main = document.getElementById("main");
-const profilLoader = document.getElementById("profil-loader");
-
-window.addEventListener("load", () => {
-  main.style.display = "block";
-  profilLoader.style.display = "none";
-});
-
 // Message
 
 const messageItemText = document.getElementById("message-item-text");
