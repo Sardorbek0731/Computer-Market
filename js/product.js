@@ -97,7 +97,7 @@ for (let i = 0; i < itemNames.length; i++) {
 
         <div class="productItem_body flex justify_center align_center">
             <div class="productItem_cost">
-                <h1>UZS ${itemPrice[i]}</h1>
+                <h1 id="product-item-price">UZS ${itemPrice[i]}</h1>
             </div>
 
             <div class="productItem_shop">
@@ -112,7 +112,7 @@ for (let i = 0; i < itemNames.length; i++) {
               </form>
             </div>
 
-            <div class="learning" onclick="openLearning()">
+            <div class="learning" id="learning-btn">
                 <h1>Batafsil...</h1>
             </div>
         </div>
@@ -131,6 +131,7 @@ const emtyProductLike = document.getElementById("emty-product-like");
 const thereProductLike = document.getElementById("there-product-like");
 const thereProductItems = document.getElementById("there-product-items");
 const productItemName = document.querySelectorAll("#product-item-name");
+const productItemPrice = document.querySelectorAll("#product-item-price");
 const anOrderBtns = document.querySelectorAll("#placing-an-order-btn");
 const productItemSearch = document.getElementById("product-item-search");
 const itemLikeBtns = document.getElementsByClassName("productItemLikeBtn");
@@ -408,7 +409,7 @@ function showLikeItem() {
                       </button>
                     </form>
                   </div>
-                  <div class="learning" onclick="openLearning()">
+                  <div class="learning">
                     <h1>Batafsil...</h1>
                   </div>
                 </div>
@@ -456,12 +457,54 @@ if (likeStorage.length) {
 }
 
 // Product Item Learning
-function openLearning() {
+const learningBtn = document.querySelectorAll("#learning-btn");
+const productItemLearning = document.getElementById("product-item-learning");
+
+function learningFunc() {
   bagMain.classList.add("hidden");
   likeMain.classList.add("hidden");
   productMain.classList.add("hidden");
   learningMain.classList.remove("hidden");
 }
+
+learningBtn.forEach((item, i) => {
+  item.addEventListener("click", () => {
+    learningFunc();
+
+    productItemLearning.innerHTML = `
+      <div class="productItem_learnings flex justify_center align_center">
+          <div class="item_learning">
+            <div class="learning_row">
+              <div class="learning_img">
+                <img src="../image/Learning/${i}.jpg" alt="Computer image" />
+              </div>
+              <div class="learning_imgs"></div>
+            </div>
+            <div class="learning_column flex justify_evenly">
+              <div class="learning_title">
+                <h1>${productItemName[i].innerHTML}</h1>
+              </div>
+              <div class="learning_price">
+                <h1>${productItemPrice[i].innerHTML}</h1>
+              </div>
+              <div class="learning_about">
+                <h1>Ekran: 15,6" QHD 2560x1440 IPS 240Hz</h1>
+                <h1>
+                  Protsessor: Intel® Core™ i7-12700H (3,5 gigagerts – 4,7
+                  gigagertsli)<br />
+                  (14 yadro; №6 samarali yadro, 8 ta samarali yadro; 20 ta
+                  ip)<br />
+                </h1>
+                <h1>Video karta: GeForce RTX3070Ti NVIDIA 8GB/256Bit/GDDR6</h1>
+                <h1>Operativ xotira: 16 GB DDR5</h1>
+                <h1>Saqlash: 1TB PCIe® NVMe™ M.2 SSD</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+    `;
+  });
+});
 
 // Item search
 productItemSearch.addEventListener("input", () => {

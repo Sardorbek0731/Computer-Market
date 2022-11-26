@@ -78,7 +78,8 @@ body.dark_mode .item_question,
 body.dark_mode .advantage_item,
 body.dark_mode .there_product_item,
 body.dark_mode .product_item,
-body.dark_mode .product_item_like {
+body.dark_mode .product_item_like,
+body.dark_mode .item_learning {
   background-color: rgb(50, 50, 50);
   border: none;
 }
