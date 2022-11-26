@@ -480,7 +480,17 @@ const pruductTypeValues = document.getElementById("pruduct-type-values");
 const productTypeItems = document.getElementById("product-type-items");
 const pruductTypeValue = document.getElementById("pruduct-type-value");
 
-let typeNames = ["Hammasi", "Asus", "Lenova", "HP", "Samsung", "Dell"];
+let typeNames = [
+  "Hammasi",
+  "Asus",
+  "Honor MagicBook",
+  "Lenova",
+  "HP",
+  "Samsung",
+  "Dell",
+  "MacBook",
+  "MSI Modern",
+];
 typeNames.forEach((item) => {
   productTypeItems.innerHTML += `
       <li class="productType_item" id="product-type-item">${item}</li>
