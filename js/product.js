@@ -476,25 +476,44 @@ productItemSearch.addEventListener("input", () => {
 });
 
 // Product Item Type
-const producItemType = document.querySelectorAll("#produc-item-type");
-const productTypeText = document.querySelectorAll("#product-type-text");
+const pruductTypeValues = document.getElementById("pruduct-type-values");
+const productTypeItems = document.getElementById("product-type-items");
+const pruductTypeValue = document.getElementById("pruduct-type-value");
 
-producItemType.forEach((item, i) => {
+let typeNames = ["Hammasi", "Asus", "Lenova", "HP", "Samsung", "Dell"];
+typeNames.forEach((item) => {
+  productTypeItems.innerHTML += `
+      <li class="productType_item" id="product-type-item">${item}</li>
+  `;
+});
+
+const productTypeItem = document.querySelectorAll("#product-type-item");
+
+productTypeItem.forEach((item) => {
   item.addEventListener("click", () => {
-    item.classList.toggle("active");
-    productTypeText[i].classList.toggle("active");
+    pruductTypeValue.innerHTML = item.innerHTML;
 
     productItemName.forEach((name) => {
-      if (
-        name.innerHTML
-          .toLowerCase()
-          .includes(productTypeText[i].innerHTML.toLowerCase())
-      ) {
-      } else {
-        name.parentElement.parentElement.parentElement.classList.toggle(
+      if (item.innerHTML.toLowerCase() == "hammasi") {
+        name.parentElement.parentElement.parentElement.classList.remove(
           "hidden"
         );
+        name.parentElement.parentElement.parentElement.classList.add("flex");
+      } else if (
+        name.innerHTML.toLowerCase().includes(item.innerHTML.toLowerCase())
+      ) {
+        name.parentElement.parentElement.parentElement.classList.remove(
+          "hidden"
+        );
+        name.parentElement.parentElement.parentElement.classList.add("flex");
+      } else {
+        name.parentElement.parentElement.parentElement.classList.remove("flex");
+        name.parentElement.parentElement.parentElement.classList.add("hidden");
       }
     });
   });
+});
+
+pruductTypeValues.addEventListener("click", () => {
+  productTypeItems.classList.toggle("hidden");
 });

@@ -18,8 +18,7 @@ body {
   height: 100%;
   background-color: #f8faff;
 }
-body.dark_mode,
-body.dark_mode .nav {
+body.dark_mode {
   background-color: rgb(0, 0, 0);
 }
 body.dark_mode .footer {
@@ -54,21 +53,21 @@ body.dark_mode .userSend_email form label,
 body.dark_mode .answer_down i,
 body.dark_mode .advantageItem_head i,
 body.dark_mode .by h1 a,
-body.dark_mode .there_product_item_price h2 {
+body.dark_mode .there_product_item_price h2,
+body.dark_mode .there_product_item_date_title h3 {
   color: white;
 }
 body.dark_mode .userSend_email form input {
   border-bottom: 1px solid white;
 }
-body.dark_mode .productItem_name h1,
-body.dark_mode .productItem_cost h1,
-body.dark_mode .learning h1,
 body.dark_mode .settingItem_title h1,
 body.dark_mode .admin_item h1,
 body.dark_mode .admin_item p,
 body.dark_mode .message_icon i,
 body.dark_mode .message_head_title h1,
-body.dark_mode .message_text p {
+body.dark_mode .message_text p,
+body.dark_mode .pruductType_values h1,
+body.dark_mode .pruductType_values i {
   color: black;
 }
 body.dark_mode .message_icon,
@@ -77,9 +76,14 @@ body.dark_mode .brands_item {
 }
 body.dark_mode .item_question,
 body.dark_mode .advantage_item,
-body.dark_mode .there_product_item {
-  background-color: rgb(49, 49, 49);
+body.dark_mode .there_product_item,
+body.dark_mode .product_item,
+body.dark_mode .product_item_like {
+  background-color: rgb(50, 50, 50);
   border: none;
+}
+body.dark_mode .nav {
+  background-color: rgb(0, 2, 50);
 }
 img {
   user-select: none;
@@ -171,6 +175,7 @@ body.dark_mode #scrollbarProgress:hover {
   list-style: none;
   height: 4rem;
   user-select: none;
+  cursor: pointer;
   margin: 0 20px 10px 20px;
   border-radius: 10px;
   transition: all 0.4s ease;
