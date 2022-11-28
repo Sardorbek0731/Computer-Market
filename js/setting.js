@@ -88,3 +88,21 @@ if (settingStorage.length) {
     fontFamily.value = `${item.fontFamily}`;
   });
 }
+
+// User nav
+let user = document.getElementById("user");
+let userItem = document.getElementById("user-item");
+let userNavItem = document.getElementById("user-nav");
+let userStorage = JSON.parse(localStorage.getItem("user"));
+
+function userNav() {
+  user.style.display = "flex";
+  user.addEventListener("click", () => {
+    userNavItem.classList.toggle("hidden");
+  });
+  userStorage.forEach((item) => {
+    userItem.innerHTML = item.firstName.charAt();
+  });
+}
+
+if (userStorage.length) userNav();

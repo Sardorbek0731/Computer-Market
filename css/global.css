@@ -160,7 +160,7 @@ body.dark_mode #scrollbarProgress:hover {
   width: 17%;
   height: 100vh;
   z-index: 2;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   background-color: white;
 }
 
@@ -248,6 +248,108 @@ body.dark_mode #scrollbarProgress:hover {
 }
 
 /* End Header */
+
+/* Top Header */
+#top-header {
+  display: flex;
+  float: right;
+  width: 83vw;
+  height: 70px;
+}
+.topNav {
+  display: flex;
+  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 83vw;
+  height: 70px;
+  z-index: 20;
+  background: linear-gradient(110deg, rgb(46, 118, 242), rgb(127, 61, 241));
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+.topUl {
+  width: 100%;
+  padding: 0 60px;
+}
+
+.top_nav_item {
+  list-style: none;
+}
+.top_nav_link {
+  text-decoration: none;
+  margin-right: 50px;
+}
+.top_nav_link h1 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 350;
+}
+.nav_link_svg {
+  position: relative;
+}
+.top_nav_link i {
+  color: white;
+  font-size: 1.7rem;
+  margin-right: 10px;
+}
+.product_item_counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -5%;
+  bottom: -30%;
+  background-color: black;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+}
+
+.user {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  background-color: #069fb3;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.user h1 {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 360;
+  user-select: none;
+}
+.userNav {
+  position: absolute;
+  top: 120%;
+  background-color: white;
+  right: 0;
+  padding: 1rem 1.5rem;
+  border-radius: 0.6rem;
+  z-index: 10;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+}
+.userNav li {
+  list-style: none;
+  margin: 1.3rem 0;
+}
+.userNav li a {
+  text-decoration: none;
+  user-select: none;
+}
+.userNav li a svg {
+  color: black;
+}
+.userNav li a h1 {
+  color: black;
+  font-size: 1rem;
+}
+.userNav li a svg {
+  margin-right: 0.7rem;
+}
 
 /* Loader */
 .container-loader {

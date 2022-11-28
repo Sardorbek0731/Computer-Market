@@ -570,3 +570,29 @@ productTypeItem.forEach((item) => {
 pruductTypeValues.addEventListener("click", () => {
   productTypeItems.classList.toggle("hidden");
 });
+
+// User nav
+let users = document.querySelectorAll("#user");
+let userItems = document.querySelectorAll("#user-item");
+let userNavItem = document.getElementsByClassName("userNav");
+let userStorage = JSON.parse(localStorage.getItem("user"));
+
+function userNav() {
+  users.forEach((user, i) => {
+    user.style.display = "flex";
+    user.addEventListener("click", () => {
+      userClick(i);
+    });
+  });
+  userStorage.forEach((item) => {
+    userItems.forEach((userItem) => {
+      userItem.innerHTML = item.firstName.charAt();
+    });
+  });
+}
+
+function userClick(id) {
+  userNavItem[id].classList.toggle("hidden");
+}
+
+if (userStorage.length) userNav();
