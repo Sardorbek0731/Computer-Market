@@ -327,28 +327,44 @@ body.dark_mode #scrollbarProgress:hover {
   top: 120%;
   background-color: white;
   right: 0;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 0;
   border-radius: 0.6rem;
   z-index: 10;
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
 }
-.userNav li {
-  list-style: none;
-  margin: 1.3rem 0;
-}
-.userNav li a {
+.userNav a {
+  display: flex;
+  justify-content: flex-start;
   text-decoration: none;
+  align-items: center;
+  list-style: none;
+  height: 4rem;
   user-select: none;
+  cursor: pointer;
 }
-.userNav li a svg {
-  color: black;
+.userNav a:hover {
+  background-color: #eff2ff;
 }
-.userNav li a h1 {
-  color: black;
-  font-size: 1rem;
+.userNav li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  padding-right: 1.5rem;
 }
-.userNav li a svg {
-  margin-right: 0.7rem;
+.userNav a li svg {
+  font-size: 1.4rem;
+  width: 60px;
+  height: 1.4rem;
+  color: rgb(3, 0, 51);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+.userNav a li h1 {
+  color: rgb(3, 0, 51);
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: all 0.4s ease;
 }
 
 /* Loader */
