@@ -15,29 +15,62 @@
   float: right;
 }
 .registerProfil_bg img {
-  width: 33rem;
+  width: 38rem;
   height: auto;
 }
 .registerProfil_form form {
-  width: 16rem;
-  padding: 7rem 6rem;
-  border-radius: 15px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+  width: 17rem;
+  height: 35rem;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 4rem 5rem;
+  border-radius: 0.5rem;
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.15);
   background-color: white;
+  position: relative;
 }
+.form_bg {
+  width: 16rem;
+  height: 9rem;
+}
+.form_bg img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: auto;
+  z-index: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.form_title {
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 25%;
+  top: 6%;
+}
+.form_title h1 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 380;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.form_title i {
+  color: white;
+  font-size: 3rem;
+}
+
 .form_item {
   position: relative;
-  margin: 3.5rem 0;
-}
-.firstName {
-  margin-top: 0;
 }
 .form_item input {
   outline: none;
   border: none;
   border-bottom: 1.5px solid black;
   padding-bottom: 0.8rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
   user-select: none;
   width: 100%;
 }
@@ -45,38 +78,38 @@
   position: absolute;
   left: 0;
   top: 0;
-  transition: all 0.3s;
-  font-size: 1.05rem;
+  transition: all 0.2s;
+  font-size: 0.96rem;
   user-select: none;
 }
 .form_item input:focus {
   border-bottom: 1.5px solid red;
 }
 .form_item input:valid {
-  border-bottom: 1.5px solid rgb(0, 0, 0);
+  border-bottom: 1.5px solid rgb(0, 155, 132);
 }
 .form_item input:focus ~ label {
-  top: -1.6rem;
-  font-size: 0.8rem;
+  top: -1.2rem;
+  color: red;
+  font-size: 0.75rem;
 }
 .form_item input:valid ~ label {
-  top: -1.6rem;
-  font-size: 0.8rem;
+  top: -1.2rem;
+  font-size: 0.75rem;
+  color: rgb(0, 155, 132);
 }
 .openProfil_btn {
   width: 100%;
-  height: 4.5rem;
+  height: 4.2rem;
   border: none;
-  border-radius: 50px;
   cursor: pointer;
-  background-color: rgb(67, 116, 212);
+  background: linear-gradient(135deg, rgb(35, 237, 255), rgb(18, 137, 148));
   color: white;
   font-size: 1.2rem;
-  box-shadow: 12px 12px 20px rgba(67, 115, 212, 0.7);
-  transition: all 0.4s;
+  border-radius: 0.5rem;
 }
 .openProfil_btn:hover {
-  transform: scale(0.95);
+  background: linear-gradient(135deg, rgb(18, 137, 148), rgb(35, 237, 255));
 }
 .show_message p {
   position: absolute;

@@ -10,34 +10,20 @@ const message = document.getElementById("message");
 const openProfil = document.getElementById("open-profil");
 
 // Show message
-
-const nameError = document.getElementById("name-error");
-const lastNameError = document.getElementById("lastName-error");
-const emailError = document.getElementById("email-error");
 const numberError = document.getElementById("number-error");
 
 openProfil.addEventListener("click", (e) => {
   e.preventDefault();
   setTimeout(() => {
-    if (firstName.value.length === 0) {
-      nameError.classList.remove("hidden");
-    }
-  }, 700);
-  setTimeout(() => {
-    if (lastName.value.length === 0) {
-      lastNameError.classList.remove("hidden");
-    }
-  }, 1400);
-  setTimeout(() => {
-    if (email.value.length === 0) {
-      emailError.classList.remove("hidden");
-    }
-  }, 2100);
-  setTimeout(() => {
     if (number.value.length === 0) {
       numberError.classList.remove("hidden");
     }
-  }, 2800);
+  }, 1000);
+  setTimeout(() => {
+    if (number.value.length === 0) {
+      numberError.classList.add("hidden");
+    }
+  }, 4000);
 });
 
 // Profil Item

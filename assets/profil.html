@@ -174,39 +174,40 @@
     <section id="register-profil">
       <div class="registerProfil flex justify_evenly align_center">
         <div class="registerProfil_bg">
-          <img
-            src="../image/Profil/Register Profil/sales-force.svg"
-            alt="Image"
-          />
+          <img src="../image/Profil/Register Profil/bg.svg" alt="Image" />
         </div>
         <div class="registerProfil_form">
-          <form>
+          <form class="flex">
+            <div class="form_bg flex justify_center align_center">
+              <img
+                src="../image/Profil/Register Profil/register-form.png"
+                alt=""
+              />
+              <div class="form_title flex justify_center">
+                <h1>
+                  Computer Marketga <br />
+                  xush kelibsiz!
+                </h1>
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+            </div>
             <div class="firstName form_item">
               <input type="text" id="firstName" autocomplete="off" required />
-              <label for="firstName">Ismingiz</label>
-              <div class="show_message hidden" id="name-error">
-                <p>Iltimos, ismingizni kiriting...</p>
-              </div>
+              <label for="firstName">Ism</label>
             </div>
             <div class="lastName form_item">
               <input type="text" id="lastName" autocomplete="off" required />
-              <label for="lastName">Familiyangiz</label>
-              <div class="show_message hidden" id="lastName-error">
-                <p>Iltimos, familiyangizni kiriting...</p>
-              </div>
+              <label for="lastName">Familiya</label>
             </div>
             <div class="email form_item">
               <input type="text" id="email" autocomplete="off" required />
-              <label for="email">Emailingiz</label>
-              <div class="show_message hidden" id="email-error">
-                <p>Iltimos, emailingizni kiriting...</p>
-              </div>
+              <label for="email">Email</label>
             </div>
             <div class="number form_item">
               <input type="text" id="number" autocomplete="off" required />
-              <label for="number">Raqamingiz</label>
+              <label for="number">Raqam</label>
               <div class="show_message hidden" id="number-error">
-                <p>Iltimos, raqamingizni kiriting...</p>
+                <p>Iltimos, qaytadan tekshiring!</p>
               </div>
             </div>
             <button id="open-profil" class="openProfil_btn" type="button">
