@@ -105,4 +105,4 @@ function userNav() {
   });
 }
 
-if (userStorage.length) userNav();
+if (userStorage) userNav();

@@ -595,4 +595,5 @@ function userClick(id) {
   userNavItem[id].classList.toggle("hidden");
 }
 
-if (userStorage.length) userNav();
+if (userStorage) userNav();
+  
