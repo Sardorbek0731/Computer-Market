@@ -548,20 +548,13 @@ productTypeItem.forEach((item) => {
 
     productItemName.forEach((name) => {
       if (item.innerHTML.toLowerCase() == "hammasi") {
-        name.parentElement.parentElement.parentElement.classList.remove(
-          "hidden"
-        );
-        name.parentElement.parentElement.parentElement.classList.add("flex");
+        name.parentElement.parentElement.parentElement.style.display = "flex";
       } else if (
         name.innerHTML.toLowerCase().includes(item.innerHTML.toLowerCase())
       ) {
-        name.parentElement.parentElement.parentElement.classList.remove(
-          "hidden"
-        );
-        name.parentElement.parentElement.parentElement.classList.add("flex");
+        name.parentElement.parentElement.parentElement.style.display = "flex";
       } else {
-        name.parentElement.parentElement.parentElement.classList.remove("flex");
-        name.parentElement.parentElement.parentElement.classList.add("hidden");
+        name.parentElement.parentElement.parentElement.style.display = "none";
       }
     });
   });
@@ -596,4 +589,3 @@ function userClick(id) {
 }
 
 if (userStorage) userNav();
-  
