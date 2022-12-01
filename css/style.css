@@ -233,7 +233,7 @@
   border-radius: 25px;
   padding: 3rem 0;
   width: 23rem;
-  box-shadow: 0 0 70px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.13);
   background-color: white;
   transition: all 0.15s;
 }
@@ -346,7 +346,7 @@
   flex-direction: column;
   padding: 2rem 2rem;
   border-radius: 20px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
   margin-right: 20px;
   cursor: pointer;
 }
