@@ -190,7 +190,7 @@ formCreate.addEventListener("submit", (e) => {
 
                   <div class="message_text">
                       <p>
-                        ${questionResult}: Bu savolingizga bizning admin
+                        Bu savolingizga bizning admin
                         bilan bog'lanish orqali olishingiz,
                         shuningdek ko'p so'raladigan
                         savollar bo'limdan ham savolingizga

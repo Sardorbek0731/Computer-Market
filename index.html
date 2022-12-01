@@ -409,9 +409,12 @@
       <footer>
         <div class="footer flex align_center justify_center">
           <div class="container">
-            <div class="footer_items">
+            <div class="footer_items flex justify_between">
               <div class="footer_brand">
-                <a href="index.html" class="brand flex align_center ml-0">
+                <a
+                  href="index.html"
+                  class="brand_item_footer flex align_center ml-0"
+                >
                   <i
                     class="fa-solid fa-laptop color--black mr-10"
                     id="brand-icon"
@@ -448,7 +451,7 @@
                 </h1>
               </div>
             </div>
-            <div class="website_about_link">
+            <div class="website_about_link flex justify_between">
               <div class="website_about_link_title">
                 <h3>Batafsil ma'lumot</h3>
               </div>
@@ -470,7 +473,7 @@
                 </li>
               </ul>
             </div>
-            <div class="userSend_email flex">
+            <div class="userSend_email flex justify_between">
               <div class="sendEmail_title">
                 <h2>
                   <i class="fa-solid fa-envelope"></i>
@@ -478,10 +481,14 @@
                 </h2>
               </div>
               <form class="flex justify_evenly">
-                <input type="text" id="userEmail" required />
-                <label for="userEmail">Email</label>
-                <button type="submit">Yuborish</button>
+                <input
+                  type="text"
+                  id="userEmail"
+                  required
+                  placeholder="Email"
+                />
               </form>
+              <button type="submit">Yuborish</button>
             </div>
           </div>
         </div>

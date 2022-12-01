@@ -31,6 +31,7 @@
   padding: 0 1rem;
   font-weight: 360;
   border-radius: 10px;
+  user-select: none;
 }
 .pruductType_values {
   display: flex;

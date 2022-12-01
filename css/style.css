@@ -109,17 +109,16 @@
   right: 2rem;
   width: 25rem;
   height: 34rem;
-  border-radius: 10px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
   background-color: rgb(218, 215, 255);
   z-index: 100;
 }
 .message_head {
   background-color: white;
-  border-radius: 10px;
   justify-content: space-between;
   padding: 1rem 1.35rem;
   width: 22.3rem;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.12);
 }
 .message_brand,
 .request_icon,
@@ -195,12 +194,11 @@
 .form_text_create {
   justify-content: space-between;
   height: 4.5rem;
-  border-radius: 10px;
+  box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.12);
 }
 .form_text_create input {
   width: 19rem;
   height: 100%;
-  border-radius: 10px;
   border: none;
   outline: none;
   font-size: 1.1rem;
@@ -368,148 +366,7 @@
   font-size: 1.2rem;
   font-weight: 500;
 }
-
 /* Footer */
 .footer {
   width: 100%;
-  height: 25rem;
-  background-color: rgb(214, 220, 255);
-  flex-direction: column;
-}
-.footer_brand,
-.footer_links {
-  margin-bottom: 3.5rem;
-}
-.link_item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4rem;
-  height: 4rem;
-  background-color: white;
-  border-radius: 10px;
-  margin-right: 2rem;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-.link_item:last-child {
-  margin-right: 0;
-}
-.link_item i {
-  transition: all 0.5s;
-  color: rgb(102, 102, 102);
-  font-size: 1.7rem;
-}
-.telegram_link:hover,
-.facebook_link:hover {
-  background-color: blue;
-}
-.youtube_link:hover {
-  background-color: red;
-}
-.github_link:hover {
-  background-color: black;
-}
-.telegram_link:hover i,
-.youtube_link:hover i,
-.github_link:hover i,
-.facebook_link:hover i {
-  color: white;
-}
-.by h1,
-.by h1 a {
-  text-decoration: none;
-  color: rgb(125, 125, 125);
-  font-size: 1.5rem;
-  font-weight: 350;
-}
-.website_about_link ul li {
-  list-style: none;
-  margin-bottom: 15px;
-}
-.website_about_link ul li:last-child {
-  margin-bottom: 0;
-}
-.website_about_link ul li a {
-  font-weight: 400;
-  text-decoration: none;
-  color: rgb(125, 125, 125);
-  font-size: 1rem;
-  transition: all 0.4s;
-  margin-left: 0;
-}
-.website_about_link ul li a:hover {
-  color: black;
-  margin-left: 10px;
-}
-.website_about_link_title h3 {
-  font-weight: 400;
-  font-size: 1.8rem;
-  margin-bottom: 2.5rem;
-}
-.userSend_email {
-  flex-direction: column;
-}
-.userSend_email form {
-  position: relative;
-  flex-direction: column;
-}
-.userSend_email form label {
-  position: absolute;
-  left: 0;
-  top: -0.2rem;
-  font-size: 1.3rem;
-  font-weight: 400;
-  transition: all 0.4s;
-}
-.userSend_email form input {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid black;
-  margin-bottom: 3rem;
-  outline: none;
-  padding-bottom: 1rem;
-  font-size: 1.1rem;
-  font-weight: 400;
-}
-.userSend_email form input:focus {
-  border-bottom: 1px solid rgb(125, 125, 125);
-}
-.userSend_email form input:focus ~ label {
-  top: -2rem;
-  font-size: 1rem;
-  color: rgb(125, 125, 125);
-}
-.userSend_email form input:valid {
-  border-bottom: 1px solid rgb(47, 162, 129);
-}
-.userSend_email form input:valid ~ label {
-  top: -2rem;
-  font-size: 1rem;
-  color: rgb(47, 162, 129);
-}
-.userSend_email form button {
-  border: none;
-  width: 8.5rem;
-  height: 3.9rem;
-  border-radius: 7px;
-  color: white;
-  outline: none;
-  background-color: rgb(255, 0, 60);
-  user-select: none;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all 0.4s;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-  border: 2px solid rgb(255, 0, 60);
-}
-.userSend_email form button:hover {
-  background-color: white;
-  color: rgb(255, 0, 60);
-}
-.sendEmail_title h2 {
-  color: rgb(125, 125, 125);
-  margin-bottom: 3.5rem;
-  font-size: 1.1rem;
-  font-weight: 400;
 }

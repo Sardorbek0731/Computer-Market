@@ -460,6 +460,24 @@ if (likeStorage.length) {
 const learningBtn = document.querySelectorAll("#learning-btn");
 const productItemLearning = document.getElementById("product-item-learning");
 
+let itemAboutDisplay = [
+  '15,6" QHD 2560x1440 IPS 240Hz',
+  '13" QHD 2260x1350 IPS 140Hz',
+  '16.5" QHD 2960x1540 IPS 200Hz',
+  '15" QHD 2450x1420 IPS 250Hz',
+  '17.3" QHD 1360x1240 IPS 350Hz',
+  '12" QHD 2120x1230 IPS 260Hz',
+  '14.1" QHD 2260x1350 IPS 200Hz',
+  '11" QHD 2130x1340 IPS 270Hz',
+  '20.5" QHD 3460x1740 IPS 400Hz',
+  '15.5" QHD 2560x1440 IPS 240Hz',
+  '13.5" QHD 2060x1040 IPS 215Hz',
+  '15.7" QHD 2660x1540 IPS 245Hz',
+  '12.5" QHD 2360x1140 IPS 265Hz',
+  '10" QHD 2060x1240 IPS 225Hz',
+  '12" QHD 2635x1145 IPS 315Hz',
+];
+
 function learningFunc() {
   bagMain.classList.add("hidden");
   likeMain.classList.add("hidden");
@@ -488,7 +506,7 @@ learningBtn.forEach((item, i) => {
                 <h1>${productItemPrice[i].innerHTML}</h1>
               </div>
               <div class="learning_about">
-                <h1>Ekran: 15,6" QHD 2560x1440 IPS 240Hz</h1>
+                <h1>Ekran: ${itemAboutDisplay[i]}</h1>
                 <h1>
                   Protsessor: Intel® Core™ i7-12700H (3,5 gigagerts – 4,7
                   gigagertsli)<br />
