@@ -477,6 +477,23 @@ let itemAboutDisplay = [
   '10" QHD 2060x1240 IPS 225Hz',
   '12" QHD 2635x1145 IPS 315Hz',
 ];
+let itemAboutProseccor = [
+  "Protsessor: Intel® Core™ i7-12700H (3,5 gigagerts – 4,7 gigagertsli) (14 yadro; №6 samarali yadro, 8 ta samarali yadro;)",
+  "Intel Core i5-1235U 12-avlod pokoleniya, taktovaya chastota do 4,4 GGts, 12 MB kesh-pamyati L3, 10 yader, 12 potokov",
+  "Intel Core i5-1135g7 4 yadra 8 potokov, taktovaya chastota 2,4 GGts razgon do 4,2 GGts kesh-pamyat' 8 mb",
+  '15" QHD 2450x1420 IPS 250Hz',
+  '17.3" QHD 1360x1240 IPS 350Hz',
+  '12" QHD 2120x1230 IPS 260Hz',
+  '14.1" QHD 2260x1350 IPS 200Hz',
+  '11" QHD 2130x1340 IPS 270Hz',
+  '20.5" QHD 3460x1740 IPS 400Hz',
+  '15.5" QHD 2560x1440 IPS 240Hz',
+  '13.5" QHD 2060x1040 IPS 215Hz',
+  '15.7" QHD 2660x1540 IPS 245Hz',
+  '12.5" QHD 2360x1140 IPS 265Hz',
+  '10" QHD 2060x1240 IPS 225Hz',
+  '12" QHD 2635x1145 IPS 315Hz',
+];
 
 function learningFunc() {
   bagMain.classList.add("hidden");
@@ -508,10 +525,7 @@ learningBtn.forEach((item, i) => {
               <div class="learning_about">
                 <h1>Ekran: ${itemAboutDisplay[i]}</h1>
                 <h1>
-                  Protsessor: Intel® Core™ i7-12700H (3,5 gigagerts – 4,7
-                  gigagertsli)<br />
-                  (14 yadro; №6 samarali yadro, 8 ta samarali yadro; 20 ta
-                  ip)<br />
+                  Prosessor: ${itemAboutProseccor[i]}
                 </h1>
                 <h1>Video karta: GeForce RTX3070Ti NVIDIA 8GB/256Bit/GDDR6</h1>
                 <h1>Operativ xotira: 16 GB DDR5</h1>
