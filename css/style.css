@@ -33,6 +33,7 @@
 .brand h1 {
   font-size: 2rem;
   color: rgb(3, 0, 51);
+  user-select: none;
 }
 .brand h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -45,11 +46,13 @@
 .home_title h1 {
   font-size: 3.2rem;
   margin-bottom: 40px;
+  user-select: none;
 }
 .home_p p {
   color: rgba(0, 0, 0, 0.6);
   font-size: 1.5rem;
   margin-bottom: 40px;
+  user-select: none;
 }
 .language_btn {
   position: relative;
@@ -57,13 +60,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.624);
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.4s;
   height: 3.7rem;
-  width: 4rem;
-  padding: 0 0.7rem;
+  width: 10rem;
+  padding: 0 1rem;
 }
 .language_btn:hover {
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
@@ -73,13 +76,17 @@
   top: 130%;
   left: 0;
   background-color: white;
-  width: 7rem;
-  border-radius: 7px;
-  padding: 0.7rem 0;
+  width: 10rem;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 .language_item {
+  display: flex;
+  align-items: center;
   list-style: none;
-  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  padding: 1rem;
   user-select: none;
 }
 .language_item:hover {
@@ -88,19 +95,22 @@
 .language_btn h1 {
   user-select: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
-  color: rgb(81, 81, 81);
+  color: rgb(0, 0, 0);
   font-weight: 380;
   font-size: 1.1rem;
+}
+.language_btn h1 svg,
+.language_item svg {
+  margin-right: 0.5rem;
 }
 .registr_btn button {
   border: 2px solid black;
   outline: none;
   padding: 0 40px;
   background-color: black;
-  border-radius: 7px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.4s;
   height: 3.7rem;
