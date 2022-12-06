@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
 .container {
   width: 80rem;
 }
@@ -230,54 +231,54 @@
 }
 .advantage_item {
   flex-direction: column;
-  border-radius: 25px;
-  padding: 3rem 0;
-  width: 23rem;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.13);
+  padding: 2.5rem;
+  width: 21rem;
+  height: 13rem;
   background-color: white;
-  transition: all 0.15s;
 }
-.advantage_item:hover {
-  background-color: #5280d6;
-  transform: scale(1.02);
+.advantageItem_hidden {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
 }
-.advantage_item:hover .advantageItem_head i,
-.advantage_item:hover .advantageItem_head svg,
-.advantage_item:hover .advantageItem_body_title h1,
-.advantage_item:hover .advantageItem_body_p p {
-  color: white;
+.advantageItem_div {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
 }
-.advantageItem_head i {
-  color: rgb(64, 159, 166);
-  font-size: 4rem;
-  margin-bottom: 30px;
+.advantage_item:hover .advantageItem_div {
+  transform: translateY(-2.6rem);
+}
+.advantage_item:hover .advantageItem_head svg {
+  opacity: 0;
+  transition: all 0.2s;
 }
 .advantageItem_head svg {
-  fill: currentColor;
-  width: 4rem;
-  width: 4rem;
-  margin-bottom: 30px;
-}
-._2UMx206R8RMWSMNdZZT2bK {
-  color: rgb(64, 159, 166);
-  font-size: 4rem !important;
+  color: #7e86aa;
+  width: 2.6rem;
+  height: 2.6rem;
+  transition: all 1.5s;
 }
 .advantageItem_body {
   flex-direction: column;
 }
 .advantageItem_body_title h1 {
-  color: rgb(64, 159, 166);
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 30px;
+  font-weight: 700;
+  color: #515769;
+  line-height: 1.4;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-family: Hind, sans-serif;
 }
 .advantageItem_body_p p {
-  text-align: center;
-  color: rgb(100, 100, 100);
-  font-size: 1rem;
+  font-size: 15px;
+  font-weight: 400;
+  color: #a6a7aa;
+  font-family: Hind, sans-serif;
 }
 .advantageFirst_row {
-  margin-bottom: 6rem;
+  margin-bottom: 1rem;
 }
 
 /* Questions */
@@ -345,10 +346,11 @@
 .brands_item {
   flex-direction: column;
   padding: 2rem 2rem;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
   margin-right: 20px;
   cursor: pointer;
+  background-color: white;
 }
 .brands_item:last-child {
   margin-right: 0;
