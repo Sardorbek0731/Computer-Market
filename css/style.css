@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hind&display=swap");
 .container {
   width: 80rem;
 }
@@ -51,19 +51,64 @@
   font-size: 1.5rem;
   margin-bottom: 40px;
 }
+.language_btn {
+  position: relative;
+  margin-right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.4s;
+  height: 3.7rem;
+  width: 4rem;
+  padding: 0 0.7rem;
+}
+.language_btn:hover {
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+}
+.language_items {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background-color: white;
+  width: 7rem;
+  border-radius: 7px;
+  padding: 0.7rem 0;
+}
+.language_item {
+  list-style: none;
+  padding: 0.7rem 1rem;
+  user-select: none;
+}
+.language_item:hover {
+  background-color: #e5eaff;
+}
+.language_btn h1 {
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: rgb(81, 81, 81);
+  font-weight: 380;
+  font-size: 1.1rem;
+}
 .registr_btn button {
   border: 2px solid black;
   outline: none;
-  padding: 17px 40px;
+  padding: 0 40px;
   background-color: black;
-  border-radius: 10px;
+  border-radius: 7px;
   cursor: pointer;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
   transition: all 0.4s;
+  height: 3.7rem;
+  user-select: none;
 }
 .registr_btn button:hover {
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
   background-color: white;
-  transform: scale(1.05);
 }
 .registr_btn a {
   font-size: 1.2rem;
