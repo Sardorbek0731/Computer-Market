@@ -533,9 +533,10 @@ learningBtn.forEach((item, i) => {
               </div>
             </div>
           </div>
+
           <div class="learningItem_imgs flex justify_between align_center">
             <div class="learningItem_img">
-                <img src="../image/learning/items/${i}.png" />
+                <img src="../image/learning/items/${i}.png"/>
               
                 <div class="fullscreen_btn" id="fullscreen-btn">
                   <svg 
@@ -622,7 +623,7 @@ learningBtn.forEach((item, i) => {
         </div>
 
         <div class="slider">
-          <div class="left_slider slider_item flex justify_center align_center">
+          <div class="left_slider slider_item flex justify_center align_center" id="left-slider">
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="16" 
@@ -634,7 +635,7 @@ learningBtn.forEach((item, i) => {
             </svg>
           </div>
 
-          <div class="right_slider slider_item flex justify_center align_center">
+          <div class="right_slider slider_item flex justify_center align_center" id="right-slider">
             <svg    
                 xmlns="http://www.w3.org/2000/svg" 
                 width="16" 
@@ -647,13 +648,35 @@ learningBtn.forEach((item, i) => {
           </div>
         </div>
 
-        <img src="../image/learning/items/${i}.png" />
+        <img src="../image/learning/items/${i}.png" id="fullscreen-img"/>
         `;
 
         const close = document.getElementById("close");
+        const rightSlider = document.getElementById("right-slider");
+        const leftSlider = document.getElementById("left-slider");
+        const fullscreenImg = document.getElementById("fullscreen-img");
 
         close.addEventListener("click", () => {
           globalOverlay.style.display = "none";
+        });
+
+        rightSlider.addEventListener("click", () => {
+          i++;
+          if (i > fullscreenBtns.length - 1) {
+            i = 0;
+            fullscreenImg.src = `../image/learning/items/${i}.png`;
+          } else {
+            fullscreenImg.src = `../image/learning/items/${i}.png`;
+          }
+        });
+        leftSlider.addEventListener("click", () => {
+          i--;
+          if (i < 0) {
+            i = fullscreenBtns.length - 1;
+            fullscreenImg.src = `../image/learning/items/${i}.png`;
+          } else {
+            fullscreenImg.src = `../image/learning/items/${i}.png`;
+          }
         });
       });
     });
