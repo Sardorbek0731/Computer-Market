@@ -1,4 +1,4 @@
-// Global Item
+// Global Item../image/learning/items/
 const productItems = document.getElementById("product-items");
 
 // Time
@@ -460,6 +460,13 @@ if (likeStorage.length) {
 const learningBtn = document.querySelectorAll("#learning-btn");
 const productItemLearning = document.getElementById("product-item-learning");
 
+function learningFunc() {
+  bagMain.classList.add("hidden");
+  likeMain.classList.add("hidden");
+  productMain.classList.add("hidden");
+  learningMain.classList.remove("hidden");
+}
+
 let itemAboutDisplay = [
   '15,6" QHD 2560x1440 IPS 240Hz',
   '13" QHD 2260x1350 IPS 140Hz',
@@ -495,13 +502,6 @@ let itemAboutProseccor = [
   '12" QHD 2635x1145 IPS 315Hz',
 ];
 
-function learningFunc() {
-  bagMain.classList.add("hidden");
-  likeMain.classList.add("hidden");
-  productMain.classList.add("hidden");
-  learningMain.classList.remove("hidden");
-}
-
 learningBtn.forEach((item, i) => {
   item.addEventListener("click", () => {
     learningFunc();
@@ -533,8 +533,130 @@ learningBtn.forEach((item, i) => {
               </div>
             </div>
           </div>
+          <div class="learningItem_imgs flex justify_between align_center">
+            <div class="learningItem_img">
+                <img src="../image/learning/items/${i}.png" />
+              
+                <div class="fullscreen_btn" id="fullscreen-btn">
+                  <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="16" 
+                      height="16" 
+                      fill="currentColor" 
+                      class="bi bi-fullscreen" 
+                      viewBox="0 0 16 16">
+                    <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+                </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="learningItem_img">
+              <img src="../image/learning/items/${i + 1}.png" />
+
+              <div class="fullscreen_btn" id="fullscreen-btn">
+                  <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="16" 
+                      height="16" 
+                      fill="currentColor" 
+                      class="bi bi-fullscreen" 
+                      viewBox="0 0 16 16">
+                    <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+                </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="learningItem_img">
+              <img src="../image/learning/items/${i + 2}.png" />
+
+              <div class="fullscreen_btn" id="fullscreen-btn">
+                  <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="16" 
+                      height="16" 
+                      fill="currentColor" 
+                      class="bi bi-fullscreen" 
+                      viewBox="0 0 16 16">
+                    <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+                </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="learningItem_img">
+              <img src="../image/learning/items/${i + 3}.png" />
+
+              <div class="fullscreen_btn" id="fullscreen-btn">
+                  <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="16" 
+                      height="16" 
+                      fill="currentColor" 
+                      class="bi bi-fullscreen" 
+                      viewBox="0 0 16 16">
+                    <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+                </div>
+              <div class="overlay"></div>
+            </div>
+          </div>
         </div>
     `;
+
+    const fullscreenBtns = document.querySelectorAll("#fullscreen-btn");
+    const globalOverlay = document.getElementById("global-overlay");
+
+    fullscreenBtns.forEach((item, i) => {
+      item.addEventListener("click", () => {
+        globalOverlay.style.display = "flex";
+        globalOverlay.innerHTML = `
+        <div class="close flex justify_center align_center" id="close">
+          <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="16" 
+              height="16" 
+              fill="currentColor" 
+              class="bi bi-fullscreen-exit" 
+              viewBox="0 0 16 16">
+            <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
+          </svg>
+        </div>
+
+        <div class="slider">
+          <div class="left_slider slider_item flex justify_center align_center">
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" 
+                height="16" 
+                fill="currentColor" 
+                class="bi bi-chevron-left" 
+                viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+          </div>
+
+          <div class="right_slider slider_item flex justify_center align_center">
+            <svg    
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" 
+                height="16" 
+                fill="currentColor" 
+                class="bi bi-chevron-right" 
+                viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </div>
+        </div>
+
+        <img src="../image/learning/items/${i}.png" />
+        `;
+
+        const close = document.getElementById("close");
+
+        close.addEventListener("click", () => {
+          globalOverlay.style.display = "none";
+        });
+      });
+    });
   });
 });
 

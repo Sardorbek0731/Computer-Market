@@ -340,6 +340,64 @@
 }
 
 /* Product Item Learning */
+.global_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 25;
+}
+.close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 6.5rem;
+  height: 6.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+.close:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.close svg,
+.slider_item svg {
+  color: rgb(205, 205, 205);
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.2s;
+}
+.close svg:hover {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.slider_item svg:hover {
+  width: 3rem;
+  height: 3rem;
+}
+.slider_item svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.slider_item {
+  position: fixed;
+  width: 6.5rem;
+  background-color: transparent;
+  bottom: 6.5rem;
+  top: 6.5rem;
+  cursor: pointer;
+}
+.slider_item:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.left_slider {
+  left: 0;
+}
+.right_slider {
+  right: 0;
+}
 .productItem_learnings {
   float: right;
   flex-direction: column;
@@ -350,12 +408,12 @@
 .item_learning {
   display: flex;
   width: 75%;
-  margin-top: 5rem;
+  margin: 4rem 0 4rem 0;
   border: 1px solid black;
   background-color: white;
   padding: 3rem;
   border-radius: 20px;
-  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 .learning_img img {
   width: 20rem;
@@ -380,4 +438,57 @@
   line-height: 1.8rem;
   font-weight: 370;
   color: rgb(83, 83, 83);
+}
+.learningItem_imgs {
+  width: 75%;
+  margin-bottom: 3rem;
+}
+.learningItem_img {
+  padding: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+.learningItem_img img {
+  width: 10rem;
+  height: 10rem;
+}
+.learningItem_img:hover .overlay {
+  opacity: 1;
+}
+.learningItem_img:hover .fullscreen_btn svg {
+  opacity: 1;
+  margin-top: 0;
+}
+.overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.2s;
+  z-index: 0;
+}
+.fullscreen_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.fullscreen_btn svg {
+  opacity: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  color: white;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+.fullscreen_btn svg:hover {
+  width: 3rem;
+  height: 3rem;
 }
