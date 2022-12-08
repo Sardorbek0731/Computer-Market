@@ -375,7 +375,8 @@
   width: 3rem;
   height: 3rem;
 }
-.slider_item svg, .mainSlider_item svg {
+.slider_item svg,
+.mainSlider_item svg {
   width: 2.5rem;
   height: 2.5rem;
 }
@@ -474,10 +475,16 @@
 }
 .learningItem_img {
   padding: 1.2rem;
-  border-radius: 10px;
   cursor: pointer;
+  border-radius: 5px;
   position: relative;
-  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.learningItem_img.active {
+  border: 1.5px solid rgb(0, 0, 99);
+  transform: scale(1.08);
+  border-radius: 10px;
 }
 .learningItem_img img {
   width: 10rem;

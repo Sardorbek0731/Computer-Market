@@ -88,6 +88,12 @@ body.dark_mode .userNav {
   background-color: rgb(50, 50, 50);
   border: none;
 }
+body.dark_mode .learningItem_img {
+  background-color: rgb(50, 50, 50);
+}
+body.dark_mode .learningItem_img.active {
+  border: 1.5px solid white;
+}
 body.dark_mode .nav {
   background-color: rgb(5, 5, 31);
 }
@@ -272,6 +278,9 @@ body.dark_mode #scrollbarProgress:hover {
   z-index: 20;
   background: linear-gradient(110deg, rgb(46, 118, 242), rgb(188, 54, 255));
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+body.dark_mode .topNav {
+  background: linear-gradient(110deg, rgb(36, 64, 113), rgb(115, 0, 172));
 }
 .topUl {
   width: 100%;

@@ -503,7 +503,7 @@ let itemAboutProseccor = [
 ];
 let imageId = 0;
 
-learningBtn.forEach((item, i) => {
+learningBtn.forEach((item, itemId) => {
   item.addEventListener("click", () => {
     learningFunc();
 
@@ -512,21 +512,21 @@ learningBtn.forEach((item, i) => {
           <div class="item_learning">
             <div class="learning_row">
               <div class="learning_img">
-                <img src="../image/Learning/${i}.jpg" alt="Computer image" />
+                <img src="../image/Learning/${itemId}.jpg" alt="Computer image" />
               </div>
               <div class="learning_imgs"></div>
             </div>
             <div class="learning_column flex justify_evenly">
               <div class="learning_title">
-                <h1>${productItemName[i].innerHTML}</h1>
+                <h1>${productItemName[itemId].innerHTML}</h1>
               </div>
               <div class="learning_price">
-                <h1>${productItemPrice[i].innerHTML}</h1>
+                <h1>${productItemPrice[itemId].innerHTML}</h1>
               </div>
               <div class="learning_about">
-                <h1>Ekran: ${itemAboutDisplay[i]}</h1>
+                <h1>Ekran: ${itemAboutDisplay[itemId]}</h1>
                 <h1>
-                  Prosessor: ${itemAboutProseccor[i]}
+                  Prosessor: ${itemAboutProseccor[itemId]}
                 </h1>
                 <h1>Video karta: GeForce RTX3070Ti NVIDIA 8GB/256Bit/GDDR6</h1>
                 <h1>Operativ xotira: 16 GB DDR5</h1>
@@ -537,7 +537,7 @@ learningBtn.forEach((item, i) => {
           
           <div class="learningMain_imgs flex align_center">
             <div class="learningMain_img">
-                <img src="../image/learning/${i}/${imageId}.png" id="fullscreen-main-img"/>
+                <img src="../image/learning/${itemId}/${imageId}.png" id="fullscreen-main-img"/>
             </div>
 
             <div class="main_slider flex align_center">
@@ -580,17 +580,17 @@ learningBtn.forEach((item, i) => {
           </div> 
 
           <div class="learningItem_imgs flex justify_between align_center">
-            <div class="learningItem_img" id="learning-item-img">
-                <img src="../image/learning/${i}/0.png"/>
+            <div class="learningItem_img active" id="learning-item-img">
+                <img src="../image/learning/${itemId}/0.png"/>
             </div>
             <div class="learningItem_img" id="learning-item-img">
-              <img src="../image/learning/${i}/1.png" />
+              <img src="../image/learning/${itemId}/1.png" />
             </div>
             <div class="learningItem_img" id="learning-item-img">
-              <img src="../image/learning/${i}/2.png" />
+              <img src="../image/learning/${itemId}/2.png" />
             </div>
             <div class="learningItem_img" id="learning-item-img">
-              <img src="../image/learning/${i}/3.png" />
+              <img src="../image/learning/${itemId}/3.png" />
             </div>
           </div>
 
@@ -605,26 +605,47 @@ learningBtn.forEach((item, i) => {
     const fullscreenMainImg = document.getElementById("fullscreen-main-img");
     const learningItemImg = document.querySelectorAll("#learning-item-img");
 
+    learningItemImg.forEach((item, i) => {
+      item.addEventListener("click", () => {
+        fullscreenMainImg.src = `../image/learning/${itemId}/${i}.png`;
+
+        learningItemImg.forEach((item) => {
+          item.classList.remove("active");
+        });
+        learningItemImg[i].classList.add("active");
+        imageId = i;
+      });
+    });
+
+    function activeItem() {
+      learningItemImg.forEach((item) => {
+        item.classList.remove("active");
+      });
+      learningItemImg[imageId].classList.add("active");
+    }
+
     function sliderFunc(where) {
       if (imageId > learningItemImg.length - 1) {
         imageId = 0;
-        where.src = `../image/learning/${i}/${imageId}.png`;
+        where.src = `../image/learning/${itemId}/${imageId}.png`;
       } else if (imageId < 0) {
         imageId = learningItemImg.length - 1;
-        where.src = `../image/learning/${i}/${imageId}.png`;
+        where.src = `../image/learning/${itemId}/${imageId}.png`;
       } else {
-        where.src = `../image/learning/${i}/${imageId}.png`;
+        where.src = `../image/learning/${itemId}/${imageId}.png`;
       }
     }
 
     rightMainSlider.addEventListener("click", () => {
       imageId++;
       sliderFunc(fullscreenMainImg);
+      activeItem();
     });
 
     leftMainSlider.addEventListener("click", () => {
       imageId--;
       sliderFunc(fullscreenMainImg);
+      activeItem();
     });
 
     fullscreenBtn.addEventListener("click", () => {
@@ -668,7 +689,7 @@ learningBtn.forEach((item, i) => {
           </div>
         </div>
 
-        <img src="../image/learning/${i}/${imageId}.png" id="fullscreen-img"/>
+        <img src="../image/learning/${itemId}/${imageId}.png" id="fullscreen-img"/>
         `;
 
       const close = document.getElementById("close");
