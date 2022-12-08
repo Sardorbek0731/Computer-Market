@@ -444,6 +444,10 @@
   margin: 4rem 0;
   position: relative;
 }
+.learningMain_img img,
+.global_overlay img {
+  cursor: zoom-in;
+}
 .main_slider {
   width: 100%;
 }
@@ -496,18 +500,6 @@
 .learningItem_img:hover .fullscreen_btn svg {
   opacity: 1;
   margin-top: 0;
-}
-.overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  transition: all 0.2s;
-  z-index: 0;
 }
 .fullscreen_btn {
   position: absolute;
