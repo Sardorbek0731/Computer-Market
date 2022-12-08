@@ -501,6 +501,7 @@ let itemAboutProseccor = [
   '10" QHD 2060x1240 IPS 225Hz',
   '12" QHD 2635x1145 IPS 315Hz',
 ];
+let imageId = 0;
 
 learningBtn.forEach((item, i) => {
   item.addEventListener("click", () => {
@@ -533,92 +534,111 @@ learningBtn.forEach((item, i) => {
               </div>
             </div>
           </div>
+          
+          <div class="learningMain_imgs flex align_center">
+            <div class="learningMain_img">
+                <img src="../image/learning/${i}/${imageId}.png" id="fullscreen-main-img"/>
+            </div>
+
+            <div class="main_slider flex align_center">
+              <div class="mainLeft_slider mainSlider_item flex justify_center align_center" id="left-main-slider">
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="16" 
+                    height="16" 
+                    fill="currentColor" 
+                    class="bi bi-chevron-left" 
+                    viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
+              </div>
+
+              <div class="mainRight_slider mainSlider_item flex justify_center align_center" id="right-main-slider">
+                <svg    
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="16" 
+                    height="16" 
+                    fill="currentColor" 
+                    class="bi bi-chevron-right" 
+                    viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="fullscreen_btn" id="fullscreen-btn">
+              <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  fill="currentColor" 
+                  class="bi bi-fullscreen" 
+                  viewBox="0 0 16 16">
+                <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+              </svg>
+            </div>
+          </div> 
 
           <div class="learningItem_imgs flex justify_between align_center">
-            <div class="learningItem_img">
-                <img src="../image/learning/items/${i}.png"/>
-              
-                <div class="fullscreen_btn" id="fullscreen-btn">
-                  <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="16" 
-                      height="16" 
-                      fill="currentColor" 
-                      class="bi bi-fullscreen" 
-                      viewBox="0 0 16 16">
-                    <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
-                  </svg>
-                </div>
-              <div class="overlay"></div>
+            <div class="learningItem_img" id="learning-item-img">
+                <img src="../image/learning/${i}/0.png"/>
             </div>
-            <div class="learningItem_img">
-              <img src="../image/learning/items/${i + 1}.png" />
-
-              <div class="fullscreen_btn" id="fullscreen-btn">
-                  <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="16" 
-                      height="16" 
-                      fill="currentColor" 
-                      class="bi bi-fullscreen" 
-                      viewBox="0 0 16 16">
-                    <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
-                  </svg>
-                </div>
-              <div class="overlay"></div>
+            <div class="learningItem_img" id="learning-item-img">
+              <img src="../image/learning/${i}/1.png" />
             </div>
-            <div class="learningItem_img">
-              <img src="../image/learning/items/${i + 2}.png" />
-
-              <div class="fullscreen_btn" id="fullscreen-btn">
-                  <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="16" 
-                      height="16" 
-                      fill="currentColor" 
-                      class="bi bi-fullscreen" 
-                      viewBox="0 0 16 16">
-                    <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
-                  </svg>
-                </div>
-              <div class="overlay"></div>
+            <div class="learningItem_img" id="learning-item-img">
+              <img src="../image/learning/${i}/2.png" />
             </div>
-            <div class="learningItem_img">
-              <img src="../image/learning/items/${i + 3}.png" />
-
-              <div class="fullscreen_btn" id="fullscreen-btn">
-                  <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="16" 
-                      height="16" 
-                      fill="currentColor" 
-                      class="bi bi-fullscreen" 
-                      viewBox="0 0 16 16">
-                    <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
-                  </svg>
-                </div>
-              <div class="overlay"></div>
+            <div class="learningItem_img" id="learning-item-img">
+              <img src="../image/learning/${i}/3.png" />
             </div>
           </div>
+
+          <div class="overlay" id="global-overlay"></div>
         </div>
     `;
 
-    const fullscreenBtns = document.querySelectorAll("#fullscreen-btn");
+    const fullscreenBtn = document.getElementById("fullscreen-btn");
     const globalOverlay = document.getElementById("global-overlay");
+    const leftMainSlider = document.getElementById("left-main-slider");
+    const rightMainSlider = document.getElementById("right-main-slider");
+    const fullscreenMainImg = document.getElementById("fullscreen-main-img");
+    const learningItemImg = document.querySelectorAll("#learning-item-img");
 
-    fullscreenBtns.forEach((item, i) => {
-      item.addEventListener("click", () => {
-        globalOverlay.style.display = "flex";
-        globalOverlay.innerHTML = `
+    function sliderFunc(where) {
+      if (imageId > learningItemImg.length - 1) {
+        imageId = 0;
+        where.src = `../image/learning/${i}/${imageId}.png`;
+      } else if (imageId < 0) {
+        imageId = learningItemImg.length - 1;
+        where.src = `../image/learning/${i}/${imageId}.png`;
+      } else {
+        where.src = `../image/learning/${i}/${imageId}.png`;
+      }
+    }
+
+    rightMainSlider.addEventListener("click", () => {
+      imageId++;
+      sliderFunc(fullscreenMainImg);
+    });
+
+    leftMainSlider.addEventListener("click", () => {
+      imageId--;
+      sliderFunc(fullscreenMainImg);
+    });
+
+    fullscreenBtn.addEventListener("click", () => {
+      globalOverlay.style.display = "flex";
+      globalOverlay.innerHTML = `
         <div class="close flex justify_center align_center" id="close">
           <svg 
               xmlns="http://www.w3.org/2000/svg" 
               width="16" 
               height="16" 
               fill="currentColor" 
-              class="bi bi-fullscreen-exit" 
+              class="bi bi-x-lg" 
               viewBox="0 0 16 16">
-            <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
           </svg>
         </div>
 
@@ -648,36 +668,26 @@ learningBtn.forEach((item, i) => {
           </div>
         </div>
 
-        <img src="../image/learning/items/${i}.png" id="fullscreen-img"/>
+        <img src="../image/learning/${i}/${imageId}.png" id="fullscreen-img"/>
         `;
 
-        const close = document.getElementById("close");
-        const rightSlider = document.getElementById("right-slider");
-        const leftSlider = document.getElementById("left-slider");
-        const fullscreenImg = document.getElementById("fullscreen-img");
+      const close = document.getElementById("close");
+      const fullscreenImg = document.getElementById("fullscreen-img");
+      const leftSlider = document.getElementById("left-slider");
+      const rightSlider = document.getElementById("right-slider");
 
-        close.addEventListener("click", () => {
-          globalOverlay.style.display = "none";
-        });
+      close.addEventListener("click", () => {
+        globalOverlay.style.display = "none";
+      });
 
-        rightSlider.addEventListener("click", () => {
-          i++;
-          if (i > fullscreenBtns.length - 1) {
-            i = 0;
-            fullscreenImg.src = `../image/learning/items/${i}.png`;
-          } else {
-            fullscreenImg.src = `../image/learning/items/${i}.png`;
-          }
-        });
-        leftSlider.addEventListener("click", () => {
-          i--;
-          if (i < 0) {
-            i = fullscreenBtns.length - 1;
-            fullscreenImg.src = `../image/learning/items/${i}.png`;
-          } else {
-            fullscreenImg.src = `../image/learning/items/${i}.png`;
-          }
-        });
+      leftSlider.addEventListener("click", () => {
+        imageId--;
+        sliderFunc(fullscreenImg);
+      });
+
+      rightSlider.addEventListener("click", () => {
+        imageId++;
+        sliderFunc(fullscreenImg);
       });
     });
   });

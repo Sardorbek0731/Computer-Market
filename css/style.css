@@ -290,6 +290,7 @@
   width: 21rem;
   height: 13rem;
   background-color: white;
+  transition: all 0.2s;
 }
 .advantageItem_hidden {
   width: 100%;
@@ -329,7 +330,7 @@
 .advantageItem_body_p p {
   font-size: 15px;
   font-weight: 400;
-  color: #a6a7aa;
+  color: #bebebe;
   font-family: Hind, sans-serif;
 }
 .advantageFirst_row {

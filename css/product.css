@@ -363,21 +363,19 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 .close svg,
-.slider_item svg {
+.slider_item svg,
+.mainSlider_item svg {
   color: rgb(205, 205, 205);
   width: 1.9rem;
   height: 1.9rem;
   transition: all 0.2s;
-}
-.close svg:hover {
-  width: 1.7rem;
-  height: 1.7rem;
+  cursor: pointer;
 }
 .slider_item svg:hover {
   width: 3rem;
   height: 3rem;
 }
-.slider_item svg {
+.slider_item svg, .mainSlider_item svg {
   width: 2.5rem;
   height: 2.5rem;
 }
@@ -408,7 +406,7 @@
 .item_learning {
   display: flex;
   width: 75%;
-  margin: 4rem 0 4rem 0;
+  margin: 4rem 0 0 0;
   border: 1px solid black;
   background-color: white;
   padding: 3rem;
@@ -439,8 +437,39 @@
   font-weight: 370;
   color: rgb(83, 83, 83);
 }
+.learningMain_imgs {
+  width: 80%;
+  flex-direction: column;
+  margin: 4rem 0;
+  position: relative;
+}
+.main_slider {
+  width: 100%;
+}
+.mainSlider_item {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.mainLeft_slider {
+  left: 0;
+}
+.mainRight_slider {
+  right: 0;
+}
+.mainSlider_item svg {
+  color: #ababab;
+}
+.mainSlider_item svg:hover {
+  transform: scale(1.2);
+  color: rgb(0, 0, 99);
+}
+.learningMain_img img {
+  width: auto;
+  height: auto;
+}
 .learningItem_imgs {
-  width: 75%;
+  width: 80%;
   margin-bottom: 3rem;
 }
 .learningItem_img {
@@ -448,7 +477,7 @@
   border-radius: 10px;
   cursor: pointer;
   position: relative;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
 }
 .learningItem_img img {
   width: 10rem;
@@ -462,7 +491,7 @@
   margin-top: 0;
 }
 .overlay {
-  opacity: 0;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -475,20 +504,17 @@
 }
 .fullscreen_btn {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+  bottom: 0;
+  right: 0;
 }
 .fullscreen_btn svg {
-  opacity: 0;
-  width: 2.3rem;
-  height: 2.3rem;
-  color: white;
+  width: 2rem;
+  height: 2rem;
+  color: #ababab;
   transition: all 0.2s;
-  margin-top: 1rem;
+  cursor: pointer;
 }
 .fullscreen_btn svg:hover {
-  width: 2.6rem;
-  height: 2.6rem;
+  color: rgb(0, 0, 99);
+  transform: scale(1.1);
 }
