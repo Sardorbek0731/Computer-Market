@@ -303,6 +303,13 @@
   height: 100%;
   transition: all 0.5s;
 }
+.advantage_item:hover {
+  background-color: #512bd4;
+}
+.advantage_item:hover .advantageItem_body_title h1,
+.advantage_item:hover .advantageItem_body_p p {
+  color: white;
+}
 .advantage_item:hover .advantageItem_div {
   transform: translateY(-2.6rem);
 }
@@ -320,12 +327,11 @@
   flex-direction: column;
 }
 .advantageItem_body_title h1 {
-  font-weight: 700;
+  font-weight: 480;
   color: #515769;
   line-height: 1.4;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  font-family: Hind, sans-serif;
 }
 .advantageItem_body_p p {
   font-size: 15px;

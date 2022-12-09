@@ -466,7 +466,7 @@
   color: #ababab;
 }
 .mainSlider_item svg:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: rgb(0, 0, 99);
 }
 .learningMain_img img {
