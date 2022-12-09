@@ -100,41 +100,14 @@ body.dark_mode .nav {
 img {
   user-select: none;
 }
+.wf-100 {
+  width: 100%;
+}
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 65rem;
-}
-.color--black {
-  color: black;
-}
-.color--white {
-  color: white;
-}
-.justify_center {
-  justify-content: center;
-}
-.justify_evenly {
-  justify-content: space-evenly;
-}
-.justify_between {
-  justify-content: space-between;
-}
-.align_center {
-  align-items: center;
-}
-.wf-100 {
-  width: 100%;
-}
-.mb-5 {
-  margin-bottom: 5rem;
-}
-.mr-10 {
-  margin-right: 10px;
-}
-.column {
-  flex-direction: column;
 }
 
 #scrollbarProgress {
@@ -450,17 +423,273 @@ body.dark_mode .userNav a:hover {
   color: white;
 }
 
-.flex {
+/* Main */
+.home {
+  flex-direction: column;
+  height: 100vh;
+  box-shadow: 0 0 90px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(-30deg, rgb(0, 128, 134), rgb(179, 255, 255));
+}
+.home_nav {
+  position: absolute;
+  top: 0;
+  height: 90px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.hidden {
+.brand {
+  text-decoration: none;
+}
+.brand i,
+.brand h1 {
+  font-size: 2rem;
+  color: rgb(3, 0, 51);
+  user-select: none;
+}
+.brand h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.home_text {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 60px;
+}
+.home_title h1 {
+  font-size: 3.2rem;
+  margin-bottom: 40px;
+  user-select: none;
+}
+.home_p p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  user-select: none;
+}
+.language_btn {
+  position: relative;
+  margin-right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+  height: 3.7rem;
+  width: 10rem;
+  padding: 0 1rem;
+}
+.language_btn:hover {
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+}
+.language_items {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background-color: white;
+  width: 10rem;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.language_item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  border-radius: 10px;
+  padding: 1rem;
+  user-select: none;
+}
+.language_item:hover {
+  background-color: #e5eaff;
+}
+.language_btn h1 {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-weight: 380;
+  font-size: 1.1rem;
+}
+.language_btn h1 svg,
+.language_item svg {
+  margin-right: 0.5rem;
+}
+.registr_btn button {
+  border: 2px solid black;
+  outline: none;
+  padding: 0 40px;
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+  height: 3.7rem;
+  user-select: none;
+}
+.registr_btn button:hover {
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+.registr_btn a {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+}
+.registr_btn button:hover a {
+  color: black;
+}
+.home_bg img {
+  width: 32rem;
+  height: auto;
+}
+.message_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+.message_icon:hover {
+  transform: scale(1.08);
+}
+.message_icon .color--white {
+  color: white;
+  font-size: 1.5rem;
+}
+.message_fixed_card {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 7rem;
+  right: 2rem;
+  width: 25rem;
+  height: 34rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  background-color: rgb(218, 215, 255);
+  z-index: 100;
 }
-.ml-0 {
-  margin-left: 0;
+.message_head {
+  background-color: white;
+  justify-content: space-between;
+  padding: 1rem 1.35rem;
+  width: 22.3rem;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.12);
 }
-.mb-0 {
-  margin-bottom: 0;
+.message_brand,
+.request_icon,
+.message_close_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+}
+.request_icon {
+  background-color: #0aab83;
+}
+.message_close_item {
+  background-color: red;
+}
+.message_brand i,
+.request_icon i {
+  font-size: 1.2rem;
+  color: white;
+}
+.message_head_title h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.message_close_item i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.message_body {
+  padding-top: 20px;
+  overflow-y: scroll;
+}
+.message_body > div {
+  margin-bottom: 40px;
+}
+.first_post {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.post_item {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.post_items {
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.post_date {
+  margin-bottom: 10px;
+}
+.post_date h4 {
+  color: rgb(65, 65, 65);
+  font-weight: 400;
+}
+.message_text {
+  width: 15.5rem;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 12px 12px 12px 0;
+  overflow-x: auto;
+}
+.quation_text {
+  border-radius: 12px 12px 0 12px;
+}
+.message_text p {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+}
+.form_text_create {
+  justify-content: space-between;
+  height: 4.5rem;
+  box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.12);
+}
+.form_text_create input {
+  width: 19rem;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding-left: 1rem;
+  padding-right: 5rem;
+}
+.form_text_create button {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(57, 133, 213);
+  border-radius: 50%;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+}
+.submit_message i {
+  font-size: 1.2rem;
 }
 
 /* Footer */
@@ -603,4 +832,47 @@ body.dark_mode .userNav a:hover {
   font-size: 1.1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
+}
+
+.flex {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+.ml-0 {
+  margin-left: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mr-0 {
+  margin-right: 0;
+}
+.color--black {
+  color: black;
+}
+.color--white {
+  color: white;
+}
+.justify_center {
+  justify-content: center;
+}
+.justify_evenly {
+  justify-content: space-evenly;
+}
+.justify_between {
+  justify-content: space-between;
+}
+.align_center {
+  align-items: center;
+}
+.mb-5 {
+  margin-bottom: 5rem;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.column {
+  flex-direction: column;
 }

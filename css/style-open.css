@@ -6,54 +6,10 @@
   font-weight: 300;
 }
 
-/* Main */
+/* Home */
 .home {
-  float: right;
   width: 83vw;
-  height: 100vh;
-  box-shadow: 0 0 90px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(-60deg, rgb(0, 115, 138), rgb(179, 255, 255));
-}
-.home_text {
-  flex-direction: column;
-  align-items: flex-start;
-  margin-right: 60px;
-}
-.home_title h1 {
-  font-size: 3.2rem;
-  margin-bottom: 40px;
-}
-.home_p p {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-}
-.registr_btn button {
-  border: 2px solid black;
-  outline: none;
-  padding: 17px 40px;
-  background-color: black;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s;
-}
-.registr_btn button:hover {
-  background-color: white;
-  transform: scale(1.05);
-}
-.registr_btn a {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: white;
-  text-decoration: none;
-}
-.registr_btn button:hover a {
-  color: black;
-}
-.home_bg img {
-  width: 32rem;
-  height: auto;
+  float: right;
 }
 
 /* Brands */
