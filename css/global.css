@@ -84,7 +84,9 @@ body.dark_mode .there_product_item,
 body.dark_mode .product_item,
 body.dark_mode .product_item_like,
 body.dark_mode .item_learning,
-body.dark_mode .userNav {
+body.dark_mode .userNav,
+body.dark_mode .itemFirst_column,
+body.dark_mode .itemSecond_column {
   background-color: rgb(50, 50, 50);
   border: none;
 }
