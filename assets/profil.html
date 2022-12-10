@@ -200,11 +200,11 @@
               <label for="lastName">Familiya</label>
             </div>
             <div class="email form_item">
-              <input type="text" id="email" autocomplete="off" required />
+              <input type="email" id="email" autocomplete="off" required />
               <label for="email">Email</label>
             </div>
             <div class="number form_item">
-              <input type="text" id="number" autocomplete="off" required />
+              <input type="tel" id="number" pattern="[+0-9]{2,} [0-9]{2,} [0-9]{2,} [0-9]{2,}[0-9]{2,}" autocomplete="off" required />
               <label for="number">Raqam</label>
               <div class="show_message hidden" id="number-error">
                 <p>Iltimos, qaytadan tekshiring!</p>

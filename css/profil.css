@@ -145,28 +145,29 @@
   height: 80vh;
 }
 .itemFirst_column {
-  width: 34%;
+  width: 25%;
 }
 .user_img_item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 13rem;
-  height: 13rem;
-  background-color: rgb(8, 184, 175);
-  border-radius: 10px;
+  width: 7rem;
+  height: 7rem;
+  background-color: rgb(35, 96, 166);
+  border-radius: 50%;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 .user_img_item h1 {
-  font-size: 8rem;
-  font-weight: 350;
+  font-size: 3.5rem;
+  font-weight: 300;
   user-select: none;
 }
 .user_name {
   text-align: center;
 }
 .user_name h1 {
-  font-weight: 370;
+  font-weight: 340;
   font-size: 2rem;
 }
 

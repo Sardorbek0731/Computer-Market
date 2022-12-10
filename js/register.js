@@ -40,10 +40,21 @@ if (inputValues.length) {
   defaultValue();
 
   nextBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
     inputValues.forEach((item) => {
       if (item.password == password.value) {
         clickedNextBtn();
         error.classList.add("hidden");
+
+        if (
+          firstName.value.length &&
+          lastName.value.length &&
+          password.value.length
+        ) {
+          clickedNextBtn();
+          userCardName.innerHTML = `${firstName.value} ${lastName.value}`;
+        }
       } else {
         error.classList.remove("hidden");
       }
@@ -56,7 +67,6 @@ if (inputValues.length) {
     inputValues.push({
       firstName: firstName.value,
       lastName: lastName.value,
-      password: password.value,
     });
 
     if (

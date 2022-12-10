@@ -12,6 +12,7 @@ const openProfil = document.getElementById("open-profil");
 // Show message
 const numberError = document.getElementById("number-error");
 
+
 openProfil.addEventListener("click", (e) => {
   e.preventDefault();
   setTimeout(() => {
@@ -77,7 +78,7 @@ function showUserAbout() {
     userLastName.innerHTML = item.lastName;
     userEmail.innerHTML = item.email;
     userNumber.innerHTML = item.number;
-    userName.innerHTML = `${item.firstName} ${item.lastName}`;
+    userName.innerHTML = `${item.firstName} </br> ${item.lastName}`;
 
     userCreateFirstName.value = item.firstName;
     userCreateLastName.value = item.lastName;
