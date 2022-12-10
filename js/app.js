@@ -87,7 +87,7 @@ formCreate.addEventListener("submit", (e) => {
 
           </div>`;
 
-      nameInput.placeholder = `Savolingizni berishingiz mumkin...`;
+      nameInput.placeholder = `Savolingiz...`;
     }, 2000);
   } else if (
     result === "Salom" ||
@@ -142,7 +142,7 @@ formCreate.addEventListener("submit", (e) => {
     }, 2000);
   } else if (
     result.trim().length > 0 &&
-    nameInput.placeholder == `Savolingizni berishingiz mumkin...` &&
+    nameInput.placeholder == `Savolingiz...` &&
     result != "Salom" &&
     result != "Assalomu alaykum" &&
     result != "Nagap"

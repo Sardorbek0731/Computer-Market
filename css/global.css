@@ -16,7 +16,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: #f8faff;
+  background-color: #fafaff;
 }
 body.dark_mode {
   background-color: rgb(0, 0, 0);
@@ -575,18 +575,20 @@ body.dark_mode .userNav a:hover {
   position: fixed;
   bottom: 7rem;
   right: 2rem;
-  width: 25rem;
+  width: 23.5rem;
   height: 34rem;
+  border-radius: 0 35px 0 0;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-  background-color: rgb(218, 215, 255);
+  background-color: rgb(217, 230, 255);
   z-index: 100;
 }
 .message_head {
   background-color: white;
   justify-content: space-between;
-  padding: 1rem 1.35rem;
-  width: 22.3rem;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.12);
+  padding: 1rem 1rem;
+  width: 21.5rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 35px 0 0;
 }
 .message_brand,
 .request_icon,
@@ -642,7 +644,7 @@ body.dark_mode .userNav a:hover {
   margin-bottom: 10px;
 }
 .post_date h4 {
-  color: rgb(65, 65, 65);
+  color: rgb(100, 100, 100);
   font-weight: 400;
 }
 .message_text {
@@ -651,9 +653,13 @@ body.dark_mode .userNav a:hover {
   padding: 20px 20px;
   border-radius: 12px 12px 12px 0;
   overflow-x: auto;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+  border-left: 2px solid #2f71a7;
 }
 .quation_text {
+  border-right: 2px solid #2f71a7;
   border-radius: 12px 12px 0 12px;
+  border-left: 0;
 }
 .message_text p {
   color: rgba(0, 0, 0, 0.7);
@@ -662,7 +668,7 @@ body.dark_mode .userNav a:hover {
 .form_text_create {
   justify-content: space-between;
   height: 4.5rem;
-  box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
 }
 .form_text_create input {
   width: 19rem;
@@ -798,6 +804,7 @@ body.dark_mode .userNav a:hover {
   border: 1px solid rgba(0, 0, 0, 0.5);
   padding: 1rem;
   outline: none;
+  border-radius: 4px;
   font-size: 1rem;
   font-weight: 400;
 }
