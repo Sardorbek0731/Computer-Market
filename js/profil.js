@@ -12,7 +12,6 @@ const openProfil = document.getElementById("open-profil");
 // Show message
 const numberError = document.getElementById("number-error");
 
-
 openProfil.addEventListener("click", (e) => {
   e.preventDefault();
   setTimeout(() => {
@@ -78,7 +77,7 @@ function showUserAbout() {
     userLastName.innerHTML = item.lastName;
     userEmail.innerHTML = item.email;
     userNumber.innerHTML = item.number;
-    userName.innerHTML = `${item.firstName} </br> ${item.lastName}`;
+    userName.innerHTML = `${item.firstName} ${item.lastName}`;
 
     userCreateFirstName.value = item.firstName;
     userCreateLastName.value = item.lastName;
@@ -141,3 +140,25 @@ deleteSettings.addEventListener("click", () => {
   closedProfil();
   localStorage.setItem("user", JSON.stringify(""));
 });
+
+// User nav
+let user = document.getElementById("user");
+let userItem = document.getElementById("user-item");
+let userNavItem = document.getElementById("user-nav");
+let userStorageNav = JSON.parse(localStorage.getItem("user"));
+
+function userNav() {
+  user.style.display = "flex";
+  user.addEventListener("click", () => {
+    userNavItem.classList.toggle("hidden");
+  });
+  userStorageNav.forEach((item) => {
+    userItem.innerHTML = item.firstName.charAt();
+  });
+}
+
+openProfil.addEventListener("click", () => {
+  userNav();
+});
+
+if (userStorageNav) userNav();
