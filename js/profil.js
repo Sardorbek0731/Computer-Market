@@ -46,10 +46,10 @@ let userStorage = JSON.parse(localStorage.getItem("user"))
   : [];
 
 if (
-  userStorage.firstName.length &&
-  userStorage.lastName.length &&
-  userStorage.email.length &&
-  userStorage.number.length
+  userStorage.firstName &&
+  userStorage.lastName &&
+  userStorage.email &&
+  userStorage.number
 ) {
   openedProfil();
   showUserAbout();
@@ -92,10 +92,10 @@ function showUserAbout() {
 openProfil.addEventListener("click", (e) => {
   e.preventDefault();
   if (
-    firstName.value.length > 0 &&
-    lastName.value.length > 0 &&
-    email.value.length > 0 &&
-    number.value.length > 0
+    firstName.value.length &&
+    lastName.value.length &&
+    email.value.length &&
+    number.value.length
   ) {
     userStorage = {
       firstName: firstName.value,
@@ -166,4 +166,15 @@ userAboutSaveBtn.addEventListener("click", () => {
   userNav();
 });
 
-if (userStorage) userNav();
+if (
+  userStorage.firstName &&
+  userStorage.lastName &&
+  userStorage.email &&
+  userStorage.number
+) {
+  userNav();
+  openedProfil();
+  showUserAbout();
+} else {
+  closedProfil();
+}

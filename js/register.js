@@ -17,6 +17,8 @@ function getItemValue() {
   let response = JSON.parse(localStorage.getItem("register"));
 }
 
+let passwordValue = "";
+
 function defaultValue() {
   inputValues.forEach((item) => {
     firstName.value = item.firstName;
@@ -41,9 +43,8 @@ if (inputValues.length) {
 
   nextBtn.addEventListener("click", (e) => {
     e.preventDefault();
-
     inputValues.forEach((item) => {
-      if (item.password == password.value) {
+      if (password.value == item.password) {
         clickedNextBtn();
         error.classList.add("hidden");
 
@@ -67,6 +68,7 @@ if (inputValues.length) {
     inputValues.push({
       firstName: firstName.value,
       lastName: lastName.value,
+      password: password.value,
     });
 
     if (
