@@ -100,9 +100,8 @@ function userNav() {
   user.addEventListener("click", () => {
     userNavItem.classList.toggle("hidden");
   });
-  userStorage.forEach((item) => {
-    userItem.innerHTML = item.firstName.charAt();
-  });
+
+  userItem.innerHTML = userStorage.firstName.charAt();
 }
 
 if (userStorage) userNav();

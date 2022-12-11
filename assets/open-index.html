@@ -369,6 +369,62 @@
         </div>
       </section>
 
+      <!----------- User message ----------->
+      <div class="message">
+        <div class="message_icon" onclick="openMessage()">
+          <i class="fa-solid fa-comment-dots color--white"></i>
+        </div>
+        <div class="message_fixed_card" id="message-item-text">
+          <div class="message_head flex align_center wf-100">
+            <div class="message_head_brand message_brand">
+              <i class="fa-solid fa-laptop" id="brand-icon"></i>
+            </div>
+            <div class="message_head_title">
+              <h1>Market</h1>
+            </div>
+            <div class="message_close_item" onclick="closedMessage()">
+              <i class="fa-solid fa-xmark color--white"></i>
+            </div>
+          </div>
+          <div class="message_body wf-100" id="message-body">
+            <div class="first_post flex align_center wf-100">
+              <div class="first_post_date post_date">
+                <h4>14:10, 2022.09.01</h4>
+              </div>
+              <div class="post_items flex wf-100">
+                <div class="message_body_brand message_brand">
+                  <i class="fa-solid fa-laptop" id="brand-icon"></i>
+                </div>
+                <div class="message_text">
+                  <p>
+                    Assalomu alaykum.<br />
+                    Hurmatli mijoz, iltimos ismingizni<br />
+                    kiriting!<br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="message_footer wf-100">
+            <form
+              class="form_text_create flex align_center wf-100"
+              id="form-create"
+            >
+              <input
+                type="text"
+                id="name-input"
+                autocomplete="off"
+                class="wf-100"
+                placeholder="Ismingizni kiriting..."
+              />
+              <button type="submit" class="submit_message">
+                <i class="fa-solid fa-share color--white"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
       <!----------- Brands ----------->
       <section id="brands">
         <div class="brands">
@@ -485,6 +541,7 @@
 
     <script src="../js/language.js"></script>
     <script src="../js/mode.js"></script>
+    <script src="../js/app.js"></script>
     <script src="../js/loader.js"></script>
     <script src="../js/setting-item.js"></script>
     <script src="../js/scroll.js"></script>

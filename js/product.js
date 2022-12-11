@@ -785,10 +785,9 @@ function userNav() {
       userClick(i);
     });
   });
-  userStorage.forEach((item) => {
-    userItems.forEach((userItem) => {
-      userItem.innerHTML = item.firstName.charAt();
-    });
+
+  userItems.forEach((userItem) => {
+    userItem.innerHTML = userStorage.firstName.charAt();
   });
 }
 

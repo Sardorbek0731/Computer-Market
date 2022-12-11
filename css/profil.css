@@ -139,7 +139,7 @@
 .itemFirst_column,
 .itemSecond_column {
   flex-direction: column;
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
   padding: 3rem 2rem;
   background-color: white;
 }
@@ -201,7 +201,7 @@ body.dark_mode .spent_money h1 {
 .spent_money {
   background-color: rgb(228, 237, 255);
   width: 85%;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
   padding: 1rem;
 }
 body.dark_mode .spent_money {
@@ -229,7 +229,7 @@ body.dark_mode .spent_money {
   background-color: rgb(228, 237, 255);
   width: 16.5rem;
   padding: 1rem;
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
   margin-bottom: 2rem;
 }
 body.dark_mode .user_about_card {
