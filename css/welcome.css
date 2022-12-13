@@ -90,6 +90,9 @@
 .user_about_form input:focus {
   border-bottom: 1px solid red;
 }
+.user_about_form input:valid {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
 .user_about_btn {
   width: 12rem;
   height: 3.5rem;
@@ -116,9 +119,13 @@
   bottom: 10px;
   width: 100%;
 }
+.errorCard {
+  bottom: -1.5rem;
+}
 .error h1 {
   font-size: 0.8rem;
   color: red;
+  font-weight: 480;
 }
 
 /* User Card Regsiter */
@@ -136,7 +143,6 @@
   align-items: center;
 }
 .user_card_register {
-  display: none;
   width: 100%;
   height: 100vh;
 }
@@ -241,10 +247,13 @@
 .form_create input:valid ~ label {
   top: -1rem;
   font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(7, 48, 195);
 }
 .form_create input:focus {
   border-bottom: 1px solid red;
+}
+.form_create input:valid {
+  border-bottom: 1px solid rgb(7, 48, 195);
 }
 .user_card_btn {
   width: 100%;

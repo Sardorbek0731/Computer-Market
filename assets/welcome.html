@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Computers Market</title>
-    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="../css/welcome.css" />
     <link rel="stylesheet" href="../css/style-open.css" />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/media.css" />
@@ -40,7 +40,7 @@
           <div class="title">
             <h1>Login</h1>
           </div>
-          <form id="form-create" class="user_about_form">
+          <form class="user_about_form">
             <div class="firstName">
               <input
                 type="text"
@@ -82,7 +82,7 @@
         </div>
       </div>
 
-      <div class="user_card_register" id="user-card-register">
+      <div class="user_card_register hidden" id="user-card-register">
         <div class="user_card flex justify_center align_center">
           <div class="user_card_items flex justify_evenly">
             <div class="userCard_chip">
@@ -107,7 +107,7 @@
           </div>
         </div>
         <div class="userCard_form flex justify_center align_center">
-          <form id="form-create" class="form_create flex">
+          <form class="form_create flex">
             <div class="user_card_title">
               <h1>User Card</h1>
             </div>
@@ -126,11 +126,11 @@
                 <input
                   type="text"
                   name="text"
-                  id="text"
+                  id="card-name"
                   required
                   autocomplete="off"
                 />
-                <label for="text">Karta nomi</label>
+                <label for="card-name">Karta nomi</label>
               </div>
               <div class="cardExpiration">
                 <input
@@ -141,9 +141,12 @@
                   required
                 />
                 <label for="cardExpiration">Yaroqlilik muddati</label>
+                <div class="error errorCard hidden" id="error-card">
+                  <h1>Iltimos qaytadan tekshiring!</h1>
+                </div>
               </div>
             </div>
-            <button class="user_card_btn" onclick="welcomeHome()">
+            <button class="user_card_btn" id="user-card-btn">
               <a href="#"> Kirish </a>
             </button>
           </form>
@@ -504,7 +507,7 @@
                     imkoniga ega bo'ling!
                   </p>
                 </div>
-                <div class="registr_btn">
+                <div class="registr_btn" id="logout">
                   <button type="button">
                     <a href="../index.html"> Chiqish </a>
                   </button>
@@ -690,7 +693,7 @@
       </main>
     </main>
 
-    <script src="../js/register.js"></script>
+    <script src="../js/welcome.js"></script>
     <script src="../js/up.js"></script>
     <script src="../js/language.js"></script>
     <script src="../js/mode.js"></script>
