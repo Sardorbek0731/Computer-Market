@@ -19,6 +19,10 @@ let inputValues = JSON.parse(localStorage.getItem("register"))
   ? JSON.parse(localStorage.getItem("register"))
   : [];
 
+let passwordStorage = JSON.parse(localStorage.getItem("password"))
+  ? JSON.parse(localStorage.getItem("password"))
+  : [];
+
 let cardValues = JSON.parse(localStorage.getItem("user-card"))
   ? JSON.parse(localStorage.getItem("user-card"))
   : [];
@@ -26,6 +30,9 @@ let cardValues = JSON.parse(localStorage.getItem("user-card"))
 // setItem
 function setItemValues() {
   localStorage.setItem("register", JSON.stringify(inputValues));
+}
+function setItemPassword() {
+  localStorage.setItem("password", JSON.stringify(passwordStorage));
 }
 function setItemCard() {
   localStorage.setItem("user-card", JSON.stringify(cardValues));
@@ -44,35 +51,48 @@ function welcome() {
   openHome.classList.remove("hidden");
 }
 
+function defaultValue() {
+  firstName.value = inputValues.firstName;
+  lastName.value = inputValues.lastName;
+}
+
 nextBtn.addEventListener("click", () => {
   if (
     firstName.value.length > 0 &&
     lastName.value.length > 0 &&
     password.value.length > 0 &&
-    !inputValues.inputBoolean &&
-    !cardValues.cardBoolean
+    inputValues.inputBoolean == undefined &&
+    cardValues.cardBoolean == undefined
   ) {
     clickedNextBtn();
 
     inputValues = {
       firstName: firstName.value,
       lastName: lastName.value,
-      password: password.value,
       inputBoolean: true,
+      welcome: true,
     };
+
+    passwordStorage = password.value;
 
     userCardName.innerHTML = `${inputValues.firstName} ${inputValues.lastName}`;
     setItemValues();
+    setItemPassword();
   } else if (
-    firstName.value.length > 0 &&
-    lastName.value.length > 0 &&
-    password.value.length > 0 &&
-    inputValues.inputBoolean &&
-    cardValues.cardBoolean
+    inputValues.firstName == firstName.value &&
+    inputValues.lastName == lastName.value &&
+    passwordStorage == password.value
   ) {
     welcome();
+
+    inputValues = {
+      firstName: firstName.value,
+      lastName: lastName.value,
+      inputBoolean: true,
+    };
+
+    setItemValues();
   } else {
-    console.log("salom");
     setTimeout(() => {
       error.classList.remove("hidden");
     }, 300);
@@ -124,3 +144,7 @@ logout.addEventListener("click", () => {
 
   setItemValues();
 });
+
+if (inputValues.firstName.length > 0 && inputValues.lastName.length > 0) {
+  defaultValue();
+}
