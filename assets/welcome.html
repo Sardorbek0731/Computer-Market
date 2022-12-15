@@ -46,8 +46,8 @@
                 type="text"
                 name="firstName"
                 id="firstName"
-                required
                 autocomplete="off"
+                required
               />
               <label for="firstName">Ism</label>
             </div>
@@ -56,8 +56,8 @@
                 type="text"
                 name="lastName"
                 id="lastName"
-                required
                 autocomplete="off"
+                required
               />
               <label for="lastName">Familiya</label>
             </div>
@@ -72,7 +72,7 @@
               <label for="password">Parol</label>
 
               <div class="error hidden" id="error">
-                <h1>Iltimos parolni tekshiring!</h1>
+                <h1>Iltimos qaytadan tekshiring!</h1>
               </div>
             </div>
             <button class="user_about_btn" id="next-btn">
@@ -114,33 +114,31 @@
             <div class="userCardForm_items">
               <div class="cardNumber">
                 <input
-                  type="number"
-                  name="username"
+                  type="tel"
                   id="card-number"
-                  required
                   autocomplete="off"
+                  required
+                  placeholder="Karta raqami"
+                  pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
                 />
-                <label for="card-number">Karta raqami</label>
               </div>
               <div class="cardName">
                 <input
                   type="text"
-                  name="text"
                   id="card-name"
                   required
                   autocomplete="off"
+                  placeholder="Karta nomi"
                 />
-                <label for="card-name">Karta nomi</label>
               </div>
-              <div class="cardExpiration">
+              <div class="cardPassword">
                 <input
-                  type="number"
-                  name="cardExpiration"
-                  id="cardExpiration"
+                  type="password"
+                  id="card-password"
                   autocomplete="off"
                   required
+                  placeholder="Karta paroli"
                 />
-                <label for="cardExpiration">Yaroqlilik muddati</label>
                 <div class="error errorCard hidden" id="error-card">
                   <h1>Iltimos qaytadan tekshiring!</h1>
                 </div>

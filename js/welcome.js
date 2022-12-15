@@ -11,7 +11,7 @@ const nextBtn = document.getElementById("next-btn");
 const password = document.getElementById("password");
 const cardNumber = document.getElementById("card-number");
 const cardName = document.getElementById("card-name");
-const cardExpiration = document.getElementById("cardExpiration");
+const cardPassword = document.getElementById("card-password");
 const errorCard = document.getElementById("error-card");
 const logout = document.getElementById("logout");
 
@@ -46,9 +46,11 @@ function welcome() {
 
 nextBtn.addEventListener("click", () => {
   if (
-    firstName.value.length &&
-    lastName.value.length &&
-    password.value.length
+    firstName.value.length > 0 &&
+    lastName.value.length > 0 &&
+    password.value.length > 0 &&
+    !inputValues.inputBoolean &&
+    !cardValues.cardBoolean
   ) {
     clickedNextBtn();
 
@@ -56,51 +58,69 @@ nextBtn.addEventListener("click", () => {
       firstName: firstName.value,
       lastName: lastName.value,
       password: password.value,
+      inputBoolean: true,
     };
 
     userCardName.innerHTML = `${inputValues.firstName} ${inputValues.lastName}`;
     setItemValues();
+  } else if (
+    firstName.value.length > 0 &&
+    lastName.value.length > 0 &&
+    password.value.length > 0 &&
+    inputValues.inputBoolean &&
+    cardValues.cardBoolean
+  ) {
+    welcome();
   } else {
+    console.log("salom");
     setTimeout(() => {
       error.classList.remove("hidden");
-    }, 500);
+    }, 300);
     setTimeout(() => {
       error.classList.add("hidden");
     }, 4000);
   }
 });
 
-if (inputValues.firstName && inputValues.lastName && inputValues.password)
-  clickedNextBtn();
-
 userCardBtn.addEventListener("click", () => {
   if (
-    cardName.value.length &&
-    cardNumber.value.length &&
-    cardExpiration.value.length
+    cardName.value.length > 0 &&
+    cardNumber.value.length > 0 &&
+    cardPassword.value.length > 0
   ) {
     welcome();
 
     cardValues = {
       cardName: cardName.value,
       cardNumber: cardNumber.value,
-      cardExpiration: cardExpiration.value,
+      cardPassword: cardPassword.value,
+      cardBoolean: true,
     };
 
     setItemCard();
   } else {
     setTimeout(() => {
       errorCard.classList.remove("hidden");
-    }, 500);
+    }, 300);
     setTimeout(() => {
       errorCard.classList.add("hidden");
     }, 4000);
   }
 });
 
-if (cardValues.cardName && cardValues.cardNumber && cardValues.cardExpiration)
+if (inputValues.inputBoolean && cardValues.cardBoolean) {
   welcome();
+}
+
+if (inputValues.inputBoolean) {
+  clickedNextBtn();
+}
 
 logout.addEventListener("click", () => {
+  inputValues = {
+    firstName: inputValues.firstName,
+    lastName: inputValues.lastName,
+  };
+
   setItemValues();
 });
