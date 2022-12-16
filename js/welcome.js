@@ -14,6 +14,10 @@ const cardName = document.getElementById("card-name");
 const cardPassword = document.getElementById("card-password");
 const errorCard = document.getElementById("error-card");
 const logout = document.getElementById("logout");
+const alertItem = document.getElementById("alert");
+
+alertItem.classList.remove("show");
+alertItem.classList.add("hidden");
 
 let inputValues = JSON.parse(localStorage.getItem("register"))
   ? JSON.parse(localStorage.getItem("register"))
@@ -116,6 +120,12 @@ userCardBtn.addEventListener("click", () => {
       cardPassword: cardPassword.value,
       cardBoolean: true,
     };
+    alertItem.classList.add("show");
+    alertItem.classList.remove("hidden");
+
+    setTimeout(() => {
+      alertItem.style.right = "-100%";
+    }, 3050);
 
     setItemCard();
   } else {
