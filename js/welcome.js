@@ -53,6 +53,11 @@ function clickedNextBtn() {
 
   userCardName.innerHTML = `${inputValues.firstName} ${inputValues.lastName}`;
 }
+function registerFunc() {
+  userAboutForm.classList.remove("hidden");
+  userCardRegister.classList.add("hidden");
+  openHome.classList.add("hidden");
+}
 
 function alertSuccessFunc() {
   alertSuccess.classList.add("show");
@@ -162,6 +167,8 @@ userCardBtn.addEventListener("click", () => {
 
 if (inputValues.inputBoolean && cardValues.cardBoolean) {
   welcome();
+} else {
+  registerFunc();
 }
 
 if (inputValues.inputBoolean) {
