@@ -1,6 +1,5 @@
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
-const error = document.getElementById("error");
 const userAboutForm = document.getElementById("user-about-form");
 const userCardBtn = document.getElementById("user-card-btn");
 const register = document.getElementById("register");
@@ -12,12 +11,17 @@ const password = document.getElementById("password");
 const cardNumber = document.getElementById("card-number");
 const cardName = document.getElementById("card-name");
 const cardPassword = document.getElementById("card-password");
-const errorCard = document.getElementById("error-card");
 const logout = document.getElementById("logout");
-const alertItem = document.getElementById("alert");
+const alertSuccess = document.getElementById("alert-success");
+const alertError = document.querySelectorAll("#alert-error");
 
-alertItem.classList.remove("show");
-alertItem.classList.add("hidden");
+alertSuccess.classList.remove("show");
+alertSuccess.style.right = "-100%";
+
+alertError.forEach((item) => {
+  item.classList.remove("show");
+  item.style.right = "-100%";
+});
 
 let inputValues = JSON.parse(localStorage.getItem("register"))
   ? JSON.parse(localStorage.getItem("register"))
@@ -48,6 +52,38 @@ function clickedNextBtn() {
   userCardRegister.classList.add("flex");
 
   userCardName.innerHTML = `${inputValues.firstName} ${inputValues.lastName}`;
+}
+
+function alertSuccessFunc() {
+  alertSuccess.classList.add("show");
+
+  setTimeout(() => {
+    alertSuccess.style.right = "2rem";
+  });
+  setTimeout(() => {
+    alertSuccess.style.right = "-100%";
+  }, 4600);
+  setTimeout(() => {
+    alertSuccess.classList.remove("show");
+  }, 5600);
+}
+
+function alertErrorFunc() {
+  alertError.forEach((item) => {
+    item.classList.add("show");
+    item.style.right = "2rem";
+  });
+
+  setTimeout(() => {
+    alertError.forEach((item) => {
+      item.style.right = "-100%";
+    });
+  }, 4600);
+  setTimeout(() => {
+    alertError.forEach((item) => {
+      item.classList.remove("show");
+    });
+  }, 5600);
 }
 
 function welcome() {
@@ -88,6 +124,7 @@ nextBtn.addEventListener("click", () => {
     passwordStorage == password.value
   ) {
     welcome();
+    alertSuccessFunc();
 
     inputValues = {
       firstName: firstName.value,
@@ -97,12 +134,7 @@ nextBtn.addEventListener("click", () => {
 
     setItemValues();
   } else {
-    setTimeout(() => {
-      error.classList.remove("hidden");
-    }, 300);
-    setTimeout(() => {
-      error.classList.add("hidden");
-    }, 4000);
+    alertErrorFunc();
   }
 });
 
@@ -120,21 +152,11 @@ userCardBtn.addEventListener("click", () => {
       cardPassword: cardPassword.value,
       cardBoolean: true,
     };
-    alertItem.classList.add("show");
-    alertItem.classList.remove("hidden");
 
-    setTimeout(() => {
-      alertItem.style.right = "-100%";
-    }, 3050);
-
+    alertSuccessFunc();
     setItemCard();
   } else {
-    setTimeout(() => {
-      errorCard.classList.remove("hidden");
-    }, 300);
-    setTimeout(() => {
-      errorCard.classList.add("hidden");
-    }, 4000);
+    alertErrorFunc();
   }
 });
 

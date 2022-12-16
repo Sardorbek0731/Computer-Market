@@ -1,18 +1,23 @@
 /* Alert */
-.alert {
+.alertSuccess,
+.alertError {
   position: fixed;
   height: 4.5rem;
   top: 2rem;
-  right: 2rem;
+  right: -100%;
   padding: 0 4rem 0 1rem;
   border-radius: 0.2rem;
   background-color: rgb(182, 255, 255);
   overflow: hidden;
   z-index: 1;
-  transition: all 1s ease;
+  transition: all 1s cubic-bezier(0.64, 0.23, 0, 1.14);
+}
+.alertError {
+  background-color: rgb(255, 187, 187);
 }
 
-.alert::after {
+.alertSuccess::after,
+.alertError::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -21,8 +26,13 @@
   height: 0.3rem;
   background-color: rgb(13, 139, 156);
 }
-.alert.show::after {
-  animation: alert-after 6s linear 1;
+.alertError::after {
+  background-color: red;
+}
+.alertSuccess.show::after,
+.alertError.show::after {
+  animation: alert-after 7s linear 1;
+  animation-delay: 1s;
 }
 @keyframes alert-after {
   100% {
@@ -36,6 +46,9 @@
   background-color: rgb(13, 139, 156);
   margin-right: 1rem;
 }
+.errorIcon {
+  background-color: red;
+}
 .icon svg {
   color: white;
   width: 1.3rem;
@@ -45,6 +58,9 @@
   font-size: 1.1rem;
   font-weight: 380;
   color: rgb(23, 102, 110);
+}
+.textError h1 {
+  color: red;
 }
 
 .userAbout_form {
@@ -161,20 +177,6 @@
 }
 .user_about_btn:hover a {
   color: red;
-}
-
-.error {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-}
-.errorCard {
-  bottom: -1.5rem;
-}
-.error h1 {
-  font-size: 0.8rem;
-  color: red;
-  font-weight: 480;
 }
 
 /* User Card Regsiter */
