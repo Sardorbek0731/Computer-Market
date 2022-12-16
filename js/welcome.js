@@ -167,8 +167,6 @@ userCardBtn.addEventListener("click", () => {
 
 if (inputValues.inputBoolean && cardValues.cardBoolean) {
   welcome();
-} else {
-  registerFunc();
 }
 
 if (inputValues.inputBoolean) {
