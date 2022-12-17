@@ -20,10 +20,18 @@ function time() {
 }
 
 function openMessage() {
-  messageItemText.style.display = "flex";
+  messageItemText.style.height = "34rem";
+
+  setTimeout(() => {
+    messageItemText.style.opacity = "1";
+  }, 150);
 }
 function closedMessage() {
-  messageItemText.style.display = "none";
+  setTimeout(() => {
+    messageItemText.style.height = "0";
+  }, 200);
+
+  messageItemText.style.opacity = "0";
 }
 
 formCreate.addEventListener("submit", (e) => {

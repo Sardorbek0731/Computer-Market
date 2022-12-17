@@ -570,7 +570,7 @@ body.dark_mode .userNav a:hover {
   font-size: 1.2rem;
 }
 .message_fixed_card {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -578,8 +578,10 @@ body.dark_mode .userNav a:hover {
   bottom: 2rem;
   right: 7rem;
   width: 23.5rem;
-  height: 34rem;
-  border-radius: 0 35px 0 0;
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s;
+  border-radius: 0 30px 0 0;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
   background-color: rgb(217, 230, 255);
   z-index: 100;
@@ -589,8 +591,8 @@ body.dark_mode .userNav a:hover {
   justify-content: space-between;
   padding: 1rem 1rem;
   width: 21.5rem;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 0 35px 0 0;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0 30px 0 0;
 }
 .message_brand,
 .request_icon,
