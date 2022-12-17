@@ -67,10 +67,10 @@ function alertSuccessFunc() {
   });
   setTimeout(() => {
     alertSuccess.style.right = "-100%";
-  }, 4600);
+  }, 5100);
   setTimeout(() => {
     alertSuccess.classList.remove("show");
-  }, 5600);
+  }, 6100);
 }
 
 function alertErrorFunc() {
@@ -83,12 +83,12 @@ function alertErrorFunc() {
     alertError.forEach((item) => {
       item.style.right = "-100%";
     });
-  }, 4600);
+  }, 5100);
   setTimeout(() => {
     alertError.forEach((item) => {
       item.classList.remove("show");
     });
-  }, 5600);
+  }, 6100);
 }
 
 function welcome() {

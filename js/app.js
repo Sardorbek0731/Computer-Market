@@ -29,7 +29,7 @@ function openMessage() {
 function closedMessage() {
   setTimeout(() => {
     messageItemText.style.height = "0";
-  }, 200);
+  }, 220);
 
   messageItemText.style.opacity = "0";
 }
