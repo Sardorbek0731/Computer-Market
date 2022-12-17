@@ -70,7 +70,7 @@ function alertSuccessFunc() {
   }, 5100);
   setTimeout(() => {
     alertSuccess.classList.remove("show");
-  }, 6100);
+  }, 5500);
 }
 
 function alertErrorFunc() {
@@ -88,7 +88,7 @@ function alertErrorFunc() {
     alertError.forEach((item) => {
       item.classList.remove("show");
     });
-  }, 6100);
+  }, 5500);
 }
 
 function welcome() {

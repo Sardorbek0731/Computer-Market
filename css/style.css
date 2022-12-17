@@ -83,14 +83,12 @@
   width: 36rem;
   height: 6rem;
   overflow: hidden;
-  box-shadow: 7px 7px 14px rgba(12, 2, 121, 0.05);
-  border: 1px solid white;
-  border-radius: 10px;
-  transition: all 0.3s;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 .item_question.click_angle_down {
   height: 12rem;
-  border: 1px solid rgb(52, 101, 179);
 }
 .question_header,
 .question_body {
@@ -104,11 +102,11 @@
 }
 .question_title h1,
 .answer_down i {
-  color: rgb(63, 63, 63);
+  color: rgba(0, 0, 0, 0.8);
 }
 .question_title h1 {
   font-size: 1.2rem;
-  font-weight: 350;
+  font-weight: 360;
 }
 .answer_down i {
   font-size: 1.4rem;
