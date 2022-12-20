@@ -4,8 +4,7 @@
   position: fixed;
   height: 4.5rem;
   top: 2rem;
-  right: -100%;
-  padding: 0 3rem 0 1rem;
+  padding: 0 4.5rem 0 1rem;
   background-color: rgb(182, 255, 255);
   overflow: hidden;
   z-index: 1;
@@ -38,6 +37,16 @@
     right: -200%;
   }
 }
+.alertError.show,
+.alertSuccess.show {
+  animation: alert 1s cubic-bezier(0.4, -0.5, 0.1, 1.5) forwards;
+  animation-delay: 5s;
+}
+@keyframes alert {
+  100% {
+    right: -100%;
+  }
+}
 .icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -60,6 +69,22 @@
 }
 .textError h1 {
   color: red;
+}
+.close {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 3.5rem;
+  background-color: rgb(255, 103, 103);
+  cursor: pointer;
+}
+.closeSuccess {
+  background-color: rgb(54, 186, 198);
+}
+.close svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: white;
 }
 
 .userAbout_form {
@@ -164,6 +189,7 @@
   border: 2px solid rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: all 0.5s;
+  outline: none;
 }
 .user_about_btn h3 {
   color: rgba(0, 0, 0, 0.5);

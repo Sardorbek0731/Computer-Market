@@ -14,6 +14,8 @@ const cardPassword = document.getElementById("card-password");
 const logout = document.getElementById("logout");
 const alertSuccess = document.getElementById("alert-success");
 const alertError = document.querySelectorAll("#alert-error");
+const closeBtns = document.querySelectorAll("#close");
+const closeSuccessBtn = document.getElementById("close-success");
 
 alertSuccess.classList.remove("show");
 alertSuccess.style.right = "-100%";
@@ -60,35 +62,43 @@ function registerFunc() {
 }
 
 function alertSuccessFunc() {
-  alertSuccess.classList.add("show");
+  alertSuccess.classList.remove("show");
+  alertSuccess.style.right = "-100%";
 
   setTimeout(() => {
+    alertSuccess.classList.add("show");
     alertSuccess.style.right = "2rem";
-  });
-  setTimeout(() => {
+  }, 200);
+
+  closeSuccessBtn.addEventListener("click", () => {
+    setTimeout(() => {
+      alertSuccess.classList.remove("show");
+    }, 1200);
     alertSuccess.style.right = "-100%";
-  }, 5100);
-  setTimeout(() => {
-    alertSuccess.classList.remove("show");
-  }, 6100);
+  });
 }
 
 function alertErrorFunc() {
   alertError.forEach((item) => {
-    item.classList.add("show");
-    item.style.right = "2rem";
+    item.classList.remove("show");
+    item.style.right = "-100%";
   });
 
   setTimeout(() => {
     alertError.forEach((item) => {
-      item.style.right = "-100%";
+      item.classList.add("show");
+      item.style.right = "2rem";
     });
-  }, 5100);
-  setTimeout(() => {
-    alertError.forEach((item) => {
-      item.classList.remove("show");
+  }, 200);
+
+  closeBtns.forEach((closeBtn, i) => {
+    closeBtn.addEventListener("click", () => {
+      setTimeout(() => {
+        alertError[i].classList.remove("show");
+      }, 1200);
+      alertError[i].style.right = "-100%";
     });
-  }, 6100);
+  });
 }
 
 function welcome() {
@@ -124,6 +134,11 @@ nextBtn.addEventListener("click", (e) => {
     userCardName.innerHTML = `${inputValues.firstName} ${inputValues.lastName}`;
     setItemValues();
     setItemPassword();
+
+    alertError.forEach((item) => {
+      item.classList.remove("show");
+      item.style.right = "-100%";
+    });
   } else if (
     inputValues.firstName == firstName.value &&
     inputValues.lastName == lastName.value &&
@@ -131,6 +146,11 @@ nextBtn.addEventListener("click", (e) => {
   ) {
     welcome();
     alertSuccessFunc();
+
+    alertError.forEach((item) => {
+      item.classList.remove("show");
+      item.style.right = "-100%";
+    });
 
     inputValues = {
       firstName: firstName.value,
@@ -152,6 +172,10 @@ userCardBtn.addEventListener("click", (e) => {
     cardPassword.value.length > 0
   ) {
     welcome();
+    alertError.forEach((item) => {
+      item.classList.remove("show");
+      item.style.right = "-100%";
+    });
 
     cardValues = {
       cardName: cardName.value,
