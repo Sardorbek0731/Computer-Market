@@ -475,7 +475,7 @@ body.dark_mode .userNav a:hover {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.4s;
   height: 3.7rem;
@@ -491,15 +491,15 @@ body.dark_mode .userNav a:hover {
   left: 0;
   background-color: white;
   width: 10rem;
-  border-radius: 10px;
-  padding: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 .language_item {
   display: flex;
   align-items: center;
   list-style: none;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   padding: 1rem;
   user-select: none;
 }
@@ -519,28 +519,22 @@ body.dark_mode .userNav a:hover {
 .language_item svg {
   margin-right: 0.5rem;
 }
-.registr_btn button {
+.registr_btn a {
   border: 2px solid black;
-  outline: none;
-  padding: 0 40px;
+  padding: 1rem 2.5rem;
   background-color: black;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.4s;
-  height: 3.7rem;
   user-select: none;
-}
-.registr_btn button:hover {
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-  background-color: white;
-}
-.registr_btn a {
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 370;
   color: white;
   text-decoration: none;
 }
-.registr_btn button:hover a {
+.registr_btn a:hover {
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  background-color: white;
   color: black;
 }
 .home_bg img {
@@ -716,7 +710,7 @@ body.dark_mode .userNav a:hover {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.4s;
-  z-index: 100;
+  z-index: 20;
 }
 .up a:hover {
   transform: rotate(360deg);

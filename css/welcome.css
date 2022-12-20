@@ -5,8 +5,7 @@
   height: 4.5rem;
   top: 2rem;
   right: -100%;
-  padding: 0 4rem 0 1rem;
-  border-radius: 0.2rem;
+  padding: 0 3rem 0 1rem;
   background-color: rgb(182, 255, 255);
   overflow: hidden;
   z-index: 1;
@@ -166,16 +165,17 @@
   cursor: pointer;
   transition: all 0.5s;
 }
-.user_about_btn a {
+.user_about_btn h3 {
   color: rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
   text-decoration: none;
   font-size: 1rem;
+  font-weight: 350;
 }
 .user_about_btn:hover {
   border: 2px solid red;
 }
-.user_about_btn:hover a {
+.user_about_btn:hover h3 {
   color: red;
 }
 

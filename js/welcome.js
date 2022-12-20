@@ -70,7 +70,7 @@ function alertSuccessFunc() {
   }, 5100);
   setTimeout(() => {
     alertSuccess.classList.remove("show");
-  }, 5500);
+  }, 6100);
 }
 
 function alertErrorFunc() {
@@ -88,7 +88,7 @@ function alertErrorFunc() {
     alertError.forEach((item) => {
       item.classList.remove("show");
     });
-  }, 5500);
+  }, 6100);
 }
 
 function welcome() {
@@ -101,7 +101,8 @@ function defaultValue() {
   lastName.value = inputValues.lastName;
 }
 
-nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   if (
     firstName.value.length > 0 &&
     lastName.value.length > 0 &&
@@ -143,7 +144,8 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-userCardBtn.addEventListener("click", () => {
+userCardBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   if (
     cardName.value.length > 0 &&
     cardNumber.value.length > 0 &&
