@@ -25,13 +25,11 @@
   height: auto;
 }
 .registerProfil_form form {
-  width: 17rem;
-  height: 35rem;
-  justify-content: space-between;
+  width: 18rem;
   flex-direction: column;
-  padding: 4rem 5rem;
+  padding: 2.5rem 4rem;
   border-radius: 0.5rem;
-  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
   background-color: white;
   position: relative;
 }
@@ -69,53 +67,55 @@
 }
 
 .form_item {
+  display: flex;
+  flex-direction: column;
   position: relative;
+  margin-top: 1.7rem;
+}
+.openProfil_btn {
+  margin-top: 2rem;
+}
+.email {
+  margin-top: 4.5rem;
 }
 .form_item input {
   outline: none;
-  border: none;
-  border-bottom: 1.5px solid black;
-  padding-bottom: 0.8rem;
+  padding: 0.8rem;
+  border: 1px solid rgb(228, 243, 255);
+  background-color: rgb(228, 243, 255);
+  margin-top: 0.7rem;
   font-size: 1rem;
+  border-radius: 0.3rem;
+  font-weight: 360;
   user-select: none;
-  width: 100%;
+}
+.form_item input::placeholder {
+  font-weight: 330;
+  color: rgba(0, 0, 0, 0.5);
 }
 .form_item label {
-  position: absolute;
-  left: 0;
-  top: 0;
   transition: all 0.2s;
-  font-size: 0.96rem;
+  font-size: 1rem;
   user-select: none;
 }
 .form_item input:focus {
-  border-bottom: 1.5px solid red;
+  border: 1px solid red;
 }
 .form_item input:valid {
-  border-bottom: 1.5px solid rgb(0, 155, 132);
-}
-.form_item input:focus ~ label {
-  top: -1.2rem;
-  color: red;
-  font-size: 0.75rem;
-}
-.form_item input:valid ~ label {
-  top: -1.2rem;
-  font-size: 0.75rem;
-  color: rgb(0, 155, 132);
+  border: 1px solid rgb(4, 210, 172);
 }
 .openProfil_btn {
-  width: 100%;
-  height: 4.2rem;
+  height: 4.5rem;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, rgb(35, 237, 255), rgb(18, 137, 148));
+  background: rgb(4, 210, 172);
   color: white;
   font-size: 1.2rem;
   border-radius: 0.5rem;
+  transition: all 0.2s;
 }
 .openProfil_btn:hover {
-  background: linear-gradient(135deg, rgb(18, 137, 148), rgb(35, 237, 255));
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
 }
 .show_message p {
   position: absolute;
@@ -142,6 +142,7 @@
   border-radius: 0.6rem;
   padding: 3rem 2rem;
   background-color: white;
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.09);
 }
 .itemFirst_column {
   height: 32rem;
@@ -199,7 +200,7 @@ body.dark_mode .spent_money h1 {
   color: white;
 }
 .spent_money {
-  background-color: rgb(228, 237, 255);
+  background: rgb(233, 232, 255);
   width: 85%;
   border-radius: 0.6rem;
   padding: 1rem;
@@ -226,7 +227,7 @@ body.dark_mode .spent_money {
   margin-bottom: 2rem;
 }
 .user_about_card {
-  background-color: rgb(228, 237, 255);
+  background: linear-gradient(-135deg, rgb(224, 234, 255), rgb(211, 219, 255));
   width: 16.5rem;
   padding: 1rem;
   border-radius: 0.6rem;
@@ -244,8 +245,8 @@ body.dark_mode .user_about_card {
   font-size: 1.1rem;
 }
 .user_about_card > h1 {
-  font-weight: 320;
-  color: rgb(100, 100, 100);
+  font-weight: 370;
+  color: rgb(80, 80, 80);
 }
 .caution h1 {
   font-size: 1.1rem;

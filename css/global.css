@@ -146,7 +146,7 @@ body.dark_mode #scrollbarProgress:hover {
   width: 17%;
   height: 100vh;
   z-index: 2;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
 
@@ -251,11 +251,7 @@ body.dark_mode #scrollbarProgress:hover {
   width: 83vw;
   height: 70px;
   z-index: 20;
-  background: linear-gradient(110deg, rgb(46, 118, 242), rgb(188, 54, 255));
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-}
-body.dark_mode .topNav {
-  background: linear-gradient(110deg, rgb(36, 64, 113), rgb(115, 0, 172));
+  background: linear-gradient(100deg, rgb(0, 192, 173), rgb(11, 28, 180));
 }
 .topUl {
   width: 100%;
