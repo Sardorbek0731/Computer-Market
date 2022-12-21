@@ -379,6 +379,7 @@ body.dark_mode .user_about_card {
   width: 100%;
 }
 .newUser_name input:focus,
-.newUsers_links input:focus {
+.newUsers_links input:focus,
+.newAge input:focus {
   border-bottom: 2px solid rgb(255, 135, 16);
 }
