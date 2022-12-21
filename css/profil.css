@@ -21,13 +21,13 @@
   float: right;
 }
 .registerProfil_bg img {
-  width: 38rem;
+  width: 36rem;
   height: auto;
 }
 .registerProfil_form form {
   width: 18rem;
   flex-direction: column;
-  padding: 2.5rem 4rem;
+  padding: 2.7rem 4rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
   background-color: white;
@@ -76,14 +76,14 @@
   margin-top: 2rem;
 }
 .email {
-  margin-top: 4.5rem;
+  margin-top: 4rem;
 }
 .form_item input {
   outline: none;
   padding: 0.8rem;
   border: 1px solid rgb(228, 243, 255);
   background-color: rgb(228, 243, 255);
-  margin-top: 0.7rem;
+  margin-top: 0.5rem;
   font-size: 1rem;
   border-radius: 0.3rem;
   font-weight: 360;
@@ -129,9 +129,9 @@
 .profil {
   float: right;
   width: 83vw;
+  height: 90vh;
   position: relative;
   margin-top: 70px;
-  padding: 3.5rem 0;
 }
 .profil_item {
   width: 100%;
@@ -140,12 +140,12 @@
 .itemSecond_column {
   flex-direction: column;
   border-radius: 0.6rem;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
   background-color: white;
   box-shadow: 0 0 70px rgba(0, 0, 0, 0.09);
 }
 .itemFirst_column {
-  height: 32rem;
+  height: 34rem;
   width: 25%;
 }
 .user_img_item {
@@ -173,11 +173,11 @@
 .changed_password a {
   text-decoration: none;
   width: 85%;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 0.5rem;
 }
 .changed_password a:hover {
-  background-color: rgb(233, 232, 255);
+  background-color: #eaecff;
 }
 body.dark_mode .changed_password a:hover {
   background-color: rgb(36, 36, 36);
@@ -203,14 +203,17 @@ body.dark_mode .spent_money h1 {
   background: rgb(233, 232, 255);
   width: 85%;
   border-radius: 0.6rem;
-  padding: 1rem;
+  padding: 1.2rem;
 }
 body.dark_mode .spent_money {
   background-color: rgb(36, 36, 36);
 }
 .spent_money h1,
 .changed_password {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+}
+.spent_money h1 {
+  font-size: 1.2rem;
 }
 .spent_money a {
   text-decoration: none;
@@ -223,36 +226,40 @@ body.dark_mode .spent_money {
 }
 .userAbouts_second_title h1 {
   font-weight: 350;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 2rem;
 }
 .user_about_card {
-  background: linear-gradient(-135deg, rgb(224, 234, 255), rgb(211, 219, 255));
   width: 16.5rem;
   padding: 1rem;
-  border-radius: 0.6rem;
-  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(165, 165, 165, 0.2);
+  cursor: no-drop;
+  border-radius: 0.4rem;
+  margin-bottom: 1.5rem;
+  user-select: none;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+.user_age,
+.user_year {
+  margin-bottom: 0;
 }
 body.dark_mode .user_about_card {
   background-color: rgb(36, 36, 36);
 }
 .user_firstname,
-.user_email {
-  margin-right: 2rem;
+.user_email,
+.user_age {
+  margin-right: 1.5rem;
 }
 .user_about_card h1 {
   font-weight: 370;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 .user_about_card > h1 {
   font-weight: 370;
   color: rgb(80, 80, 80);
-}
-.caution h1 {
-  font-size: 1.1rem;
-  font-weight: 340;
-  cursor: pointer;
-  color: rgb(255, 0, 0);
 }
 .userProfil_btns button,
 .createUser_btn button {
@@ -310,14 +317,15 @@ body.dark_mode .user_about_card {
 .newProfil_card {
   flex-direction: column;
   background-color: white;
-  border-radius: 30px;
-  padding: 6rem 6rem;
+  border-radius: 1rem;
+  width: 33rem;
+  padding: 4rem 5rem;
 }
 .settings_overlay {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px);
   width: 100%;
   height: 100vh;
@@ -341,12 +349,14 @@ body.dark_mode .user_about_card {
   font-size: 1.7rem;
 }
 
-.newUser_name {
-  margin-bottom: 5rem;
+.newUser_name,
+.newUsers_links,
+.newAge {
+  width: 100%;
 }
-.newUser_firstname,
-.newUser_email {
-  margin-right: 5rem;
+.newUser_name,
+.newUsers_links {
+  margin-bottom: 4rem;
 }
 .newUserName h1,
 .newUsers_link h1 {
@@ -355,15 +365,20 @@ body.dark_mode .user_about_card {
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
+.newProfil_card > div > div {
+  width: 40%;
+}
 .newUser_name input,
-.newUsers_links input {
-  padding-bottom: 0.6rem;
+.newUsers_links input,
+.newAge input {
+  padding-bottom: 0.5rem;
   outline: none;
-  border-radius: 0;
   border: none;
+  font-size: 1rem;
   border-bottom: 2px solid blue;
+  width: 100%;
 }
 .newUser_name input:focus,
 .newUsers_links input:focus {
-  border-bottom: 2px solid rgb(225, 53, 0);
+  border-bottom: 2px solid rgb(255, 135, 16);
 }

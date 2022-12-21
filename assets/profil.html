@@ -179,10 +179,7 @@
         <div class="registerProfil_form">
           <form class="flex">
             <div class="form_bg flex justify_center align_center">
-              <img
-                src="../image/Profil/register-form.png"
-                alt=""
-              />
+              <img src="../image/Profil/register-form.png" alt="" />
               <div class="form_title flex justify_center">
                 <h1>
                   Computer Marketga <br />
@@ -193,7 +190,13 @@
             </div>
             <div class="email form_item">
               <label for="email">Emailingiz</label>
-              <input type="email" id="email" autocomplete="off" required placeholder="@example.com" />
+              <input
+                type="email"
+                id="email"
+                autocomplete="off"
+                required
+                placeholder="@gmail.com"
+              />
             </div>
             <div class="number form_item">
               <label for="number">Raqamingiz</label>
@@ -208,7 +211,7 @@
             </div>
             <div class="yaer form_item">
               <label for="year">Tu'gilgan yil</label>
-              <input type="date" id="number" autocomplete="off" required />
+              <input type="date" id="year" autocomplete="off" required />
             </div>
             <button id="open-profil" class="openProfil_btn" type="button">
               Yuborish
@@ -335,7 +338,7 @@
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-chevron-right"
+                      class="bi bi-chevron-right right"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -373,7 +376,7 @@
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-chevron-right"
+                      class="bi bi-chevron-right right"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -432,11 +435,20 @@
                       <h1 id="user-number"></h1>
                     </div>
                   </div>
-                </div>
-                <div class="caution">
-                  <h1>
-                    Emailni o'zgartirish nosozliklarga olib kelishi mumkin!
-                  </h1>
+                  <div class="userAge flex justify_between align_center">
+                    <div class="user_age user_about_card">
+                      <div class="userAge_title userGoogle_title">
+                        <h1 class="mb-07">Yosh:</h1>
+                      </div>
+                      <h1 id="user-age"></h1>
+                    </div>
+                    <div class="user_year user_about_card">
+                      <div class="userYear_title userGoogle_title">
+                        <h1 class="mb-07">Tug'ilgan yilingiz:</h1>
+                      </div>
+                      <h1 id="user-year"></h1>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="userProfil_btns flex align_center justify_center">
@@ -520,6 +532,28 @@
                         <input
                           type="text"
                           id="user-create-number"
+                          autocomplete="off"
+                        />
+                      </div>
+                    </div>
+                    <div class="newAge flex justify_between align_center">
+                      <div class="newUser_age">
+                        <div class="userAge_title newUsers_link">
+                          <h1>Yosh</h1>
+                        </div>
+                        <input
+                          type="number"
+                          id="user-create-age"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div class="newUser_year">
+                        <div class="userYear_title newUsers_link">
+                          <h1>Tug'ilgan yilingiz</h1>
+                        </div>
+                        <input
+                          type="date"
+                          id="user-create-year"
                           autocomplete="off"
                         />
                       </div>

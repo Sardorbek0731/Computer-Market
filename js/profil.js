@@ -1,43 +1,31 @@
 // Profil Register
-
-// Register Item
 const registerProfil = document.getElementById("register-profil");
-const firstName = document.getElementById("firstName");
-const lastName = document.getElementById("lastName");
 const email = document.getElementById("email");
 const number = document.getElementById("number");
-const message = document.getElementById("message");
+const yaer = document.getElementById("year");
 const openProfil = document.getElementById("open-profil");
 
-// Show message
-const numberError = document.getElementById("number-error");
-
-openProfil.addEventListener("click", (e) => {
-  e.preventDefault();
-  setTimeout(() => {
-    if (number.value.length === 0) {
-      numberError.classList.remove("hidden");
-    }
-  }, 1000);
-  setTimeout(() => {
-    if (number.value.length === 0) {
-      numberError.classList.add("hidden");
-    }
-  }, 4000);
-});
-
-// Profil Item
 const profil = document.getElementById("profil");
 const userName = document.getElementById("user-name");
 const userFirstName = document.getElementById("user-firstName");
 const userLastName = document.getElementById("user-lastName");
 const userEmail = document.getElementById("user-email");
 const userNumber = document.getElementById("user-number");
+const userAge = document.getElementById("user-age");
+const userYear = document.getElementById("user-year");
 const userCreateFirstName = document.getElementById("user-create-firstName");
 const userCreateLastName = document.getElementById("user-create-lastName");
 const userCreateEmail = document.getElementById("user-create-email");
 const userCreateNumber = document.getElementById("user-create-number");
+const userCreateYear = document.getElementById("user-create-year");
+const userCreateAge = document.getElementById("user-create-age");
 const userImg = document.getElementById("user-img");
+
+function date() {
+  let now = new Date();
+
+  return now.getFullYear();
+}
 
 // LocalStorage
 
@@ -45,12 +33,11 @@ let userStorage = JSON.parse(localStorage.getItem("user"))
   ? JSON.parse(localStorage.getItem("user"))
   : [];
 
-if (
-  userStorage.firstName &&
-  userStorage.lastName &&
-  userStorage.email &&
-  userStorage.number
-) {
+let registerItems = JSON.parse(localStorage.getItem("register"))
+  ? JSON.parse(localStorage.getItem("register"))
+  : [];
+
+if (userStorage.email && userStorage.number && userStorage.yaer) {
   openedProfil();
   showUserAbout();
 } else {
@@ -76,32 +63,37 @@ function closedProfil() {
 
 // showUserAbout
 function showUserAbout() {
-  userImg.innerHTML = userStorage.firstName.slice(0, 1).toUpperCase();
-  userFirstName.innerHTML = userStorage.firstName;
-  userLastName.innerHTML = userStorage.lastName;
+  userImg.innerHTML = registerItems.firstName.slice(0, 1).toUpperCase();
+  userFirstName.innerHTML = registerItems.firstName;
+  userLastName.innerHTML = registerItems.lastName;
   userEmail.innerHTML = userStorage.email;
   userNumber.innerHTML = userStorage.number;
-  userName.innerHTML = `${userStorage.firstName} ${userStorage.lastName}`;
+  userYear.innerHTML = userStorage.yaer;
+  userAge.innerHTML = userStorage.age;
+  userName.innerHTML = `${registerItems.firstName} ${registerItems.lastName}`;
 
-  userCreateFirstName.value = userStorage.firstName;
-  userCreateLastName.value = userStorage.lastName;
+  userCreateFirstName.value = registerItems.firstName;
+  userCreateLastName.value = registerItems.lastName;
   userCreateEmail.value = userStorage.email;
   userCreateNumber.value = userStorage.number;
+  userCreateYear.value = userStorage.yaer;
+  userCreateAge.value = userStorage.age;
 }
 
 openProfil.addEventListener("click", (e) => {
   e.preventDefault();
   if (
-    firstName.value.length &&
-    lastName.value.length &&
-    email.value.length &&
-    number.value.length
+    email.value.length > 0 &&
+    number.value.length > 0 &&
+    yaer.value.length > 0
   ) {
+    let ageNow = date() - yaer.value.slice(0, 4);
+
     userStorage = {
-      firstName: firstName.value,
-      lastName: lastName.value,
       email: email.value,
       number: number.value,
+      yaer: yaer.value,
+      age: ageNow,
     };
 
     setUserItem();
@@ -127,10 +119,12 @@ closeProfilSetting.addEventListener("click", () => {
 userAboutSaveBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  userStorage.firstName = userCreateFirstName.value;
-  userStorage.lastName = userCreateLastName.value;
+  registerItems.firstName = userCreateFirstName.value;
+  registerItems.lastName = userCreateLastName.value;
   userStorage.email = userCreateEmail.value;
   userStorage.number = userCreateNumber.value;
+  userStorage.yaer = userCreateYear.value;
+  userStorage.age = userCreateAge.value;
 
   setUserItem();
   showUserAbout();
@@ -148,14 +142,12 @@ let userItem = document.getElementById("user-item");
 let userNavItem = document.getElementById("user-nav");
 
 function userNav() {
-  let userStorageNav = JSON.parse(localStorage.getItem("user"));
-
   user.style.display = "flex";
   user.addEventListener("click", () => {
     userNavItem.classList.toggle("hidden");
   });
 
-  userItem.innerHTML = userStorageNav.firstName.charAt();
+  userItem.innerHTML = registerItems.firstName.charAt();
 }
 
 openProfil.addEventListener("click", () => {
@@ -166,12 +158,7 @@ userAboutSaveBtn.addEventListener("click", () => {
   userNav();
 });
 
-if (
-  userStorage.firstName &&
-  userStorage.lastName &&
-  userStorage.email &&
-  userStorage.number
-) {
+if (userStorage.email && userStorage.number && userStorage.yaer) {
   userNav();
   openedProfil();
   showUserAbout();
