@@ -311,7 +311,11 @@
               <div
                 class="user_settings wf-100 flex justify_center flex_column align_center"
               >
-                <a href="#" class="changed_password flex wf-100">
+                <a
+                  href="#"
+                  class="changed_password flex wf-100"
+                  id="change-password"
+                >
                   <div class="flex justify_between align_center wf-100">
                     <h1 class="flex justify_center align_center">
                       <svg
@@ -388,32 +392,49 @@
                 </a>
                 <div
                   class="deleteAllBlur hidden justify_center align_center"
-                  id="deleteBox"
+                  id="change-password-box"
                 >
-                  <div class="deleteAllForm flex">
-                    <h3>Ma'lumotni o'chirish!</h3>
+                  <div class="deleteAllForm flex" id="change-password-form">
+                    <h3>Parolni o'zgartirish!</h3>
                     <div class="hr"></div>
-                    <p>
-                      Barcha ma'lumotlarni o'chirish uchun parolni kiriting
-                      va<br />
-                      o'chrish tugmasini bosing. Agar ma'lumotlarni
-                      o'chirsangiz<br />
-                      buyurtmalaringiz bekor qilinishi mumkin!<br />
-                    </p>
+                    <p>Parolni o'zgartirish uchun olding parolni kiriting.</p>
                     <form>
                       <input
                         type="password"
-                        id="delete-input"
+                        id="changed-input"
                         placeholder="Parolni kiriting..."
                       />
-                      <div class="errorDelete hidden" id="error-delete">
+                      <div class="errorDelete hidden" id="error-changed">
                         <h3>Parolni qaytadan tekshiring!</h3>
                       </div>
                       <div class="deleteBtns flex justify_between wf-100">
-                        <a href="#" class="deleteBtn" id="delete-btn">
-                          O'chirish
-                        </a>
-                        <button class="canselBtn" id="cansel-delete">
+                        <button class="deleteBtn" id="next-changed-btn">
+                          Keyingi
+                        </button>
+                        <button class="canselBtn" id="cansel-changed">
+                          Bekor qilish
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="deleteAllForm hidden" id="changed-password-form">
+                    <h3>Parolni o'zgartirish!</h3>
+                    <div class="hr"></div>
+                    <p>Yangi parolni kiriting.</p>
+                    <form>
+                      <input
+                        type="password"
+                        id="changed-input-save"
+                        placeholder="Yangi parol..."
+                      />
+                      <div class="errorDelete hidden" id="error-changed">
+                        <h3>Parolni qaytadan tekshiring!</h3>
+                      </div>
+                      <div class="deleteBtns flex justify_between wf-100">
+                        <button class="deleteBtn" id="save-changed-btn">
+                          O'zgartirish
+                        </button>
+                        <button class="canselBtn" id="cansel-changed-save">
                           Bekor qilish
                         </button>
                       </div>

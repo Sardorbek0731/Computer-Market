@@ -3,6 +3,11 @@ let passwordStorage = JSON.parse(localStorage.getItem("password"))
   ? JSON.parse(localStorage.getItem("password"))
   : [];
 
+// getItem
+function setNewPassword() {
+  localStorage.setItem("password", JSON.stringify(passwordStorage));
+}
+
 const registerProfil = document.getElementById("register-profil");
 const email = document.getElementById("email");
 const number = document.getElementById("number");
@@ -24,6 +29,17 @@ const userCreateNumber = document.getElementById("user-create-number");
 const userCreateYear = document.getElementById("user-create-year");
 const userCreateAge = document.getElementById("user-create-age");
 const userImg = document.getElementById("user-img");
+const changePassword = document.getElementById("change-password");
+const changePasswordBox = document.getElementById("change-password-box");
+const changedInputSave = document.getElementById("changed-input-save");
+const saveChangedBtn = document.getElementById("save-changed-btn");
+const canselChanged = document.getElementById("cansel-changed");
+const changedInput = document.getElementById("changed-input");
+const errorChanged = document.getElementById("error-changed");
+const nextChangedBtn = document.getElementById("next-changed-btn");
+const changePasswordForm = document.getElementById("change-password-form");
+const changedPasswordForm = document.getElementById("changed-password-form");
+const canselChangedSave = document.getElementById("cansel-changed-save");
 const deleteUserAllAbout = document.getElementById("delete-user-all-about");
 const deleteBox = document.getElementById("deleteBox");
 const deleteBtn = document.getElementById("delete-btn");
@@ -33,6 +49,47 @@ const deleteText = document.getElementById("delete-text");
 const errorDelete = document.getElementById("error-delete");
 
 // Changed password
+changePassword.addEventListener("click", () => {
+  changePasswordBox.classList.remove("hidden");
+  changePasswordBox.classList.add("flex");
+  changedPasswordForm.classList.remove("flex");
+  changedPasswordForm.classList.add("hidden");
+  changePasswordForm.classList.add("flex");
+  changePasswordForm.classList.remove("hidden");
+  changedInput.value = "";
+});
+canselChanged.addEventListener("click", (e) => {
+  e.preventDefault();
+  changePasswordBox.classList.remove("flex");
+  changePasswordBox.classList.add("hidden");
+});
+nextChangedBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (changedInput.value == passwordStorage) {
+    changePasswordForm.classList.remove("flex");
+    changePasswordForm.classList.add("hidden");
+    changedPasswordForm.classList.add("flex");
+    changedPasswordForm.classList.remove("hidden");
+
+    saveChangedBtn.addEventListener("click", () => {
+      passwordStorage = changedInputSave.value;
+      setNewPassword();
+      console.log(changedInputSave.value);
+      changePasswordBox.classList.remove("flex");
+      changePasswordBox.classList.add("hidden");
+    });
+    canselChangedSave.addEventListener("click", () => {
+      changePasswordBox.classList.remove("flex");
+      changePasswordBox.classList.add("hidden");
+    });
+  } else {
+    errorChanged.classList.remove("hidden");
+
+    setTimeout(() => {
+      errorChanged.classList.add("hidden");
+    }, 3500);
+  }
+});
 
 // Delete User About
 deleteText.addEventListener("click", (e) => {
