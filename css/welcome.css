@@ -186,7 +186,7 @@
   width: 12rem;
   height: 3.5rem;
   background-color: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: all 0.5s;
   outline: none;
@@ -199,7 +199,8 @@
   font-weight: 350;
 }
 .user_about_btn:hover {
-  border: 2px solid red;
+  border: 1px solid red;
+  background: linear-gradient(to right, white, rgb(255, 205, 205), white);
 }
 .user_about_btn:hover h3 {
   color: red;

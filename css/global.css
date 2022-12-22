@@ -240,7 +240,7 @@ body.dark_mode #scrollbarProgress:hover {
   display: flex;
   float: right;
   width: 83vw;
-  height: 70px;
+  height: 4.5rem;
 }
 .topNav {
   display: flex;
@@ -249,7 +249,7 @@ body.dark_mode #scrollbarProgress:hover {
   top: 0;
   right: 0;
   width: 83vw;
-  height: 70px;
+  height: 4.5rem;
   z-index: 20;
   background: linear-gradient(100deg, rgb(0, 192, 173), rgb(11, 28, 180));
 }

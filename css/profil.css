@@ -131,7 +131,7 @@
   width: 83vw;
   height: 90vh;
   position: relative;
-  margin-top: 70px;
+  margin-top: 4.5rem;
 }
 .profil_item {
   width: 100%;
@@ -170,28 +170,29 @@
   font-weight: 340;
   font-size: 1.8rem;
 }
-.changed_password a {
+.changed_password {
   text-decoration: none;
   width: 85%;
   padding: 1.2rem;
   border-radius: 0.5rem;
 }
-.changed_password a:hover {
+.changed_password:hover {
   background-color: #eaecff;
 }
-body.dark_mode .changed_password a:hover {
+body.dark_mode .changed_password:hover {
   background-color: rgb(36, 36, 36);
 }
-.changed_password a h1,
+.changed_password h1,
 .spent_money h1 {
   font-size: 1.1rem;
   font-weight: 340;
+  text-decoration: none;
 }
-.changed_password a h1 svg {
+.changed_password h1 svg {
   margin-right: 0.5rem;
 }
-.changed_password a h1,
-.changed_password a svg {
+.changed_password h1,
+.changed_password svg {
   color: black;
 }
 body.dark_mode .changed_password a h1,
@@ -219,6 +220,86 @@ body.dark_mode .spent_money {
   text-decoration: none;
   color: blue;
 }
+
+/* Delete */
+.deleteAllBlur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 17, 24, 0.7);
+  backdrop-filter: blur(7px);
+  z-index: 21;
+}
+.deleteAllForm {
+  background-color: black;
+  padding: 2rem 2.5rem;
+  border-radius: 0.8rem;
+  width: 28rem;
+  flex-direction: column;
+}
+.deleteAllForm h3 {
+  font-weight: 380;
+  color: white;
+  font-size: 1.5rem;
+}
+.deleteAllForm p {
+  color: rgb(181, 181, 181);
+  font-size: 1.1rem;
+  font-weight: 360;
+  margin-bottom: 2.5rem;
+}
+.hr {
+  margin: 1.2rem 0 1.8rem 0;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(to right, rgb(145, 145, 145), black);
+}
+.deleteAllForm form {
+  position: relative;
+}
+.deleteAllForm form input {
+  width: 94%;
+  background-color: rgb(45, 45, 45);
+  border: none;
+  outline: none;
+  padding: 0 3%;
+  height: 3rem;
+  color: white;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  margin-bottom: 3rem;
+}
+.deleteBtn,
+.canselBtn {
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  background-color: rgb(255, 0, 0);
+  border-radius: 0.4rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 370;
+}
+.canselBtn {
+  background-color: rgb(45, 45, 45);
+}
+.deleteBtn:hover {
+  background-color: rgb(159, 0, 0);
+}
+.canselBtn:hover {
+  background-color: rgb(31, 31, 31);
+}
+.errorDelete h3 {
+  color: red;
+  position: absolute;
+  top: 35%;
+  font-size: 1rem;
+} 
 
 .userAbouts_second {
   flex-direction: column;

@@ -94,6 +94,7 @@ let user = document.getElementById("user");
 let userItem = document.getElementById("user-item");
 let userNavItem = document.getElementById("user-nav");
 let userStorage = JSON.parse(localStorage.getItem("user"));
+let registerStorage = JSON.parse(localStorage.getItem("register"));
 
 function userNav() {
   user.style.display = "flex";
@@ -101,7 +102,7 @@ function userNav() {
     userNavItem.classList.toggle("hidden");
   });
 
-  userItem.innerHTML = userStorage.firstName.charAt();
+  userItem.innerHTML = registerStorage.firstName.charAt();
 }
 
 if (userStorage) userNav();

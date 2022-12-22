@@ -311,10 +311,8 @@
               <div
                 class="user_settings wf-100 flex justify_center flex_column align_center"
               >
-                <div
-                  class="changed_password wf-100 flex justify_center align_center"
-                >
-                  <a href="#" class="flex justify_between align_center wf-100">
+                <a href="#" class="changed_password flex wf-100">
+                  <div class="flex justify_between align_center wf-100">
                     <h1 class="flex justify_center align_center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -346,12 +344,14 @@
                         d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                       />
                     </svg>
-                  </a>
-                </div>
-                <div
-                  class="deleted_account changed_password wf-100 flex justify_center align_center"
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  id="delete-text"
+                  class="deleted_account changed_password flex wf-100"
                 >
-                  <a href="#" class="flex justify_between align_center wf-100">
+                  <div class="wf-100 flex justify_between align_center">
                     <h1 class="flex justify_center align_center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -384,7 +384,75 @@
                         d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                       />
                     </svg>
-                  </a>
+                  </div>
+                </a>
+                <div
+                  class="deleteAllBlur hidden justify_center align_center"
+                  id="deleteBox"
+                >
+                  <div class="deleteAllForm flex">
+                    <h3>Ma'lumotni o'chirish!</h3>
+                    <div class="hr"></div>
+                    <p>
+                      Barcha ma'lumotlarni o'chirish uchun parolni kiriting
+                      va<br />
+                      o'chrish tugmasini bosing. Agar ma'lumotlarni
+                      o'chirsangiz<br />
+                      buyurtmalaringiz bekor qilinishi mumkin!<br />
+                    </p>
+                    <form>
+                      <input
+                        type="password"
+                        id="delete-input"
+                        placeholder="Parolni kiriting..."
+                      />
+                      <div class="errorDelete hidden" id="error-delete">
+                        <h3>Parolni qaytadan tekshiring!</h3>
+                      </div>
+                      <div class="deleteBtns flex justify_between wf-100">
+                        <a href="#" class="deleteBtn" id="delete-btn">
+                          O'chirish
+                        </a>
+                        <button class="canselBtn" id="cansel-delete">
+                          Bekor qilish
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div
+                  class="deleteAllBlur hidden justify_center align_center"
+                  id="deleteBox"
+                >
+                  <div class="deleteAllForm flex">
+                    <h3>Ma'lumotni o'chirish!</h3>
+                    <div class="hr"></div>
+                    <p>
+                      Barcha ma'lumotlarni o'chirish uchun parolni kiriting
+                      va<br />
+                      o'chrish tugmasini bosing. Agar ma'lumotlarni
+                      o'chirsangiz<br />
+                      buyurtmalaringiz bekor qilinishi mumkin!<br />
+                    </p>
+                    <form>
+                      <input
+                        type="password"
+                        id="delete-input"
+                        placeholder="Parolni kiriting..."
+                      />
+                      <div class="errorDelete hidden" id="error-delete">
+                        <h3>Parolni qaytadan tekshiring!</h3>
+                      </div>
+                      <div class="deleteBtns flex justify_between wf-100">
+                        <a href="#" class="deleteBtn" id="delete-btn">
+                          O'chirish
+                        </a>
+                        <button class="canselBtn" id="cansel-delete">
+                          Bekor qilish
+                        </button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
                 <div class="spent_money">
                   <h1>Sarflagan pulim</h1>

@@ -777,6 +777,7 @@ let users = document.querySelectorAll("#user");
 let userItems = document.querySelectorAll("#user-item");
 let userNavItem = document.getElementsByClassName("userNav");
 let userStorage = JSON.parse(localStorage.getItem("user"));
+let registerStorage = JSON.parse(localStorage.getItem("register"));
 
 function userNav() {
   users.forEach((user, i) => {
@@ -787,7 +788,7 @@ function userNav() {
   });
 
   userItems.forEach((userItem) => {
-    userItem.innerHTML = userStorage.firstName.charAt();
+    userItem.innerHTML = registerStorage.firstName.charAt();
   });
 }
 

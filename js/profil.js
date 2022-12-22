@@ -1,4 +1,8 @@
 // Profil Register
+let passwordStorage = JSON.parse(localStorage.getItem("password"))
+  ? JSON.parse(localStorage.getItem("password"))
+  : [];
+
 const registerProfil = document.getElementById("register-profil");
 const email = document.getElementById("email");
 const number = document.getElementById("number");
@@ -20,6 +24,39 @@ const userCreateNumber = document.getElementById("user-create-number");
 const userCreateYear = document.getElementById("user-create-year");
 const userCreateAge = document.getElementById("user-create-age");
 const userImg = document.getElementById("user-img");
+const deleteUserAllAbout = document.getElementById("delete-user-all-about");
+const deleteBox = document.getElementById("deleteBox");
+const deleteBtn = document.getElementById("delete-btn");
+const deleteInput = document.getElementById("delete-input");
+const canselDelete = document.getElementById("cansel-delete");
+const deleteText = document.getElementById("delete-text");
+const errorDelete = document.getElementById("error-delete");
+
+// Changed password
+
+// Delete User About
+deleteText.addEventListener("click", (e) => {
+  e.preventDefault();
+  deleteBox.classList.remove("hidden");
+  deleteBox.classList.add("flex");
+});
+canselDelete.addEventListener("click", (e) => {
+  e.preventDefault();
+  deleteBox.classList.remove("flex");
+  deleteBox.classList.add("hidden");
+});
+deleteBtn.addEventListener("click", () => {
+  if (deleteInput.value == passwordStorage) {
+    localStorage.clear();
+    deleteBtn.href = "../index.html";
+  } else {
+    errorDelete.classList.remove("hidden");
+
+    setTimeout(() => {
+      errorDelete.classList.add("hidden");
+    }, 3500);
+  }
+});
 
 function date() {
   let now = new Date();
