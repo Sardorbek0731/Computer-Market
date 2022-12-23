@@ -255,6 +255,7 @@
   border-radius: 10px;
   border: 1px solid black;
   margin-bottom: 5rem;
+  background-color: white;
 }
 .there_product_item:last-child {
   margin-bottom: 0;

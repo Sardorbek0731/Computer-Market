@@ -251,7 +251,8 @@ body.dark_mode #scrollbarProgress:hover {
   width: 83vw;
   height: 4.5rem;
   z-index: 20;
-  background: linear-gradient(100deg, rgb(0, 192, 173), rgb(11, 28, 180));
+  background: linear-gradient(100deg, rgb(4, 173, 159), rgb(0, 118, 131));
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 .topUl {
   width: 100%;
@@ -295,16 +296,15 @@ body.dark_mode #scrollbarProgress:hover {
 
 .user {
   display: none;
-  width: 3rem;
-  height: 3rem;
-  background-color: #069fb3;
+  width: 3.3rem;
+  height: 3.3rem;
+  background-color: #6897c6;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 .user h1 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: white;
   font-weight: 360;
   user-select: none;
@@ -314,8 +314,8 @@ body.dark_mode #scrollbarProgress:hover {
   top: 120%;
   background-color: white;
   right: 0;
-  padding: 0.5rem 0;
-  border-radius: 0.6rem;
+  padding: 0.7rem 0;
+  border-radius: 0.5rem;
   z-index: 10;
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
 }
@@ -338,13 +338,14 @@ body.dark_mode .userNav a:hover {
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 1.3rem;
+  padding: 0 1.5rem;
 }
 .userNav a li svg {
   color: rgb(3, 0, 51);
-  margin-right: 1rem;
+  margin-right: 0.8rem;
   width: 1.1rem;
   height: 1.1rem;
+  margin-top: 0.2rem;
 }
 .userNav a li h1 {
   color: rgb(3, 0, 51);
