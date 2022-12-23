@@ -399,8 +399,8 @@ body.dark_mode .user_about_card {
   flex-direction: column;
   background-color: white;
   border-radius: 1rem;
-  width: 33rem;
-  padding: 4rem 5rem;
+  padding: 3.5rem;
+  width: 34rem;
 }
 .settings_overlay {
   position: fixed;
@@ -437,30 +437,32 @@ body.dark_mode .user_about_card {
 }
 .newUser_name,
 .newUsers_links {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .newUserName h1,
 .newUsers_link h1 {
   color: black;
-  font-weight: 370;
+  font-weight: 380;
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .newProfil_card > div > div {
-  width: 40%;
+  width: 46%;
 }
 .newUser_name input,
 .newUsers_links input,
 .newAge input {
-  padding-bottom: 0.5rem;
+  padding: 7%;
   outline: none;
-  border: none;
   font-size: 1rem;
-  border-bottom: 2px solid blue;
-  width: 100%;
+  color: #000000bb;
+  border-radius: 0.3rem;
+  background-color: #e6e6e6;
+  border: 2px solid #e6e6e6;
+  width: 86%;
 }
 .newUser_name input:focus,
 .newUsers_links input:focus,
 .newAge input:focus {
-  border-bottom: 2px solid rgb(255, 135, 16);
+  border: 2px solid rgb(255, 135, 16);
 }
