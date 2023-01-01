@@ -20,11 +20,10 @@
 .advantage_item {
   flex-direction: column;
   padding: 2.5rem;
-  width: 20.8rem;
+  width: 21rem;
   height: 13rem;
   background-color: white;
   transition: all 0.2s;
-  border-radius: 0.3rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.07);
 }
 .advantageItem_hidden {
@@ -81,8 +80,7 @@
   background: url("../image/Worker/background.avif") center;
   background-size: cover;
   border-radius: 1rem;
-  height: 420px;
-  padding: 3rem;
+  padding: 4rem;
   overflow: hidden;
   box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.5);
   position: relative;
@@ -101,18 +99,18 @@
 }
 .ourWorker_item {
   flex-direction: column;
-  padding: 4rem 0 4rem 0;
+  padding: 3.5rem 0 3.5rem 0;
   transition: all 0.3s;
   border-radius: 1rem;
-  width: 21rem;
+  width: 19rem;
 }
 .ourWorker_item:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .ourWorker_item i {
-  font-size: 4.5rem;
+  font-size: 4.3rem;
   color: rgb(255, 255, 255);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .ourWorker_item h1,
 .ourWorker_item h2 {
@@ -120,13 +118,13 @@
   font-family: "Montserrat", sans-serif;
 }
 .ourWorker_item h1 {
-  font-size: 4.2rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+  font-size: 2.7rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
 }
 .ourWorker_item h2 {
   font-size: 1.6rem;
-  font-weight: 380;
+  font-weight: 570;
 }
 
 /* Questions */
@@ -146,7 +144,8 @@
   overflow: hidden;
   border-radius: 7px;
   transition: all 0.2s ease;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 60px rgba(0, 22, 58, 0.15);
+  border-bottom: 2px solid rgb(67, 116, 167);
 }
 .item_question.click_angle_down {
   height: 12rem;
@@ -162,21 +161,28 @@
   top: 7rem;
 }
 .question_title h1,
-.answer_down i {
+.answer_down svg {
   color: rgba(0, 0, 0, 0.8);
+  user-select: none;
+  transition: all 0.3s;
+}
+.answer_down svg.up {
+  transform: rotate(180deg);
 }
 .question_title h1 {
   font-size: 1.2rem;
   font-weight: 360;
 }
-.answer_down i {
-  font-size: 1.4rem;
+.answer_down svg {
+  width: 1.4rem;
+  height: 1.4rem;
   cursor: pointer;
 }
 .question_body p {
   color: rgb(110, 110, 110);
   font-size: 1rem;
   font-weight: 350;
+  user-select: none;
 }
 
 /* Brands */
