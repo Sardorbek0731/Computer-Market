@@ -8,9 +8,9 @@ if (storageMode) modeFunc();
 
 function modeFunc() {
   body.classList.toggle("dark_mode");
-  darkMode.classList.toggle("hidden");
   darkMode.classList.toggle("mb-0");
   lightMode.classList.toggle("mb-0");
+  darkMode.classList.toggle("hidden");
   lightMode.classList.toggle("hidden");
 }
 
