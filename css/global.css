@@ -474,7 +474,7 @@ body.dark_mode .userNav a:hover {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0.7rem;
+  border-radius: 0.6rem;
   cursor: pointer;
   transition: all 0.4s;
   height: 3.7rem;
@@ -490,7 +490,7 @@ body.dark_mode .userNav a:hover {
   left: 0;
   background-color: white;
   width: 9rem;
-  border-radius: 0.7rem;
+  border-radius: 0.6rem;
   padding: 1rem;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -498,7 +498,7 @@ body.dark_mode .userNav a:hover {
   display: flex;
   align-items: center;
   list-style: none;
-  border-radius: 0.7rem;
+  border-radius: 0.6rem;
   padding: 1rem;
   user-select: none;
 }
@@ -522,7 +522,7 @@ body.dark_mode .userNav a:hover {
   border: 2px solid black;
   padding: 1rem 2.5rem;
   background-color: black;
-  border-radius: 0.7rem;
+  border-radius: 0.6rem;
   cursor: pointer;
   transition: all 0.4s;
   user-select: none;
@@ -541,7 +541,7 @@ body.dark_mode .userNav a:hover {
   height: 3.7rem;
   width: 1.7rem;
   padding: 0 1rem;
-  border-radius: 0.7rem;
+  border-radius: 0.6rem;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   transition: all 0.4s;
@@ -921,7 +921,7 @@ body.dark_mode .userNav a:hover {
   height: 3.7rem;
   color: white;
   outline: none;
-  border-radius: 0.7rem;
+  border-radius: 0.3rem;
   background: rgb(3, 171, 166);
   user-select: none;
   font-size: 1.05rem;
@@ -929,7 +929,7 @@ body.dark_mode .userNav a:hover {
   cursor: pointer;
   transition: all 0.4s;
   box-shadow: 7px 7px 17px rgba(0, 0, 0, 0.15);
-  border: 2px solid rgb(3, 171, 166);
+  border: 1px solid rgb(3, 171, 166);
 }
 .userSend_email button:hover {
   background-color: white;

@@ -8,8 +8,13 @@
   margin-bottom: 5rem;
 }
 .titles h1 {
-  font-size: 2.5rem;
-  font-weight: 300;
+  font-size: 2.3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 3.5rem;
+  font-weight: 370;
+}
+.blueTitle {
+  color: rgb(41, 130, 224);
 }
 
 /* Advantage  */
@@ -17,25 +22,45 @@
   padding: 150px 0;
   width: 100%;
 }
+.designHr {
+  height: 38.85rem;
+  width: 0.2rem;
+  margin-right: 3rem;
+  background-color: rgb(41, 130, 224);
+  border-radius: 10px;
+}
 .advantage_item {
   flex-direction: column;
   padding: 2.5rem;
-  width: 19.5rem;
+  width: 19rem;
   height: 13rem;
   background-color: rgb(255, 254, 255);
   transition: all 0.2s;
   border: 1px solid #d2dae4;
   border-radius: 10px;
   justify-content: space-between;
+  position: relative;
 }
 .advantage_item:hover {
-  box-shadow: 0 0 60px rgba(170, 180, 190, 0.35);
+  box-shadow: 0 0 7rem rgba(116, 140, 163, 0.4);
   background-color: white;
 }
 .advantageItem_head svg {
   width: 2.6rem;
   height: 2.6rem;
   transition: all 1.5s;
+}
+.qualityItem::before,
+.designItem::before {
+  content: "";
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: rgb(41, 130, 224);
+  top: 50%;
+  left: -3.8rem;
+  transform: translate(0, -50%);
+  border-radius: 50%;
 }
 .qualityItem svg {
   color: rgb(35, 219, 158);
@@ -69,7 +94,7 @@
   font-family: Hind, sans-serif;
 }
 .advantageFirst_row {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 /* Our Workers */
