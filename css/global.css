@@ -16,7 +16,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: rgb(248, 250, 255);
+  background-color: rgb(253, 254, 255);
 }
 body.dark_mode {
   background-color: rgb(0, 0, 0);
@@ -51,7 +51,6 @@ body.dark_mode .sendEmail_title h2,
 body.dark_mode .userSend_email form input,
 body.dark_mode .userSend_email form label,
 body.dark_mode .answer_down i,
-body.dark_mode .advantageItem_head i,
 body.dark_mode .by h1 a,
 body.dark_mode .there_product_item_price h2,
 body.dark_mode .there_product_item_date_title h3,
@@ -74,8 +73,7 @@ body.dark_mode .pruductType_values h1,
 body.dark_mode .pruductType_values i {
   color: black;
 }
-body.dark_mode .message_icon,
-body.dark_mode .brands_item {
+body.dark_mode .message_icon {
   background-color: white;
 }
 body.dark_mode .item_question,
@@ -90,7 +88,8 @@ body.dark_mode .itemSecond_column {
   background-color: rgb(50, 50, 50);
   border: none;
 }
-body.dark_mode .learningItem_img {
+body.dark_mode .learningItem_img,
+body.dark_mode .newProfil_card {
   background-color: rgb(50, 50, 50);
 }
 body.dark_mode .learningItem_img.active {
@@ -98,6 +97,9 @@ body.dark_mode .learningItem_img.active {
 }
 body.dark_mode .nav {
   background-color: rgb(5, 5, 31);
+}
+body.dark_mode .title h1 {
+  color: rgb(255, 0, 81);
 }
 img {
   user-select: none;
@@ -472,11 +474,11 @@ body.dark_mode .userNav a:hover {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   cursor: pointer;
   transition: all 0.4s;
   height: 3.7rem;
-  width: 10rem;
+  width: 9rem;
   padding: 0 1rem;
 }
 .language_btn:hover {
@@ -487,8 +489,8 @@ body.dark_mode .userNav a:hover {
   top: 130%;
   left: 0;
   background-color: white;
-  width: 10rem;
-  border-radius: 0.5rem;
+  width: 9rem;
+  border-radius: 0.7rem;
   padding: 1rem;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -496,7 +498,7 @@ body.dark_mode .userNav a:hover {
   display: flex;
   align-items: center;
   list-style: none;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   padding: 1rem;
   user-select: none;
 }
@@ -520,7 +522,7 @@ body.dark_mode .userNav a:hover {
   border: 2px solid black;
   padding: 1rem 2.5rem;
   background-color: black;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   cursor: pointer;
   transition: all 0.4s;
   user-select: none;
@@ -539,7 +541,7 @@ body.dark_mode .userNav a:hover {
   height: 3.7rem;
   width: 1.7rem;
   padding: 0 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   transition: all 0.4s;
@@ -572,7 +574,7 @@ body.dark_mode .userNav a:hover {
   right: -45%;
   height: 2.7rem;
   background-color: black;
-  border-radius: 0.3rem;
+  border-radius: 25px;
   opacity: 0;
   transition: all 0.2s;
 }
@@ -830,20 +832,19 @@ body.dark_mode .userNav a:hover {
   border-radius: 0.4rem;
   margin-right: 1.5rem;
   cursor: pointer;
-  transition: all 0.5s;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s;
 }
 .link_item:last-child {
   margin-right: 0;
 }
 .link_item i {
-  transition: all 0.5s;
+  transition: all 0.3s;
   color: rgb(170, 170, 170);
   font-size: 1.55rem;
 }
 .telegram_link:hover,
 .facebook_link:hover {
-  background-color: rgb(55, 120, 195);
+  background-color: rgb(20, 85, 147);
 }
 .youtube_link:hover {
   background-color: red;
@@ -917,21 +918,22 @@ body.dark_mode .userNav a:hover {
 .userSend_email button {
   border: none;
   width: 8.5rem;
-  height: 3.9rem;
+  height: 3.7rem;
   color: white;
   outline: none;
-  background: rgb(33, 105, 177);
+  border-radius: 0.7rem;
+  background: rgb(3, 171, 166);
   user-select: none;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
   transition: all 0.4s;
   box-shadow: 7px 7px 17px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgb(33, 105, 177);
+  border: 2px solid rgb(3, 171, 166);
 }
 .userSend_email button:hover {
   background-color: white;
-  color: rgb(33, 105, 177);
+  color: rgb(3, 171, 166);
 }
 .sendEmail_title h2 {
   color: rgb(125, 125, 125);

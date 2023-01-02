@@ -20,42 +20,44 @@
 .advantage_item {
   flex-direction: column;
   padding: 2.5rem;
-  width: 21rem;
+  width: 19.5rem;
   height: 13rem;
-  background-color: white;
+  background-color: rgb(255, 254, 255);
   transition: all 0.2s;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.07);
+  border: 1px solid #d2dae4;
+  border-radius: 10px;
+  justify-content: space-between;
 }
-.advantageItem_hidden {
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-}
-.advantageItem_div {
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  transition: all 0.3s;
-}
-.advantage_item:hover .advantageItem_div {
-  transform: translateY(-2.6rem);
-}
-.advantage_item:hover .advantageItem_head svg {
-  opacity: 0;
-  transition: all 0.1s;
+.advantage_item:hover {
+  box-shadow: 0 0 60px rgba(170, 180, 190, 0.35);
+  background-color: white;
 }
 .advantageItem_head svg {
-  color: #7e86aa;
   width: 2.6rem;
   height: 2.6rem;
   transition: all 1.5s;
+}
+.qualityItem svg {
+  color: rgb(35, 219, 158);
+}
+.orderItem svg {
+  color: #3e92bc;
+}
+.aboutItem svg {
+  color: #8a52d2;
+}
+.designItem svg {
+  color: orange;
+}
+.prizItem svg {
+  color: #ff0000;
 }
 .advantageItem_body {
   flex-direction: column;
 }
 .advantageItem_body_title h1 {
   font-weight: 480;
-  color: #515769;
+  color: #5b6686;
   line-height: 1.4;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -67,7 +69,7 @@
   font-family: Hind, sans-serif;
 }
 .advantageFirst_row {
-  margin-bottom: 1.2rem;
+  margin-bottom: 3rem;
 }
 
 /* Our Workers */
@@ -79,10 +81,9 @@
   width: 100%;
   background: url("../image/Worker/background.avif") center;
   background-size: cover;
-  border-radius: 1rem;
+  border-radius: 10px;
   padding: 4rem;
   overflow: hidden;
-  box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
   justify-content: space-between;
@@ -101,7 +102,7 @@
   flex-direction: column;
   padding: 3.5rem 0 3.5rem 0;
   transition: all 0.3s;
-  border-radius: 1rem;
+  border-radius: 10px;
   width: 19rem;
 }
 .ourWorker_item:hover {
@@ -199,6 +200,10 @@
   margin-right: 20px;
   cursor: pointer;
   background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.brands_item:hover {
+  box-shadow: 0 10px 40px rgba(170, 180, 190, 0.3);
 }
 .brands_item:last-child {
   margin-right: 0;
@@ -207,10 +212,10 @@
   width: 5.5rem;
   height: auto;
   margin-bottom: 1.5rem;
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 .brands_item:hover img {
-  transform: translateY(-0.5rem);
+  transform: translateY(-0.3rem);
 }
 .brand_item_title {
   font-size: 1.15rem;
