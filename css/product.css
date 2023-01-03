@@ -182,8 +182,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #25528e;
-  border: 2px solid #25528e;
+  background-color: #427ecb;
+  border: 2px solid #427ecb;
   color: white;
   font-size: 0.9rem;
   font-weight: 390;
@@ -200,7 +200,7 @@
 .productItem_shop form button:hover {
   background-color: white;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  color: #25528e;
+  color: #427ecb;
 }
 .productItem_shop form button.clicked_an_order {
   background-color: #15a273;

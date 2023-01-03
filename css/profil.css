@@ -180,7 +180,7 @@
   background-color: #eaecff;
 }
 body.dark_mode .changed_password:hover {
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(4, 173, 159);
 }
 .changed_password h1,
 .spent_money h1 {
@@ -207,7 +207,7 @@ body.dark_mode .spent_money h1 {
   padding: 1.2rem;
 }
 body.dark_mode .spent_money {
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(0, 0, 0);
 }
 .spent_money h1,
 .changed_password {

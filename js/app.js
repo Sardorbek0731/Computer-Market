@@ -6,7 +6,7 @@ const header = document.getElementById("header");
 document.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     up.style.bottom = "2rem";
-    message.style.bottom = "7rem";
+    message.style.bottom = "6.8rem";
     header.style.top = "0";
   } else {
     up.style.bottom = "-100%";

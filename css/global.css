@@ -84,7 +84,7 @@ body.dark_mode .item_learning,
 body.dark_mode .userNav,
 body.dark_mode .itemFirst_column,
 body.dark_mode .itemSecond_column {
-  background-color: rgb(50, 50, 50);
+  background-color: rgb(18, 53, 91);
   border: none;
 }
 body.dark_mode .learningItem_img,
@@ -655,8 +655,8 @@ body.dark_mode .headMode {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   background-color: black;
   cursor: pointer;
@@ -810,13 +810,13 @@ body.dark_mode .headMode {
   position: fixed;
   bottom: -100%;
   right: 2rem;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  background-color: rgb(57, 95, 192);
+  background-color: rgb(4, 157, 157);
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.4s;
+  transition: all 0.5s;
   z-index: 20;
 }
 .up a:hover {
