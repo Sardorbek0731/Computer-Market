@@ -26,9 +26,13 @@
   left: 0;
   width: 100%;
   transition: all 0.7s;
-  padding: 0.6rem 0;
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.7rem 0;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+body.dark_mode .navHeader {
+  backdrop-filter: blur(8px);
+  background-color: rgba(10, 25, 41, 0.7);
 }
 
 /* Advantage  */
@@ -55,26 +59,38 @@
   justify-content: space-between;
 }
 .advantage_item:hover {
-  box-shadow: 0 0 7rem rgba(116, 140, 163, 0.4);
+  box-shadow: 0 0 6rem rgba(51, 74, 96, 0.4);
   background-color: white;
+}
+body.dark_mode .advantage_item {
+  background-color: rgb(18, 53, 91);
+  border: 1px solid rgb(18, 53, 91);
+}
+body.dark_mode .advantage_item:hover {
+  box-shadow: 0 0 6rem rgba(62, 84, 248, 0.5);
 }
 .advantageItem_head svg {
   width: 2.6rem;
   height: 2.6rem;
   transition: all 1.5s;
 }
+body.dark_mode .qualityItem svg,
 .qualityItem svg {
   color: rgb(35, 219, 158);
 }
+body.dark_mode .orderItem svg,
 .orderItem svg {
   color: #3e92bc;
 }
+body.dark_mode .aboutItem svg,
 .aboutItem svg {
   color: #8a52d2;
 }
+body.dark_mode .designItem svg,
 .designItem svg {
   color: orange;
 }
+body.dark_mode .prizItem svg,
 .prizItem svg {
   color: #ff0000;
 }
@@ -172,6 +188,11 @@
   transition: all 0.2s ease;
   box-shadow: 0.6rem 0.6rem 2rem rgba(86, 108, 143, 0.2);
   border-bottom: 3px solid rgb(67, 116, 167);
+}
+body.dark_mode .item_question {
+  background-color: rgb(18, 53, 91);
+  border-bottom: 3px solid rgb(89, 122, 255);
+  box-shadow: 0 0 0;
 }
 .item_question.click_angle_down {
   height: 12rem;
