@@ -8,13 +8,27 @@
   margin-bottom: 5rem;
 }
 .titles h1 {
-  font-size: 2.3rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 3.5rem;
-  font-weight: 370;
+  font-size: 2.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  line-height: 3.4rem;
+  font-weight: 380;
 }
 .blueTitle {
   color: rgb(41, 130, 224);
+}
+
+/* Nav */
+.navHeader {
+  position: fixed;
+  z-index: 10;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  transition: all 0.7s;
+  padding: 0.6rem 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Advantage  */
@@ -26,7 +40,7 @@
   height: 38.85rem;
   width: 0.2rem;
   margin-right: 3rem;
-  background-color: rgb(41, 130, 224);
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
 }
 .advantage_item {
@@ -39,7 +53,6 @@
   border: 1px solid #d2dae4;
   border-radius: 10px;
   justify-content: space-between;
-  position: relative;
 }
 .advantage_item:hover {
   box-shadow: 0 0 7rem rgba(116, 140, 163, 0.4);
@@ -49,18 +62,6 @@
   width: 2.6rem;
   height: 2.6rem;
   transition: all 1.5s;
-}
-.qualityItem::before,
-.designItem::before {
-  content: "";
-  position: absolute;
-  width: 1.3rem;
-  height: 1.3rem;
-  background-color: rgb(41, 130, 224);
-  top: 50%;
-  left: -3.8rem;
-  transform: translate(0, -50%);
-  border-radius: 50%;
 }
 .qualityItem svg {
   color: rgb(35, 219, 158);
@@ -154,8 +155,8 @@
 }
 
 /* Questions */
-.advantage {
-  padding: 150px 0;
+.questions {
+  padding: 0 0 150px 0;
   width: 100%;
 }
 .questions-container {
@@ -168,10 +169,9 @@
   width: 36rem;
   height: 6rem;
   overflow: hidden;
-  border-radius: 7px;
   transition: all 0.2s ease;
-  box-shadow: 10px 10px 60px rgba(0, 22, 58, 0.15);
-  border-bottom: 2px solid rgb(67, 116, 167);
+  box-shadow: 0.6rem 0.6rem 2rem rgba(86, 108, 143, 0.2);
+  border-bottom: 3px solid rgb(67, 116, 167);
 }
 .item_question.click_angle_down {
   height: 12rem;
@@ -209,6 +209,12 @@
   font-size: 1rem;
   font-weight: 350;
   user-select: none;
+}
+
+/* Thoughts */
+.thoughts {
+  width: 100%;
+  background: linear-gradient(85deg, #132f4c 0%, #173a5e 100%);
 }
 
 /* Brands */

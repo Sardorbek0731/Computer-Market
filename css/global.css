@@ -469,7 +469,7 @@ body.dark_mode .userNav a:hover {
 }
 .language_btn {
   position: relative;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -480,6 +480,12 @@ body.dark_mode .userNav a:hover {
   height: 3.7rem;
   width: 9rem;
   padding: 0 1rem;
+}
+.headerLang {
+  background-color: white;
+  height: 3.2rem;
+  width: 8rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 .language_btn:hover {
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
@@ -493,6 +499,9 @@ body.dark_mode .userNav a:hover {
   border-radius: 0.6rem;
   padding: 1rem;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.headerLang .language_items {
+  width: 8rem;
 }
 .language_item {
   display: flex;
@@ -518,22 +527,31 @@ body.dark_mode .userNav a:hover {
 .language_item svg {
   margin-right: 0.5rem;
 }
-.registr_btn a {
+.registr_btn {
   border: 2px solid black;
-  padding: 1rem 2.5rem;
   background-color: black;
+  height: 3.7rem;
+  padding: 0 2rem;
   border-radius: 0.6rem;
   cursor: pointer;
   transition: all 0.4s;
+}
+.headSign {
+  height: 3.2rem;
+  margin-left: 1.5rem;
+}
+.registr_btn a {
   user-select: none;
   font-size: 1.2rem;
   font-weight: 370;
   color: white;
   text-decoration: none;
 }
-.registr_btn a:hover {
+.registr_btn:hover {
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
   background-color: white;
+}
+.registr_btn:hover a {
   color: black;
 }
 .lightIcon,
@@ -547,12 +565,18 @@ body.dark_mode .userNav a:hover {
   transition: all 0.4s;
   align-items: center;
 }
+.darkIcon {
+  background-color: black;
+}
+.headMode {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 3.2rem;
+  width: 1.2rem;
+  background-color: white;
+}
 .darkMode,
 .lightMode {
   position: relative;
-}
-.darkIcon {
-  background-color: black;
 }
 .lightIcon:hover,
 .darkIcon:hover {
@@ -565,6 +589,11 @@ body.dark_mode .userNav a:hover {
 }
 .darkIcon svg {
   color: white;
+}
+.headMode svg {
+  color: #007FFF;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 .lightComment,
 .darkComment {
