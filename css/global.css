@@ -88,7 +88,7 @@ body.dark_mode .itemSecond_column {
 }
 body.dark_mode .learningItem_img,
 body.dark_mode .newProfil_card {
-  background-color: rgb(50, 50, 50);
+  background-color: rgb(43, 43, 58);
 }
 body.dark_mode .learningItem_img.active {
   border: 1.5px solid white;

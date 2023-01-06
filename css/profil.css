@@ -456,13 +456,15 @@ body.dark_mode .user_about_card {
   outline: none;
   font-size: 1rem;
   color: #000000bb;
-  border-radius: 0.3rem;
-  border: none;
-  background-color: #e6e6e6;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  border: 3px solid white;
+  background-color: #ffffff;
   width: 86%;
 }
 .newUser_name input:focus,
 .newUsers_links input:focus,
 .newAge input:focus {
-  background-color: #c5c9ec;
+  background-color: #eff0ff;
+  border: 3px solid rgb(60, 122, 175);
 }

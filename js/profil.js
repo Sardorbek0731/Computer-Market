@@ -74,7 +74,6 @@ nextChangedBtn.addEventListener("click", (e) => {
     saveChangedBtn.addEventListener("click", () => {
       passwordStorage = changedInputSave.value;
       setNewPassword();
-      console.log(changedInputSave.value);
       changePasswordBox.classList.remove("flex");
       changePasswordBox.classList.add("hidden");
     });
@@ -210,11 +209,21 @@ createSettingsBtn.addEventListener("click", () => {
   profilSettings.classList.remove("hidden");
 });
 closeProfilSetting.addEventListener("click", () => {
-  profilSettings.classList.add("hidden");
+  if (
+    userCreateFirstName.value.length > 0 &&
+    userCreateLastName.value.length > 0 &&
+    userCreateEmail.value.length > 0 &&
+    userCreateNumber.value.length > 0 &&
+    userCreateYear.value.length > 0 &&
+    userCreateAge.value.length > 0
+  ) {
+    profilSettings.classList.add("hidden");
+  } else {
+    alertFunc(alertErrorCreate, closeErrorBtnCreate);
+  }
 });
 
-userAboutSaveBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+userAboutSaveBtn.addEventListener("click", () => {
   if (
     userCreateFirstName.value.length > 0 &&
     userCreateLastName.value.length > 0 &&
