@@ -190,9 +190,12 @@ openProfil.addEventListener("click", (e) => {
       age: ageNow,
     };
 
+    alertSuccessFunc();
     setUserItem();
     openedProfil();
     showUserAbout();
+  } else {
+    alertErrorFunc();
   }
 });
 

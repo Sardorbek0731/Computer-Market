@@ -1,0 +1,91 @@
+/* Alert */
+.alertSuccess,
+.alertError {
+  position: fixed;
+  height: 4.5rem;
+  top: 2rem;
+  padding: 0 5rem 0 1rem;
+  background-color: rgb(144, 255, 255);
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.4, -0.5, 0.1, 1.5);
+  z-index: 10;
+}
+.alertProfilSuccess {
+  top: 6rem;
+}
+.alertError {
+  background-color: rgb(255, 187, 187);
+}
+
+.alertSuccess::after,
+.alertError::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 0.3rem;
+  background-color: rgb(13, 139, 156);
+}
+.alertError::after {
+  background-color: red;
+}
+.alertSuccess.show::after,
+.alertError.show::after {
+  animation: alert-after 8s linear 1;
+  animation-delay: 1s;
+}
+@keyframes alert-after {
+  100% {
+    right: -200%;
+  }
+}
+.alertError.show,
+.alertSuccess.show {
+  animation: alert 1s cubic-bezier(0.4, -0.5, 0.1, 1.5) forwards;
+  animation-delay: 5s;
+}
+@keyframes alert {
+  100% {
+    right: -100%;
+  }
+}
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgb(13, 139, 156);
+  margin-right: 1rem;
+}
+.errorIcon {
+  background-color: red;
+}
+.icon svg {
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.text h1 {
+  font-size: 1.1rem;
+  font-weight: 380;
+  color: rgb(23, 102, 110);
+}
+.textError h1 {
+  color: red;
+}
+.close {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 3.5rem;
+  background-color: rgb(255, 136, 136);
+  cursor: pointer;
+}
+.closeSuccess {
+  background-color: rgb(0, 200, 218);
+}
+.close svg {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
