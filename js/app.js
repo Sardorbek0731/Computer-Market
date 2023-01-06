@@ -4,7 +4,7 @@ const message = document.getElementById("message");
 const header = document.getElementById("header");
 
 document.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
+  if (window.scrollY > 250) {
     up.style.bottom = "2rem";
     message.style.bottom = "6.8rem";
     header.style.top = "0";

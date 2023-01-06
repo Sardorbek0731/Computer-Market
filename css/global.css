@@ -492,7 +492,7 @@ body.dark_mode .headerLang {
   border: 2px solid rgba(255, 255, 255, 0);
 }
 .language_btn:hover {
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
 .language_items {
   position: absolute;
@@ -552,7 +552,7 @@ body.dark_mode .headerLang {
   text-decoration: none;
 }
 .registr_btn:hover {
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
   background-color: white;
 }
 .registr_btn:hover a {
@@ -587,7 +587,7 @@ body.dark_mode .headMode {
 }
 .lightIcon:hover,
 .darkIcon:hover {
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
 .lightIcon svg,
 .darkIcon svg {

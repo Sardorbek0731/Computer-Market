@@ -14,10 +14,12 @@ languageBtn.forEach((item, i) => {
 languageItem.forEach((item) => {
   item.addEventListener("click", () => {
     languageValue.innerHTML = item.innerHTML;
+    languageValueHeader.innerHTML = item.innerHTML;
   });
 });
 languageItemHeader.forEach((item) => {
   item.addEventListener("click", () => {
+    languageValue.innerHTML = item.innerHTML;
     languageValueHeader.innerHTML = item.innerHTML;
   });
 });

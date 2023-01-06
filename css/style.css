@@ -25,10 +25,11 @@
   top: -100%;
   left: 0;
   width: 100%;
-  transition: all 0.7s;
-  padding: 0.7rem 0;
-  backdrop-filter: blur(12px);
-  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 1s;
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  box-shadow: 0 5px 3rem rgba(87, 92, 129, 0.3);
 }
 body.dark_mode .navHeader {
   backdrop-filter: blur(8px);
@@ -52,14 +53,14 @@ body.dark_mode .navHeader {
   padding: 2.5rem;
   width: 19rem;
   height: 13rem;
-  background-color: rgb(255, 254, 255);
+  background-color: rgb(253, 253, 253);
   transition: all 0.2s;
-  border: 1px solid #d2dae4;
+  border: 1px solid rgba(108, 144, 178, 0.4);
   border-radius: 10px;
   justify-content: space-between;
 }
 .advantage_item:hover {
-  box-shadow: 0 0 6rem rgba(51, 74, 96, 0.4);
+  box-shadow: 0 0 5rem rgba(77, 103, 127, 0.4);
   background-color: white;
 }
 body.dark_mode .advantage_item {
@@ -107,11 +108,11 @@ body.dark_mode .prizItem svg,
 .advantageItem_body_p p {
   font-size: 15px;
   font-weight: 400;
-  color: #bebebe;
+  color: #b4b4b4;
   font-family: Hind, sans-serif;
 }
 .advantageFirst_row {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 /* Our Workers */
