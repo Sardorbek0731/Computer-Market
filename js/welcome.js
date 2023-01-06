@@ -92,9 +92,6 @@ nextBtn.addEventListener("click", (e) => {
     inputValues.lastName == lastName.value &&
     passwordStorage == password.value
   ) {
-    welcome();
-    alertSuccessFunc();
-
     alertError.forEach((item) => {
       item.classList.remove("show");
       item.style.right = "-100%";
@@ -107,8 +104,10 @@ nextBtn.addEventListener("click", (e) => {
     };
 
     setItemValues();
+    welcome();
+    alertFunc(alertSuccess, closeSuccessBtn);
   } else {
-    alertErrorFunc();
+    alertFunc(alertError, closeErrorBtns);
   }
 });
 
@@ -132,10 +131,10 @@ userCardBtn.addEventListener("click", (e) => {
       cardBoolean: true,
     };
 
-    alertSuccessFunc();
     setItemCard();
+    alertFunc(alertSuccess, closeSuccessBtn);
   } else {
-    alertErrorFunc();
+    alertFunc(alertError, closeErrorBtns);
   }
 });
 
