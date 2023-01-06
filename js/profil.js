@@ -190,12 +190,12 @@ openProfil.addEventListener("click", (e) => {
       age: ageNow,
     };
 
-    alertSuccessFunc();
     setUserItem();
     openedProfil();
     showUserAbout();
+    alertFunc(alertSuccess, closeSuccessBtn);
   } else {
-    alertErrorFunc();
+    alertFunc(alertError, closeErrorBtns);
   }
 });
 
@@ -215,17 +215,28 @@ closeProfilSetting.addEventListener("click", () => {
 
 userAboutSaveBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  if (
+    userCreateFirstName.value.length > 0 &&
+    userCreateLastName.value.length > 0 &&
+    userCreateEmail.value.length > 0 &&
+    userCreateNumber.value.length > 0 &&
+    userCreateYear.value.length > 0 &&
+    userCreateAge.value.length > 0
+  ) {
+    registerItems.firstName = userCreateFirstName.value;
+    registerItems.lastName = userCreateLastName.value;
+    userStorage.email = userCreateEmail.value;
+    userStorage.number = userCreateNumber.value;
+    userStorage.yaer = userCreateYear.value;
+    userStorage.age = userCreateAge.value;
 
-  registerItems.firstName = userCreateFirstName.value;
-  registerItems.lastName = userCreateLastName.value;
-  userStorage.email = userCreateEmail.value;
-  userStorage.number = userCreateNumber.value;
-  userStorage.yaer = userCreateYear.value;
-  userStorage.age = userCreateAge.value;
-
-  setUserItem();
-  showUserAbout();
-  profilSettings.classList.add("hidden");
+    setUserItem();
+    showUserAbout();
+    profilSettings.classList.add("hidden");
+    alertFunc(alertSuccessCreate, closeSuccessBtnCreate);
+  } else {
+    alertFunc(alertErrorCreate, closeErrorBtnCreate);
+  }
 });
 
 deleteSettings.addEventListener("click", () => {

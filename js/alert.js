@@ -1,51 +1,42 @@
-const alertSuccess = document.getElementById("alert-success");
+const alertSuccess = document.querySelectorAll("#alert-success");
 const alertError = document.querySelectorAll("#alert-error");
-const closeBtns = document.querySelectorAll("#close");
-const closeSuccessBtn = document.getElementById("close-success");
+const alertSuccessCreate = document.querySelectorAll("#alert-success-create");
+const alertErrorCreate = document.querySelectorAll("#alert-error-create");
+const closeErrorBtns = document.querySelectorAll("#close");
+const closeSuccessBtn = document.querySelectorAll("#close-success");
+const closeSuccessBtnCreate = document.querySelectorAll("#close-success-create");
+const closeErrorBtnCreate = document.querySelectorAll("#close-error-create");
 
-alertSuccess.classList.remove("show");
-alertSuccess.style.right = "-100%";
-
-alertError.forEach((item) => {
-  item.classList.remove("show");
-  item.style.right = "-100%";
-});
-function alertSuccessFunc() {
-  alertSuccess.classList.remove("show");
-  alertSuccess.style.right = "-100%";
-
-  setTimeout(() => {
-    alertSuccess.classList.add("show");
-    alertSuccess.style.right = "2rem";
-  }, 200);
-
-  closeSuccessBtn.addEventListener("click", () => {
-    setTimeout(() => {
-      alertSuccess.classList.remove("show");
-    }, 1200);
-    alertSuccess.style.right = "-100%";
+function defaultAlert(where) {
+  where.forEach((item) => {
+    item.classList.remove("show");
+    item.style.right = "-100%";
   });
 }
+defaultAlert(alertSuccess);
+defaultAlert(alertError);
+defaultAlert(alertSuccessCreate);
+defaultAlert(alertErrorCreate);
 
-function alertErrorFunc() {
-  alertError.forEach((item) => {
+function alertFunc(where, btnId) {
+  where.forEach((item) => {
     item.classList.remove("show");
     item.style.right = "-100%";
   });
 
   setTimeout(() => {
-    alertError.forEach((item) => {
+    where.forEach((item) => {
       item.classList.add("show");
       item.style.right = "2rem";
     });
   }, 200);
 
-  closeBtns.forEach((closeBtn, i) => {
+  btnId.forEach((closeBtn, i) => {
     closeBtn.addEventListener("click", () => {
       setTimeout(() => {
-        alertError[i].classList.remove("show");
+        where[i].classList.remove("show");
       }, 1200);
-      alertError[i].style.right = "-100%";
+      where[i].style.right = "-100%";
     });
   });
 }
