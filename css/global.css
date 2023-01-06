@@ -28,17 +28,17 @@ body.dark_mode .home {
   background: #001e3c;
   box-shadow: 0 0 0 0;
 }
-body.dark_mode .registr_btn button {
+body.dark_mode .registr_btn {
   border: 2px solid white;
   background-color: white;
 }
-body.dark_mode .registr_btn button:hover {
+body.dark_mode .registr_btn:hover {
   background-color: black;
 }
-body.dark_mode .registr_btn button:hover a {
+body.dark_mode .registr_btn:hover a {
   color: white;
 }
-body.dark_mode .registr_btn button a {
+body.dark_mode .registr_btn a {
   color: black;
 }
 body.dark_mode h1,
@@ -60,7 +60,6 @@ body.dark_mode .userNav a li svg {
   color: white;
 }
 body.dark_mode .userSend_email form input {
-  border: 1px solid #eff2ff;
   background-color: #eff2ff;
   color: black;
 }
@@ -944,7 +943,7 @@ body.dark_mode .headMode {
   );
 }
 .userSend_email form input::placeholder {
-  color: #28225d7c;
+  color: #7d7d7d;
 }
 .userSend_email button {
   border: none;
