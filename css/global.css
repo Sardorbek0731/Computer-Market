@@ -19,7 +19,7 @@ body {
   background-color: rgb(253, 254, 255);
 }
 body.dark_mode {
-  background-color: #0A1929;
+  background-color: #0a1929;
 }
 body.dark_mode .footer {
   background-color: rgb(20, 85, 147);
@@ -1007,6 +1007,9 @@ body.dark_mode .headMode {
 }
 .align_center {
   align-items: center;
+}
+.align_start {
+  align-items: flex-start;
 }
 .mb-5 {
   margin-bottom: 5rem;
