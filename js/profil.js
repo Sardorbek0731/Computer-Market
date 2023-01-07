@@ -207,6 +207,7 @@ const closeProfilSetting = document.getElementById("close-profil-setting");
 
 createSettingsBtn.addEventListener("click", () => {
   profilSettings.classList.remove("hidden");
+  defaultAlert(alertSuccessCreate);
 });
 closeProfilSetting.addEventListener("click", () => {
   if (
@@ -243,6 +244,7 @@ userAboutSaveBtn.addEventListener("click", () => {
     showUserAbout();
     profilSettings.classList.add("hidden");
     alertFunc(alertSuccessCreate, closeSuccessBtnCreate);
+    defaultAlert(alertErrorCreate);
   } else {
     alertFunc(alertErrorCreate, closeErrorBtnCreate);
   }
