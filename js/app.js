@@ -155,8 +155,9 @@ formCreate.addEventListener("submit", (e) => {
 
                   <div class="message_text">
                       <p>
-                        Hurmatli mijoz! Savollaringiz bo'lsa<br>
-                        berishingiz mumkin.<br>
+                        Valaykum assalom! <br>
+                        Hurmatli mijoz, iltimos ismingizni<br>
+                        kiriting!
                       </p>
                   </div>
 
