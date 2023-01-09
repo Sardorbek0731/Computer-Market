@@ -925,16 +925,12 @@
       <!----------- Thoughts ----------->
       <section>
         <div class="thoughts flex justify_center align_center">
-          <div class="container flex column align_start">
-            <div
-              class="thoughtsTitle_and_sliderBtn flex align_center justify_between wf-100"
-            >
-              <div class="thoughtsTitle">
-                <h1>Mijozlarimiz <span class="blueTitle">fikrlari</span></h1>
-              </div>
-              <div class="sliderBtns flex align_center justify_center">
+          <div class="container flex align_center justify_between">
+            <div class="thoughtItemElem">
+              <div class="sliderBtns flex align_center">
                 <div
                   class="leftSlider_btn sliderBtn flex justify_center align_center"
+                  onclick="leftSlider()"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -952,6 +948,7 @@
                 </div>
                 <div
                   class="rightSlider_btn sliderBtn flex justify_center align_center"
+                  onclick="rightSlider()"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -968,129 +965,210 @@
                   </svg>
                 </div>
               </div>
+              <div class="thoughtItems flex align_center">
+                <div class="thoughtItems-container overflow">
+                  <div class="thoughtItems_row flex" id="thought-items">
+                    <div class="thoughtItem" id="thought-item">
+                      <div class="thoughtItem_message">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Assumenda nulla necessitatibus temporibus quos
+                          totam deleniti rem enim voluptatem magni, ipsa
+                          molestiae voluptate et incidunt cupiditate. Soluta at
+                          error optio natus. Voluptates eos veritatis dolores
+                          magnam aliquid quidem a placeat asperiores
+                          perspiciatis laudantium minima, eaque quibusdam
+                          deserunt, reiciendis, obcaecati nobis totam error
+                        </p>
+                      </div>
+                      <div class="thoughtItem_about flex align_center">
+                        <img
+                          src="./image/Thoughts/Diyorbek.jpg"
+                          alt="Ahror Soliyev rasmi"
+                        />
+                        <div
+                          class="thoughtItem_name flex column justify_between"
+                        >
+                          <h1>Diyorbek Olimov</h1>
+                          <h3 class="flex align_center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-building-fill"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"
+                              />
+                            </svg>
+                            iTransition, Pogrammer
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thoughtItem" id="thought-item">
+                      <div class="thoughtItem_message">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Assumenda nulla necessitatibus temporibus quos
+                          totam deleniti rem enim voluptatem magni, ipsa
+                          molestiae voluptate et incidunt cupiditate. Soluta at
+                          error optio natus. Voluptates eos veritatis dolores
+                          magnam aliquid quidem a placeat asperiores
+                          perspiciatis laudantium minima, eaque quibusdam
+                          deserunt, reiciendis, obcaecati nobis totam error
+                        </p>
+                      </div>
+                      <div class="thoughtItem_about flex align_center">
+                        <img
+                          src="./image/Thoughts/Ahror.jpg"
+                          alt="Ahror Soliyev rasmi"
+                        />
+                        <div
+                          class="thoughtItem_name flex column justify_between"
+                        >
+                          <h1>Ahror Soliyev</h1>
+                          <h3 class="flex align_center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-building-fill"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"
+                              />
+                            </svg>
+                            Teacher, Programmer
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thoughtItem" id="thought-item">
+                      <div class="thoughtItem_message">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Assumenda nulla necessitatibus temporibus quos
+                          totam deleniti rem enim voluptatem magni, ipsa
+                          molestiae voluptate et incidunt cupiditate. Soluta at
+                          error optio natus. Voluptates eos veritatis dolores
+                          magnam aliquid quidem a placeat asperiores
+                          perspiciatis laudantium minima, eaque quibusdam
+                          deserunt, reiciendis, obcaecati nobis totam error
+                        </p>
+                      </div>
+                      <div class="thoughtItem_about flex align_center">
+                        <img
+                          src="./image/Thoughts/Sardorbek.jpg"
+                          alt="Ahror Soliyev rasmi"
+                        />
+                        <div
+                          class="thoughtItem_name flex column justify_between"
+                        >
+                          <h1>Sardorbek Olimov</h1>
+                          <h3 class="flex align_center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-building-fill"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"
+                              />
+                            </svg>
+                            Student
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="thoughtItems flex justify_center">
-              <div class="thoughtItem thoughtItem_first">
-                <div class="thoughtItem_message">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
-                    Assumenda nulla necessitatibus temporibus quos totam<br />
-                    deleniti rem enim voluptatem magni, ipsa molestiae
-                    voluptate<br />
-                    et incidunt cupiditate. Soluta at error optio natus.<br />
-                    Voluptates eos veritatis dolores magnam aliquid quidem a<br />
-                    placeat asperiores perspiciatis laudantium minima, eaque<br />
-                    quibusdam deserunt, reiciendis, obcaecati nobis totam
-                    error<br />
-                    cum hic eum est fugit incidunt? Molestiae, eius
-                    explicabo.<br />
-                  </p>
-                </div>
-                <div class="thoughtItem_about flex align_center">
-                  <img
-                    src="./image/Thoughts/Ahror.jpg"
-                    alt="Ahror Soliyev rasmi"
-                  />
-                  <div class="thoughtItem_name flex column justify_between">
-                    <h1>Ahror Soliyev</h1>
-                    <h3 class="flex align_center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-building-fill"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"
-                        />
-                      </svg>
-                      Teacher, Programmer
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="thoughtItem thoughtItem_second">
-                <div class="thoughtItem_message">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
-                    Assumenda nulla necessitatibus temporibus quos totam<br />
-                    deleniti rem enim voluptatem magni, ipsa molestiae
-                    voluptate<br />
-                    et incidunt cupiditate. Soluta at error optio natus.<br />
-                    Voluptates eos veritatis dolores magnam aliquid quidem a<br />
-                    placeat asperiores perspiciatis laudantium minima, eaque<br />
-                    quibusdam deserunt, reiciendis, obcaecati nobis totam
-                    error<br />
-                    cum hic eum est fugit incidunt? Molestiae, eius
-                    explicabo.<br />
-                  </p>
-                </div>
-                <div class="thoughtItem_about flex align_center">
-                  <img
-                    src="./image/Thoughts/Diyorbek.jpg"
-                    alt="Ahror Soliyev rasmi"
-                  />
-                  <div class="thoughtItem_name flex column justify_between">
-                    <h1>Diyorbek Olimov</h1>
-                    <h3 class="flex align_center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-building-fill"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"
-                        />
-                      </svg>
-                      iTransition, Pogrammer
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="thoughtItem thoughtItem_third">
-                <div class="thoughtItem_message">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
-                    Assumenda nulla necessitatibus temporibus quos totam<br />
-                    deleniti rem enim voluptatem magni, ipsa molestiae
-                    voluptate<br />
-                    et incidunt cupiditate. Soluta at error optio natus.<br />
-                    Voluptates eos veritatis dolores magnam aliquid quidem a<br />
-                    placeat asperiores perspiciatis laudantium minima, eaque<br />
-                    quibusdam deserunt, reiciendis, obcaecati nobis totam
-                    error<br />
-                    cum hic eum est fugit incidunt? Molestiae, eius
-                    explicabo.<br />
-                  </p>
-                </div>
-                <div class="thoughtItem_about flex align_center">
+            <div class="sponsors">
+              <div class="sponsorsFirst_row flex">
+                <div class="sponsorItem flex column align_center">
                   <img
                     src="./image/Thoughts/Sardorbek.jpg"
-                    alt="Ahror Soliyev rasmi"
+                    alt="Sardorbek OLimov image"
                   />
-                  <div class="thoughtItem_name flex column justify_between">
-                    <h1>Sardorbek Olimov</h1>
-                    <h3 class="flex align_center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-building-fill"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"
-                        />
-                      </svg>
-                      Student
-                    </h3>
-                  </div>
+                  <h3>Sardorbek</h3>
+                  <a href="#"> <i class="fa-solid fa-heart"></i>Sponsor </a>
+                </div>
+                <div class="sponsorItem flex column align_center">
+                  <img
+                    src="./image/Thoughts/Diyorbek.jpg"
+                    alt="Diyorbek OLimov image"
+                  />
+                  <h3>Diyorbek</h3>
+                  <a href="#"> <i class="fa-solid fa-heart"></i>Sponsor </a>
+                </div>
+                <div class="sponsorItem flex column align_center">
+                  <img
+                    src="./image/Thoughts/Ahror.jpg"
+                    alt="Ahror Soliyevimage"
+                  />
+                  <h3>Ahror</h3>
+                  <a href="#"> <i class="fa-solid fa-heart"></i>Sponsor </a>
+                </div>
+              </div>
+              <div class="sponsorsSecond_row flex">
+                <div class="sponsorItem flex column align_center">
+                  <img
+                    src="./image/Thoughts/Ulug'bek.jpg"
+                    alt="Sardorbek OLimov image"
+                  />
+                  <h3>Ulug'bek</h3>
+                  <a href="#"> <i class="fa-solid fa-heart"></i>Sponsor </a>
+                </div>
+                <div class="sponsorItem flex column align_center">
+                  <img
+                    src="./image/Thoughts/Doston.jpg"
+                    alt="Diyorbek OLimov image"
+                  />
+                  <h3>Doston</h3>
+                  <a href="#"> <i class="fa-solid fa-heart"></i>Sponsor </a>
+                </div>
+                <div class="sponsorItem flex column align_center">
+                  <img
+                    src="./image/Thoughts/Samuel.jpg"
+                    alt="Ahror Soliyevimage"
+                  />
+                  <h3>Samuel</h3>
+                  <a href="#"> <i class="fa-solid fa-heart"></i>Sponsor </a>
+                </div>
+              </div>
+              <div class="sponsorsThird_row flex">
+                <div class="sponsorItem flex column align_center">
+                  <img
+                    src="./image/Thoughts/Hyu Van.jpg"
+                    alt="Sardorbek OLimov image"
+                  />
+                  <h3>Hyu Van</h3>
+                  <a href="#"> <i class="fa-solid fa-heart"></i>Sponsor </a>
+                </div>
+                <div class="sponsorItem flex column align_center">
+                  <img
+                    src="./image/Thoughts/John.jpg"
+                    alt="Diyorbek OLimov image"
+                  />
+                  <h3>John</h3>
+                  <a href="#"> <i class="fa-solid fa-heart"></i>Sponsor </a>
+                </div>
+                <div class="sponsorItem flex column align_center">
+                  <img
+                    src="./image/Thoughts/Sara.jpg"
+                    alt="Ahror Soliyevimage"
+                  />
+                  <h3>Sara</h3>
+                  <a href="#"> <i class="fa-solid fa-heart"></i>Sponsor </a>
                 </div>
               </div>
             </div>
@@ -1228,6 +1306,7 @@
     </main>
 
     <script src="./js/app.js"></script>
+    <script src="./js/slider.js"></script>
     <script src="./js/mode.js"></script>
     <script src="./js/language.js"></script>
     <script src="./js/scroll.js"></script>

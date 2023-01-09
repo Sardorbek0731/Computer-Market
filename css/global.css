@@ -978,6 +978,9 @@ body.dark_mode .headMode {
 .hidden {
   display: none;
 }
+.overflow {
+  overflow: hidden;
+}
 .ml-0 {
   margin-left: 0;
 }
@@ -1002,14 +1005,14 @@ body.dark_mode .headMode {
 .justify_between {
   justify-content: space-between;
 }
+.justify_direction {
+  flex-direction: row-reverse;
+}
 .flex_column {
   flex-direction: column;
 }
 .align_center {
   align-items: center;
-}
-.align_start {
-  align-items: flex-start;
 }
 .mb-5 {
   margin-bottom: 5rem;

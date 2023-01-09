@@ -23,7 +23,7 @@
 .pruductType_values {
   border: none;
   outline: none;
-  background-color: rgb(221, 232, 255);
+  background-color: rgb(234, 241, 255);
   width: 20rem;
   height: 4.4rem;
   font-size: 1.2rem;
@@ -32,6 +32,7 @@
   font-weight: 360;
   border-radius: 10px;
   user-select: none;
+  border: 1px solid rgb(234, 241, 255);
 }
 .pruductType_values {
   display: flex;
@@ -39,9 +40,7 @@
   align-items: center;
   position: relative;
   width: 17.9rem;
-  border: 1px solid black;
   cursor: pointer;
-  background-color: rgb(255, 255, 255);
   user-select: none;
 }
 .pruductType_value {
@@ -73,7 +72,7 @@
   cursor: pointer;
 }
 .productType_item:hover {
-  background-color: #f1f1ff;
+  background-color: #f3f3ff;
 }
 
 .product_items {
@@ -91,14 +90,14 @@
   border-radius: 10px;
   background-color: white;
   padding: 2rem 0;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4rem rgba(45, 44, 61, 0.2);
   transition: all 0.3s;
   margin: 3rem;
 }
 .product_item:hover,
 .product_item_like:hover {
   transform: translateY(-7px);
-  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0.5rem 4rem rgba(45, 44, 61, 0.2);
 }
 .productItemLikeBtn,
 .productItemLikeDelete {
