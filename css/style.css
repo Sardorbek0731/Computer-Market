@@ -317,7 +317,7 @@ body.dark_mode .item_question {
 .sponsors {
   position: absolute;
   right: 0;
-  top: -20%;
+  top: -30%;
   transform: rotate(-10deg);
 }
 .sponsorItem {
@@ -338,18 +338,19 @@ body.dark_mode .item_question {
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
-.sponsorItem a {
+.sponsorItem div {
   text-decoration: none;
   color: white;
   background-color: #0a213a;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
+  cursor: pointer;
   transition: all 0.2s;
 }
-.sponsorItem a:hover {
+.sponsorItem div:hover {
   background-color: #021223;
 }
-.sponsorItem a i {
+.sponsorItem div i {
   margin-right: 0.3rem;
 }
 
