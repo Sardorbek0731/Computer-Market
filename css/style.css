@@ -18,24 +18,6 @@
   color: rgb(41, 130, 224);
 }
 
-/* Nav */
-.navHeader {
-  position: fixed;
-  z-index: 10;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  transition: all 1s;
-  padding: 1rem 0;
-  backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 5px 3rem rgba(87, 92, 129, 0.3);
-}
-body.dark_mode .navHeader {
-  box-shadow: 0 10px 4rem rgba(0, 0, 0, 0.2);
-  background-color: rgba(25, 81, 146, 0.3);
-}
-
 /* Advantage  */
 .advantage {
   padding: 150px 0;

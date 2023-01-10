@@ -422,76 +422,73 @@ body.dark_mode .userNav a:hover {
   color: white;
 }
 
-/* Main */
-.home {
-  flex-direction: column;
-  height: 100vh;
-  box-shadow: 0 0 90px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(-30deg, rgb(0, 128, 134), rgb(179, 255, 255));
-}
-.home_nav {
+/* Nav */
+.navHeader {
   position: absolute;
+  z-index: 10;
   top: 0;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 0;
+  width: 100%;
+  height: 6.5rem;
+  transition: all 0.4s ease-in-out;
+  background-color: transparent;
 }
-.brand {
+.navHeader.activeHeader {
+  position: fixed;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: white;
+  height: 5.5rem;
+}
+.navUl li {
+  list-style: none;
+  margin-right: 2rem;
+  position: relative;
+}
+.navUl li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s;
+  background-color: black;
+}
+.navUl li:hover::after {
+  width: 50%;
+}
+.navUl li:last-child {
+  margin-right: 0;
+}
+.navUl li a {
   text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  font-weight: 390;
 }
-.brand i,
-.brand h1 {
-  font-size: 2rem;
-  color: rgb(3, 0, 51);
-  user-select: none;
+.navUl li:hover a {
+  color: black;
 }
-.brand h1 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-.home_text {
-  flex-direction: column;
-  align-items: flex-start;
-  margin-right: 60px;
-}
-.home_title h1 {
-  font-size: 3.2rem;
-  margin-bottom: 40px;
-  user-select: none;
-}
-.home_p p {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  user-select: none;
-}
+
 .language_btn {
   position: relative;
   margin-right: 1.5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 0.6rem;
   cursor: pointer;
   transition: all 0.4s;
-  height: 3.7rem;
+  height: 3.5rem;
   width: 9rem;
   padding: 0 1rem;
 }
-.headerLang {
-  background-color: white;
-  height: 3.2rem;
-  width: 8.2rem;
-  border: 2px solid #e5eaff;
-  background-color: #e5eaff;
-}
-body.dark_mode .headerLang {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0);
-}
 .language_btn:hover {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+.navHeader.activeHeader .language_btn {
+  background-color: #e7ecff;
 }
 .language_items {
   position: absolute;
@@ -501,10 +498,7 @@ body.dark_mode .headerLang {
   width: 9rem;
   border-radius: 0.6rem;
   padding: 1rem;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-}
-.headerLang .language_items {
-  width: 8.2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 .language_item {
   display: flex;
@@ -530,37 +524,11 @@ body.dark_mode .headerLang {
 .language_item svg {
   margin-right: 0.5rem;
 }
-.registr_btn {
-  border: 2px solid black;
-  background-color: black;
-  height: 3.7rem;
-  padding: 0 2rem;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  transition: all 0.4s;
-}
-.headSign {
-  height: 3.2rem;
-  margin-left: 1.5rem;
-}
-.registr_btn a {
-  user-select: none;
-  font-size: 1.2rem;
-  font-weight: 370;
-  color: white;
-  text-decoration: none;
-}
-.registr_btn:hover {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
-  background-color: white;
-}
-.registr_btn:hover a {
-  color: black;
-}
+
 .lightIcon,
 .darkIcon {
-  height: 3.7rem;
-  width: 1.7rem;
+  height: 3.5rem;
+  width: 1.5rem;
   padding: 0 1rem;
   border-radius: 0.6rem;
   background-color: rgba(255, 255, 255, 0.5);
@@ -568,17 +536,8 @@ body.dark_mode .headerLang {
   transition: all 0.4s;
   align-items: center;
 }
-body.dark_mode .headMode {
-  border: 2px solid rgba(255, 255, 255, 0);
-}
 .darkIcon {
   background-color: black;
-}
-.headMode {
-  height: 3.2rem;
-  width: 1.2rem;
-  border-radius: 0.7rem;
-  border: 2px solid black;
 }
 .darkMode,
 .lightMode {
@@ -586,7 +545,7 @@ body.dark_mode .headMode {
 }
 .lightIcon:hover,
 .darkIcon:hover {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
 }
 .lightIcon svg,
 .darkIcon svg {
@@ -640,6 +599,53 @@ body.dark_mode .headMode {
   user-select: none;
 }
 .lightComment h4 {
+  color: black;
+}
+
+/* Main */
+.home {
+  flex-direction: column;
+  height: 100vh;
+  box-shadow: 0 0 90px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(-30deg, rgb(0, 128, 134), rgb(179, 255, 255));
+}
+.home_text {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 60px;
+}
+.home_title h1 {
+  font-size: 3.2rem;
+  margin-bottom: 40px;
+  user-select: none;
+}
+.home_p p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  user-select: none;
+}
+.registr_btn {
+  border: 2px solid black;
+  background-color: black;
+  height: 3.7rem;
+  padding: 0 2rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.registr_btn a {
+  user-select: none;
+  font-size: 1.2rem;
+  font-weight: 370;
+  color: white;
+  text-decoration: none;
+}
+.registr_btn:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+.registr_btn:hover a {
   color: black;
 }
 
@@ -983,6 +989,9 @@ body.dark_mode .headMode {
 }
 .ml-0 {
   margin-left: 0;
+}
+.mt-5 {
+  margin-top: 5rem;
 }
 .mb-0 {
   margin-bottom: 0;
