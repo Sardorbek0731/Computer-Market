@@ -11,7 +11,7 @@ const password = document.getElementById("password");
 const cardNumber = document.getElementById("card-number");
 const cardName = document.getElementById("card-name");
 const cardPassword = document.getElementById("card-password");
-const logout = document.getElementById("logout");
+const logouts = document.querySelectorAll("#logout");
 
 let inputValues = JSON.parse(localStorage.getItem("register"))
   ? JSON.parse(localStorage.getItem("register"))
@@ -146,13 +146,15 @@ if (inputValues.inputBoolean) {
   clickedNextBtn();
 }
 
-logout.addEventListener("click", () => {
-  inputValues = {
-    firstName: inputValues.firstName,
-    lastName: inputValues.lastName,
-  };
+logout.forEach((item) => {
+  item.addEventListener("click", () => {
+    inputValues = {
+      firstName: inputValues.firstName,
+      lastName: inputValues.lastName,
+    };
 
-  setItemValues();
+    setItemValues();
+  });
 });
 
 if (inputValues.firstName.length > 0 && inputValues.lastName.length > 0) {
