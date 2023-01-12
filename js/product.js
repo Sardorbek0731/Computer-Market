@@ -797,3 +797,23 @@ function userClick(id) {
 }
 
 if (userStorage) userNav();
+
+const logouts = document.querySelectorAll("#logout");
+let inputValues = JSON.parse(localStorage.getItem("register"))
+  ? JSON.parse(localStorage.getItem("register"))
+  : [];
+
+function setItemValues() {
+  localStorage.setItem("register", JSON.stringify(inputValues));
+}
+
+logouts.forEach((item) => {
+  item.addEventListener("click", () => {
+    inputValues = {
+      firstName: inputValues.firstName,
+      lastName: inputValues.lastName,
+    };
+
+    setItemValues();
+  });
+});

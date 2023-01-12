@@ -28,18 +28,31 @@ body.dark_mode .home {
   background: #001e3c;
   box-shadow: 0 0 0 0;
 }
+body.dark_mode .navHeader.activeHeader {
+  backdrop-filter: blur(8px);
+  background-color: rgba(10, 25, 41, 0.7);
+  box-shadow: 0 0 0;
+}
+body.dark_mode .navUl li a {
+  color: rgba(255, 255, 255, 0.5);
+}
+body.dark_mode .navUl li:hover a {
+  color: white;
+}
+body.dark_mode .navUl li::after {
+  background-color: white;
+}
+body.dark_mode .navHeader.activeHeader .language_btn {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 body.dark_mode .registr_btn {
   border: 2px solid white;
   background-color: white;
+  color: black;
 }
 body.dark_mode .registr_btn:hover {
   background-color: black;
-}
-body.dark_mode .registr_btn:hover a {
   color: white;
-}
-body.dark_mode .registr_btn a {
-  color: black;
 }
 body.dark_mode h1,
 body.dark_mode svg,
